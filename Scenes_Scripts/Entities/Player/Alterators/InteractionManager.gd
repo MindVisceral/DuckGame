@@ -64,7 +64,10 @@ func _physics_process(delta: float) -> void:
 			
 			## If the Player wants to, they may interact with this Interactable
 			if Input.is_action_just_pressed("input_interact"):
-				player.InteractableCast.get_collider(0).interact.emit()
+				#player.InteractableCast.get_collider(0).interact.emit()
+				interactables[0].interact.emit()
+				#get_interactable_monologue_info(player.InteractableCast.get_collider(0))
+				get_interactable_monologue_info(interactables[0])
 			
 		
 		## Since it doesn't, we tell this Interactable to emit the "unfocused" signal
@@ -94,6 +97,7 @@ func _physics_process(delta: float) -> void:
 			## And if the Player wants to, they may interact with this Interactable
 			if Input.is_action_just_pressed("input_interact"):
 				closest_interactable.interact.emit()
+				get_interactable_monologue_info(closest_interactable)
 			
 		
 		## If it isn't colliding, we unfocus all the Interactables
@@ -129,3 +133,20 @@ func find_closest_interactable() -> Interactable:
 	
 	## Now that we are sure which Interactable is the closest, we simply return it
 	return closest_interactable
+
+
+func get_interactable_monologue_info(interactable: Interactable) -> void:
+	var data = interactable.monologue_data
+	
+	print("gathering monologue data: ", data)
+	
+	if data != null:
+		if data.is_empty():
+			print("empty")
+		else:
+			player.Monologue.reset_monologue()
+			
+			player.Monologue.monologue = data
+			player.Monologue.start_monologue()
+	
+	data = null

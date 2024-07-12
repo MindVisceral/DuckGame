@@ -14,58 +14,6 @@ size = Vector3(3, 3, 3)
 [sub_resource type="BoxShape3D" id="BoxShape3D_j0tvc"]
 size = Vector3(2.25269, 2.41603, 0.244858)
 
-[sub_resource type="Animation" id="Animation_tu6ci"]
-resource_name = "close"
-length = 2.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Lift/Lift_body/Lift_door_outer_L:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2.3),
-"transitions": PackedFloat32Array(0.392292, 1.23114, 1.23114),
-"update": 0,
-"values": [Vector3(-0.877011, 1.02957, 0.987187), Vector3(-0.61, 1.03, 0.987), Vector3(-0.61, 1.03, 0.987)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Lift/Lift_body/Lift_door_outer_R:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 2.3),
-"transitions": PackedFloat32Array(0.392292, 1.23114, 1.23114),
-"update": 0,
-"values": [Vector3(0.88087, 1.02957, 0.987187), Vector3(0.61, 1.03, 0.987), Vector3(0.61, 1.03, 0.987)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Lift/Lift_body/Lift_door_outer_R/Lift_door_inner_R:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.1, 2.3),
-"transitions": PackedFloat32Array(0.757858, 1.41421, 0.68302),
-"update": 0,
-"values": [Vector3(-0.0501674, 0, 0), Vector3(-0.0501674, 0, 0), Vector3(-0.382, 0, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Lift/Lift_body/Lift_door_outer_L/Lift_door_inner_L:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.1, 2.3),
-"transitions": PackedFloat32Array(0.757858, 1.41421, 0.68302),
-"update": 0,
-"values": [Vector3(0.0501675, 0, 0), Vector3(0.0501675, 0, 0), Vector3(0.382, 0, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_jk1xr"]
 length = 0.001
 tracks/0/type = "value"
@@ -153,6 +101,58 @@ tracks/6/keys = {
 "values": [Vector3(0.000610352, 1.10142, 1.0099)]
 }
 
+[sub_resource type="Animation" id="Animation_tu6ci"]
+resource_name = "close"
+length = 2.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lift/Lift_body/Lift_door_outer_L:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.3),
+"transitions": PackedFloat32Array(0.392292, 1.23114, 1.23114),
+"update": 0,
+"values": [Vector3(-0.877011, 1.02957, 0.987187), Vector3(-0.61, 1.03, 0.987), Vector3(-0.61, 1.03, 0.987)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lift/Lift_body/Lift_door_outer_R:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2.3),
+"transitions": PackedFloat32Array(0.392292, 1.23114, 1.23114),
+"update": 0,
+"values": [Vector3(0.88087, 1.02957, 0.987187), Vector3(0.61, 1.03, 0.987), Vector3(0.61, 1.03, 0.987)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Lift/Lift_body/Lift_door_outer_R/Lift_door_inner_R:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.3),
+"transitions": PackedFloat32Array(0.757858, 1.41421, 0.68302),
+"update": 0,
+"values": [Vector3(-0.0501674, 0, 0), Vector3(-0.0501674, 0, 0), Vector3(-0.382, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Lift/Lift_body/Lift_door_outer_L/Lift_door_inner_L:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.3),
+"transitions": PackedFloat32Array(0.757858, 1.41421, 0.68302),
+"update": 0,
+"values": [Vector3(0.0501675, 0, 0), Vector3(0.0501675, 0, 0), Vector3(0.382, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_jewxc"]
 resource_name = "open"
 length = 2.4
@@ -215,8 +215,8 @@ tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(1, 3.4, 3.6, 3.8, 4, 4.2, 4.4, 4.6, 4.8, 5, 5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6, 6.7, 6.9, 7.1, 7.3, 7.5, 7.7, 7.9, 8.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(1, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8, 6.9, 7, 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8, 8.1, 8.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
 "args": [],
 "method": &"do_screen_shake"
@@ -246,7 +246,79 @@ tracks/0/keys = {
 "method": &"do_screen_shake"
 }, {
 "args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
 "method": &"fade_to_black"
+}, {
+"args": [],
+"method": &"fade_to_black"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
 }, {
 "args": [],
 "method": &"do_screen_shake"
@@ -316,6 +388,15 @@ script = ExtResource("1_f71ji")
 [node name="ColliderBody" parent="Lift/Lift_body" index="0"]
 collision_layer = 64
 collision_mask = 133
+
+[node name="Lift_door_outer_L" parent="Lift/Lift_body" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.877011, 1.02957, 0.987187)
+
+[node name="Lift_door_outer_R" parent="Lift/Lift_body" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88087, 1.02957, 0.987187)
+
+[node name="Lift_door_inner_R" parent="Lift/Lift_body/Lift_door_outer_R" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0501674, 0, 0)
 
 [node name="SmallLight" parent="Lift/Lift_body" index="4" instance=ExtResource("2_4ajtd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0618, 0)

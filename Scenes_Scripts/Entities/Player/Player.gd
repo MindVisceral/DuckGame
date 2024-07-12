@@ -127,6 +127,7 @@ extends CharacterBody3D
 @onready var Camera: Camera3D = $Head/BobbingNode/PlayerCamera
 ## UI, HUD, Posprocessing, Custscene effects
 @onready var FadeToBlack: ColorRect = $Head/BobbingNode/PlayerCamera/CutsceneEffects/FadeToBlack
+@onready var Monologue: Control = $Head/BobbingNode/PlayerCamera/HUD/Monologue
 #
 @onready var Firearms: Marker3D = $Head/BobbingNode/Firearms
 #@onready var Firearms: Marker3D = $Head/Firearms

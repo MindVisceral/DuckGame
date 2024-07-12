@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://lhlklylca50m"]
+[gd_scene load_steps=24 format=3 uid="uid://lhlklylca50m"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player.gd" id="1_kmike"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player_States/State_Manager.gd" id="2_c5aqi"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/CutsceneEffectManager.gd" id="13_trho6"]
 [ext_resource type="Shader" path="res://Scenes_Scripts/Shaders/GodotRetro/Screen Shaders/Aditional Shaders/Dithering.gdshader" id="14_ekeqm"]
 [ext_resource type="Shader" path="res://Scenes_Scripts/Shaders/Grain.gdshader" id="15_pu8nk"]
+[ext_resource type="PackedScene" uid="uid://dv5syngbq0ouk" path="res://Scenes_Scripts/Entities/Player/MonologueUI.tscn" id="16_468sw"]
 
 [sub_resource type="CapsuleShape3D" id="15"]
 radius = 0.15
@@ -48,6 +49,7 @@ radius = 0.15
 collision_mask = 198
 input_ray_pickable = false
 script = ExtResource("1_kmike")
+MOUSE_SENSITIVITY = 0.4
 gravity_multiplier = 0.05
 
 [node name="Scripts" type="Node" parent="."]
@@ -232,10 +234,6 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -246,6 +244,9 @@ mouse_filter = 2
 
 [node name="CrosshairSprite" type="Sprite2D" parent="Head/BobbingNode/PlayerCamera/HUD/Crosshair"]
 texture = ExtResource("13_20fa4")
+
+[node name="Monologue" parent="Head/BobbingNode/PlayerCamera/HUD" instance=ExtResource("16_468sw")]
+layout_mode = 1
 
 [node name="Postprocessing" type="Control" parent="Head/BobbingNode/PlayerCamera"]
 layout_mode = 3
