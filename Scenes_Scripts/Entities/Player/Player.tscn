@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://Scenes & Scripts/Entities/Player/Alterators/WeaponManager.gd" id="9_cyjjp"]
 [ext_resource type="Script" path="res://Scenes & Scripts/Entities/Player/Alterators/HeadBop.gd" id="10_6kxr3"]
 [ext_resource type="Script" path="res://Scenes & Scripts/Entities/Player/Alterators/WeaponBob.gd" id="12_4bkuj"]
-[ext_resource type="PackedScene" uid="uid://b2fet7sg7ta7s" path="res://Scenes & Scripts/Entities/Weapons/Firearms/Pistol.tscn" id="12_nnnx6"]
+[ext_resource type="PackedScene" path="res://Scenes & Scripts/Entities/Weapons/Firearms/Pistol.tscn" id="12_nnnx6"]
 [ext_resource type="Script" path="res://Scenes & Scripts/Entities/Player/Alterators/InteractionManager.gd" id="13_qk48y"]
 
 [sub_resource type="CapsuleShape3D" id="15"]
