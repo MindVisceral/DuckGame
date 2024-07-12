@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://lhlklylca50m"]
+[gd_scene load_steps=26 format=3 uid="uid://lhlklylca50m"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player.gd" id="1_kmike"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player_States/State_Manager.gd" id="2_c5aqi"]
@@ -18,6 +18,7 @@
 [ext_resource type="Shader" path="res://Scenes_Scripts/Shaders/GodotRetro/Screen Shaders/Aditional Shaders/Dithering.gdshader" id="14_ekeqm"]
 [ext_resource type="Shader" path="res://Scenes_Scripts/Shaders/Grain.gdshader" id="15_pu8nk"]
 [ext_resource type="PackedScene" uid="uid://dv5syngbq0ouk" path="res://Scenes_Scripts/Entities/Player/MonologueUI.tscn" id="16_468sw"]
+[ext_resource type="AudioStream" uid="uid://ngitqq7446yu" path="res://Scenes_Scripts/Music/cacophony.wav" id="19_0jqkr"]
 
 [sub_resource type="CapsuleShape3D" id="15"]
 radius = 0.15
@@ -42,8 +43,24 @@ shader_parameter/grain_size = 1.4
 shader_parameter/lum_amount = 0.09
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_3mfp7"]
-height = 3.0
 radius = 0.15
+
+[sub_resource type="GDScript" id="GDScript_5b072"]
+resource_name = "cacophonyPlayer"
+script/source = "extends AudioStreamPlayer
+
+var active: bool = false
+
+func _process(delta: float) -> void:
+	if Globals.cacophony_active == true and !playing:
+		play()
+
+
+func _on_finished() -> void:
+	if active == true:
+		#play()
+		pass
+"
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 collision_mask = 198
@@ -281,10 +298,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="InteractableCast" type="ShapeCast3D" parent="Head/BobbingNode"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.5)
 enabled = false
 shape = SubResource("CylinderShape3D_3mfp7")
-target_position = Vector3(0, -1.5, 0)
 max_results = 8
 collision_mask = 32
 collide_with_areas = true
@@ -298,3 +314,11 @@ visible = false
 
 [node name="Firearms" type="Marker3D" parent="Head/BobbingNode"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.315, -0.264, -0.106)
+
+[node name="cacophony_AudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_0jqkr")
+max_polyphony = 2
+bus = &"Music"
+script = SubResource("GDScript_5b072")
+
+[connection signal="finished" from="cacophony_AudioPlayer" to="cacophony_AudioPlayer" method="_on_finished"]

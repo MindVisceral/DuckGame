@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var leftAnim: AnimationPlayer = $LeftAnimationPlayer
 @onready var rightAnim: AnimationPlayer = $RightAnimationPlayer
+@onready var click_audio: AudioStreamPlayer3D = $ClickAudioPlayer
 
 @export var left_switch_object: Node3D
 @export var right_switch_object: Node3D
@@ -11,11 +12,11 @@ extends Node3D
 
 func _ready() -> void:
 	if left_switch_on == true:
-		left_switch_object_interact()
+		#left_switch_object_interact()
 		leftAnim.play("left_on")
 	
 	if right_switch_on == true:
-		right_switch_object_interact()
+		#right_switch_object_interact()
 		rightAnim.play("right_on")
 
 
@@ -28,6 +29,7 @@ func toggle_left_switch() -> void:
 		left_switch_on = true
 		leftAnim.play("left_on")
 	
+	click_audio.play()
 	left_switch_object_interact()
 #
 func toggle_right_switch() -> void:
@@ -38,6 +40,7 @@ func toggle_right_switch() -> void:
 		right_switch_on = true
 		rightAnim.play("right_on")
 	
+	click_audio.play()
 	right_switch_object_interact()
 
 

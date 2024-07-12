@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://0gxx8qg8ui1l"]
+[gd_scene load_steps=7 format=3 uid="uid://0gxx8qg8ui1l"]
 
 [ext_resource type="PackedScene" uid="uid://dtpahgxff8fyt" path="res://Blender/fire_thing.gltf" id="1_nxfup"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/Stove.gd" id="1_twam7"]
 [ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="2_fvso7"]
+[ext_resource type="AudioStream" uid="uid://bohu1lq4vlv1" path="res://Scenes_Scripts/Sounds/kwahmah_click-switch.wav" id="4_k716k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vrqg2"]
 size = Vector3(0.408325, 0.168579, 0.460205)
@@ -12,6 +13,8 @@ size = Vector3(2, 2, 2)
 
 [node name="Stove" type="StaticBody3D"]
 script = ExtResource("1_twam7")
+monologue_data = Array[String](["[center]Nothing happened.[/center]", "[center]Perhaps its power source is missing.[/center]"])
+monologue_first_line_time = 0.5
 
 [node name="fire_thing" parent="." instance=ExtResource("1_nxfup")]
 
@@ -27,6 +30,12 @@ shape = SubResource("BoxShape3D_vrqg2")
 
 [node name="CollisionShape3D" parent="Interactable/InteractableRange" index="0"]
 shape = SubResource("BoxShape3D_2h204")
+
+[node name="click_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_k716k")
+volume_db = 12.0
+max_polyphony = 8
+bus = &"Sounds"
 
 [connection signal="interact" from="Interactable" to="." method="_on_interactable_interact"]
 

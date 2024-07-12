@@ -183,4 +183,12 @@ mix_target = 2
 max_polyphony = 10
 bus = &"Sounds"
 
+[node name="lastbeepAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_l0ou5")
+volume_db = 12.0
+pitch_scale = 0.5
+mix_target = 2
+max_polyphony = 10
+bus = &"Sounds"
+
 [connection signal="timeout" from="AspectRatioContainer/MarginContainer/TextBackground_Panel/DialogTimer" to="." method="_on_dialog_timer_timeout"]

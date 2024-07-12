@@ -1,4 +1,4 @@
-[gd_scene load_steps=228 format=3 uid="uid://bc1l8essgx3qb"]
+[gd_scene load_steps=238 format=3 uid="uid://bc1l8essgx3qb"]
 
 [ext_resource type="Environment" uid="uid://c45ge3tprgx5o" path="res://Scenes_Scripts/Levels/environment_default.tres" id="1_1jw4r"]
 [ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1_skewd"]
@@ -24,13 +24,12 @@
 [ext_resource type="PackedScene" uid="uid://dsdtgd7pxkygr" path="res://Scenes_Scripts/Levels/Objects/Lift.tscn" id="16_auiut"]
 [ext_resource type="PackedScene" uid="uid://tlr6sujh62a1" path="res://Scenes_Scripts/Levels/Objects/Cheap_table.tscn" id="16_l7y1m"]
 [ext_resource type="PackedScene" uid="uid://b7kfdbpdqk3o6" path="res://Scenes_Scripts/Levels/Objects/Door.tscn" id="17_oa5uw"]
+[ext_resource type="AudioStream" uid="uid://tyvvo3g05m3b" path="res://Scenes_Scripts/Sounds/unfa_jnr-hacksaw_boom.wav" id="17_ow35o"]
 [ext_resource type="PackedScene" uid="uid://3bibeogihx0k" path="res://Scenes_Scripts/Levels/Objects/HangingLamp.tscn" id="18_nbo0e"]
 [ext_resource type="PackedScene" uid="uid://bmhltsh5yk6ib" path="res://Scenes_Scripts/Levels/Objects/KitchenSink.tscn" id="21_auyeb"]
 [ext_resource type="PackedScene" uid="uid://cqgv3mifwf8bv" path="res://Scenes_Scripts/Levels/Objects/Stool.tscn" id="21_oxs2i"]
-[ext_resource type="PackedScene" uid="uid://cutufj1luxfqd" path="res://Scenes_Scripts/Levels/Objects/TVShelf.tscn" id="21_q5swt"]
 [ext_resource type="PackedScene" uid="uid://dxjgsggwy0tir" path="res://Scenes_Scripts/Levels/Objects/TV.tscn" id="22_n1yhl"]
 [ext_resource type="PackedScene" uid="uid://dikpxxwdpl37n" path="res://Scenes_Scripts/Levels/Objects/SmallTable.tscn" id="23_hj68o"]
-[ext_resource type="PackedScene" uid="uid://x3e511wh70uk" path="res://Scenes_Scripts/Levels/Objects/BigChair.tscn" id="24_62o4k"]
 [ext_resource type="PackedScene" uid="uid://0gxx8qg8ui1l" path="res://Scenes_Scripts/Levels/Objects/Stove.tscn" id="25_nnnhv"]
 [ext_resource type="PackedScene" uid="uid://7p8wceukapmt" path="res://Scenes_Scripts/Entities/Things/SmallFan.tscn" id="27_w2tk1"]
 [ext_resource type="PackedScene" uid="uid://bc22rykkm5ipg" path="res://Scenes_Scripts/Levels/Objects/CeilingFan.tscn" id="28_yh6ym"]
@@ -42,6 +41,7 @@
 [ext_resource type="PackedScene" uid="uid://8ruudaiqveis" path="res://Scenes_Scripts/Levels/Objects/SingleSwitch.tscn" id="34_hwrgg"]
 [ext_resource type="PackedScene" uid="uid://hwftdxvnadge" path="res://Scenes_Scripts/Levels/Objects/WideRack.tscn" id="35_j2pbv"]
 [ext_resource type="PackedScene" uid="uid://8egt1w6pi4se" path="res://Scenes_Scripts/Levels/Objects/ThinRack.tscn" id="36_5xfj4"]
+[ext_resource type="PackedScene" uid="uid://dmjyqi6lctioe" path="res://Blender/eye_test.gltf" id="41_u84jh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3w8cn"]
 texture_filter = 0
@@ -769,7 +769,7 @@ var ready_now: bool = false
 
 @export var new_monologue_data: Array[String]
 
-func _physics_process(delta: float) -> void:
+func _process(delta: float) -> void:
 	if ready_now:
 		door.is_locked = false
 		door.monologue_data.clear()
@@ -778,6 +778,148 @@ func _physics_process(delta: float) -> void:
 func play_set_piece() -> void:
 	ready_now = true
 "
+
+[sub_resource type="GDScript" id="GDScript_wek6e"]
+resource_name = "DangerImminent"
+script/source = "extends Node
+
+## The parent of all the danger lights
+@export var danger_lights_owner: Node3D
+
+var ready_now: bool = false
+
+func _ready() -> void:
+	danger_lights_owner.visible = false
+
+func play_set_piece() -> void:
+	ready_now = true
+	
+	danger_lights_owner.visible = true
+"
+
+[sub_resource type="GDScript" id="GDScript_df7bp"]
+resource_name = "HallwayLights"
+script/source = "extends Node
+
+@onready var camshake_animplayer: AnimationPlayer = $CamShake_AnimationPlayer
+
+## The hallway danger spotlight
+@onready var danger_spotlight: SpotLight3D = $\"../../Objects/BigCorridor/HallwaySetpiece/DangerSpotLight\"
+## Light-blocking monster thing
+@onready var light_blocker: Node3D = $\"../../Objects/BigCorridor/HallwaySetpiece/eye_test\"
+##
+@onready var audio: AudioStreamPlayer3D = $\"../../Objects/BigCorridor/HallwaySetpiece/EyeAudioPlayer\"
+
+@onready var area1: Area3D = $\"../../Objects/BigCorridor/HallwaySetpiece/WindowArea3D\"
+@onready var area2: Area3D = $\"../../Objects/BigCorridor/HallwaySetpiece/LiftArea3D\"
+
+var ready_now: bool = false
+
+
+func _ready() -> void:
+	danger_spotlight.visible = false
+
+func play_set_piece():
+	
+	if ready_now == false:
+		danger_spotlight.visible = true
+		audio.play()
+		Globals.camare_shake_enabled = true
+		
+		camshake_animplayer.play(\"shake\")
+	
+	ready_now = true
+
+func _physics_process(delta: float) -> void:
+	if ready_now == true:
+		if light_blocker.position.x <= 19.0:
+			var tween = get_tree().create_tween()
+			tween.tween_property(light_blocker, \"position\", Vector3(19.0, light_blocker.position.y, light_blocker.position.z), delta)
+
+
+func do_screen_shake() -> void:
+	Globals.camare_shake_enabled = true
+
+
+
+func _on_window_area_3d_body_entered(body: Node3D) -> void:
+	play_set_piece()
+
+func _on_lift_area_3d_body_entered(body: Node3D) -> void:
+	play_set_piece()
+"
+
+[sub_resource type="Animation" id="Animation_pbpf7"]
+resource_name = "shake"
+length = 1.6
+step = 0.05
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iblid"]
+_data = {
+"shake": SubResource("Animation_pbpf7")
+}
 
 [sub_resource type="GDScript" id="GDScript_4xx8e"]
 resource_name = "FakeLiftMovementScript"
@@ -798,6 +940,24 @@ func _physics_process(delta: float) -> void:
 func play_set_piece() -> void:
 	ready_now = true
 "
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iome6"]
+size = Vector3(3.48389, 2.42859, 4.72012)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gqthw"]
+size = Vector3(3.47949, 2.48853, 10.5975)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_72k4r"]
+size = Vector3(0.69278, 1.95049, 0.573517)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4s1ra"]
+size = Vector3(0.333107, 0.161207, 2.03492)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2o8vr"]
+size = Vector3(0.351119, 2.09169, 1.11583)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xwlom"]
+size = Vector3(1.32555, 1.95049, 0.462528)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t0dxu"]
 size = Vector3(2.94128, 2.47546, 3.15417)
@@ -1347,21 +1507,107 @@ shape = SubResource("ConvexPolygonShape3D_co1nm")
 script = SubResource("GDScript_qi0ud")
 door = NodePath("../../Objects/InsideCorridor/Door")
 
+[node name="DangerImminent" type="Node" parent="SetPieces" node_paths=PackedStringArray("danger_lights_owner")]
+script = SubResource("GDScript_wek6e")
+danger_lights_owner = NodePath("../../Objects/Danger")
+
+[node name="HallwayLights" type="Node" parent="SetPieces"]
+script = SubResource("GDScript_df7bp")
+
+[node name="CamShake_AnimationPlayer" type="AnimationPlayer" parent="SetPieces/HallwayLights"]
+libraries = {
+"": SubResource("AnimationLibrary_iblid")
+}
+
 [node name="FakeLiftMovement" type="Node" parent="SetPieces" node_paths=PackedStringArray("fake_wall")]
 script = SubResource("GDScript_4xx8e")
 fake_wall = NodePath("../../QodotMap/entity_1_func_group")
 
 [node name="Objects" type="Node3D" parent="."]
 
+[node name="Danger" type="Node3D" parent="Objects"]
+visible = false
+
+[node name="SpotLight3D1" type="SpotLight3D" parent="Objects/Danger"]
+transform = Transform3D(-4.19726e-08, 0.279242, -0.960221, 1.22061e-08, 0.960221, 0.279242, 1, -1.77636e-15, -4.37114e-08, -1.23963, 2.88715, 2.40538)
+light_energy = 5.0
+light_volumetric_fog_energy = 8.534
+light_specular = 0.0
+shadow_bias = 0.0
+spot_range = 5.2
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Objects/Danger"]
+transform = Transform3D(-4.19726e-08, 0.279242, -0.960221, 1.22061e-08, 0.960221, 0.279242, 1, -1.77636e-15, -4.37114e-08, -1.23963, 2.88715, 5.36768)
+light_energy = 5.0
+light_volumetric_fog_energy = 8.534
+light_specular = 0.0
+shadow_bias = 0.0
+spot_range = 9.51614
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Objects/Danger"]
+transform = Transform3D(-4.19726e-08, 0.279242, -0.960221, 1.22061e-08, 0.960221, 0.279242, 1, -1.77636e-15, -4.37114e-08, -1.23963, 2.88715, 9.32599)
+light_energy = 5.0
+light_volumetric_fog_energy = 8.534
+light_specular = 0.0
+shadow_bias = 0.0
+spot_range = 9.30695
+spot_angle = 57.5548
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Objects/Danger"]
+transform = Transform3D(1, 0, 0, 0, 0.960294, 0.278991, 0, -0.278991, 0.960294, 5.42357, 2.88715, 13.4619)
+light_energy = 5.0
+light_volumetric_fog_energy = 8.534
+light_specular = 0.0
+shadow_bias = 0.0
+spot_range = 7.12494
+
 [node name="PhantomLights" type="Node3D" parent="Objects"]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Objects/PhantomLights"]
+[node name="OmniLight3D1" type="OmniLight3D" parent="Objects/PhantomLights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.157, 2.38792, 5.37838)
 shadow_enabled = true
 omni_range = 2.562
 omni_attenuation = 0.25
 
 [node name="BigCorridor" type="Node3D" parent="Objects"]
+
+[node name="HallwaySetpiece" type="Node3D" parent="Objects/BigCorridor"]
+
+[node name="WindowArea3D" type="Area3D" parent="Objects/BigCorridor/HallwaySetpiece"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5072, 1.9677, 9.06135)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/BigCorridor/HallwaySetpiece/WindowArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0012207, 0.259216, 0.306412)
+shape = SubResource("BoxShape3D_iome6")
+
+[node name="LiftArea3D" type="Area3D" parent="Objects/BigCorridor/HallwaySetpiece"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4437, 2.31913, -2.80668)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/BigCorridor/HallwaySetpiece/LiftArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0600586, -0.0657959, -1.0777)
+shape = SubResource("BoxShape3D_gqthw")
+
+[node name="DangerSpotLight" type="SpotLight3D" parent="Objects/BigCorridor/HallwaySetpiece"]
+transform = Transform3D(1, 0, 0, 0, 0.960294, 0.278991, 0, -0.278991, 0.960294, 14.5981, 3.10619, 13.4619)
+light_energy = 5.0
+light_volumetric_fog_energy = 8.534
+light_specular = 0.0
+shadow_bias = 0.0
+spot_range = 7.757
+spot_angle = 46.193
+
+[node name="eye_test" parent="Objects/BigCorridor/HallwaySetpiece" instance=ExtResource("41_u84jh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7686, 3.04884, 12.798)
+
+[node name="EyeAudioPlayer" type="AudioStreamPlayer3D" parent="Objects/BigCorridor/HallwaySetpiece"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4608, 2.3613, 12.1918)
+stream = ExtResource("17_ow35o")
+volume_db = 80.0
+unit_size = 100.0
+max_db = 6.0
+pitch_scale = 0.8
+panning_strength = 0.0
+bus = &"Roar"
 
 [node name="Lift" parent="Objects/BigCorridor" instance=ExtResource("16_auiut")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.497, 1, -11.682)
@@ -1390,6 +1636,143 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4808, 3.5, -6.636)
 [node name="SmallLight7" parent="Objects/BigCorridor" instance=ExtResource("15_e2eic")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4808, 3.5, -9.636)
 
+[node name="Planks" type="Node3D" parent="Objects/BigCorridor"]
+
+[node name="WindowPlanks" type="Node3D" parent="Objects/BigCorridor/Planks"]
+
+[node name="Inside" type="Node3D" parent="Objects/BigCorridor/Planks/WindowPlanks"]
+
+[node name="Vertical" type="Node3D" parent="Objects/BigCorridor/Planks/WindowPlanks/Inside"]
+
+[node name="Plank1" parent="Objects/BigCorridor/Planks/WindowPlanks/Inside/Vertical" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-3.98538, 3.49052e-07, -0.341667, 0.341667, -1.49348e-08, -3.98538, -3.49052e-07, -4, -1.49348e-08, 13.9034, 2.30225, 11.6606)
+
+[node name="Plank2" parent="Objects/BigCorridor/Planks/WindowPlanks/Inside/Vertical" instance=ExtResource("29_jyjop")]
+transform = Transform3D(3.99771, -5.90378e-09, -0.135063, -0.135063, -1.74746e-07, -3.99771, 0, 4, -1.74845e-07, 14.2099, 2.26465, 11.6606)
+
+[node name="Plank3" parent="Objects/BigCorridor/Planks/WindowPlanks/Inside/Vertical" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-3.9988, 3.49639e-07, -0.0977287, 0.0977287, -4.27186e-09, -3.9988, -3.49639e-07, -4, -4.27186e-09, 14.5263, 2.26465, 11.6606)
+
+[node name="Plank4" parent="Objects/BigCorridor/Planks/WindowPlanks/Inside/Vertical" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-3.99961, -3.49674e-07, 0.0558484, -0.0558484, -2.44122e-09, -3.99961, 3.49674e-07, -4, -2.44121e-09, 14.8297, 2.26465, 11.6606)
+
+[node name="Plank5" parent="Objects/BigCorridor/Planks/WindowPlanks/Inside/Vertical" instance=ExtResource("29_jyjop")]
+transform = Transform3D(3.99964, 2.33138e-09, 0.0533356, 0.0533356, -1.7483e-07, -3.99964, 1.93454e-16, 4, -1.74845e-07, 15.1181, 2.26465, 11.6606)
+
+[node name="Horizontal" type="Node3D" parent="Objects/BigCorridor/Planks/WindowPlanks/Inside"]
+
+[node name="Plank1" parent="Objects/BigCorridor/Planks/WindowPlanks/Inside/Horizontal" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-0.355785, 1.74153e-07, 3.98414, 3.98414, 1.55519e-08, 0.355785, -6.66056e-15, 4, -1.74845e-07, 14.3492, 2.82272, 11.6095)
+
+[node name="Plank2" parent="Objects/BigCorridor/Planks/WindowPlanks/Inside/Horizontal" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-0.246702, 1.84723e-07, -3.99238, 3.99238, -1.56734e-07, -0.246702, -1.67828e-07, -4, -1.74704e-07, 14.5087, 2.51876, 11.6095)
+
+[node name="Plank3" parent="Objects/BigCorridor/Planks/WindowPlanks/Inside/Horizontal" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-0.0497755, 1.74832e-07, 3.99969, 3.99969, 2.17578e-09, 0.0497755, -6.66056e-15, 4, -1.74845e-07, 14.4004, 2.21746, 11.6095)
+
+[node name="Plank4" parent="Objects/BigCorridor/Planks/WindowPlanks/Inside/Horizontal" instance=ExtResource("29_jyjop")]
+transform = Transform3D(0.0800702, 1.74811e-07, 3.99919, 3.99919, -3.49996e-09, -0.0800702, -6.48372e-15, 4, -1.74845e-07, 14.5074, 1.91212, 11.6095)
+
+[node name="Plank5" parent="Objects/BigCorridor/Planks/WindowPlanks/Inside/Horizontal" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-0.127806, 1.8e-07, -3.99795, 3.99795, -1.62465e-07, -0.127806, -1.68133e-07, -4, -1.74716e-07, 14.5074, 1.51722, 11.6095)
+
+[node name="Outside" type="Node3D" parent="Objects/BigCorridor/Planks/WindowPlanks"]
+
+[node name="Plank1" parent="Objects/BigCorridor/Planks/WindowPlanks/Outside" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-3.99174, 3.47373e-07, 0.256805, -0.256805, 3.73136e-08, -3.99174, -3.49052e-07, -4, -1.49348e-08, 13.979, 2.30225, 12.0302)
+
+[node name="Plank2" parent="Objects/BigCorridor/Planks/WindowPlanks/Outside" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-3.99996, 3.49111e-07, -0.0166855, 0.0166855, 1.34786e-08, -3.99996, -3.49052e-07, -4, -1.49348e-08, 14.3424, 2.30225, 12.0302)
+
+[node name="Plank3" parent="Objects/BigCorridor/Planks/WindowPlanks/Outside" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-3.99859, 3.49325e-07, -0.106034, 0.106034, 5.67668e-09, -3.99859, -3.49052e-07, -4, -1.49348e-08, 14.6755, 2.30225, 12.0302)
+
+[node name="Plank4" parent="Objects/BigCorridor/Planks/WindowPlanks/Outside" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-3.99475, 3.4783e-07, 0.204812, -0.204812, 3.27877e-08, -3.99475, -3.49052e-07, -4, -1.49348e-08, 15.057, 2.30225, 12.0302)
+
+[node name="Plank5" parent="Objects/BigCorridor/Planks/WindowPlanks/Outside" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-0.252277, 7.10944e-09, 3.99203, -3.99203, 3.49299e-07, -0.252277, -3.49052e-07, -4, -1.49348e-08, 14.4625, 3.02611, 12.0874)
+
+[node name="Plank6" parent="Objects/BigCorridor/Planks/WindowPlanks/Outside" instance=ExtResource("29_jyjop")]
+transform = Transform3D(0.200767, -3.24355e-08, 3.99495, -3.99495, 3.47863e-07, 0.200767, -3.49052e-07, -4, -1.49348e-08, 14.4625, 2.64027, 12.0874)
+
+[node name="Plank7" parent="Objects/BigCorridor/Planks/WindowPlanks/Outside" instance=ExtResource("29_jyjop")]
+transform = Transform3D(0.0405602, -1.84734e-08, 3.99979, -3.99979, 3.48883e-07, 0.0405602, -3.49052e-07, -4, -1.49348e-08, 14.4625, 2.29579, 12.0874)
+
+[node name="Plank8" parent="Objects/BigCorridor/Planks/WindowPlanks/Outside" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-0.27234, 8.86511e-09, 3.99071, -3.99071, 3.49259e-07, -0.27234, -3.49052e-07, -4, -1.49348e-08, 14.4625, 1.94004, 12.0874)
+
+[node name="Plank9" parent="Objects/BigCorridor/Planks/WindowPlanks/Outside" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-0.208856, 3.31103e-09, 3.99454, -3.99454, 3.49356e-07, -0.208856, -3.49052e-07, -4, -1.49348e-08, 14.4625, 1.60215, 12.0874)
+
+[node name="FloorPlanks" type="Node3D" parent="Objects/BigCorridor/Planks"]
+
+[node name="Plank1" parent="Objects/BigCorridor/Planks/FloorPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(3.99918, 0, 0.0805588, 0, 4, 0, -0.0805588, 0, 3.99918, 12.9362, 1.02299, 7.04271)
+
+[node name="Plank2" parent="Objects/BigCorridor/Planks/FloorPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(3.99985, 0, 0.0338589, 0, 4, 0, -0.0338589, 0, 3.99985, 12.9207, 1.08064, 6.99772)
+
+[node name="Plank3" parent="Objects/BigCorridor/Planks/FloorPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(3.99513, 0, 0.197142, 0, 4, 0, -0.197142, 0, 3.99513, 12.9861, 1.13891, 7.09115)
+
+[node name="Plank4" parent="Objects/BigCorridor/Planks/FloorPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(5.13244e-07, 3.87084, -1.00828, 8.81463e-08, 1.00828, 3.87083, 3.99999, -5.18891e-07, 4.40732e-08, 13.028, 1.97155, 6.3957)
+
+[node name="Plank5" parent="Objects/BigCorridor/Planks/FloorPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-3.43199e-07, 3.85209, 1.0777, -5.01041e-08, 1.0777, -3.85208, -3.99999, -3.44008e-07, -4.42149e-08, 13.1024, 1.96632, 6.46176)
+
+[node name="Plank6" parent="Objects/BigCorridor/Planks/FloorPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-1.68757e-07, 3.86072, 1.04633, -4.57365e-08, 1.04633, -3.86072, -3.99999, -1.74846e-07, 2.12432e-15, 13.0204, 1.96789, 6.77068)
+
+[node name="Plank7" parent="Objects/BigCorridor/Planks/FloorPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-1.60096e-07, -3.83129, 1.14944, -1.00487e-07, -1.14944, -3.83128, 3.99999, -1.8222e-07, -5.02436e-08, 13.1152, 1.9603, 6.72653)
+
+[node name="FloorPlanksBlocker" type="StaticBody3D" parent="Objects/BigCorridor/Planks/FloorPlanks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7045, 2, 6.66891)
+collision_layer = 2
+collision_mask = 197
+
+[node name="UprightCollider" type="CollisionShape3D" parent="Objects/BigCorridor/Planks/FloorPlanks/FloorPlanksBlocker"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.367599, -0.0140419, -0.08992)
+shape = SubResource("BoxShape3D_72k4r")
+
+[node name="FloorCollider" type="CollisionShape3D" parent="Objects/BigCorridor/Planks/FloorPlanks/FloorPlanksBlocker"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.200558, -0.908685, 0.396782)
+shape = SubResource("BoxShape3D_4s1ra")
+
+[node name="FakeDoorPlanks" type="Node3D" parent="Objects/BigCorridor/Planks"]
+
+[node name="Plank1" parent="Objects/BigCorridor/Planks/FakeDoorPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(1.3842e-07, 4, -3.47788e-07, 3.97824, -1.73894e-07, -0.416655, -0.416655, -3.31479e-07, -3.97823, 16.2261, 2.8275, 5.3558)
+
+[node name="Plank2" parent="Objects/BigCorridor/Planks/FakeDoorPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(1.7017e-07, 4, -3.49659e-07, 3.99964, -1.7483e-07, -0.0534752, -0.0534752, -3.47354e-07, -3.99964, 16.1985, 2.48169, 5.58548)
+
+[node name="Plank3" parent="Objects/BigCorridor/Planks/FakeDoorPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(1.89769e-07, 4, -3.49372e-07, 3.99635, -1.74686e-07, 0.170711, 0.170711, -3.57153e-07, -3.99635, 16.2181, 2.11019, 5.42241)
+
+[node name="Plank4" parent="Objects/BigCorridor/Planks/FakeDoorPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(1.72233e-07, 4, -3.49681e-07, 3.99988, -1.74841e-07, -0.0298797, -0.0298797, -3.48385e-07, -3.99988, 16.235, 1.74843, 5.28136)
+
+[node name="Plank5" parent="Objects/BigCorridor/Planks/FakeDoorPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(2.0421e-07, 4, -3.48456e-07, 3.98587, -1.74228e-07, 0.335894, 0.335894, -3.64374e-07, -3.98587, 16.2261, 1.3626, 5.3558)
+
+[node name="Plank6" parent="Objects/BigCorridor/Planks/FakeDoorPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(1.95198e-06, -4, -4.62186e-08, -0.528679, -2.1218e-07, -3.9649, 3.9649, 1.94096e-06, -0.528679, 16.196, 2.0815, 5.14707)
+
+[node name="Plank7" parent="Objects/BigCorridor/Planks/FakeDoorPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(7.20015e-06, -4, -8.35381e-09, -0.0955564, -1.63654e-07, -3.99885, 3.99885, 7.1983e-06, -0.0955564, 16.1482, 2.02052, 5.545)
+
+[node name="FakeDoorBlocker" type="StaticBody3D" parent="Objects/BigCorridor/Planks/FakeDoorPlanks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2733, 2, 5.39036)
+collision_layer = 2
+collision_mask = 197
+
+[node name="Collider" type="CollisionShape3D" parent="Objects/BigCorridor/Planks/FakeDoorPlanks/FakeDoorBlocker"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0585041, 0.0582361, 0.0087328)
+shape = SubResource("BoxShape3D_2o8vr")
+
 [node name="InsideCorridor" type="Node3D" parent="Objects"]
 
 [node name="Door" parent="Objects/InsideCorridor" node_paths=PackedStringArray("setpiece_script") instance=ExtResource("17_oa5uw")]
@@ -1406,16 +1789,53 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.70075, 3.5, 5.335)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2239, 3.5, 5.335)
 
 [node name="DoubleSwitch" parent="Objects/InsideCorridor" node_paths=PackedStringArray("left_switch_object", "right_switch_object") instance=ExtResource("30_vwp30")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8239, 2.3, 4.50553)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75907, 2.3, 4.50553)
 left_switch_object = NodePath("../CheapLight1")
 right_switch_object = NodePath("../CheapLight2")
-left_switch_on = true
 right_switch_on = true
 
 [node name="SingleSwitch" parent="Objects/InsideCorridor" node_paths=PackedStringArray("switch_object") instance=ExtResource("34_hwrgg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0473, 2.3, 4.50553)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6362, 2.3, 4.50553)
 switch_object = NodePath("../CheapLight3")
 switch_on = true
+
+[node name="DoorwayPlanks" type="Node3D" parent="Objects/InsideCorridor"]
+
+[node name="Plank1" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(3.99299, 1.03451e-08, 0.236668, 0.236668, -1.74539e-07, -3.99299, 0, 4, -1.74845e-07, 9.06035, 2.03277, 4.61859)
+
+[node name="Plank2" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(3.99999, 0, 0, 0, -1.74846e-07, -3.99999, 0, 4, -1.74845e-07, 9.41687, 2.01454, 4.61859)
+
+[node name="Plank3" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(3.99943, 2.92943e-09, 0.0670174, 0.0670174, -1.74821e-07, -3.99943, 0, 4, -1.74845e-07, 9.73223, 2.0599, 4.61859)
+
+[node name="Plank4" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(3.99804, 5.46153e-09, 0.124945, 0.124945, -1.7476e-07, -3.99804, 0, 4, -1.74845e-07, 10.038, 1.99158, 4.61859)
+
+[node name="Plank5" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(0.169595, 1.74688e-07, 3.9964, 3.9964, -7.41323e-09, -0.169595, 0, 4, -1.74845e-07, 9.52377, 2.07803, 4.52888)
+
+[node name="Plank6" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-0.476735, 1.73599e-07, 3.97148, 3.97148, 2.08388e-08, 0.476735, 6.22097e-16, 4, -1.74845e-07, 9.52377, 2.49671, 4.52888)
+
+[node name="Plank7" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(-0.220777, 1.74579e-07, 3.9939, 3.9939, 9.65046e-09, 0.220777, -1.1416e-15, 4, -1.74845e-07, 9.52377, 2.82783, 4.52888)
+
+[node name="Plank8" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(0.281254, 1.74413e-07, 3.99009, 3.99009, -1.2294e-08, -0.281254, -1.1416e-15, 4, -1.74845e-07, 9.52377, 1.75681, 4.52888)
+
+[node name="Plank9" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
+transform = Transform3D(0.0743463, 1.74815e-07, 3.9993, 3.9993, -3.24979e-09, -0.0743463, -2.55616e-16, 4, -1.74845e-07, 9.52377, 1.42782, 4.52888)
+
+[node name="BathroomBlocker" type="StaticBody3D" parent="Objects/InsideCorridor/DoorwayPlanks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.524, 2, 4.529)
+collision_layer = 2
+collision_mask = 197
+
+[node name="Collider" type="CollisionShape3D" parent="Objects/InsideCorridor/DoorwayPlanks/BathroomBlocker"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0268993, 0.0336456, -0.084116)
+shape = SubResource("BoxShape3D_xwlom")
 
 [node name="Kitchen" type="Node3D" parent="Objects"]
 
@@ -1430,18 +1850,6 @@ bones/4/rotation = Quaternion(-9.9748e-08, 9.9748e-08, -0.707107, 0.707107)
 
 [node name="Door_fridge" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="0"]
 transform = Transform3D(1, 2.84217e-14, 1.42157e-15, -2.84217e-14, 1, 1.42109e-14, -1.42157e-15, -1.42109e-14, 1, 0.45144, 0.669023, 0.454514)
-
-[node name="Door_freezer" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="1"]
-transform = Transform3D(-0.707104, 0, 0.70711, 0, 1, 0, -0.70711, 0, -0.707104, 0.451531, 1.63774, 0.446294)
-
-[node name="Controller" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.364519, 1.20031, 0.139305)
-
-[node name="Shelf_bottom" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.579313, -0.0510678)
-
-[node name="Shelf_top" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.995155, -0.0510678)
 
 [node name="CollisionShape3D" parent="Objects/Kitchen/Fridge/Interactable_fridge/InteractableRange" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85199, 1.25519, 1.07709)
@@ -1464,33 +1872,36 @@ transform = Transform3D(-0.232003, 0, -0.972715, 0, 1, 0, 0.972715, 0, -0.232003
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.0884, 1, 8.59519)
 
 [node name="HandgingLamp" parent="Objects/Kitchen" instance=ExtResource("18_nbo0e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47141, 3.9688, 9.09929)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98616, 3.9688, 9.09929)
 
 [node name="SingleSwitch" parent="Objects/Kitchen" node_paths=PackedStringArray("switch_object") instance=ExtResource("34_hwrgg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.48384, 2.3, 6.50008)
 switch_object = NodePath("../HandgingLamp")
-switch_on = true
+
+[node name="SmallFan" parent="Objects/Kitchen" instance=ExtResource("27_w2tk1")]
+transform = Transform3D(-0.624234, 0, -0.781237, 0, 1, 0, 0.781237, 0, -0.624234, 6.7927, 1.71416, 11.1848)
+
+[node name="Radio" parent="Objects/Kitchen" node_paths=PackedStringArray("setpiece_script", "danger_setpiece_script") instance=ExtResource("15_2pxgy")]
+transform = Transform3D(-0.98672, 0, 0.162431, 0, 1, 0, -0.162431, 0, -0.98672, 8.88979, 2.17814, 10.6709)
+setpiece_script = NodePath("../../../SetPieces/DoorLocked")
+danger_setpiece_script = NodePath("../../../SetPieces/DangerImminent")
 
 [node name="Main Room" type="Node3D" parent="Objects"]
 
-[node name="TVShelf" parent="Objects/Main Room" instance=ExtResource("21_q5swt")]
-transform = Transform3D(0.993343, 0, -0.115197, 0, 1, 0, 0.115197, 0, 0.993343, 1.99418, 1, 10.9409)
-
 [node name="TV" parent="Objects/Main Room" instance=ExtResource("22_n1yhl")]
-transform = Transform3D(-0.929776, 0, 0.368125, 0, 1, 0, -0.368125, 0, -0.929777, 1.26788, 1.68115, 10.6023)
+transform = Transform3D(-0.893536, 0, 0.448992, 0, 1, 0, -0.448992, 0, -0.893536, 1.2724, 1.54732, 10.6074)
+
+[node name="SpotLight3D" parent="Objects/Main Room/TV" index="4"]
+light_energy = 1.1
+light_volumetric_fog_energy = 9.0
+light_specular = 1.3
+shadow_bias = 0.02
+
+[node name="NoiseSprite" parent="Objects/Main Room/TV" index="5"]
+transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 4.76837e-07, 0.659703, 0.326403)
 
 [node name="SmallTable" parent="Objects/Main Room" instance=ExtResource("23_hj68o")]
-transform = Transform3D(0.390313, 0, -0.920682, 0, 1, 0, 0.920682, 0, 0.390313, 1.25075, 1, 8.7875)
-
-[node name="BigChair" parent="Objects/Main Room" instance=ExtResource("24_62o4k")]
-transform = Transform3D(0.9412, 0, -0.337851, 0, 1, 0, 0.337851, 0, 0.9412, 2.55342, 1, 8.07132)
-
-[node name="Radio" parent="Objects/Main Room" node_paths=PackedStringArray("setpiece_script") instance=ExtResource("15_2pxgy")]
-transform = Transform3D(0.1519, 0, 0.988396, 0, 1, 0, -0.988396, 0, 0.1519, 1.32116, 1.46746, 8.57723)
-setpiece_script = NodePath("../../../SetPieces/DoorLocked")
-
-[node name="SmallFan" parent="Objects/Main Room" instance=ExtResource("27_w2tk1")]
-transform = Transform3D(-0.566018, 0, 0.824393, 0, 1, 0, -0.824393, 0, -0.566018, 1.16929, 1.46746, 8.97761)
+transform = Transform3D(-0.518475, 0, -0.855093, 0, 1, 0, 0.855093, 0, -0.518475, 1.15254, 1, 10.7042)
 
 [node name="Bedroom" type="Node3D" parent="Objects"]
 
@@ -1507,6 +1918,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71045, 3.49393, 1.90082)
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.137, 2.3, 4.246)
 left_switch_object = NodePath("../CheapLight")
 right_switch_object = NodePath("../CeilingFan")
+right_switch_on = true
 
 [node name="WindowPlanks" type="Node3D" parent="Objects"]
 
@@ -1810,7 +2222,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.99, 3.5, 2.20988)
 [node name="SingleSwitch" parent="Objects/Toilet" node_paths=PackedStringArray("switch_object") instance=ExtResource("34_hwrgg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2062, 2.3, 4.50112)
 switch_object = NodePath("../CheapLight")
-switch_on = true
 
 [node name="Storage" type="Node3D" parent="Objects"]
 
@@ -1841,10 +2252,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.67809, 1.47042, 2.82313)
 speed = 4.0
 crouch_height = 0.8
 jump_height = 6.0
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="HeadBob" parent="Player/Scripts" index="3"]
 rotation_speed = 1.0
 angle_limit_for_tilt = 0.01
+
+[connection signal="body_entered" from="Objects/BigCorridor/HallwaySetpiece/WindowArea3D" to="SetPieces/HallwayLights" method="_on_window_area_3d_body_entered"]
+[connection signal="body_entered" from="Objects/BigCorridor/HallwaySetpiece/LiftArea3D" to="SetPieces/HallwayLights" method="_on_lift_area_3d_body_entered"]
 
 [editable path="Objects/Kitchen/Fridge"]
 [editable path="Objects/Kitchen/Fridge/FINAL_fridge_tall"]
@@ -1852,4 +2268,6 @@ angle_limit_for_tilt = 0.01
 [editable path="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_fridge"]
 [editable path="Objects/Kitchen/Fridge/Interactable_fridge"]
 [editable path="Objects/Kitchen/Fridge/Interactable_freezer"]
+[editable path="Objects/Main Room/TV"]
+[editable path="Objects/Main Room/TV/Interactable"]
 [editable path="Player"]

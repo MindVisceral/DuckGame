@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxjgsggwy0tir"]
+[gd_scene load_steps=10 format=3 uid="uid://dxjgsggwy0tir"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/TV.gd" id="1_85e2u"]
 [ext_resource type="PackedScene" uid="uid://cn0moilkovbc3" path="res://Blender/TV.gltf" id="1_ibuwa"]
@@ -11,16 +11,27 @@ size = Vector3(1.08362, 1.08362, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_o050e"]
 size = Vector3(3, 3, 3)
 
+[sub_resource type="Gradient" id="Gradient_5i4bk"]
+colors = PackedColorArray(0.462291, 0.462291, 0.462291, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_e2nep"]
+noise_type = 5
+frequency = 1.0
+fractal_type = 0
+domain_warp_type = 1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lq2ii"]
+color_ramp = SubResource("Gradient_5i4bk")
+noise = SubResource("FastNoiseLite_e2nep")
+
 [node name="TV" type="RigidBody3D"]
 collision_layer = 128
 collision_mask = 71
 script = ExtResource("1_85e2u")
 monologue_data = Array[String](["[center]No one is broadcasting anything [i]this[/i] far out from the center.[/center]", "[center]...but all the infrastructure should still be [b]intact[/b].[/center]", "[center]Maybe there [i]is[/i] [b]no[/b] one left to broadcast anything in this layer anymore.[/center]"])
 monologue_first_line_time = 1.0
-monologue_line_time = Array[float]([2.0, 0.8, 2.0])
 
 [node name="TV" parent="." instance=ExtResource("1_ibuwa")]
-transform = Transform3D(0.25, 0, 0, 0, 0.249964, 0.00421477, 0, -0.00421477, 0.249964, 0, 0.491567, 0)
 
 [node name="Collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.544729, -0.200195)
@@ -38,6 +49,19 @@ shape = SubResource("BoxShape3D_o050e")
 
 [node name="StaticAudioPlayer" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_1kp6h")
+attenuation_model = 2
+max_distance = 15.0
+bus = &"Sounds"
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.627879, 0.312964)
+shadow_enabled = true
+spot_range = 9.0
+spot_angle = 85.0
+
+[node name="NoiseSprite" type="Sprite3D" parent="."]
+transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0.659703, 0.326403)
+texture = SubResource("NoiseTexture2D_lq2ii")
 
 [connection signal="interact" from="Interactable" to="." method="_on_interactable_interact"]
 [connection signal="finished" from="StaticAudioPlayer" to="." method="_on_static_audio_player_finished"]

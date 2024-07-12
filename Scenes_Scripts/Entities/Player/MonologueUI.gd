@@ -6,6 +6,7 @@ extends Control
 @onready var timer: Timer = $AspectRatioContainer/MarginContainer/TextBackground_Panel/DialogTimer
 @onready var beep_audioplayer: AudioStreamPlayer = $BeepAudioPlayer
 @onready var newlinebeep_audioplayer: AudioStreamPlayer = $linebeepAudioPlayer
+@onready var lastlinebeep_audioplayer: AudioStreamPlayer = $lastbeepAudioPlayer
 
 ## Holds all the lines in the monologue that comes from interacting with this specific
 ## Interactable. These lines are set in the Interactable itself.
@@ -68,8 +69,11 @@ func nextPhrase() -> void:
 	## Othwerwise, we set the next monologue line in the Array
 	else:
 		textbox.text = monologue[current_monologue_line]
+		newlinebeep_audioplayer.play()
 	
-	newlinebeep_audioplayer.play()
+	if current_monologue_line == monologue.size():
+		lastlinebeep_audioplayer.play()
+	
 	current_monologue_line += 1
 
 ## We reset everything

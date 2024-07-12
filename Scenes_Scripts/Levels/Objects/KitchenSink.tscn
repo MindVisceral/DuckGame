@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmhltsh5yk6ib"]
+[gd_scene load_steps=9 format=3 uid="uid://bmhltsh5yk6ib"]
 
+[ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/KitchenSink.gd" id="1_dd2x4"]
 [ext_resource type="PackedScene" uid="uid://bb58x7d4pboho" path="res://Blender/kitchen_sink.gltf" id="1_dl2eh"]
+[ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="2_swn0s"]
+[ext_resource type="AudioStream" uid="uid://du5f6cx1mm8t4" path="res://Scenes_Scripts/Sounds/d0tdash_joedesh_squeak-final.wav" id="4_s0m6x"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1q6ly"]
 size = Vector3(0.2052, 0.725464, 0.210693)
@@ -8,7 +11,18 @@ size = Vector3(0.2052, 0.725464, 0.210693)
 [sub_resource type="BoxShape3D" id="BoxShape3D_nbvtg"]
 size = Vector3(0.519775, 0.22229, 0.402283)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_j48c1"]
+size = Vector3(0.589355, 1.20557, 0.498291)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lm1t0"]
+size = Vector3(3, 3, 3)
+
 [node name="KitchenSink" type="StaticBody3D"]
+collision_layer = 64
+collision_mask = 133
+script = ExtResource("1_dd2x4")
+monologue_data = Array[String](["[center]Nothing happened.[/center]", "[center]This object's shape suggests that it is a reservoir,[/center][center]but I have no knowledge of what substance it contains.[/center]"])
+monologue_first_line_time = 1.4
 
 [node name="kitchen_sink" parent="." instance=ExtResource("1_dl2eh")]
 
@@ -19,3 +33,24 @@ shape = SubResource("BoxShape3D_1q6ly")
 [node name="ColliderSink" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00158691, 0.835144, -0.0528259)
 shape = SubResource("BoxShape3D_nbvtg")
+
+[node name="Interactable" parent="." instance=ExtResource("2_swn0s")]
+
+[node name="CollisionShape3D" parent="Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0109863, 0.588623, -0.0679932)
+shape = SubResource("BoxShape3D_j48c1")
+
+[node name="CollisionShape3D" parent="Interactable/InteractableRange" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.63377, 0)
+shape = SubResource("BoxShape3D_lm1t0")
+
+[node name="grind_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_s0m6x")
+volume_db = -8.0
+pitch_scale = 1.91
+max_polyphony = 8
+bus = &"Sounds"
+
+[connection signal="interact" from="Interactable" to="." method="_on_interactable_interact"]
+
+[editable path="Interactable"]

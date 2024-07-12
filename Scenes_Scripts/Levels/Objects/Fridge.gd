@@ -1,6 +1,18 @@
 extends StaticBody3D
 
 
+
+
+## Contains Strings, which are taken by the MonologueUI Node, which displays them in the
+## Player's monologue box
+@export var monologue_data: Array[String]
+## How long before the first line gets shown on screen
+@export var monologue_first_line_time: float = 0.0
+
+
+
+
+
 @export var fridge_open: bool = false
 @export var freezer_open: bool = false
 
@@ -18,22 +30,24 @@ func _ready() -> void:
 
 ##
 func toggle_fridge() -> void:
-	if fridge_open == true:
-		fridge_open = false
-		FridgeanimPlay.play("close_fridge")
-	else:
-		fridge_light.visible = true
-		fridge_open = true
-		FridgeanimPlay.play("open_fridge")
+	if !FridgeanimPlay.is_playing():
+		if fridge_open == true:
+			fridge_open = false
+			FridgeanimPlay.play("close_fridge")
+		else:
+			fridge_light.visible = true
+			fridge_open = true
+			FridgeanimPlay.play("open_fridge")
 
 func toggle_freezer() -> void:
-	if freezer_open == true:
-		freezer_open = false
-		FreezeranimPlay.play("close_freezer")
-	else:
-		freezer_light.visible = true
-		freezer_open = true
-		FreezeranimPlay.play("open_freezer")
+	if !FreezeranimPlay.is_playing():
+		if freezer_open == true:
+			freezer_open = false
+			FreezeranimPlay.play("close_freezer")
+		else:
+			freezer_light.visible = true
+			freezer_open = true
+			FreezeranimPlay.play("open_freezer")
 
 
 

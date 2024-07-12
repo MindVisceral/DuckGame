@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccsu3qdjk12ns"]
+[gd_scene load_steps=8 format=3 uid="uid://ccsu3qdjk12ns"]
 
 [ext_resource type="PackedScene" uid="uid://bk82hqwy0uldi" path="res://Blender/bed.gltf" id="1_bvjag"]
+[ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/Bed.gd" id="1_ctwb7"]
+[ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="2_ndu7t"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r3u8x"]
 size = Vector3(1.71149, 0.444275, 2.92569)
@@ -8,9 +10,18 @@ size = Vector3(1.71149, 0.444275, 2.92569)
 [sub_resource type="BoxShape3D" id="BoxShape3D_fl57y"]
 size = Vector3(1.70888, 0.455383, 0.083252)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_m5nw5"]
+size = Vector3(1.7113, 0.911682, 2.92688)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jjtoy"]
+size = Vector3(5.56726, 3, 5.81433)
+
 [node name="Bed" type="StaticBody3D"]
 collision_layer = 64
 collision_mask = 133
+script = ExtResource("1_ctwb7")
+monologue_data = Array[String](["[center]I should take a look around before I rest again.[/center]"])
+monologue_first_line_time = 0.5
 
 [node name="bed" parent="." instance=ExtResource("1_bvjag")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.176185, 0)
@@ -26,3 +37,15 @@ shape = SubResource("BoxShape3D_fl57y")
 [node name="FeetCollider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000822067, 0.685929, -1.90268)
 shape = SubResource("BoxShape3D_fl57y")
+
+[node name="Interactable" parent="." instance=ExtResource("2_ndu7t")]
+
+[node name="CollisionShape3D" parent="Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000793457, 0.453461, -0.48822)
+shape = SubResource("BoxShape3D_m5nw5")
+
+[node name="CollisionShape3D" parent="Interactable/InteractableRange" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.297302, 1.19586, -0.399238)
+shape = SubResource("BoxShape3D_jjtoy")
+
+[editable path="Interactable"]

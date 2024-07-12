@@ -3,6 +3,10 @@
 		"generator":"Khronos glTF Blender I/O v4.0.44",
 		"version":"2.0"
 	},
+	"extensionsUsed":[
+		"KHR_materials_specular",
+		"KHR_materials_ior"
+	],
 	"scene":0,
 	"scenes":[
 		{
@@ -15,27 +19,26 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"table_small",
-			"translation":[
-				0,
-				1.0106991529464722,
-				0
-			]
+			"name":"table_small"
 		}
 	],
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Brown.004",
+			"extensions":{
+				"KHR_materials_specular":{
+					"specularFactor":0.04724409431219101
+				},
+				"KHR_materials_ior":{
+					"ior":1.4500000476837158
+				}
+			},
+			"name":"texture_smalltable",
 			"pbrMetallicRoughness":{
-				"baseColorFactor":[
-					0.3505583703517914,
-					0.12707479298114777,
-					0.04741016775369644,
-					1
-				],
-				"metallicFactor":0,
-				"roughnessFactor":0.5
+				"baseColorTexture":{
+					"index":0
+				},
+				"metallicFactor":0
 			}
 		}
 	],
@@ -55,20 +58,33 @@
 			]
 		}
 	],
+	"textures":[
+		{
+			"sampler":0,
+			"source":0
+		}
+	],
+	"images":[
+		{
+			"mimeType":"image/png",
+			"name":"texture_smalltable",
+			"uri":"texture_smalltable.png"
+		}
+	],
 	"accessors":[
 		{
 			"bufferView":0,
 			"componentType":5126,
 			"count":480,
 			"max":[
-				1.653928518295288,
-				0.8390817642211914,
-				1.7788676023483276
+				0.4959683418273926,
+				0.5565370321273804,
+				0.533672034740448
 			],
 			"min":[
-				-1.6449166536331177,
-				-1.0129419565200806,
-				-1.7793669700622559
+				-0.493685245513916,
+				0.0009299516677856445,
+				-0.5337983965873718
 			],
 			"type":"VEC3"
 		},
@@ -115,6 +131,12 @@
 			"byteLength":1320,
 			"byteOffset":15360,
 			"target":34963
+		}
+	],
+	"samplers":[
+		{
+			"magFilter":9728,
+			"minFilter":9984
 		}
 	],
 	"buffers":[

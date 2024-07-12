@@ -1,10 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://bc22rykkm5ipg"]
+[gd_scene load_steps=11 format=3 uid="uid://bc22rykkm5ipg"]
 
 [ext_resource type="PackedScene" uid="uid://d3yh27n7ciaf1" path="res://Blender/ceiling_fan.gltf" id="1_3u0dt"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/CeilingFan.gd" id="1_r4ij7"]
+[ext_resource type="AudioStream" uid="uid://byvgo1fl7e68s" path="res://Scenes_Scripts/Sounds/ffedsmoker_fan_loop-wind-final.wav" id="3_5g3b7"]
+[ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="3_6jajp"]
+[ext_resource type="AudioStream" uid="uid://geawk1ahxaw7" path="res://Scenes_Scripts/Sounds/ezcah_computer-fan_loop-motor-final.wav" id="4_uahxi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xh0d0"]
 size = Vector3(1.16064, 0.466064, 1.30737)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7xtcc"]
+size = Vector3(5.48291, 2.26196, 3.53076)
 
 [sub_resource type="Animation" id="Animation_krnq5"]
 length = 0.001
@@ -48,8 +54,20 @@ _data = {
 collision_layer = 64
 collision_mask = 133
 script = ExtResource("1_r4ij7")
+monologue_data = Array[String](["[center]I do not understand this object's purpose.[/center][center]Its movement does not accomplish any task that I can recognise.[/center]"])
+monologue_first_line_time = 0.5
 
 [node name="ceiling_fan" parent="." instance=ExtResource("1_3u0dt")]
+
+[node name="Interactable" parent="." instance=ExtResource("3_6jajp")]
+
+[node name="CollisionShape3D" parent="Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0376585, -0.256378, 0)
+shape = SubResource("BoxShape3D_xh0d0")
+
+[node name="CollisionShape3D" parent="Interactable/InteractableRange" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.215576, -1.08264, -0.265381)
+shape = SubResource("BoxShape3D_7xtcc")
 
 [node name="Collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0227051, -0.246704, 0.0318604)
@@ -60,4 +78,20 @@ libraries = {
 "": SubResource("AnimationLibrary_bne20")
 }
 
+[node name="1fan_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_5g3b7")
+max_distance = 6.0
+max_polyphony = 4
+bus = &"Sounds"
+
+[node name="2fan_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_uahxi")
+max_distance = 6.0
+max_polyphony = 4
+bus = &"Sounds"
+
+[connection signal="finished" from="1fan_AudioPlayer" to="." method="_on_1fan_audio_player_finished"]
+[connection signal="finished" from="2fan_AudioPlayer" to="." method="_on_2fan_audio_player_finished"]
+
 [editable path="ceiling_fan"]
+[editable path="Interactable"]

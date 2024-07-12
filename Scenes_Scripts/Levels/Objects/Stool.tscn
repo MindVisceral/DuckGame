@@ -14,6 +14,8 @@ size = Vector3(4, 2, 4)
 collision_layer = 64
 collision_mask = 133
 script = ExtResource("1_fh8vx")
+monologue_data = Array[String](["[center]This item's purpose seems to be similiar to that of the [i]bed[/i],[/center][center]providing neccessary rest to one's subsystems.[/center]", "[center]But it performs worse in every conceivable way.[/center][center]Its existence is puzzling.[/center]"])
+monologue_first_line_time = 0.5
 
 [node name="stool2" parent="." instance=ExtResource("1_msy4q")]
 

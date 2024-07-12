@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://b7kfdbpdqk3o6"]
+[gd_scene load_steps=10 format=3 uid="uid://b7kfdbpdqk3o6"]
 
 [ext_resource type="PackedScene" uid="uid://dnpca2xy4g5u4" path="res://Blender/door.gltf" id="1_ju2bi"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/Door.gd" id="1_oolfw"]
 [ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="2_avstk"]
+[ext_resource type="AudioStream" uid="uid://ddjse2wu1pht5" path="res://Scenes_Scripts/Sounds/pagancow_japanyoshithegamer-door.wav" id="4_1sl82"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h5g04"]
 size = Vector3(1.00317, 2.24445, 0.0975952)
@@ -52,7 +53,6 @@ collision_mask = 133
 script = ExtResource("1_oolfw")
 monologue_data = Array[String](["[center]This place is safe enough, I should not wander.[/center][center]At least until [i]it[/i] gets here.[/center]"])
 monologue_first_line_time = 0.4
-monologue_line_time = Array[float]([0.5])
 
 [node name="door" parent="." instance=ExtResource("1_ju2bi")]
 
@@ -79,10 +79,10 @@ libraries = {
 "": SubResource("AnimationLibrary_755vy")
 }
 
-[node name="rattleAudioPlayer" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.980508, 0.976701, 0.0173024)
-
 [node name="openAudioPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_1sl82")
+max_db = 6.0
+bus = &"Sounds"
 
 [connection signal="interact" from="door/Interactable" to="." method="_on_interactable_interact"]
 

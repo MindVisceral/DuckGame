@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var anim: AnimationPlayer = $AnimationPlayer
-
+@onready var click_audio: AudioStreamPlayer3D = $ClickAudioPlayer
 
 @export var switch_object: Node3D
 
@@ -22,6 +22,7 @@ func toggle_switch() -> void:
 		switch_on = true
 		anim.play("on")
 	
+	click_audio.play()
 	switch_object_interact()
 
 

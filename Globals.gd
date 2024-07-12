@@ -8,3 +8,5 @@ var global_gravity: float = ProjectSettings.get_setting("physics/3d/default_grav
 
 var camare_shake_enabled: bool = false
 var fade_to_black: bool = false
+
+var cacophony_active: bool = false
