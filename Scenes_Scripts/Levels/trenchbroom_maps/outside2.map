@@ -8,686 +8,686 @@
 "_tb_textures" "textures;textures/Classic_64_Asset_Pack/Bricks/Materials;textures/Classic_64_Asset_Pack/Concrete/Materials;textures/Classic_64_Asset_Pack/Doors/Materials;textures/Classic_64_Asset_Pack/Electrical/Materials;textures/Classic_64_Asset_Pack/Floor/Materials;textures/Classic_64_Asset_Pack/Food/Materials;textures/Classic_64_Asset_Pack/Industrial/Materials;textures/Classic_64_Asset_Pack/Metal/Materials;textures/Classic_64_Asset_Pack/Road/Materials;textures/Classic_64_Asset_Pack/Rocks/Materials;textures/Classic_64_Asset_Pack/Roof/Materials;textures/Classic_64_Asset_Pack/Shelves/Materials;textures/Classic_64_Asset_Pack/Tiles;textures/Classic_64_Asset_Pack/Tiles/Materials;textures/Classic_64_Asset_Pack/Wood/Materials"
 // brush 0
 {
-( 436 -80 0 ) ( 436 -79 0 ) ( 436 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 -28 52 ) ( 564 -28 40 ) ( 436 -28 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 440 -24 28 ) ( 568 -8 28 ) ( 440 -8 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 440 -52 48 ) ( 440 -36 48 ) ( 568 -36 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 440 0 4 ) ( 441 0 4 ) ( 440 0 5 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 0 4 ) ( 448 0 5 ) ( 448 1 4 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 -16 ) ( 436 -79 -16 ) ( 436 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -28 36 ) ( 564 -28 24 ) ( 436 -28 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 440 -24 12 ) ( 568 -8 12 ) ( 440 -8 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 440 -52 32 ) ( 440 -36 32 ) ( 568 -36 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 440 0 -12 ) ( 441 0 -12 ) ( 440 0 -11 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 0 -12 ) ( 448 0 -11 ) ( 448 1 -12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 1
 {
-( 436 -80 0 ) ( 436 -79 0 ) ( 436 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 -28 52 ) ( 564 -28 40 ) ( 436 -28 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 440 -52 48 ) ( 568 -36 48 ) ( 440 -36 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 440 0 56 ) ( 440 1 56 ) ( 441 0 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 440 0 4 ) ( 441 0 4 ) ( 440 0 5 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 0 4 ) ( 448 0 5 ) ( 448 1 4 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 -16 ) ( 436 -79 -16 ) ( 436 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -28 36 ) ( 564 -28 24 ) ( 436 -28 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 440 -52 32 ) ( 568 -36 32 ) ( 440 -36 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 440 0 40 ) ( 440 1 40 ) ( 441 0 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 440 0 -12 ) ( 441 0 -12 ) ( 440 0 -11 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 0 -12 ) ( 448 0 -11 ) ( 448 1 -12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 2
 {
-( 436 -80 0 ) ( 436 -79 0 ) ( 436 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 -52 52 ) ( 564 -52 44 ) ( 436 -52 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 440 -52 48 ) ( 568 -36 48 ) ( 440 -36 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 440 0 56 ) ( 440 1 56 ) ( 441 0 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 436 -28 52 ) ( 436 -28 40 ) ( 564 -28 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 0 4 ) ( 448 0 5 ) ( 448 1 4 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 -16 ) ( 436 -79 -16 ) ( 436 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -52 36 ) ( 564 -52 28 ) ( 436 -52 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 440 -52 32 ) ( 568 -36 32 ) ( 440 -36 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 440 0 40 ) ( 440 1 40 ) ( 441 0 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 436 -28 36 ) ( 436 -28 24 ) ( 564 -28 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 0 -12 ) ( 448 0 -11 ) ( 448 1 -12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 3
 {
-( 436 -80 0 ) ( 436 -79 0 ) ( 436 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 -80 0 ) ( 436 -80 1 ) ( 437 -80 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 440 -52 48 ) ( 568 -36 48 ) ( 440 -36 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 440 0 56 ) ( 440 1 56 ) ( 441 0 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 436 -52 52 ) ( 436 -52 44 ) ( 564 -52 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 0 4 ) ( 448 0 5 ) ( 448 1 4 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 -16 ) ( 436 -79 -16 ) ( 436 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 -16 ) ( 436 -80 -15 ) ( 437 -80 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 440 -52 32 ) ( 568 -36 32 ) ( 440 -36 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 440 0 40 ) ( 440 1 40 ) ( 441 0 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 436 -52 36 ) ( 436 -52 28 ) ( 564 -52 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 0 -12 ) ( 448 0 -11 ) ( 448 1 -12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 4
 {
-( 436 -80 0 ) ( 436 -79 0 ) ( 436 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 -80 0 ) ( 436 -80 1 ) ( 437 -80 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 440 -24 28 ) ( 568 -8 28 ) ( 440 -8 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 440 -52 48 ) ( 440 -36 48 ) ( 568 -36 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 436 -52 52 ) ( 436 -52 44 ) ( 564 -52 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 0 4 ) ( 448 0 5 ) ( 448 1 4 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 -16 ) ( 436 -79 -16 ) ( 436 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 -16 ) ( 436 -80 -15 ) ( 437 -80 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 440 -24 12 ) ( 568 -8 12 ) ( 440 -8 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 440 -52 32 ) ( 440 -36 32 ) ( 568 -36 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 436 -52 36 ) ( 436 -52 28 ) ( 564 -52 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 0 -12 ) ( 448 0 -11 ) ( 448 1 -12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 5
 {
-( 436 -80 0 ) ( 436 -79 0 ) ( 436 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 -52 52 ) ( 564 -52 44 ) ( 436 -52 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 -80 16 ) ( 437 -80 16 ) ( 436 -79 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 440 -48 28 ) ( 440 -36 28 ) ( 568 -36 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 436 -28 52 ) ( 436 -28 40 ) ( 564 -28 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 0 4 ) ( 448 0 5 ) ( 448 1 4 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 -16 ) ( 436 -79 -16 ) ( 436 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -52 36 ) ( 564 -52 28 ) ( 436 -52 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 0 ) ( 437 -80 0 ) ( 436 -79 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 440 -48 12 ) ( 440 -36 12 ) ( 568 -36 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 436 -28 36 ) ( 436 -28 24 ) ( 564 -28 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 0 -12 ) ( 448 0 -11 ) ( 448 1 -12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 6
 {
-( 436 -80 0 ) ( 436 -79 0 ) ( 436 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 -28 52 ) ( 564 -28 40 ) ( 436 -28 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 -80 16 ) ( 437 -80 16 ) ( 436 -79 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 440 -24 28 ) ( 440 -8 28 ) ( 568 -8 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 440 0 4 ) ( 441 0 4 ) ( 440 0 5 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 0 4 ) ( 448 0 5 ) ( 448 1 4 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 -16 ) ( 436 -79 -16 ) ( 436 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -28 36 ) ( 564 -28 24 ) ( 436 -28 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 0 ) ( 437 -80 0 ) ( 436 -79 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 440 -24 12 ) ( 440 -8 12 ) ( 568 -8 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 440 0 -12 ) ( 441 0 -12 ) ( 440 0 -11 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 0 -12 ) ( 448 0 -11 ) ( 448 1 -12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 7
 {
-( 436 -80 0 ) ( 436 -79 0 ) ( 436 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 -80 0 ) ( 436 -80 1 ) ( 437 -80 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 -80 16 ) ( 437 -80 16 ) ( 436 -79 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 440 -24 28 ) ( 440 -8 28 ) ( 568 -8 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 436 -52 52 ) ( 436 -52 44 ) ( 564 -52 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 0 4 ) ( 448 0 5 ) ( 448 1 4 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 -16 ) ( 436 -79 -16 ) ( 436 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 -16 ) ( 436 -80 -15 ) ( 437 -80 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 0 ) ( 437 -80 0 ) ( 436 -79 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 440 -24 12 ) ( 440 -8 12 ) ( 568 -8 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 436 -52 36 ) ( 436 -52 28 ) ( 564 -52 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 0 -12 ) ( 448 0 -11 ) ( 448 1 -12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 8
 {
-( 80 -80 0 ) ( 80 -79 0 ) ( 80 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 304 -80 0 ) ( 304 -80 1 ) ( 305 -80 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 304 -80 16 ) ( 305 -80 16 ) ( 304 -79 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 432 -24 28 ) ( 432 -8 28 ) ( 560 -8 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 320 -68 16 ) ( 321 -68 16 ) ( 320 -68 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 376 -64 16 ) ( 376 -64 17 ) ( 376 -63 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 -80 -16 ) ( 80 -79 -16 ) ( 80 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 304 -80 -16 ) ( 304 -80 -15 ) ( 305 -80 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 304 -80 0 ) ( 305 -80 0 ) ( 304 -79 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 432 -24 12 ) ( 432 -8 12 ) ( 560 -8 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 320 -68 0 ) ( 321 -68 0 ) ( 320 -68 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 376 -64 0 ) ( 376 -64 1 ) ( 376 -63 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 9
 {
-( 80 -16 0 ) ( 80 -15 0 ) ( 80 -16 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 432 -12 0 ) ( 432 -12 1 ) ( 433 -12 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 428 0 48 ) ( 412 128 48 ) ( 412 0 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 448 0 56 ) ( 448 1 56 ) ( 449 0 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 448 0 16 ) ( 449 0 16 ) ( 448 0 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 0 52 ) ( 436 128 44 ) ( 436 0 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 -16 -16 ) ( 80 -15 -16 ) ( 80 -16 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 432 -12 -16 ) ( 432 -12 -15 ) ( 433 -12 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 428 0 32 ) ( 412 128 32 ) ( 412 0 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 448 0 40 ) ( 448 1 40 ) ( 449 0 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 448 0 0 ) ( 449 0 0 ) ( 448 0 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 0 36 ) ( 436 128 28 ) ( 436 0 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 10
 {
-( 80 -16 0 ) ( 80 -15 0 ) ( 80 -16 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 432 -12 0 ) ( 432 -12 1 ) ( 433 -12 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 432 -24 28 ) ( 560 -8 28 ) ( 432 -8 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 428 0 48 ) ( 412 0 48 ) ( 412 128 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 448 0 16 ) ( 449 0 16 ) ( 448 0 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 0 52 ) ( 436 128 44 ) ( 436 0 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 -16 -16 ) ( 80 -15 -16 ) ( 80 -16 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 432 -12 -16 ) ( 432 -12 -15 ) ( 433 -12 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 432 -24 12 ) ( 560 -8 12 ) ( 432 -8 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 428 0 32 ) ( 412 0 32 ) ( 412 128 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 448 0 0 ) ( 449 0 0 ) ( 448 0 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 0 36 ) ( 436 128 28 ) ( 436 0 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 11
 {
-( 80 -16 0 ) ( 80 -15 0 ) ( 80 -16 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 432 -12 0 ) ( 432 -12 1 ) ( 433 -12 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 432 -16 16 ) ( 433 -16 16 ) ( 432 -15 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 432 -24 28 ) ( 432 -8 28 ) ( 560 -8 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 448 0 16 ) ( 449 0 16 ) ( 448 0 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 0 52 ) ( 436 128 44 ) ( 436 0 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 -80 -16 ) ( 80 -79 -16 ) ( 80 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 244 -80 -16 ) ( 244 -80 -15 ) ( 245 -80 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 244 -80 -16 ) ( 245 -80 -16 ) ( 244 -79 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 276 32 0 ) ( 276 33 0 ) ( 277 32 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 276 0 0 ) ( 277 0 0 ) ( 276 0 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -64 0 ) ( 448 -56 128 ) ( 448 -56 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 12
 {
-( 80 -80 0 ) ( 80 -79 0 ) ( 80 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 244 -80 0 ) ( 244 -80 1 ) ( 245 -80 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 244 -80 0 ) ( 245 -80 0 ) ( 244 -79 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 276 32 16 ) ( 276 33 16 ) ( 277 32 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 276 0 16 ) ( 277 0 16 ) ( 276 0 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -64 16 ) ( 448 -56 144 ) ( 448 -56 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -8 0 ) ( 0 -7 0 ) ( 0 -8 1 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -12 0 ) ( 0 -12 1 ) ( 1 -12 0 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -8 -12 ) ( 1 -8 -12 ) ( 0 -7 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 0 196 ) ( 80 1 196 ) ( 81 0 196 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 0 4 ) ( 81 0 4 ) ( 80 0 5 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 0 4 ) ( 80 0 5 ) ( 80 1 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 13
 {
-( 0 -8 16 ) ( 0 -7 16 ) ( 0 -8 17 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -12 16 ) ( 0 -12 17 ) ( 1 -12 16 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -8 4 ) ( 1 -8 4 ) ( 0 -7 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 80 0 212 ) ( 80 1 212 ) ( 81 0 212 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 80 0 20 ) ( 81 0 20 ) ( 80 0 21 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 80 0 20 ) ( 80 0 21 ) ( 80 1 20 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -80 0 ) ( 0 -79 0 ) ( 0 -80 1 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -80 0 ) ( 0 -80 1 ) ( 1 -80 0 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -80 -12 ) ( 1 -80 -12 ) ( 0 -79 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 -68 196 ) ( 80 -67 196 ) ( 81 -68 196 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 -68 4 ) ( 81 -68 4 ) ( 80 -68 5 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 -68 4 ) ( 80 -68 5 ) ( 80 -67 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 14
 {
-( 0 -80 16 ) ( 0 -79 16 ) ( 0 -80 17 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -80 16 ) ( 0 -80 17 ) ( 1 -80 16 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -80 4 ) ( 1 -80 4 ) ( 0 -79 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 80 -68 212 ) ( 80 -67 212 ) ( 81 -68 212 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 80 -68 20 ) ( 81 -68 20 ) ( 80 -68 21 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 80 -68 20 ) ( 80 -68 21 ) ( 80 -67 20 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -20 0 ) ( 0 -19 0 ) ( 0 -20 1 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -68 -68 0 ) ( -68 -68 1 ) ( -67 -68 0 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -68 -20 -12 ) ( -67 -20 -12 ) ( -68 -19 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 12 -12 196 ) ( 12 -11 196 ) ( 13 -12 196 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 12 -12 4 ) ( 13 -12 4 ) ( 12 -12 5 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 12 -12 4 ) ( 12 -12 5 ) ( 12 -11 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 15
 {
-( 0 -20 16 ) ( 0 -19 16 ) ( 0 -20 17 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -68 -68 16 ) ( -68 -68 17 ) ( -67 -68 16 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -68 -20 4 ) ( -67 -20 4 ) ( -68 -19 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 12 -12 212 ) ( 12 -11 212 ) ( 13 -12 212 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 12 -12 20 ) ( 13 -12 20 ) ( 12 -12 21 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 12 -12 20 ) ( 12 -12 21 ) ( 12 -11 20 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 -32 60 ) ( 68 -31 60 ) ( 68 -32 61 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 -68 60 ) ( 68 -68 61 ) ( 69 -68 60 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 -32 40 ) ( 69 -32 40 ) ( 68 -31 40 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 -12 196 ) ( 80 -11 196 ) ( 81 -12 196 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 -12 64 ) ( 81 -12 64 ) ( 80 -12 65 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 -12 64 ) ( 80 -12 65 ) ( 80 -11 64 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 16
 {
-( 68 -32 76 ) ( 68 -31 76 ) ( 68 -32 77 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 68 -68 76 ) ( 68 -68 77 ) ( 69 -68 76 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 68 -32 56 ) ( 69 -32 56 ) ( 68 -31 56 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 80 -12 212 ) ( 80 -11 212 ) ( 81 -12 212 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 80 -12 80 ) ( 81 -12 80 ) ( 80 -12 81 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 80 -12 80 ) ( 80 -12 81 ) ( 80 -11 80 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -80 -28 ) ( 0 -79 -28 ) ( 0 -80 -27 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 76 -68 -12 ) ( 72 -68 -12 ) ( 72 -68 116 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -80 -28 ) ( 1 -80 -28 ) ( 0 -79 -28 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 0 -12 ) ( 80 1 -12 ) ( 81 0 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 -12 -12 ) ( 76 -12 -12 ) ( 76 -12 116 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 -20 -12 ) ( 68 -28 -12 ) ( 68 -28 116 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 17
 {
-( 0 -80 -12 ) ( 0 -79 -12 ) ( 0 -80 -11 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 76 -68 4 ) ( 72 -68 4 ) ( 72 -68 132 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -80 -12 ) ( 1 -80 -12 ) ( 0 -79 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 80 0 4 ) ( 80 1 4 ) ( 81 0 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 72 -12 4 ) ( 76 -12 4 ) ( 76 -12 132 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 68 -20 4 ) ( 68 -28 4 ) ( 68 -28 132 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 -20 -12 ) ( 68 -28 116 ) ( 68 -28 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 76 -68 -12 ) ( 72 -68 -12 ) ( 72 -68 116 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -80 -28 ) ( 1 -80 -28 ) ( 0 -79 -28 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 0 0 ) ( 80 1 0 ) ( 81 0 0 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 -12 -12 ) ( 76 -12 -12 ) ( 76 -12 116 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 -48 -12 ) ( 80 -32 116 ) ( 80 -32 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 18
 {
-( 68 -20 4 ) ( 68 -28 132 ) ( 68 -28 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 76 -68 4 ) ( 72 -68 4 ) ( 72 -68 132 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -80 -12 ) ( 1 -80 -12 ) ( 0 -79 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 80 0 16 ) ( 80 1 16 ) ( 81 0 16 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 72 -12 4 ) ( 76 -12 4 ) ( 76 -12 132 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 80 -48 4 ) ( 80 -32 132 ) ( 80 -32 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -80 -28 ) ( 0 -79 -28 ) ( 0 -80 -27 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 -12 -12 ) ( 76 -12 116 ) ( 76 -12 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -80 -28 ) ( 1 -80 -28 ) ( 0 -79 -28 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 0 -12 ) ( 80 1 -12 ) ( 81 0 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 0 -12 ) ( 81 0 -12 ) ( 80 0 -11 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 -20 -12 ) ( 68 -28 -12 ) ( 68 -28 116 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 19
 {
-( 0 -80 -12 ) ( 0 -79 -12 ) ( 0 -80 -11 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 72 -12 4 ) ( 76 -12 132 ) ( 76 -12 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -80 -12 ) ( 1 -80 -12 ) ( 0 -79 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 80 0 4 ) ( 80 1 4 ) ( 81 0 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 80 0 4 ) ( 81 0 4 ) ( 80 0 5 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 68 -20 4 ) ( 68 -28 4 ) ( 68 -28 132 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -80 -28 ) ( 0 -79 -28 ) ( 0 -80 -27 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -80 -28 ) ( 0 -80 -27 ) ( 1 -80 -28 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -80 -28 ) ( 1 -80 -28 ) ( 0 -79 -28 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 0 -12 ) ( 80 1 -12 ) ( 81 0 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 76 -68 -12 ) ( 72 -68 116 ) ( 72 -68 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 -20 -12 ) ( 68 -28 -12 ) ( 68 -28 116 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 20
 {
-( 0 -80 -12 ) ( 0 -79 -12 ) ( 0 -80 -11 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -80 -12 ) ( 0 -80 -11 ) ( 1 -80 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -80 -12 ) ( 1 -80 -12 ) ( 0 -79 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 80 0 4 ) ( 80 1 4 ) ( 81 0 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 76 -68 4 ) ( 72 -68 132 ) ( 72 -68 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 68 -20 4 ) ( 68 -28 4 ) ( 68 -28 132 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 -20 -12 ) ( 68 -28 116 ) ( 68 -28 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -80 -28 ) ( 0 -80 -27 ) ( 1 -80 -28 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -80 -28 ) ( 1 -80 -28 ) ( 0 -79 -28 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 0 -12 ) ( 80 1 -12 ) ( 81 0 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 76 -68 -12 ) ( 72 -68 116 ) ( 72 -68 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 -48 -12 ) ( 80 -32 116 ) ( 80 -32 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 21
 {
-( 68 -20 4 ) ( 68 -28 132 ) ( 68 -28 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -80 -12 ) ( 0 -80 -11 ) ( 1 -80 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -80 -12 ) ( 1 -80 -12 ) ( 0 -79 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 80 0 4 ) ( 80 1 4 ) ( 81 0 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 76 -68 4 ) ( 72 -68 132 ) ( 72 -68 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 80 -48 4 ) ( 80 -32 132 ) ( 80 -32 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 -16 -28 ) ( 68 -15 -28 ) ( 68 -16 -27 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 68 -12 -28 ) ( 68 -12 -27 ) ( 69 -12 -28 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 68 -16 -28 ) ( 69 -16 -28 ) ( 68 -15 -28 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 80 -12 -12 ) ( 80 -11 -12 ) ( 81 -12 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 80 0 -24 ) ( 81 0 -24 ) ( 80 0 -23 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 80 -12 -24 ) ( 80 -12 -23 ) ( 80 -11 -24 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 // brush 22
 {
-( 68 -16 -12 ) ( 68 -15 -12 ) ( 68 -16 -11 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 68 -12 -12 ) ( 68 -12 -11 ) ( 69 -12 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 68 -16 -12 ) ( 69 -16 -12 ) ( 68 -15 -12 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 80 -12 4 ) ( 80 -11 4 ) ( 81 -12 4 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 80 0 -8 ) ( 81 0 -8 ) ( 80 0 -7 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 80 -12 -8 ) ( 80 -12 -7 ) ( 80 -11 -8 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 376 -84 -8 ) ( 376 -83 -8 ) ( 376 -84 -7 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 376 -92 -8 ) ( 376 -92 -7 ) ( 377 -92 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 376 -84 -8 ) ( 377 -84 -8 ) ( 376 -83 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 428 -80 -4 ) ( 428 -79 -4 ) ( 429 -80 -4 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 428 -80 -4 ) ( 429 -80 -4 ) ( 428 -80 -3 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -80 -4 ) ( 436 -80 -3 ) ( 436 -79 -4 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 23
 {
-( 376 -84 8 ) ( 376 -83 8 ) ( 376 -84 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 376 -92 8 ) ( 376 -92 9 ) ( 377 -92 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 376 -84 8 ) ( 377 -84 8 ) ( 376 -83 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 428 -80 12 ) ( 428 -79 12 ) ( 429 -80 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 428 -80 12 ) ( 429 -80 12 ) ( 428 -80 13 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 436 -80 12 ) ( 436 -80 13 ) ( 436 -79 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -160 -16 ) ( -32 -159 -16 ) ( -32 -160 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 44 -1536 -16 ) ( 44 -1536 -15 ) ( 45 -1536 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 44 -160 -24 ) ( 45 -160 -24 ) ( 44 -159 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 228 -80 -8 ) ( 228 -79 -8 ) ( 229 -80 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 228 -80 -8 ) ( 229 -80 -8 ) ( 228 -80 -7 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -80 -8 ) ( 480 -80 -7 ) ( 480 -79 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 24
 {
-( -32 -160 0 ) ( -32 -159 0 ) ( -32 -160 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 44 -1536 0 ) ( 44 -1536 1 ) ( 45 -1536 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 44 -160 -8 ) ( 45 -160 -8 ) ( 44 -159 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 228 -80 8 ) ( 228 -79 8 ) ( 229 -80 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 228 -80 8 ) ( 229 -80 8 ) ( 228 -80 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -80 8 ) ( 480 -80 9 ) ( 480 -79 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 -64 16 ) ( 80 -63 16 ) ( 80 -64 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 252 -80 16 ) ( 252 -80 17 ) ( 253 -80 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 252 -64 40 ) ( 253 -64 40 ) ( 252 -63 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 380 64 56 ) ( 380 65 56 ) ( 381 64 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 380 0 48 ) ( 381 0 48 ) ( 380 0 49 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -80 48 ) ( 448 48 40 ) ( 448 -80 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 25
 {
-( 80 -64 32 ) ( 80 -63 32 ) ( 80 -64 33 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 252 -80 32 ) ( 252 -80 33 ) ( 253 -80 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 252 -64 56 ) ( 253 -64 56 ) ( 252 -63 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 380 64 72 ) ( 380 65 72 ) ( 381 64 72 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 380 0 64 ) ( 381 0 64 ) ( 380 0 65 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -80 64 ) ( 448 48 56 ) ( 448 -80 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 -80 -16 ) ( 80 -79 -16 ) ( 80 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 304 -80 -16 ) ( 304 -80 -15 ) ( 305 -80 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 428 0 32 ) ( 412 128 32 ) ( 412 0 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 320 -64 40 ) ( 320 -63 40 ) ( 321 -64 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 320 -68 0 ) ( 321 -68 0 ) ( 320 -68 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 200 -80 48 ) ( 200 48 40 ) ( 200 -80 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 26
 {
-( 80 -80 0 ) ( 80 -79 0 ) ( 80 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 304 -80 0 ) ( 304 -80 1 ) ( 305 -80 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 428 0 48 ) ( 412 128 48 ) ( 412 0 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 320 -64 56 ) ( 320 -63 56 ) ( 321 -64 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 320 -68 16 ) ( 321 -68 16 ) ( 320 -68 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 200 -80 64 ) ( 200 48 56 ) ( 200 -80 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 -80 -16 ) ( 80 -79 -16 ) ( 80 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 304 -80 -16 ) ( 304 -80 -15 ) ( 305 -80 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 216 -80 24 ) ( 224 -80 24 ) ( 224 48 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 428 0 32 ) ( 412 0 32 ) ( 412 128 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 320 -68 0 ) ( 321 -68 0 ) ( 320 -68 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 200 -80 48 ) ( 200 48 40 ) ( 200 -80 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 27
 {
-( 80 -80 0 ) ( 80 -79 0 ) ( 80 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 304 -80 0 ) ( 304 -80 1 ) ( 305 -80 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 216 -80 40 ) ( 224 -80 40 ) ( 224 48 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 428 0 48 ) ( 412 0 48 ) ( 412 128 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 320 -68 16 ) ( 321 -68 16 ) ( 320 -68 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 200 -80 64 ) ( 200 48 56 ) ( 200 -80 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 -80 -16 ) ( 80 -79 -16 ) ( 80 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 304 -80 -16 ) ( 304 -80 -15 ) ( 305 -80 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 432 -24 12 ) ( 560 -8 12 ) ( 432 -8 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 216 -80 24 ) ( 224 48 24 ) ( 224 -80 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 320 -68 0 ) ( 321 -68 0 ) ( 320 -68 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 200 -80 48 ) ( 200 48 40 ) ( 200 -80 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 28
 {
-( 80 -80 0 ) ( 80 -79 0 ) ( 80 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 304 -80 0 ) ( 304 -80 1 ) ( 305 -80 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 432 -24 28 ) ( 560 -8 28 ) ( 432 -8 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 216 -80 40 ) ( 224 48 40 ) ( 224 -80 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 320 -68 16 ) ( 321 -68 16 ) ( 320 -68 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 200 -80 64 ) ( 200 48 56 ) ( 200 -80 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 244 -80 -16 ) ( 244 -79 -16 ) ( 244 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 468 -80 -16 ) ( 468 -80 -15 ) ( 469 -80 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 592 0 32 ) ( 576 128 32 ) ( 576 0 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 484 -64 40 ) ( 484 -63 40 ) ( 485 -64 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 484 -68 0 ) ( 485 -68 0 ) ( 484 -68 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 376 -80 48 ) ( 376 48 40 ) ( 376 -80 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 29
 {
-( 244 -80 0 ) ( 244 -79 0 ) ( 244 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 468 -80 0 ) ( 468 -80 1 ) ( 469 -80 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 592 0 48 ) ( 576 128 48 ) ( 576 0 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 484 -64 56 ) ( 484 -63 56 ) ( 485 -64 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 484 -68 16 ) ( 485 -68 16 ) ( 484 -68 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 376 -80 64 ) ( 376 48 56 ) ( 376 -80 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 244 -80 -16 ) ( 244 -79 -16 ) ( 244 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 468 -80 -16 ) ( 468 -80 -15 ) ( 469 -80 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 380 -80 24 ) ( 388 -80 24 ) ( 388 48 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 592 0 32 ) ( 576 0 32 ) ( 576 128 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 484 -68 0 ) ( 485 -68 0 ) ( 484 -68 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 376 -80 48 ) ( 376 48 40 ) ( 376 -80 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 30
 {
-( 244 -80 0 ) ( 244 -79 0 ) ( 244 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 468 -80 0 ) ( 468 -80 1 ) ( 469 -80 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 380 -80 40 ) ( 388 -80 40 ) ( 388 48 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 592 0 48 ) ( 576 0 48 ) ( 576 128 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 484 -68 16 ) ( 485 -68 16 ) ( 484 -68 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 376 -80 64 ) ( 376 48 56 ) ( 376 -80 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 244 -80 -16 ) ( 244 -79 -16 ) ( 244 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 468 -80 -16 ) ( 468 -80 -15 ) ( 469 -80 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 596 -24 12 ) ( 724 -8 12 ) ( 596 -8 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 380 -80 24 ) ( 388 48 24 ) ( 388 -80 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 484 -68 0 ) ( 485 -68 0 ) ( 484 -68 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 376 -80 48 ) ( 376 48 40 ) ( 376 -80 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 31
 {
-( 244 -80 0 ) ( 244 -79 0 ) ( 244 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 468 -80 0 ) ( 468 -80 1 ) ( 469 -80 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 596 -24 28 ) ( 724 -8 28 ) ( 596 -8 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 380 -80 40 ) ( 388 48 40 ) ( 388 -80 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 484 -68 16 ) ( 485 -68 16 ) ( 484 -68 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 376 -80 64 ) ( 376 48 56 ) ( 376 -80 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -96 -8 ) ( -32 -95 -8 ) ( -32 -96 -7 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 -96 -8 ) ( 72 -96 -7 ) ( 73 -96 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 -96 -8 ) ( 73 -96 -8 ) ( 72 -95 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 228 -80 12 ) ( 216 -80 12 ) ( 216 48 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 376 -80 0 ) ( 377 -80 0 ) ( 376 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 376 -80 36 ) ( 376 48 32 ) ( 376 -80 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 32
 {
-( -32 -96 8 ) ( -32 -95 8 ) ( -32 -96 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 72 -96 8 ) ( 72 -96 9 ) ( 73 -96 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 72 -96 8 ) ( 73 -96 8 ) ( 72 -95 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 228 -80 28 ) ( 216 -80 28 ) ( 216 48 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 376 -80 16 ) ( 377 -80 16 ) ( 376 -80 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 376 -80 52 ) ( 376 48 48 ) ( 376 -80 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 244 -80 36 ) ( 244 -80 32 ) ( 244 48 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 -96 -8 ) ( 72 -96 -7 ) ( 73 -96 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 228 -80 12 ) ( 216 48 12 ) ( 216 -80 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 216 -80 40 ) ( 228 48 40 ) ( 228 -80 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 376 -80 0 ) ( 377 -80 0 ) ( 376 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 376 -96 56 ) ( 376 32 40 ) ( 376 -96 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 33
 {
-( 244 -80 52 ) ( 244 -80 48 ) ( 244 48 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 72 -96 8 ) ( 72 -96 9 ) ( 73 -96 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 228 -80 28 ) ( 216 48 28 ) ( 216 -80 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 216 -80 56 ) ( 228 48 56 ) ( 228 -80 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 376 -80 16 ) ( 377 -80 16 ) ( 376 -80 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 376 -96 72 ) ( 376 32 56 ) ( 376 -96 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -96 -8 ) ( -32 -95 -8 ) ( -32 -96 -7 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 -96 -8 ) ( 72 -96 -7 ) ( 73 -96 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 228 -80 12 ) ( 216 48 12 ) ( 216 -80 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 216 -80 40 ) ( 228 48 40 ) ( 228 -80 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 376 -80 0 ) ( 377 -80 0 ) ( 376 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 200 -80 36 ) ( 200 48 32 ) ( 200 -80 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 34
 {
-( -32 -96 8 ) ( -32 -95 8 ) ( -32 -96 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 72 -96 8 ) ( 72 -96 9 ) ( 73 -96 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 228 -80 28 ) ( 216 48 28 ) ( 216 -80 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 216 -80 56 ) ( 228 48 56 ) ( 228 -80 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 376 -80 16 ) ( 377 -80 16 ) ( 376 -80 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 200 -80 52 ) ( 200 48 48 ) ( 200 -80 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 -96 -8 ) ( 436 -95 -8 ) ( 436 -96 -7 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 432 -96 -8 ) ( 432 -96 -7 ) ( 433 -96 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 432 -96 -8 ) ( 433 -96 -8 ) ( 432 -95 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 440 -96 40 ) ( 444 32 40 ) ( 444 -96 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 448 -80 0 ) ( 449 -80 0 ) ( 448 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -80 0 ) ( 480 -80 1 ) ( 480 -79 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 35
 {
-( 436 -96 8 ) ( 436 -95 8 ) ( 436 -96 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 432 -96 8 ) ( 432 -96 9 ) ( 433 -96 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 432 -96 8 ) ( 433 -96 8 ) ( 432 -95 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 440 -96 56 ) ( 444 32 56 ) ( 444 -96 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 448 -80 16 ) ( 449 -80 16 ) ( 448 -80 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -80 16 ) ( 480 -80 17 ) ( 480 -79 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -96 -8 ) ( -32 -95 -8 ) ( -32 -96 -7 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 -96 -8 ) ( 72 -96 -7 ) ( 73 -96 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 208 -96 40 ) ( 240 -96 40 ) ( 240 32 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 208 -96 72 ) ( 240 32 72 ) ( 240 -96 72 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 376 -80 0 ) ( 377 -80 0 ) ( 376 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -96 56 ) ( 480 32 40 ) ( 480 -96 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 36
 {
-( -32 -96 8 ) ( -32 -95 8 ) ( -32 -96 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 72 -96 8 ) ( 72 -96 9 ) ( 73 -96 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 208 -96 56 ) ( 240 -96 56 ) ( 240 32 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 208 -96 88 ) ( 240 32 88 ) ( 240 -96 88 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 376 -80 16 ) ( 377 -80 16 ) ( 376 -80 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -96 72 ) ( 480 32 56 ) ( 480 -96 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -96 24 ) ( -32 -95 24 ) ( -32 -96 25 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 -96 24 ) ( 72 -96 25 ) ( 73 -96 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 208 -96 72 ) ( 240 -96 72 ) ( 240 32 72 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 208 -96 128 ) ( 240 32 128 ) ( 240 -96 128 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 376 -80 32 ) ( 377 -80 32 ) ( 376 -80 33 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -96 88 ) ( 480 32 72 ) ( 480 -96 72 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 37
 {
-( -32 -96 40 ) ( -32 -95 40 ) ( -32 -96 41 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 72 -96 40 ) ( 72 -96 41 ) ( 73 -96 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 208 -96 88 ) ( 240 -96 88 ) ( 240 32 88 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 208 -96 144 ) ( 240 32 144 ) ( 240 -96 144 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 376 -80 48 ) ( 377 -80 48 ) ( 376 -80 49 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -96 104 ) ( 480 32 88 ) ( 480 -96 88 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -96 80 ) ( -32 -95 80 ) ( -32 -96 81 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 -96 80 ) ( 72 -96 81 ) ( 73 -96 80 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 208 -96 128 ) ( 240 -96 128 ) ( 240 32 128 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 208 -96 1152 ) ( 240 32 1152 ) ( 240 -96 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 376 -80 88 ) ( 377 -80 88 ) ( 376 -80 89 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -96 144 ) ( 480 32 128 ) ( 480 -96 128 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 38
 {
-( -32 -96 96 ) ( -32 -95 96 ) ( -32 -96 97 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 72 -96 96 ) ( 72 -96 97 ) ( 73 -96 96 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 208 -96 144 ) ( 240 -96 144 ) ( 240 32 144 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 208 -96 1168 ) ( 240 32 1168 ) ( 240 -96 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 376 -80 104 ) ( 377 -80 104 ) ( 376 -80 105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -96 160 ) ( 480 32 144 ) ( 480 -96 144 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -80 8 ) ( 448 -79 8 ) ( 448 -80 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -80 8 ) ( 448 -80 9 ) ( 449 -80 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -80 -16 ) ( 449 -80 -16 ) ( 448 -79 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 464 0 12 ) ( 464 1 12 ) ( 465 0 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 464 0 12 ) ( 465 0 12 ) ( 464 0 13 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 464 0 12 ) ( 464 0 13 ) ( 464 1 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 39
 {
-( 448 -80 24 ) ( 448 -79 24 ) ( 448 -80 25 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -80 24 ) ( 448 -80 25 ) ( 449 -80 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -80 0 ) ( 449 -80 0 ) ( 448 -79 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 464 0 28 ) ( 464 1 28 ) ( 465 0 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 464 0 28 ) ( 465 0 28 ) ( 464 0 29 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 464 0 28 ) ( 464 0 29 ) ( 464 1 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -80 -16 ) ( 448 -79 -16 ) ( 448 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 452 -80 -16 ) ( 452 -80 -15 ) ( 453 -80 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 456 -24 12 ) ( 584 -8 12 ) ( 456 -8 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 456 -52 32 ) ( 456 -36 32 ) ( 584 -36 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 452 -52 36 ) ( 452 -52 28 ) ( 580 -52 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 464 0 -12 ) ( 464 0 -11 ) ( 464 1 -12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 40
 {
-( 448 -80 0 ) ( 448 -79 0 ) ( 448 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 452 -80 0 ) ( 452 -80 1 ) ( 453 -80 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 456 -24 28 ) ( 584 -8 28 ) ( 456 -8 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 456 -52 48 ) ( 456 -36 48 ) ( 584 -36 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 452 -52 52 ) ( 452 -52 44 ) ( 580 -52 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 464 0 4 ) ( 464 0 5 ) ( 464 1 4 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -28 -16 ) ( 448 -27 -16 ) ( 448 -28 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 452 -28 -16 ) ( 452 -28 -15 ) ( 453 -28 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 456 28 12 ) ( 584 44 12 ) ( 456 44 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 456 0 32 ) ( 456 16 32 ) ( 584 16 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 452 0 36 ) ( 452 0 28 ) ( 580 0 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 464 52 -12 ) ( 464 52 -11 ) ( 464 53 -12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 41
 {
-( 448 -28 0 ) ( 448 -27 0 ) ( 448 -28 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 452 -28 0 ) ( 452 -28 1 ) ( 453 -28 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 456 28 28 ) ( 584 44 28 ) ( 456 44 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 456 0 48 ) ( 456 16 48 ) ( 584 16 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 452 0 52 ) ( 452 0 44 ) ( 580 0 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 464 52 4 ) ( 464 52 5 ) ( 464 53 4 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -80 -16 ) ( 448 -79 -16 ) ( 448 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 452 -80 -16 ) ( 452 -80 -15 ) ( 453 -80 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 456 -52 32 ) ( 584 -36 32 ) ( 456 -36 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 456 0 56 ) ( 456 1 56 ) ( 457 0 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 452 0 36 ) ( 452 0 28 ) ( 580 0 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 464 0 -12 ) ( 464 0 -11 ) ( 464 1 -12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 42
 {
-( 448 -80 0 ) ( 448 -79 0 ) ( 448 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 452 -80 0 ) ( 452 -80 1 ) ( 453 -80 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 456 -52 48 ) ( 584 -36 48 ) ( 456 -36 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 456 0 72 ) ( 456 1 72 ) ( 457 0 72 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 452 0 52 ) ( 452 0 44 ) ( 580 0 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 464 0 4 ) ( 464 0 5 ) ( 464 1 4 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -96 1152 ) ( -32 -95 1152 ) ( -32 -96 1153 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 352 -192 1160 ) ( 368 -192 1288 ) ( 368 -192 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -96 1152 ) ( -31 -96 1152 ) ( -32 -95 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -80 1168 ) ( 480 -79 1168 ) ( 481 -80 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -80 1160 ) ( 481 -80 1160 ) ( 480 -80 1161 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 64 -768 1160 ) ( 64 -800 1160 ) ( 64 -800 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 43
 {
-( -32 -96 1168 ) ( -32 -95 1168 ) ( -32 -96 1169 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 352 -192 1176 ) ( 368 -192 1304 ) ( 368 -192 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -96 1168 ) ( -31 -96 1168 ) ( -32 -95 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -80 1184 ) ( 480 -79 1184 ) ( 481 -80 1184 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -80 1176 ) ( 481 -80 1176 ) ( 480 -80 1177 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 64 -768 1176 ) ( 64 -800 1176 ) ( 64 -800 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 64 -768 1160 ) ( 64 -800 1288 ) ( 64 -800 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 352 -192 1160 ) ( 368 -192 1288 ) ( 368 -192 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -96 1152 ) ( -31 -96 1152 ) ( -32 -95 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -80 1168 ) ( 480 -79 1168 ) ( 481 -80 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -80 1160 ) ( 481 -80 1160 ) ( 480 -80 1161 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 384 -848 1160 ) ( 384 -880 1160 ) ( 384 -880 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 44
 {
-( 64 -768 1176 ) ( 64 -800 1304 ) ( 64 -800 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 352 -192 1176 ) ( 368 -192 1304 ) ( 368 -192 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -96 1168 ) ( -31 -96 1168 ) ( -32 -95 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -80 1184 ) ( 480 -79 1184 ) ( 481 -80 1184 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -80 1176 ) ( 481 -80 1176 ) ( 480 -80 1177 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 384 -848 1176 ) ( 384 -880 1176 ) ( 384 -880 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 384 -848 1160 ) ( 384 -880 1288 ) ( 384 -880 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 352 -192 1160 ) ( 368 -192 1288 ) ( 368 -192 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -96 1152 ) ( -31 -96 1152 ) ( -32 -95 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -80 1168 ) ( 480 -79 1168 ) ( 481 -80 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -80 1160 ) ( 481 -80 1160 ) ( 480 -80 1161 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -80 1160 ) ( 480 -80 1161 ) ( 480 -79 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 45
 {
-( 384 -848 1176 ) ( 384 -880 1304 ) ( 384 -880 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 352 -192 1176 ) ( 368 -192 1304 ) ( 368 -192 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -96 1168 ) ( -31 -96 1168 ) ( -32 -95 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -80 1184 ) ( 480 -79 1184 ) ( 481 -80 1184 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -80 1176 ) ( 481 -80 1176 ) ( 480 -80 1177 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -80 1176 ) ( 480 -80 1177 ) ( 480 -79 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -96 1152 ) ( -32 -95 1152 ) ( -32 -96 1153 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 16 -512 1160 ) ( 32 -512 1288 ) ( 32 -512 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -96 1152 ) ( -31 -96 1152 ) ( -32 -95 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -80 1168 ) ( 480 -79 1168 ) ( 481 -80 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 352 -192 1160 ) ( 368 -192 1160 ) ( 368 -192 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 64 -768 1160 ) ( 64 -800 1160 ) ( 64 -800 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 46
 {
-( -32 -96 1168 ) ( -32 -95 1168 ) ( -32 -96 1169 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 16 -512 1176 ) ( 32 -512 1304 ) ( 32 -512 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -96 1168 ) ( -31 -96 1168 ) ( -32 -95 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -80 1184 ) ( 480 -79 1184 ) ( 481 -80 1184 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 352 -192 1176 ) ( 368 -192 1176 ) ( 368 -192 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 64 -768 1176 ) ( 64 -800 1176 ) ( 64 -800 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 384 -496 1160 ) ( 384 -464 1160 ) ( 384 -464 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -512 1160 ) ( 32 -512 1288 ) ( 32 -512 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -96 1152 ) ( -31 -96 1152 ) ( -32 -95 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -80 1168 ) ( 480 -79 1168 ) ( 481 -80 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 16 -192 1160 ) ( 32 -192 1160 ) ( 32 -192 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -768 1160 ) ( 480 -800 1160 ) ( 480 -800 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 47
 {
-( 384 -496 1176 ) ( 384 -464 1176 ) ( 384 -464 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -512 1176 ) ( 32 -512 1304 ) ( 32 -512 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -96 1168 ) ( -31 -96 1168 ) ( -32 -95 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -80 1184 ) ( 480 -79 1184 ) ( 481 -80 1184 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 16 -192 1176 ) ( 32 -192 1176 ) ( 32 -192 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -768 1176 ) ( 480 -800 1176 ) ( 480 -800 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -160 1152 ) ( -32 -159 1152 ) ( -32 -160 1153 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -640 1160 ) ( 32 -640 1288 ) ( 32 -640 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -160 1152 ) ( -31 -160 1152 ) ( -32 -159 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -144 1168 ) ( 480 -143 1168 ) ( 481 -144 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 16 -512 1160 ) ( 32 -512 1160 ) ( 32 -512 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -560 1160 ) ( 480 -528 1288 ) ( 480 -528 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 48
 {
-( -32 -160 1168 ) ( -32 -159 1168 ) ( -32 -160 1169 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -640 1176 ) ( 32 -640 1304 ) ( 32 -640 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -160 1168 ) ( -31 -160 1168 ) ( -32 -159 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -144 1184 ) ( 480 -143 1184 ) ( 481 -144 1184 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 16 -512 1176 ) ( 32 -512 1176 ) ( 32 -512 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -560 1176 ) ( 480 -528 1304 ) ( 480 -528 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -544 1152 ) ( -32 -543 1152 ) ( -32 -544 1153 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 16 -960 1160 ) ( 32 -960 1288 ) ( 32 -960 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -544 1152 ) ( -31 -544 1152 ) ( -32 -543 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -528 1168 ) ( 480 -527 1168 ) ( 481 -528 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 352 -640 1160 ) ( 368 -640 1160 ) ( 368 -640 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 64 -1216 1160 ) ( 64 -1248 1160 ) ( 64 -1248 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 49
 {
-( -32 -544 1168 ) ( -32 -543 1168 ) ( -32 -544 1169 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 16 -960 1176 ) ( 32 -960 1304 ) ( 32 -960 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -544 1168 ) ( -31 -544 1168 ) ( -32 -543 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -528 1184 ) ( 480 -527 1184 ) ( 481 -528 1184 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 352 -640 1176 ) ( 368 -640 1176 ) ( 368 -640 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 64 -1216 1176 ) ( 64 -1248 1176 ) ( 64 -1248 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -608 1152 ) ( -32 -607 1152 ) ( -32 -608 1153 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -1088 1160 ) ( 32 -1088 1288 ) ( 32 -1088 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -608 1152 ) ( -31 -608 1152 ) ( -32 -607 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -592 1168 ) ( 480 -591 1168 ) ( 481 -592 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 16 -960 1160 ) ( 32 -960 1160 ) ( 32 -960 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -1008 1160 ) ( 480 -976 1288 ) ( 480 -976 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 50
 {
-( -32 -608 1168 ) ( -32 -607 1168 ) ( -32 -608 1169 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -1088 1176 ) ( 32 -1088 1304 ) ( 32 -1088 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -608 1168 ) ( -31 -608 1168 ) ( -32 -607 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -592 1184 ) ( 480 -591 1184 ) ( 481 -592 1184 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 16 -960 1176 ) ( 32 -960 1176 ) ( 32 -960 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -1008 1176 ) ( 480 -976 1304 ) ( 480 -976 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 384 -944 1160 ) ( 384 -912 1160 ) ( 384 -912 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -960 1160 ) ( 32 -960 1288 ) ( 32 -960 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -544 1152 ) ( -31 -544 1152 ) ( -32 -543 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -528 1168 ) ( 480 -527 1168 ) ( 481 -528 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 16 -640 1160 ) ( 32 -640 1160 ) ( 32 -640 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -1216 1160 ) ( 480 -1248 1160 ) ( 480 -1248 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 51
 {
-( 384 -944 1176 ) ( 384 -912 1176 ) ( 384 -912 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -960 1176 ) ( 32 -960 1304 ) ( 32 -960 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -544 1168 ) ( -31 -544 1168 ) ( -32 -543 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -528 1184 ) ( 480 -527 1184 ) ( 481 -528 1184 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 16 -640 1176 ) ( 32 -640 1176 ) ( 32 -640 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -1216 1176 ) ( 480 -1248 1176 ) ( 480 -1248 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -992 1152 ) ( -32 -991 1152 ) ( -32 -992 1153 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 16 -1408 1160 ) ( 32 -1408 1288 ) ( 32 -1408 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -992 1152 ) ( -31 -992 1152 ) ( -32 -991 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -976 1168 ) ( 480 -975 1168 ) ( 481 -976 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 352 -1088 1160 ) ( 368 -1088 1160 ) ( 368 -1088 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 64 -1664 1160 ) ( 64 -1696 1160 ) ( 64 -1696 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 52
 {
-( -32 -992 1168 ) ( -32 -991 1168 ) ( -32 -992 1169 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 16 -1408 1176 ) ( 32 -1408 1304 ) ( 32 -1408 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -992 1168 ) ( -31 -992 1168 ) ( -32 -991 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -976 1184 ) ( 480 -975 1184 ) ( 481 -976 1184 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 352 -1088 1176 ) ( 368 -1088 1176 ) ( 368 -1088 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 64 -1664 1176 ) ( 64 -1696 1176 ) ( 64 -1696 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -1056 1152 ) ( -32 -1055 1152 ) ( -32 -1056 1153 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -1536 1160 ) ( 32 -1536 1288 ) ( 32 -1536 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -1056 1152 ) ( -31 -1056 1152 ) ( -32 -1055 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -1040 1168 ) ( 480 -1039 1168 ) ( 481 -1040 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 16 -1408 1160 ) ( 32 -1408 1160 ) ( 32 -1408 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -1456 1160 ) ( 480 -1424 1288 ) ( 480 -1424 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 53
 {
-( -32 -1056 1168 ) ( -32 -1055 1168 ) ( -32 -1056 1169 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -1536 1176 ) ( 32 -1536 1304 ) ( 32 -1536 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -1056 1168 ) ( -31 -1056 1168 ) ( -32 -1055 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -1040 1184 ) ( 480 -1039 1184 ) ( 481 -1040 1184 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 16 -1408 1176 ) ( 32 -1408 1176 ) ( 32 -1408 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -1456 1176 ) ( 480 -1424 1304 ) ( 480 -1424 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 384 -1392 1160 ) ( 384 -1360 1160 ) ( 384 -1360 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -1408 1160 ) ( 32 -1408 1288 ) ( 32 -1408 1160 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -992 1152 ) ( -31 -992 1152 ) ( -32 -991 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -976 1168 ) ( 480 -975 1168 ) ( 481 -976 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 16 -1088 1160 ) ( 32 -1088 1160 ) ( 32 -1088 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -1664 1160 ) ( 480 -1696 1160 ) ( 480 -1696 1288 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 54
 {
-( 384 -1392 1176 ) ( 384 -1360 1176 ) ( 384 -1360 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -1408 1176 ) ( 32 -1408 1304 ) ( 32 -1408 1176 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -992 1168 ) ( -31 -992 1168 ) ( -32 -991 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -976 1184 ) ( 480 -975 1184 ) ( 481 -976 1184 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 16 -1088 1176 ) ( 32 -1088 1176 ) ( 32 -1088 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -1664 1176 ) ( 480 -1696 1176 ) ( 480 -1696 1304 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -632 -24 ) ( 480 -631 -24 ) ( 480 -632 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -1536 -24 ) ( 480 -1536 -23 ) ( 481 -1536 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -632 -24 ) ( 481 -632 -24 ) ( 480 -631 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -448 736 ) ( 608 -576 736 ) ( 480 -576 736 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 496 -80 -16 ) ( 497 -80 -16 ) ( 496 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 496 -80 -16 ) ( 496 -80 -15 ) ( 496 -79 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 55
 {
-( 480 -632 -8 ) ( 480 -631 -8 ) ( 480 -632 -7 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -1536 -8 ) ( 480 -1536 -7 ) ( 481 -1536 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -632 -8 ) ( 481 -632 -8 ) ( 480 -631 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -448 752 ) ( 608 -576 752 ) ( 480 -576 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 496 -80 0 ) ( 497 -80 0 ) ( 496 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 496 -80 0 ) ( 496 -80 1 ) ( 496 -79 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 368 -1536 736 ) ( 368 -1535 736 ) ( 368 -1536 737 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 496 -1536 736 ) ( 496 -1536 737 ) ( 497 -1536 736 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 496 -1536 736 ) ( 497 -1536 736 ) ( 496 -1535 736 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 512 -1472 752 ) ( 512 -1471 752 ) ( 513 -1472 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 512 -96 752 ) ( 513 -96 752 ) ( 512 -96 753 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 704 -1472 752 ) ( 704 -1472 753 ) ( 704 -1471 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 56
 {
-( 368 -1536 752 ) ( 368 -1535 752 ) ( 368 -1536 753 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 496 -1536 752 ) ( 496 -1536 753 ) ( 497 -1536 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 496 -1536 752 ) ( 497 -1536 752 ) ( 496 -1535 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 512 -1472 768 ) ( 512 -1471 768 ) ( 513 -1472 768 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 512 -96 768 ) ( 513 -96 768 ) ( 512 -96 769 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 704 -1472 768 ) ( 704 -1472 769 ) ( 704 -1471 768 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -96 752 ) ( 480 -95 752 ) ( 480 -96 753 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -96 752 ) ( 480 -96 753 ) ( 481 -96 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -96 752 ) ( 481 -96 752 ) ( 480 -95 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 544 -80 1168 ) ( 544 -79 1168 ) ( 545 -80 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 544 -80 768 ) ( 545 -80 768 ) ( 544 -80 769 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 544 -80 768 ) ( 544 -80 769 ) ( 544 -79 768 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 57
 {
-( 480 -96 768 ) ( 480 -95 768 ) ( 480 -96 769 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -96 768 ) ( 480 -96 769 ) ( 481 -96 768 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -96 768 ) ( 481 -96 768 ) ( 480 -95 768 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 544 -80 1184 ) ( 544 -79 1184 ) ( 545 -80 1184 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 544 -80 784 ) ( 545 -80 784 ) ( 544 -80 785 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 544 -80 784 ) ( 544 -80 785 ) ( 544 -79 784 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-}
-// brush 58
-{
-( 448 -112 1120 ) ( 448 -111 1120 ) ( 448 -112 1121 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -1536 1120 ) ( 448 -1536 1121 ) ( 449 -1536 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -112 1120 ) ( 449 -112 1120 ) ( 448 -111 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -96 1168 ) ( 480 -95 1168 ) ( 481 -96 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -96 1136 ) ( 481 -96 1136 ) ( 480 -96 1137 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -96 1136 ) ( 480 -96 1137 ) ( 480 -95 1136 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-}
-// brush 59
-{
-( 448 -112 768 ) ( 448 -111 768 ) ( 448 -112 769 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -1536 768 ) ( 448 -1536 769 ) ( 449 -1536 768 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -112 768 ) ( 449 -112 768 ) ( 448 -111 768 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -96 816 ) ( 480 -95 816 ) ( 481 -96 816 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -96 784 ) ( 481 -96 784 ) ( 480 -96 785 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -96 784 ) ( 480 -96 785 ) ( 480 -95 784 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-}
-// brush 60
-{
-( 448 -128 1104 ) ( 448 -127 1104 ) ( 448 -128 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -160 1104 ) ( 448 -160 1105 ) ( 449 -160 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -128 816 ) ( 449 -128 816 ) ( 448 -127 816 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -96 1120 ) ( 480 -95 1120 ) ( 481 -96 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 448 -112 1104 ) ( 448 -111 1104 ) ( 448 -112 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -1536 1104 ) ( 448 -1536 1105 ) ( 449 -1536 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -112 1104 ) ( 449 -112 1104 ) ( 448 -111 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -96 1152 ) ( 480 -95 1152 ) ( 481 -96 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
 ( 480 -96 1120 ) ( 481 -96 1120 ) ( 480 -96 1121 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 ( 480 -96 1120 ) ( 480 -96 1121 ) ( 480 -95 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
+// brush 58
+{
+( 448 -112 752 ) ( 448 -111 752 ) ( 448 -112 753 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -1536 752 ) ( 448 -1536 753 ) ( 449 -1536 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -112 752 ) ( 449 -112 752 ) ( 448 -111 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -96 800 ) ( 480 -95 800 ) ( 481 -96 800 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -96 768 ) ( 481 -96 768 ) ( 480 -96 769 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -96 768 ) ( 480 -96 769 ) ( 480 -95 768 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 59
+{
+( 448 -128 1088 ) ( 448 -127 1088 ) ( 448 -128 1089 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -160 1088 ) ( 448 -160 1089 ) ( 449 -160 1088 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -128 800 ) ( 449 -128 800 ) ( 448 -127 800 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -96 1104 ) ( 480 -95 1104 ) ( 481 -96 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -96 1104 ) ( 481 -96 1104 ) ( 480 -96 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -96 1104 ) ( 480 -96 1105 ) ( 480 -95 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 60
+{
+( 448 -416 1088 ) ( 448 -415 1088 ) ( 448 -416 1089 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -448 1088 ) ( 448 -448 1089 ) ( 449 -448 1088 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -416 800 ) ( 449 -416 800 ) ( 448 -415 800 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -384 1104 ) ( 480 -383 1104 ) ( 481 -384 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -384 1104 ) ( 481 -384 1104 ) ( 480 -384 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -384 1104 ) ( 480 -384 1105 ) ( 480 -383 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
 // brush 61
 {
-( 448 -416 1104 ) ( 448 -415 1104 ) ( 448 -416 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -448 1104 ) ( 448 -448 1105 ) ( 449 -448 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -416 816 ) ( 449 -416 816 ) ( 448 -415 816 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -384 1120 ) ( 480 -383 1120 ) ( 481 -384 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -384 1120 ) ( 481 -384 1120 ) ( 480 -384 1121 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -384 1120 ) ( 480 -384 1121 ) ( 480 -383 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -672 1088 ) ( 448 -671 1088 ) ( 448 -672 1089 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -704 1088 ) ( 448 -704 1089 ) ( 449 -704 1088 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -672 800 ) ( 449 -672 800 ) ( 448 -671 800 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -640 1104 ) ( 480 -639 1104 ) ( 481 -640 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -640 1104 ) ( 481 -640 1104 ) ( 480 -640 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -640 1104 ) ( 480 -640 1105 ) ( 480 -639 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 62
 {
-( 448 -672 1104 ) ( 448 -671 1104 ) ( 448 -672 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -704 1104 ) ( 448 -704 1105 ) ( 449 -704 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -672 816 ) ( 449 -672 816 ) ( 448 -671 816 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -640 1120 ) ( 480 -639 1120 ) ( 481 -640 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -640 1120 ) ( 481 -640 1120 ) ( 480 -640 1121 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -640 1120 ) ( 480 -640 1121 ) ( 480 -639 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -928 1088 ) ( 448 -927 1088 ) ( 448 -928 1089 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -960 1088 ) ( 448 -960 1089 ) ( 449 -960 1088 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -928 800 ) ( 449 -928 800 ) ( 448 -927 800 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -896 1104 ) ( 480 -895 1104 ) ( 481 -896 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -896 1104 ) ( 481 -896 1104 ) ( 480 -896 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -896 1104 ) ( 480 -896 1105 ) ( 480 -895 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 63
 {
-( 448 -928 1104 ) ( 448 -927 1104 ) ( 448 -928 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -960 1104 ) ( 448 -960 1105 ) ( 449 -960 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -928 816 ) ( 449 -928 816 ) ( 448 -927 816 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -896 1120 ) ( 480 -895 1120 ) ( 481 -896 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -896 1120 ) ( 481 -896 1120 ) ( 480 -896 1121 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -896 1120 ) ( 480 -896 1121 ) ( 480 -895 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -1184 1088 ) ( 448 -1183 1088 ) ( 448 -1184 1089 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -1216 1088 ) ( 448 -1216 1089 ) ( 449 -1216 1088 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -1184 800 ) ( 449 -1184 800 ) ( 448 -1183 800 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -1152 1104 ) ( 480 -1151 1104 ) ( 481 -1152 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -1152 1104 ) ( 481 -1152 1104 ) ( 480 -1152 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -1152 1104 ) ( 480 -1152 1105 ) ( 480 -1151 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 64
 {
-( 448 -1184 1104 ) ( 448 -1183 1104 ) ( 448 -1184 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -1216 1104 ) ( 448 -1216 1105 ) ( 449 -1216 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -1184 816 ) ( 449 -1184 816 ) ( 448 -1183 816 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -1152 1120 ) ( 480 -1151 1120 ) ( 481 -1152 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -1152 1120 ) ( 481 -1152 1120 ) ( 480 -1152 1121 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -1152 1120 ) ( 480 -1152 1121 ) ( 480 -1151 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -1440 1088 ) ( 448 -1439 1088 ) ( 448 -1440 1089 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -1472 1088 ) ( 448 -1472 1089 ) ( 449 -1472 1088 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 448 -1440 800 ) ( 449 -1440 800 ) ( 448 -1439 800 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -1408 1104 ) ( 480 -1407 1104 ) ( 481 -1408 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 480 -1408 1104 ) ( 481 -1408 1104 ) ( 480 -1408 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 480 -1408 1104 ) ( 480 -1408 1105 ) ( 480 -1407 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 65
 {
-( 448 -1440 1104 ) ( 448 -1439 1104 ) ( 448 -1440 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -1472 1104 ) ( 448 -1472 1105 ) ( 449 -1472 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 448 -1440 816 ) ( 449 -1440 816 ) ( 448 -1439 816 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -1408 1120 ) ( 480 -1407 1120 ) ( 481 -1408 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 480 -1408 1120 ) ( 481 -1408 1120 ) ( 480 -1408 1121 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 480 -1408 1120 ) ( 480 -1408 1121 ) ( 480 -1407 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -48 -632 -24 ) ( -48 -631 -24 ) ( -48 -632 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -48 -1536 -24 ) ( -48 -1536 -23 ) ( -47 -1536 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -48 -632 -24 ) ( -47 -632 -24 ) ( -48 -631 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( -48 -448 736 ) ( 80 -576 736 ) ( -48 -576 736 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( -32 -80 -16 ) ( -31 -80 -16 ) ( -32 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -80 -16 ) ( -32 -80 -15 ) ( -32 -79 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 66
 {
-( -48 -632 -8 ) ( -48 -631 -8 ) ( -48 -632 -7 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -48 -1536 -8 ) ( -48 -1536 -7 ) ( -47 -1536 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -48 -632 -8 ) ( -47 -632 -8 ) ( -48 -631 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( -48 -448 752 ) ( 80 -576 752 ) ( -48 -576 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( -32 -80 0 ) ( -31 -80 0 ) ( -32 -80 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -80 0 ) ( -32 -80 1 ) ( -32 -79 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -272 -1536 736 ) ( -272 -1535 736 ) ( -272 -1536 737 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -144 -1536 736 ) ( -144 -1536 737 ) ( -143 -1536 736 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -144 -1536 736 ) ( -143 -1536 736 ) ( -144 -1535 736 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( -128 -1472 752 ) ( -128 -1471 752 ) ( -127 -1472 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( -128 -96 752 ) ( -127 -96 752 ) ( -128 -96 753 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 64 -1472 752 ) ( 64 -1472 753 ) ( 64 -1471 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 67
 {
-( -272 -1536 752 ) ( -272 -1535 752 ) ( -272 -1536 753 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -144 -1536 752 ) ( -144 -1536 753 ) ( -143 -1536 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -144 -1536 752 ) ( -143 -1536 752 ) ( -144 -1535 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( -128 -1472 768 ) ( -128 -1471 768 ) ( -127 -1472 768 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( -128 -96 768 ) ( -127 -96 768 ) ( -128 -96 769 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 64 -1472 768 ) ( 64 -1472 769 ) ( 64 -1471 768 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-}
-// brush 68
-{
-( -32 -112 1120 ) ( -32 -111 1120 ) ( -32 -112 1121 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -1536 1120 ) ( -32 -1536 1121 ) ( -31 -1536 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -112 1120 ) ( -31 -112 1120 ) ( -32 -111 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -96 1168 ) ( 0 -95 1168 ) ( 1 -96 1168 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -96 1136 ) ( 1 -96 1136 ) ( 0 -96 1137 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -96 1136 ) ( 0 -96 1137 ) ( 0 -95 1136 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-}
-// brush 69
-{
-( -32 -112 768 ) ( -32 -111 768 ) ( -32 -112 769 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -1536 768 ) ( -32 -1536 769 ) ( -31 -1536 768 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -112 768 ) ( -31 -112 768 ) ( -32 -111 768 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -96 816 ) ( 0 -95 816 ) ( 1 -96 816 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -96 784 ) ( 1 -96 784 ) ( 0 -96 785 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -96 784 ) ( 0 -96 785 ) ( 0 -95 784 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-}
-// brush 70
-{
-( -32 -128 1104 ) ( -32 -127 1104 ) ( -32 -128 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -160 1104 ) ( -32 -160 1105 ) ( -31 -160 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -128 816 ) ( -31 -128 816 ) ( -32 -127 816 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -96 1120 ) ( 0 -95 1120 ) ( 1 -96 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( -32 -112 1104 ) ( -32 -111 1104 ) ( -32 -112 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -1536 1104 ) ( -32 -1536 1105 ) ( -31 -1536 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -112 1104 ) ( -31 -112 1104 ) ( -32 -111 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -96 1152 ) ( 0 -95 1152 ) ( 1 -96 1152 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
 ( 0 -96 1120 ) ( 1 -96 1120 ) ( 0 -96 1121 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 ( 0 -96 1120 ) ( 0 -96 1121 ) ( 0 -95 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
+// brush 68
+{
+( -32 -112 752 ) ( -32 -111 752 ) ( -32 -112 753 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -1536 752 ) ( -32 -1536 753 ) ( -31 -1536 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -112 752 ) ( -31 -112 752 ) ( -32 -111 752 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -96 800 ) ( 0 -95 800 ) ( 1 -96 800 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -96 768 ) ( 1 -96 768 ) ( 0 -96 769 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -96 768 ) ( 0 -96 769 ) ( 0 -95 768 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 69
+{
+( -32 -128 1088 ) ( -32 -127 1088 ) ( -32 -128 1089 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -160 1088 ) ( -32 -160 1089 ) ( -31 -160 1088 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -128 800 ) ( -31 -128 800 ) ( -32 -127 800 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -96 1104 ) ( 0 -95 1104 ) ( 1 -96 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -96 1104 ) ( 1 -96 1104 ) ( 0 -96 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -96 1104 ) ( 0 -96 1105 ) ( 0 -95 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 70
+{
+( -32 -416 1088 ) ( -32 -415 1088 ) ( -32 -416 1089 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -448 1088 ) ( -32 -448 1089 ) ( -31 -448 1088 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -416 800 ) ( -31 -416 800 ) ( -32 -415 800 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -384 1104 ) ( 0 -383 1104 ) ( 1 -384 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -384 1104 ) ( 1 -384 1104 ) ( 0 -384 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -384 1104 ) ( 0 -384 1105 ) ( 0 -383 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
 // brush 71
 {
-( -32 -416 1104 ) ( -32 -415 1104 ) ( -32 -416 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -448 1104 ) ( -32 -448 1105 ) ( -31 -448 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -416 816 ) ( -31 -416 816 ) ( -32 -415 816 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -384 1120 ) ( 0 -383 1120 ) ( 1 -384 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -384 1120 ) ( 1 -384 1120 ) ( 0 -384 1121 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -384 1120 ) ( 0 -384 1121 ) ( 0 -383 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -672 1088 ) ( -32 -671 1088 ) ( -32 -672 1089 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -704 1088 ) ( -32 -704 1089 ) ( -31 -704 1088 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -672 800 ) ( -31 -672 800 ) ( -32 -671 800 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -640 1104 ) ( 0 -639 1104 ) ( 1 -640 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -640 1104 ) ( 1 -640 1104 ) ( 0 -640 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -640 1104 ) ( 0 -640 1105 ) ( 0 -639 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 72
 {
-( -32 -672 1104 ) ( -32 -671 1104 ) ( -32 -672 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -704 1104 ) ( -32 -704 1105 ) ( -31 -704 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -672 816 ) ( -31 -672 816 ) ( -32 -671 816 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -640 1120 ) ( 0 -639 1120 ) ( 1 -640 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -640 1120 ) ( 1 -640 1120 ) ( 0 -640 1121 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -640 1120 ) ( 0 -640 1121 ) ( 0 -639 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -928 1088 ) ( -32 -927 1088 ) ( -32 -928 1089 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -960 1088 ) ( -32 -960 1089 ) ( -31 -960 1088 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -928 800 ) ( -31 -928 800 ) ( -32 -927 800 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -896 1104 ) ( 0 -895 1104 ) ( 1 -896 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -896 1104 ) ( 1 -896 1104 ) ( 0 -896 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -896 1104 ) ( 0 -896 1105 ) ( 0 -895 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 73
 {
-( -32 -928 1104 ) ( -32 -927 1104 ) ( -32 -928 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -960 1104 ) ( -32 -960 1105 ) ( -31 -960 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -928 816 ) ( -31 -928 816 ) ( -32 -927 816 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -896 1120 ) ( 0 -895 1120 ) ( 1 -896 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -896 1120 ) ( 1 -896 1120 ) ( 0 -896 1121 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -896 1120 ) ( 0 -896 1121 ) ( 0 -895 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -1184 1088 ) ( -32 -1183 1088 ) ( -32 -1184 1089 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -1216 1088 ) ( -32 -1216 1089 ) ( -31 -1216 1088 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -1184 800 ) ( -31 -1184 800 ) ( -32 -1183 800 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -1152 1104 ) ( 0 -1151 1104 ) ( 1 -1152 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -1152 1104 ) ( 1 -1152 1104 ) ( 0 -1152 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -1152 1104 ) ( 0 -1152 1105 ) ( 0 -1151 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 74
 {
-( -32 -1184 1104 ) ( -32 -1183 1104 ) ( -32 -1184 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -1216 1104 ) ( -32 -1216 1105 ) ( -31 -1216 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -1184 816 ) ( -31 -1184 816 ) ( -32 -1183 816 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -1152 1120 ) ( 0 -1151 1120 ) ( 1 -1152 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -1152 1120 ) ( 1 -1152 1120 ) ( 0 -1152 1121 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -1152 1120 ) ( 0 -1152 1121 ) ( 0 -1151 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -1440 1088 ) ( -32 -1439 1088 ) ( -32 -1440 1089 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -1472 1088 ) ( -32 -1472 1089 ) ( -31 -1472 1088 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -32 -1440 800 ) ( -31 -1440 800 ) ( -32 -1439 800 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -1408 1104 ) ( 0 -1407 1104 ) ( 1 -1408 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 0 -1408 1104 ) ( 1 -1408 1104 ) ( 0 -1408 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 0 -1408 1104 ) ( 0 -1408 1105 ) ( 0 -1407 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 // brush 75
 {
-( -32 -1440 1104 ) ( -32 -1439 1104 ) ( -32 -1440 1105 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -1472 1104 ) ( -32 -1472 1105 ) ( -31 -1472 1104 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( -32 -1440 816 ) ( -31 -1440 816 ) ( -32 -1439 816 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -1408 1120 ) ( 0 -1407 1120 ) ( 1 -1408 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
-( 0 -1408 1120 ) ( 1 -1408 1120 ) ( 0 -1408 1121 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
-( 0 -1408 1120 ) ( 0 -1408 1121 ) ( 0 -1407 1120 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 -16 -16 ) ( 80 -15 -16 ) ( 80 -16 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 432 -12 -16 ) ( 432 -12 -15 ) ( 433 -12 -16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 432 -16 0 ) ( 433 -16 0 ) ( 432 -15 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 432 -24 12 ) ( 432 -8 12 ) ( 560 -8 12 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 448 0 0 ) ( 449 0 0 ) ( 448 0 1 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 436 0 36 ) ( 436 128 28 ) ( 436 0 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_04 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 }
 }

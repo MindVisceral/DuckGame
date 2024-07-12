@@ -1,9 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://dsdtgd7pxkygr"]
+[gd_scene load_steps=17 format=3 uid="uid://dsdtgd7pxkygr"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/Lift.gd" id="1_f71ji"]
 [ext_resource type="PackedScene" uid="uid://c1xj4q1r54i1r" path="res://Blender/Lift.gltf" id="1_mdu1c"]
 [ext_resource type="PackedScene" uid="uid://db7w5ip2jk0td" path="res://Scenes_Scripts/Levels/Objects/SmallLight.tscn" id="2_4ajtd"]
 [ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="3_gf1b1"]
+[ext_resource type="AudioStream" uid="uid://baki5t0nqnyau" path="res://Scenes_Scripts/Sounds/sheyvan__sliding-elevator-door-closing.wav" id="5_o03sn"]
+[ext_resource type="AudioStream" uid="uid://dtsbu4vvwahp2" path="res://Scenes_Scripts/Sounds/yoyodaman234_elevator-door-open-6b-backing.wav" id="5_tofot"]
+[ext_resource type="AudioStream" uid="uid://bsp8r5hq402pg" path="res://Scenes_Scripts/Sounds/sheyvan__sliding-elevator-door-opening.wav" id="6_7y1i0"]
+[ext_resource type="AudioStream" uid="uid://dp6fd3dbvl2vc" path="res://Scenes_Scripts/Sounds/sheyvan_sliding-elevator-door-click.wav" id="6_bif47"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w5px6"]
 size = Vector3(0.109863, 0.970718, 0.395782)
@@ -103,7 +107,7 @@ tracks/6/keys = {
 
 [sub_resource type="Animation" id="Animation_tu6ci"]
 resource_name = "close"
-length = 2.3
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -111,7 +115,7 @@ tracks/0/path = NodePath("Lift/Lift_body/Lift_door_outer_L:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2.3),
+"times": PackedFloat32Array(0, 2.6, 5),
 "transitions": PackedFloat32Array(0.392292, 1.23114, 1.23114),
 "update": 0,
 "values": [Vector3(-0.877011, 1.02957, 0.987187), Vector3(-0.61, 1.03, 0.987), Vector3(-0.61, 1.03, 0.987)]
@@ -123,7 +127,7 @@ tracks/1/path = NodePath("Lift/Lift_body/Lift_door_outer_R:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 2.3),
+"times": PackedFloat32Array(0, 2.6, 5),
 "transitions": PackedFloat32Array(0.392292, 1.23114, 1.23114),
 "update": 0,
 "values": [Vector3(0.88087, 1.02957, 0.987187), Vector3(0.61, 1.03, 0.987), Vector3(0.61, 1.03, 0.987)]
@@ -135,10 +139,10 @@ tracks/2/path = NodePath("Lift/Lift_body/Lift_door_outer_R/Lift_door_inner_R:pos
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.1, 2.3),
-"transitions": PackedFloat32Array(0.757858, 1.41421, 0.68302),
+"times": PackedFloat32Array(0, 1.5, 3.2, 5),
+"transitions": PackedFloat32Array(0.757858, 1.41421, 0.68302, 0.68302),
 "update": 0,
-"values": [Vector3(-0.0501674, 0, 0), Vector3(-0.0501674, 0, 0), Vector3(-0.382, 0, 0)]
+"values": [Vector3(-0.0501674, 0, 0), Vector3(-0.0501674, 0, 0), Vector3(-0.382, 0, 0), Vector3(-0.382, 0, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -147,15 +151,44 @@ tracks/3/path = NodePath("Lift/Lift_body/Lift_door_outer_L/Lift_door_inner_L:pos
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.1, 2.3),
-"transitions": PackedFloat32Array(0.757858, 1.41421, 0.68302),
+"times": PackedFloat32Array(0, 1.5, 3.2, 5),
+"transitions": PackedFloat32Array(0.757858, 1.41421, 0.68302, 0.68302),
 "update": 0,
-"values": [Vector3(0.0501675, 0, 0), Vector3(0.0501675, 0, 0), Vector3(0.382, 0, 0)]
+"values": [Vector3(0.0501675, 0, 0), Vector3(0.0501675, 0, 0), Vector3(0.382, 0, 0), Vector3(0.382, 0, 0)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("backing_AudioPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("closing_AudioPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_jewxc"]
 resource_name = "open"
-length = 2.4
+length = 6.0
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -163,7 +196,7 @@ tracks/0/path = NodePath("Lift/Lift_body/Lift_door_outer_L:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.9, 2.1, 2.2, 2.4),
+"times": PackedFloat32Array(0, 3.35, 5.55, 5.7, 5.95),
 "transitions": PackedFloat32Array(0.517632, 1.62451, 0.482968, 0.189465, 0.258816),
 "update": 0,
 "values": [Vector3(-0.61, 1.03, 0.987), Vector3(-0.61, 1.03, 0.987), Vector3(-0.877011, 1.02957, 0.987187), Vector3(-0.89, 1.03, 0.987), Vector3(-0.877011, 1.02957, 0.987187)]
@@ -175,7 +208,7 @@ tracks/1/path = NodePath("Lift/Lift_body/Lift_door_outer_R:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.9, 2.1, 2.2, 2.4),
+"times": PackedFloat32Array(0, 3.35, 5.55, 5.7, 5.95),
 "transitions": PackedFloat32Array(0.517632, 1.62451, 0.482968, 0.189465, 0.258816),
 "update": 0,
 "values": [Vector3(0.61, 1.03, 0.987), Vector3(0.61, 1.03, 0.987), Vector3(0.88087, 1.02957, 0.987187), Vector3(0.89, 1.03, 0.987), Vector3(0.88087, 1.02957, 0.987187)]
@@ -187,7 +220,7 @@ tracks/2/path = NodePath("Lift/Lift_body/Lift_door_outer_R/Lift_door_inner_R:pos
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1, 2.1),
+"times": PackedFloat32Array(0, 3.35, 5.55),
 "transitions": PackedFloat32Array(0.933033, 1.27456, 0.757858),
 "update": 0,
 "values": [Vector3(-0.382, 0, 0), Vector3(-0.0501674, 0, 0), Vector3(-0.0501674, 0, 0)]
@@ -199,10 +232,38 @@ tracks/3/path = NodePath("Lift/Lift_body/Lift_door_outer_L/Lift_door_inner_L:pos
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1, 2.1),
+"times": PackedFloat32Array(0, 3.35, 5.55),
 "transitions": PackedFloat32Array(0.933033, 1.27456, 0.757858),
 "update": 0,
 "values": [Vector3(0.382, 0, 0), Vector3(0.0501675, 0, 0), Vector3(0.0501675, 0, 0)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("backing_AudioPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("opening_AudioPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_kgc3x"]
@@ -384,7 +445,6 @@ collision_mask = 133
 script = ExtResource("1_f71ji")
 monologue_data = Array[String](["dayum"])
 monologue_first_line_time = 3.0
-monologue_line_time = Array[float]([4.0])
 
 [node name="Lift" parent="." instance=ExtResource("1_mdu1c")]
 
@@ -423,6 +483,19 @@ disabled = true
 libraries = {
 "": SubResource("AnimationLibrary_ciqi5")
 }
+
+[node name="closing_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_o03sn")
+
+[node name="opening_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_7y1i0")
+
+[node name="backing_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_tofot")
+volume_db = -6.0
+
+[node name="buttonclicked_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_bif47")
 
 [connection signal="interact" from="Interactable" to="." method="_on_interactable_interact"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
