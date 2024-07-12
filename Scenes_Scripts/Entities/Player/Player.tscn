@@ -428,6 +428,7 @@ grow_vertical = 2
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(1440, 810)
+render_target_update_mode = 4
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Head/BobbingNode/PlayerCamera/CutsceneEffects/SubViewportContainer/SubViewport"]
 layer = 100

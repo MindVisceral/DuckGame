@@ -1,0 +1,218 @@
+[gd_scene load_steps=10 format=3 uid="uid://co2nbpxdkj6rv"]
+
+[ext_resource type="FontFile" uid="uid://c41k7wxmhkwfs" path="res://Scenes_Scripts/Fonts/VCR_OSD_MONO_1.001.ttf" id="1_bfk6y"]
+[ext_resource type="Script" path="res://Scenes_Scripts/Levels/credits.gd" id="1_tv3tf"]
+[ext_resource type="FontVariation" uid="uid://bn6h2tjp2tnml" path="res://Scenes_Scripts/Fonts/BoldVCR.tres" id="2_o00ls"]
+[ext_resource type="FontVariation" uid="uid://ckkunrng0eu5" path="res://Scenes_Scripts/Fonts/ItalicsVCR.tres" id="3_q57up"]
+[ext_resource type="FontVariation" uid="uid://bpanvlayr3ks1" path="res://Scenes_Scripts/Fonts/BoldItalicsVCR.tres" id="4_adnv4"]
+[ext_resource type="AudioStream" uid="uid://de1h0n0aopjua" path="res://Scenes_Scripts/Sounds/new_line_beep.wav" id="5_swfh7"]
+
+[sub_resource type="Animation" id="Animation_ejgpv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Return_MarginContainer/ReturnAudioPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_7b2h1"]
+resource_name = "return"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Return_MarginContainer/ReturnAudioPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"return_to_menu"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yqp76"]
+_data = {
+"RESET": SubResource("Animation_ejgpv"),
+"return": SubResource("Animation_7b2h1")
+}
+
+[node name="credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tv3tf")
+
+[node name="Main_MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+auto_translate = false
+localize_numeral_system = false
+
+[node name="Background" type="ColorRect" parent="Main_MarginContainer"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Main_VBoxContainer" type="VBoxContainer" parent="Main_MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 250
+
+[node name="Top_VBoxContainer" type="VBoxContainer" parent="Main_MarginContainer/Main_VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 4.26
+auto_translate = false
+localize_numeral_system = false
+theme_override_constants/separation = 5
+
+[node name="Credits_RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Main_VBoxContainer/Top_VBoxContainer"]
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("1_bfk6y")
+theme_override_fonts/bold_font = ExtResource("2_o00ls")
+theme_override_fonts/italics_font = ExtResource("3_q57up")
+theme_override_fonts/bold_italics_font = ExtResource("4_adnv4")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[center]Credits[/center]"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="Models_RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Main_VBoxContainer/Top_VBoxContainer"]
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("1_bfk6y")
+theme_override_fonts/bold_font = ExtResource("2_o00ls")
+theme_override_fonts/italics_font = ExtResource("3_q57up")
+theme_override_fonts/bold_italics_font = ExtResource("4_adnv4")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]Models[/center]"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="Columns_VBoxContainer" type="VBoxContainer" parent="Main_MarginContainer/Main_VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Row1_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer/Row1_HBoxContainer"]
+layout_mode = 2
+text = "credits 1"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="Row2_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer/Row2_HBoxContainer"]
+layout_mode = 2
+text = "credits 1"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="Row3_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer/Row3_HBoxContainer"]
+layout_mode = 2
+text = "credits 1"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="Row4_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer/Row4_HBoxContainer"]
+layout_mode = 2
+text = "credits 1"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="Return_MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.92
+anchor_right = 0.101
+anchor_bottom = 1.0
+offset_top = -0.200012
+offset_right = 0.559998
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Return" type="Button" parent="Return_MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_bfk6y")
+theme_override_font_sizes/font_size = 30
+action_mode = 0
+text = "RETURN"
+
+[node name="ReturnAudioPlayer" type="AudioStreamPlayer" parent="Return_MarginContainer"]
+stream = ExtResource("5_swfh7")
+pitch_scale = 0.4
+bus = &"Sounds"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yqp76")
+}
+
+[connection signal="pressed" from="Return_MarginContainer/Return" to="." method="_on_return_pressed"]

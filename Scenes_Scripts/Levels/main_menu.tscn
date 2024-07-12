@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cluw03kxhvknr"]
+[gd_scene load_steps=14 format=3 uid="uid://cluw03kxhvknr"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Levels/main_menu.gd" id="1_as0fm"]
 [ext_resource type="FontFile" uid="uid://c41k7wxmhkwfs" path="res://Scenes_Scripts/Fonts/VCR_OSD_MONO_1.001.ttf" id="1_dw06b"]
@@ -71,6 +71,18 @@ tracks/4/path = NodePath("MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxCon
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer/CreditsAudioPlayer:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -214,9 +226,41 @@ tracks/4/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_kaw6s"]
+resource_name = "credits"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer/CreditsAudioPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"go_to_credits"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uh7dj"]
 _data = {
 "RESET": SubResource("Animation_4yosr"),
+"credits": SubResource("Animation_kaw6s"),
 "default": SubResource("Animation_77k0v"),
 "quit": SubResource("Animation_kitna")
 }
@@ -249,7 +293,7 @@ layout_mode = 2
 size_flags_stretch_ratio = 4.26
 auto_translate = false
 localize_numeral_system = false
-theme_override_constants/separation = 270
+theme_override_constants/separation = 110
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Main_VBoxContainer"]
 layout_mode = 2
@@ -257,9 +301,9 @@ theme_override_fonts/normal_font = ExtResource("1_dw06b")
 theme_override_fonts/bold_font = ExtResource("2_5i3kh")
 theme_override_fonts/italics_font = ExtResource("3_368u5")
 theme_override_fonts/bold_italics_font = ExtResource("4_ua02a")
-theme_override_font_sizes/normal_font_size = 316
+theme_override_font_sizes/normal_font_size = 222
 bbcode_enabled = true
-text = "[center]TITLE[/center]"
+text = "[center]In a Poor Slate[/center]"
 fit_content = true
 scroll_active = false
 
@@ -284,6 +328,20 @@ shortcut_in_tooltip = false
 text = "AWAKEN"
 
 [node name="AwakenAudioPlayer" type="AudioStreamPlayer" parent="MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer"]
+stream = ExtResource("6_vb8tc")
+pitch_scale = 1.2
+bus = &"Sounds"
+
+[node name="Credits" type="Button" parent="MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_dw06b")
+theme_override_font_sizes/font_size = 50
+action_mode = 0
+shortcut = SubResource("Shortcut_jyx2g")
+shortcut_in_tooltip = false
+text = "CREDITS"
+
+[node name="CreditsAudioPlayer" type="AudioStreamPlayer" parent="MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer"]
 stream = ExtResource("6_vb8tc")
 pitch_scale = 1.2
 bus = &"Sounds"
@@ -313,4 +371,5 @@ libraries = {
 }
 
 [connection signal="pressed" from="MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer/Awaken" to="." method="_on_awaken_pressed"]
+[connection signal="pressed" from="MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer/Return" to="." method="_on_return_pressed"]

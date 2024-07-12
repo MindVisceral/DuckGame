@@ -13,6 +13,7 @@ extends Control
 
 
 @onready var level: String = "res://Scenes_Scripts/Levels/level_home.tscn"
+@onready var credits: String = "res://Scenes_Scripts/Levels/credits.tscn"
 
 func _ready() -> void:
 	if Globals.menu_color_black == true:
@@ -26,6 +27,9 @@ func _on_awaken_pressed() -> void:
 func _on_return_pressed() -> void:
 	animPlayer.play("quit")
 
+func _on_credits_pressed() -> void:
+	animPlayer.play("credits")
+
 
 
 func hide_cursor() -> void:
@@ -34,6 +38,9 @@ func hide_cursor() -> void:
 
 func next_level() -> void:
 	get_tree().change_scene_to_file(level)
+
+func go_to_credits() -> void:
+	get_tree().change_scene_to_file(credits)
 
 func quit() -> void:
 	get_tree().quit()
