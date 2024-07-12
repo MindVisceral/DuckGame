@@ -382,6 +382,9 @@ _data = {
 collision_layer = 64
 collision_mask = 133
 script = ExtResource("1_f71ji")
+monologue_data = Array[String](["dayum"])
+monologue_first_line_time = 3.0
+monologue_line_time = Array[float]([4.0])
 
 [node name="Lift" parent="." instance=ExtResource("1_mdu1c")]
 

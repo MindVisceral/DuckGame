@@ -1,6 +1,19 @@
 extends StaticBody3D
 
-@export var setpiece_script: Node3D
+
+
+
+@export var monologue_data: Array[String]
+## How long before the first line gets shown on screen
+@export var monologue_first_line_time: float = 0.0
+## The time before you can move on to the next line after a line shows up on the screen 
+@export var monologue_line_time: Array[float]
+
+
+
+
+
+@export var setpiece_script: Node
 
 @onready var animPlayer: AnimationPlayer = $AnimationPlayer
 @onready var ColliderBlock: CollisionShape3D = $ExitBlocker

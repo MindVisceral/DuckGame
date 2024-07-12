@@ -1,5 +1,6 @@
 extends Control
 
+@onready var background: Panel = $AspectRatioContainer/MarginContainer/TextBackground_Panel
 @onready var textbox: RichTextLabel = $AspectRatioContainer/MarginContainer/TextBackground_Panel/Monologue_RichTextLabel
 @onready var sprite_anim: AnimationPlayer = $AspectRatioContainer/MarginContainer/TextBackground_Panel/Continue_MarginContainer/Arrow_Sprite2D/AnimationPlayer
 @onready var timer: Timer = $AspectRatioContainer/MarginContainer/TextBackground_Panel/DialogTimer
@@ -8,10 +9,18 @@ extends Control
 ## Holds all the lines in the monologue that comes from interacting with this specific
 ## Interactable. These lines are set in the Interactable itself.
 var monologue: Array
-var current_array_postion: int = 0
+var current_monologue_line: int = 0
+## Time before the first line is shown
+var first_line_time: float = 0
+## Time before the next line is shown
+var monologue_time: Array = []
+
+## We only make new monologue show up when the current monologue is over
+var accept_new_data: bool = true
+
 
 func _ready() -> void:
-	sprite_anim.play("invisible")
+	reset_monologue()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
@@ -21,40 +30,55 @@ func _process(delta: float) -> void:
 
 ## The dialogue has started,
 func start_monologue():
-	print("started")
+	accept_new_data = false
 	
-	## We start up the Timer so that the Player can't just button mash through dialogue
-	timer.start()
+	
+	## We wait a moment to make the textbox shows up, if it isn't set to show up immediately
+	if first_line_time > 0.0:
+		await get_tree().create_timer(first_line_time).timeout
 	
 	if !monologue.is_empty():
+		if not (current_monologue_line >= monologue_time.size()):
+			timer.wait_time = monologue_time[current_monologue_line]
+		else:
+			timer.wait_time = 0.001
+		timer.start()
+		
+		background.visible = true
 		beep_audioplayer.play()
-		textbox.text = monologue[current_array_postion]
-		current_array_postion += 1
+		textbox.text = monologue[current_monologue_line]
+		current_monologue_line += 1
 	else:
 		reset_monologue()
 
 func nextPhrase() -> void:
-	timer.start()
+	if not (current_monologue_line >= monologue_time.size()):
+		timer.wait_time = monologue_time[current_monologue_line]
+	else:
+		timer.wait_time = 0.001
+		timer.start()
+	
+	
 	sprite_anim.play("invisible")
 	
 	## When we reach the end of the monologue, we reset the whole thing
-	if current_array_postion >= monologue.size():
+	if current_monologue_line >= monologue.size():
 		reset_monologue()
 	## Othwerwise, we set the next monologue line in the Array
 	else:
-		textbox.text = monologue[current_array_postion]
+		textbox.text = monologue[current_monologue_line]
 	
-	current_array_postion += 1
+	current_monologue_line += 1
 
 ## We reset everything
 func reset_monologue() -> void:
-	current_array_postion = 0
+	current_monologue_line = 0
 	monologue.clear()
-	
-	
+	background.visible = false
 	timer.stop()
 	sprite_anim.play("invisible")
 	textbox.text = ""
+	accept_new_data = true
 
 ## Time to read the text is over, we may proceed now
 func _on_dialog_timer_timeout() -> void:

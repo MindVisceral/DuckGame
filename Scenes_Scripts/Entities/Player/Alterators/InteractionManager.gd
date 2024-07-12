@@ -135,18 +135,30 @@ func find_closest_interactable() -> Interactable:
 	return closest_interactable
 
 
-func get_interactable_monologue_info(interactable: Interactable) -> void:
-	var data = interactable.monologue_data
+func get_interactable_monologue_info(interactable) -> void:
 	
-	print("gathering monologue data: ", data)
-	
-	if data != null:
-		if data.is_empty():
-			print("empty")
-		else:
-			player.Monologue.reset_monologue()
-			
-			player.Monologue.monologue = data
-			player.Monologue.start_monologue()
-	
-	data = null
+	## We only send new data if the Monologue is done with all the lines
+	if player.Monologue.accept_new_data == true:
+		
+		var data: Array
+		var first_time: float
+		var data_time: Array
+		if "monologue_data" in interactable.owner:
+			data = interactable.owner.monologue_data.duplicate()
+		if "monologue_first_line_time" in interactable.owner:
+			first_time = interactable.owner.monologue_first_line_time
+		if "monologue_line_time" in interactable.owner:
+			data_time = interactable.owner.monologue_line_time.duplicate()
+		
+		if data != null:
+			if data.is_empty():
+				print("empty")
+				player.Monologue.reset_monologue()
+			else:
+				player.Monologue.reset_monologue()
+				
+				player.Monologue.monologue = data
+				player.Monologue.first_line_time = first_time
+				player.Monologue.monologue_time = data_time
+				
+				player.Monologue.start_monologue()

@@ -38,7 +38,13 @@ max_polyphony = 6
 bus = &"Sounds"
 attenuation_filter_cutoff_hz = 20500.0
 
+[node name="ClickAudioPlayer" type="AudioStreamPlayer3D" parent="."]
+
+[node name="SetpieceTimer" type="Timer" parent="."]
+wait_time = 1.5
+
 [connection signal="interact" from="Interactable" to="." method="_on_interactable_interact"]
 [connection signal="finished" from="AudioPlayer" to="." method="_on_audio_player_finished"]
+[connection signal="timeout" from="SetpieceTimer" to="." method="_on_setpiece_timer_timeout"]
 
 [editable path="Interactable"]

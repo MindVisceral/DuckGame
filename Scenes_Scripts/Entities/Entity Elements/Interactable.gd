@@ -9,17 +9,12 @@ signal unfocused()
 signal interact()
 
 
-## Contains Strings, which are taken by the MonologueUI Node, which displays them in the
-## Player's monologue box
-@export var monologue_data: Array[String]
-
-
 ## When an Entity enters/exits the Range Area3D, we add/remove this Interactable node to/from
 ## that Entity's "interactables" Array
 func _on_body_range_entered(body: Node3D) -> void:
 	if body is Player:
 		body.InteractionManager.interactables.append(self)
-		print(body, " has entered ", self.owner, "'s Range!")
+		#print(body, " has entered ", self.owner, "'s Range!")
 #
 func _on_body_range_exited(body: Node3D) -> void:
 	if body is Player:
@@ -27,4 +22,4 @@ func _on_body_range_exited(body: Node3D) -> void:
 		## We also emit the "unfocused" signal to avoid bugs
 		## The Entity can't focus on the Interactable if it isn't within its reach, now can it?
 		unfocused.emit()
-		print(body, " has exited ", self.owner, "'s Range!")
+		#print(body, " has exited ", self.owner, "'s Range!")

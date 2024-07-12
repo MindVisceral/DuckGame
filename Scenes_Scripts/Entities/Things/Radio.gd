@@ -2,8 +2,15 @@ extends RigidBody3D
 
 ## Reference to the music player
 @onready var audio: AudioStreamPlayer3D = $AudioPlayer
+@onready var click_audio: AudioStreamPlayer3D = $ClickAudioPlayer
 ## Point (in seconds) at which the music was turned off
 var pause_position = 0
+
+
+@onready var setpiecetimer: Timer = $SetpieceTimer
+## References the DoorLocked setpiece script. The door will unlock when the radio is interacted with. 
+@export var setpiece_script: Node
+
 
 ## Is the radio turned on right now?
 @export var turned_on: bool = false
@@ -17,7 +24,17 @@ func toggle_radio() -> void:
 		audio.stop()
 	else:
 		turned_on = true
+		
+		setpiecetimer.start()
+		
+		click_audio.play()
 		audio.play(pause_position)
+
+
+func do_the_setpiece() -> void:
+	setpiece_script.play_set_piece()
+
+
 
 ##
 func _on_interactable_interact() -> void:
@@ -27,3 +44,8 @@ func _on_interactable_interact() -> void:
 func _on_audio_player_finished() -> void:
 	if turned_on:
 		audio.play()
+
+
+
+func _on_setpiece_timer_timeout() -> void:
+	do_the_setpiece()
