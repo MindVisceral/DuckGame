@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://lhlklylca50m"]
+[gd_scene load_steps=21 format=3 uid="uid://lhlklylca50m"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player.gd" id="1_kmike"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player_States/State_Manager.gd" id="2_c5aqi"]
@@ -11,7 +11,9 @@
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/WeaponManager.gd" id="9_alxax"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/HeadBop.gd" id="10_6kxr3"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/WeaponBob.gd" id="12_4bkuj"]
+[ext_resource type="Shader" path="res://Scenes_Scripts/Shaders/Grain.gdshader" id="13_2jptx"]
 [ext_resource type="Texture2D" uid="uid://ds6uye256hjrj" path="res://Scenes_Scripts/crosshair.png" id="13_20fa4"]
+[ext_resource type="Shader" path="res://Scenes_Scripts/Shaders/Dithering.gdshader" id="13_i6uun"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/InteractionManager.gd" id="13_qk48y"]
 
 [sub_resource type="CapsuleShape3D" id="15"]
@@ -21,6 +23,20 @@ height = 1.6
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_hata5"]
 height = 0.01
 radius = 0.18
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1e1y2"]
+shader = ExtResource("13_i6uun")
+shader_parameter/SCREEN_WIDTH = 320.0
+shader_parameter/COLOR_FACTOR = 22.0
+shader_parameter/DITHERING_STRENTH = 0.04
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dcbvy"]
+shader = ExtResource("13_2jptx")
+shader_parameter/colored = false
+shader_parameter/color_amount = 0.6
+shader_parameter/grain_amount = 0.025
+shader_parameter/grain_size = 1.45
+shader_parameter/lum_amount = 1.731
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_3mfp7"]
 height = 3.0
@@ -175,16 +191,42 @@ Its FOV can be changed through an exported variable in the Player node"
 current = true
 fov = 90.0
 
+[node name="Postprocessing" type="Node" parent="Head/BobbingNode/PlayerCamera"]
+
+[node name="Dithering" type="CanvasLayer" parent="Head/BobbingNode/PlayerCamera/Postprocessing"]
+
+[node name="ColorRect" type="ColorRect" parent="Head/BobbingNode/PlayerCamera/Postprocessing/Dithering"]
+material = SubResource("ShaderMaterial_1e1y2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Grain" type="CanvasLayer" parent="Head/BobbingNode/PlayerCamera/Postprocessing"]
+
+[node name="ColorRect" type="ColorRect" parent="Head/BobbingNode/PlayerCamera/Postprocessing/Grain"]
+material = SubResource("ShaderMaterial_dcbvy")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Crosshair" type="CenterContainer" parent="Head/BobbingNode/PlayerCamera"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 auto_translate = false
 localize_numeral_system = false
 mouse_filter = 2

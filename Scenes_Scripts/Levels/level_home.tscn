@@ -1,4 +1,4 @@
-[gd_scene load_steps=150 format=3 uid="uid://bc1l8essgx3qb"]
+[gd_scene load_steps=155 format=3 uid="uid://bc1l8essgx3qb"]
 
 [ext_resource type="Environment" uid="uid://c45ge3tprgx5o" path="res://Scenes_Scripts/Levels/environment_default.tres" id="1_1jw4r"]
 [ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1_skewd"]
@@ -28,10 +28,15 @@
 [ext_resource type="PackedScene" uid="uid://dikpxxwdpl37n" path="res://Scenes_Scripts/Levels/Objects/SmallTable.tscn" id="23_hj68o"]
 [ext_resource type="PackedScene" uid="uid://x3e511wh70uk" path="res://Scenes_Scripts/Levels/Objects/BigChair.tscn" id="24_62o4k"]
 [ext_resource type="PackedScene" uid="uid://0gxx8qg8ui1l" path="res://Scenes_Scripts/Levels/Objects/Stove.tscn" id="25_nnnhv"]
-[ext_resource type="PackedScene" uid="uid://7p8wceukapmt" path="res://Scenes_Scripts/Levels/Objects/SmallFan.tscn" id="27_w2tk1"]
+[ext_resource type="PackedScene" uid="uid://7p8wceukapmt" path="res://Scenes_Scripts/Entities/Things/SmallFan.tscn" id="27_w2tk1"]
 [ext_resource type="PackedScene" uid="uid://bc22rykkm5ipg" path="res://Scenes_Scripts/Levels/Objects/CeilingFan.tscn" id="28_yh6ym"]
 [ext_resource type="PackedScene" uid="uid://1owbioygmh4e" path="res://Scenes_Scripts/Levels/Objects/CheapLight.tscn" id="29_nwno4"]
 [ext_resource type="PackedScene" uid="uid://ir1i011ri52f" path="res://Scenes_Scripts/Levels/Objects/DoubleSwitch.tscn" id="30_vwp30"]
+[ext_resource type="PackedScene" uid="uid://cv6uya7ihctui" path="res://Scenes_Scripts/Levels/Objects/Toilet.tscn" id="32_5nkmf"]
+[ext_resource type="PackedScene" uid="uid://divyc38qmce6w" path="res://Scenes_Scripts/Levels/Objects/WaterFall.tscn" id="33_c0u2l"]
+[ext_resource type="PackedScene" uid="uid://8ruudaiqveis" path="res://Scenes_Scripts/Levels/Objects/SingleSwitch.tscn" id="34_hwrgg"]
+[ext_resource type="PackedScene" uid="uid://hwftdxvnadge" path="res://Scenes_Scripts/Levels/Objects/WideRack.tscn" id="35_j2pbv"]
+[ext_resource type="PackedScene" uid="uid://8egt1w6pi4se" path="res://Scenes_Scripts/Levels/Objects/ThinRack.tscn" id="36_5xfj4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3w8cn"]
 texture_filter = 0
@@ -955,12 +960,44 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1556, 3.54162, 1.90082)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71045, 3.49393, 1.90082)
 
 [node name="DoubleSwitch" parent="Objects/Bedroom" node_paths=PackedStringArray("left_switch_object", "right_switch_object") instance=ExtResource("30_vwp30")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.13665, 2.32109, 4.2464)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.137, 2.3, 4.246)
 left_switch_object = NodePath("../CheapLight")
 right_switch_object = NodePath("../CeilingFan")
 
+[node name="Toilet" type="Node3D" parent="Objects"]
+
+[node name="Toilet" parent="Objects/Toilet" instance=ExtResource("32_5nkmf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0995, 1, 0.614045)
+
+[node name="WaterFall" parent="Objects/Toilet" instance=ExtResource("33_c0u2l")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.9813, 1, 0.253468)
+
+[node name="CheapLight" parent="Objects/Toilet" instance=ExtResource("29_nwno4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.99, 3.5, 2.20988)
+
+[node name="SingleSwitch" parent="Objects/Toilet" node_paths=PackedStringArray("switch_object") instance=ExtResource("34_hwrgg")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.7218, 2.3, 4.24648)
+switch_object = NodePath("../CheapLight")
+
 [node name="CheapLight" parent="Objects" instance=ExtResource("29_nwno4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91217, 3.50629, 5.3353)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.912, 3.5, 5.335)
+
+[node name="Storage" type="Node3D" parent="Objects"]
+
+[node name="WideRack" parent="Objects/Storage" instance=ExtResource("35_j2pbv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1, 11.16)
+
+[node name="ThinRack1" parent="Objects/Storage" instance=ExtResource("36_5xfj4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.1183, 1, 7.40819)
+
+[node name="ThinRack2" parent="Objects/Storage" instance=ExtResource("36_5xfj4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.1183, 1, 9.3735)
+
+[node name="ThinRack3" parent="Objects/Storage" instance=ExtResource("36_5xfj4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.88011, 1, 7.40819)
+
+[node name="ThinRack4" parent="Objects/Storage" instance=ExtResource("36_5xfj4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.88011, 1, 9.32558)
 
 [node name="Player" parent="." instance=ExtResource("5_tmuyv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2.51392, 5)

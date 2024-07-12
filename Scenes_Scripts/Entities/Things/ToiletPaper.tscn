@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://2rjwm88cwxks"]
+
+[ext_resource type="PackedScene" uid="uid://bsftdjdm0bepl" path="res://Blender/toilet_paper.gltf" id="1_a5boh"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dheg2"]
+height = 0.114471
+radius = 0.061368
+
+[node name="ToiletPaper" type="RigidBody3D"]
+
+[node name="toilet_paper" parent="." instance=ExtResource("1_a5boh")]
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.057, 0)
+shape = SubResource("CylinderShape3D_dheg2")

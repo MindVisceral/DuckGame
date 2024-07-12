@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://divyc38qmce6w"]
+
+[ext_resource type="PackedScene" uid="uid://dqf3uaqt14cpq" path="res://Blender/water_fall.gltf" id="1_m2c3t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_636yi"]
+size = Vector3(0.547485, 1.40602, 0.434448)
+
+[node name="WaterFall" type="StaticBody3D"]
+collision_layer = 64
+collision_mask = 133
+
+[node name="water_fall" parent="." instance=ExtResource("1_m2c3t")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.180359, 0.920143, -0.216736)
+shape = SubResource("BoxShape3D_636yi")

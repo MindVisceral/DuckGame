@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=3 uid="uid://8ruudaiqveis"]
+
+[ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/SingleSwitch.gd" id="1_hb5sc"]
+[ext_resource type="PackedScene" uid="uid://bbd7ggd1h78vr" path="res://Blender/SingleLightSwitch.gltf" id="2_xuwx6"]
+[ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="3_yh3mi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hwbpu"]
+size = Vector3(0.122131, 0.120361, 0.0395508)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i7tvm"]
+size = Vector3(3, 3, 3)
+
+[sub_resource type="Animation" id="Animation_ygfar"]
+resource_name = "on"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SingleLightSwitch/switch:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.0698132, 0, 0), Vector3(0.0698132, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pkoro"]
+resource_name = "off"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SingleLightSwitch/switch:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.0698132, 0, 0), Vector3(-0.0698132, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_axar7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SingleLightSwitch/switch:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0698132, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l3rj7"]
+_data = {
+"RESET": SubResource("Animation_axar7"),
+"off": SubResource("Animation_pkoro"),
+"on": SubResource("Animation_ygfar")
+}
+
+[node name="SingleSwitch" type="Node3D"]
+script = ExtResource("1_hb5sc")
+
+[node name="SingleLightSwitch" parent="." instance=ExtResource("2_xuwx6")]
+
+[node name="switch" parent="SingleLightSwitch" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.997564, 0.0697565, 0, -0.0697565, 0.997564, 0.000135733, 0, 0.026861)
+
+[node name="Interactable" parent="." instance=ExtResource("3_yh3mi")]
+
+[node name="CollisionShape3D" parent="Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000824016, -0.000854492, 0.017334)
+shape = SubResource("BoxShape3D_hwbpu")
+
+[node name="CollisionShape3D" parent="Interactable/InteractableRange" index="0"]
+shape = SubResource("BoxShape3D_i7tvm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_l3rj7")
+}
+
+[connection signal="interact" from="Interactable" to="." method="_on_interactable_interact"]
+
+[editable path="SingleLightSwitch"]
+[editable path="Interactable"]
