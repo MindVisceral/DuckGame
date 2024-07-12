@@ -2,7 +2,9 @@ extends StaticBody3D
 
 @onready var animPlayer: AnimationPlayer = $AnimationPlayer
 
-@export var is_closed: bool = false
+@onready var rattleSound: AudioStreamPlayer3D = $rattleAudioPlayer
+@onready var openSound: AudioStreamPlayer3D = $openAudioPlayer
+
 
 @export var is_locked: bool = true
 @export var setpiece_script: Node
@@ -19,16 +21,14 @@ extends StaticBody3D
 @export var monologue_line_time: Array[float]
 
 func _ready() -> void:
-	#toggle_door()
 	pass
 
 func toggle_door() -> void:
-	if is_closed == true:
-		is_closed = false
-		animPlayer.play("close")
-	else:
-		is_closed = true
+	if !is_locked:
 		animPlayer.play("open")
+		
+	else:
+		rattleSound.play()
 
 
 func _on_interactable_interact() -> void:

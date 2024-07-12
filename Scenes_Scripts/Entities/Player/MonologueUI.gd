@@ -5,6 +5,7 @@ extends Control
 @onready var sprite_anim: AnimationPlayer = $AspectRatioContainer/MarginContainer/TextBackground_Panel/Continue_MarginContainer/Arrow_Sprite2D/AnimationPlayer
 @onready var timer: Timer = $AspectRatioContainer/MarginContainer/TextBackground_Panel/DialogTimer
 @onready var beep_audioplayer: AudioStreamPlayer = $BeepAudioPlayer
+@onready var newlinebeep_audioplayer: AudioStreamPlayer = $linebeepAudioPlayer
 
 ## Holds all the lines in the monologue that comes from interacting with this specific
 ## Interactable. These lines are set in the Interactable itself.
@@ -52,12 +53,12 @@ func start_monologue():
 		reset_monologue()
 
 func nextPhrase() -> void:
-	if not (current_monologue_line >= monologue_time.size()):
-		timer.wait_time = monologue_time[current_monologue_line]
-	else:
+	if current_monologue_line >= monologue_time.size():
 		timer.wait_time = 0.001
-		timer.start()
-	
+	else:
+		timer.wait_time = monologue_time[current_monologue_line]
+	#
+	timer.start()
 	
 	sprite_anim.play("invisible")
 	
@@ -68,6 +69,7 @@ func nextPhrase() -> void:
 	else:
 		textbox.text = monologue[current_monologue_line]
 	
+	newlinebeep_audioplayer.play()
 	current_monologue_line += 1
 
 ## We reset everything

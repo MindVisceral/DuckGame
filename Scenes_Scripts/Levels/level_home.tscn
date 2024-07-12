@@ -1370,25 +1370,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.497, 1, -11.682)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.35, 0.760695, 5.88665)
 
 [node name="SmallLight1" parent="Objects/BigCorridor" instance=ExtResource("15_e2eic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.591, 3.5, 8.364)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4808, 3.5, 8.364)
 
 [node name="SmallLight2" parent="Objects/BigCorridor" instance=ExtResource("15_e2eic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5911, 3.5, 5.3638)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4809, 3.5, 5.3638)
 
 [node name="SmallLight3" parent="Objects/BigCorridor" instance=ExtResource("15_e2eic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.591, 3.5, 2.364)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4808, 3.5, 2.364)
 
 [node name="SmallLight4" parent="Objects/BigCorridor" instance=ExtResource("15_e2eic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.591, 3.5, -0.636)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4808, 3.5, -0.636)
 
 [node name="SmallLight5" parent="Objects/BigCorridor" instance=ExtResource("15_e2eic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.591, 3.5, -3.636)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4808, 3.5, -3.636)
 
 [node name="SmallLight6" parent="Objects/BigCorridor" instance=ExtResource("15_e2eic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.591, 3.5, -6.636)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4808, 3.5, -6.636)
 
 [node name="SmallLight7" parent="Objects/BigCorridor" instance=ExtResource("15_e2eic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.591, 3.5, -9.636)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4808, 3.5, -9.636)
 
 [node name="InsideCorridor" type="Node3D" parent="Objects"]
 
@@ -1495,7 +1495,7 @@ transform = Transform3D(-0.566018, 0, 0.824393, 0, 1, 0, -0.824393, 0, -0.566018
 [node name="Bedroom" type="Node3D" parent="Objects"]
 
 [node name="Bed" parent="Objects/Bedroom" instance=ExtResource("15_nrla8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.439, 1, 1.105)
+transform = Transform3D(-0.868207, 0, 0.496201, 0, 1, 0, -0.496201, 0, -0.868207, 4.44574, 1, 1.52544)
 
 [node name="CeilingFan" parent="Objects/Bedroom" instance=ExtResource("28_yh6ym")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1556, 3.54162, 1.90082)
@@ -1837,7 +1837,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.23, 
 switch_object = NodePath("../CheapLight")
 
 [node name="Player" parent="." instance=ExtResource("5_tmuyv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2208, 1.47042, -4.61924)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.67809, 1.47042, 2.82313)
 speed = 4.0
 crouch_height = 0.8
 jump_height = 6.0

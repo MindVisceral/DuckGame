@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b7kfdbpdqk3o6"]
+[gd_scene load_steps=9 format=3 uid="uid://b7kfdbpdqk3o6"]
 
 [ext_resource type="PackedScene" uid="uid://dnpca2xy4g5u4" path="res://Blender/door.gltf" id="1_ju2bi"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/Door.gd" id="1_oolfw"]
@@ -25,22 +25,6 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_doc04"]
-resource_name = "close"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("door:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 1.6057, 0), Vector3(0, 0, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_6vqgn"]
 resource_name = "open"
 tracks/0/type = "value"
@@ -59,7 +43,6 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_755vy"]
 _data = {
 "RESET": SubResource("Animation_po5mm"),
-"close": SubResource("Animation_doc04"),
 "open": SubResource("Animation_6vqgn")
 }
 
@@ -67,9 +50,9 @@ _data = {
 collision_layer = 64
 collision_mask = 133
 script = ExtResource("1_oolfw")
-monologue_data = Array[String](["12", "34", "56", "78"])
-monologue_first_line_time = 1.0
-monologue_line_time = Array[float]([1.0, 2.0, 3.0, 4.0])
+monologue_data = Array[String](["[p]This place is safe enough.[/p][p]I would rather stay here until [i]it[/i] arrives.[/p]"])
+monologue_first_line_time = 0.4
+monologue_line_time = Array[float]([0.5])
 
 [node name="door" parent="." instance=ExtResource("1_ju2bi")]
 
@@ -95,6 +78,11 @@ shape = SubResource("BoxShape3D_h5g04")
 libraries = {
 "": SubResource("AnimationLibrary_755vy")
 }
+
+[node name="rattleAudioPlayer" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.980508, 0.976701, 0.0173024)
+
+[node name="openAudioPlayer" type="AudioStreamPlayer3D" parent="."]
 
 [connection signal="interact" from="door/Interactable" to="." method="_on_interactable_interact"]
 

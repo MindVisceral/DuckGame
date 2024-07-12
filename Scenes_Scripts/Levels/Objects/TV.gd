@@ -3,6 +3,10 @@ extends RigidBody3D
 ## Contains Strings, which are taken by the MonologueUI Node, which displays them in the
 ## Player's monologue box
 @export var monologue_data: Array[String]
+## How long before the first line gets shown on screen
+@export var monologue_first_line_time: float = 0.0
+## The time before you can move on to the next line after a line shows up on the screen 
+@export var monologue_line_time: Array[float]
 
 @onready var staticaudio: AudioStreamPlayer3D = $StaticAudioPlayer
 ## Point (in seconds) at which the music was turned off
