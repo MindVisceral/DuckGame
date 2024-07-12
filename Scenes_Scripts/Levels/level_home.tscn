@@ -2274,7 +2274,7 @@ transform = Transform3D(0.0743463, 1.74815e-07, 3.9993, 3.9993, -3.24979e-09, -0
 material_overlay = ExtResource("27_mw02y")
 
 [node name="BathroomBlocker" parent="Objects/InsideCorridor/DoorwayPlanks" node_paths=PackedStringArray("focused_meshes") instance=ExtResource("26_g1g4j")]
-monologue_data = Array[String](["[center]This construction's previous residents barricaded most of the doors and windows, except for the lift in the corridor.[/center][center]We may only theorize on an explanation for this behaviour.[/center]"])
+monologue_data = Array[String](["[center]This structure's previous residents barricaded most of the doors and windows, except for the lift in the corridor.[/center][center]We may only theorize on the cause for this behaviour.[/center]"])
 monologue_first_line_time = 0.2
 focused_meshes = [NodePath("../Plank1/Cube"), NodePath("../Plank2/Cube"), NodePath("../Plank3/Cube"), NodePath("../Plank4/Cube"), NodePath("../Plank5/Cube"), NodePath("../Plank6/Cube"), NodePath("../Plank7/Cube"), NodePath("../Plank8/Cube"), NodePath("../Plank9/Cube")]
 
@@ -2285,21 +2285,6 @@ visible = false
 
 [node name="Fridge" parent="Objects/Kitchen" instance=ExtResource("15_ktfy2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.71789, 1, 7.1)
-
-[node name="Door_fridge" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="0"]
-transform = Transform3D(1, 2.84217e-14, 1.42157e-15, -2.84217e-14, 1, 1.42109e-14, -1.42157e-15, -1.42109e-14, 1, 0.45144, 0.669023, 0.454514)
-
-[node name="Door_freezer" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.451531, 1.63774, 0.446294)
-
-[node name="Controller" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.364519, 1.20031, 0.139305)
-
-[node name="Shelf_bottom" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.579313, -0.0510678)
-
-[node name="Shelf_top" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.995155, -0.0510678)
 
 [node name="CollisionShape3D" parent="Objects/Kitchen/Fridge/Interactable_fridge/InteractableRange" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85199, 1.25519, 1.07709)

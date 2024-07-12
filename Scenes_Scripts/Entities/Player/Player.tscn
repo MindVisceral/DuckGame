@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://lhlklylca50m"]
+[gd_scene load_steps=45 format=3 uid="uid://lhlklylca50m"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player.gd" id="1_kmike"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player_States/State_Manager.gd" id="2_c5aqi"]
@@ -166,10 +166,13 @@ resource_name = "cacophonyPlayer"
 script/source = "extends AudioStreamPlayer
 
 var active: bool = false
+@onready var animplay: AnimationPlayer = $AnimationPlayer
 
 func _process(delta: float) -> void:
 	if Globals.cacophony_active == true and !playing:
 		play()
+	if Globals.cacophony_fadeout == true:
+		animplay.play(\"fade_out\")
 
 
 func _on_finished() -> void:
@@ -178,35 +181,49 @@ func _on_finished() -> void:
 		pass
 "
 
+[sub_resource type="Animation" id="Animation_h7ju4"]
+resource_name = "fade_out"
+length = 11.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 9.6, 10.4, 10.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -35.0, -50.0, -80.0]
+}
+
+[sub_resource type="Animation" id="Animation_0e2m8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vxlrx"]
+_data = {
+"RESET": SubResource("Animation_0e2m8"),
+"fade_out": SubResource("Animation_h7ju4")
+}
+
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 collision_mask = 198
 input_ray_pickable = false
 script = ExtResource("1_kmike")
-accept_input = null
 MOUSE_SENSITIVITY = 0.4
-mouse_scroll_value = null
-MOUSE_SENSITIVITY_SCROLL_WHEEL = null
-camera_FOV = null
-first_person = null
 gravity_multiplier = 0.05
-speed = null
-air_control = null
-step_lengthen = null
-default_height = null
-crouch_height = null
-default_width = null
-default_head_height = null
-crouch_head_height = null
-default_feet_height = null
-crouch_feet_height = null
-default_FloorCast_height = null
-crouch_FloorCast_height = null
-crouch_speed = null
-jump_height = null
-stomp_strength = null
-fly_mode_speed_modifier = null
-MAX_HEALTH = null
-health = null
 
 [node name="Scripts" type="Node" parent="."]
 
@@ -609,5 +626,10 @@ stream = ExtResource("19_0jqkr")
 max_polyphony = 2
 bus = &"Music"
 script = SubResource("GDScript_5b072")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cacophony_AudioPlayer"]
+libraries = {
+"": SubResource("AnimationLibrary_vxlrx")
+}
 
 [connection signal="finished" from="cacophony_AudioPlayer" to="cacophony_AudioPlayer" method="_on_finished"]

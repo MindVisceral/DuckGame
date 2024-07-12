@@ -149,7 +149,7 @@ _data = {
 collision_layer = 64
 collision_mask = 133
 script = ExtResource("1_r4ij7")
-monologue_data = Array[String](["[center]I do not understand this object's purpose.[/center][center]Its movement does not accomplish any task which I am aware of.[/center]"])
+monologue_data = Array[String](["[center]This thing looks like a fan, but it is not connected to any machinery.[/center]", "[center]I do not understand this object's purpose.[/center]"])
 monologue_first_line_time = 0.5
 focused_meshes = [NodePath("ceiling_fan/Ceiling_Fan_Blades_01"), NodePath("ceiling_fan/Ceiling_Fan_01")]
 

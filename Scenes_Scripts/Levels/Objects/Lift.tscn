@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dsdtgd7pxkygr"]
+[gd_scene load_steps=20 format=3 uid="uid://dsdtgd7pxkygr"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/Lift.gd" id="1_f71ji"]
 [ext_resource type="PackedScene" uid="uid://c1xj4q1r54i1r" path="res://Blender/Lift.gltf" id="1_mdu1c"]
@@ -18,21 +18,6 @@ size = Vector3(2.82415, 3.24072, 2.10648)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j0tvc"]
 size = Vector3(2.25269, 2.41603, 0.244858)
-
-[sub_resource type="Animation" id="Animation_kkg52"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("riding_AudioPlayer:playing")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="Animation" id="Animation_jk1xr"]
 resource_name = "RESET_CLOSED"
@@ -887,9 +872,12 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(5, 14),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(3.4, 5, 14),
+"transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
+"args": [],
+"method": &"cacophony_fadeout"
+}, {
 "args": [],
 "method": &"fade_to_black"
 }, {
@@ -1172,7 +1160,6 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ciqi5"]
 _data = {
-"RESET": SubResource("Animation_kkg52"),
 "RESET_CLOSED": SubResource("Animation_jk1xr"),
 "RESET_OPEN": SubResource("Animation_5yy0c"),
 "close": SubResource("Animation_tu6ci"),
@@ -1185,7 +1172,7 @@ _data = {
 collision_layer = 64
 collision_mask = 133
 script = ExtResource("1_f71ji")
-monologue_data = Array[String](["[center]I am safe here. These walls should limit [b]its[/b] influence.[/center]", "[center]If I measured everything correctly, this ride to the bottom will take appoximately 352 hours.[/center]"])
+monologue_data = Array[String](["[center]I am safe here. These walls should limit [b]its[/b] influence.[/center]", "[center]If I measured everything correctly, this ride to the bottom will take appoximately 313 hours.[/center]"])
 monologue_first_line_time = 3.0
 
 [node name="Lift" parent="." instance=ExtResource("1_mdu1c")]
@@ -1195,13 +1182,16 @@ collision_layer = 64
 collision_mask = 133
 
 [node name="Lift_door_outer_L" parent="Lift/Lift_body" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.877011, 1.02957, 0.987187)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61, 1.03, 0.987)
+
+[node name="Lift_door_inner_L" parent="Lift/Lift_body/Lift_door_outer_L" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.382, 0, 0)
 
 [node name="Lift_door_outer_R" parent="Lift/Lift_body" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88087, 1.02957, 0.987187)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.61, 1.03, 0.987)
 
 [node name="Lift_door_inner_R" parent="Lift/Lift_body/Lift_door_outer_R" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0501674, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.382, 0, 0)
 
 [node name="SmallLight" parent="Lift/Lift_body" index="4" instance=ExtResource("2_4ajtd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.06083, 0)
@@ -1219,7 +1209,6 @@ shape = SubResource("BoxShape3D_i0e8u")
 [node name="ExitBlocker" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000610352, 1.10142, 1.0099)
 shape = SubResource("BoxShape3D_j0tvc")
-disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -1242,7 +1231,9 @@ volume_db = -6.0
 [node name="riding_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18, 0)
 stream = ExtResource("8_gmqo3")
+volume_db = -1.45833
 max_db = 6.0
+stream_paused = true
 panning_strength = 0.05
 bus = &"Sounds"
 

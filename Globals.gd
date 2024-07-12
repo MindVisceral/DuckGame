@@ -14,3 +14,4 @@ var fade_to_white: bool = false
 var fade_to_normal: bool = false
 
 var cacophony_active: bool = false
+var cacophony_fadeout: bool = false

@@ -107,7 +107,7 @@ size = Vector3(2, 2, 2)
 
 [node name="Stove" type="StaticBody3D" node_paths=PackedStringArray("focused_meshes")]
 script = ExtResource("1_twam7")
-monologue_data = Array[String](["[center]Nothing happened.[/center]", "[center]Perhaps its power source is missing.[/center]"])
+monologue_data = Array[String](["[center]Nothing happens when I attempt to turn it on.[/center]", "[center]Perhaps its power source is missing.[/center]"])
 monologue_first_line_time = 0.5
 focused_meshes = [NodePath("fire_thing/Oven")]
 

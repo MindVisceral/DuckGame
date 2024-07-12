@@ -76,6 +76,9 @@ func fade_to_black() -> void:
 func fade_to_normal() -> void:
 	Globals.fade_to_normal = true
 
+func cacophony_fadeout() -> void:
+	Globals.cacophony_fadeout = true
+
 
 @onready var level2: String = "res://Scenes_Scripts/Levels/level_outside.tscn"
 
