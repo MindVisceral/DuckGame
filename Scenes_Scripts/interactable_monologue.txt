@@ -33,7 +33,7 @@
 
 
 // ## Fridge text
-[center]The temparature inside of this object is lower than that of its surroundings.[/center]
+[center]The temperature inside of this object is lower than that of its surroundings.[/center]
 
 [center]It must have been used to store power cores and other fragile components.[/center]
 
@@ -50,7 +50,7 @@
 
 // ## TV text
 [center]A primitive broadcast receiver.[/center]
-[center]It seems that no one is transmitting anything this far out from The Core.[/center]
+[center]It seems that no one is transmitting anything this far out from [i]The Core[/i].[/center]
 
 [center]...but all the infrastructure should still be intact. Perplexing.[/center]
 

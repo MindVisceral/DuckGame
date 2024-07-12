@@ -122,8 +122,8 @@ noise = SubResource("FastNoiseLite_e2nep")
 collision_layer = 128
 collision_mask = 71
 script = ExtResource("1_85e2u")
-monologue_data = Array[String](["[center]A primitive broadcast receiver.[/center][center]It seems that no one is transmitting anything this far out from The Core.[/center]", "[center]...but all the infrastructure should still be intact. Perplexing.[/center]"])
-monologue_first_line_time = 1.0
+monologue_data = Array[String](["[center]A primitive broadcast receiver.[/center][center]It seems that no one is transmitting anything this far out from [i]The Core[/i].[/center]", "[center]...but all the infrastructure should still be intact. Perplexing.[/center]"])
+monologue_first_line_time = 0.5
 focused_meshes = [NodePath("TV/Television A")]
 
 [node name="TV" parent="." instance=ExtResource("1_ibuwa")]

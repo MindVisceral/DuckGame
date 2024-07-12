@@ -1,4 +1,4 @@
-[gd_scene load_steps=253 format=3 uid="uid://bc1l8essgx3qb"]
+[gd_scene load_steps=256 format=3 uid="uid://bc1l8essgx3qb"]
 
 [ext_resource type="Texture2D" uid="uid://2bjvipf27f6y" path="res://HDR_sky.hdr" id="1_o43kj"]
 [ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1_skewd"]
@@ -1016,18 +1016,61 @@ script/source = "extends Node
 
 ## The wall which will move up to fake the elevator moving up
 @export var fake_wall: StaticBody3D
+@onready var animplay: AnimationPlayer = $MovementAnimationPlayer
 
 var ready_now: bool = false
+var played: bool = false
 
 
 func _physics_process(delta: float) -> void:
-	if ready_now:
-		var tween = get_tree().create_tween()
-		tween.tween_property(fake_wall, \"position\", Vector3(fake_wall.position.x, 1.4, fake_wall.position.z), 0.5)
+	if ready_now and played == false:
+		played = true
+		animplay.play(\"move\")
+		print(\"moved\")
+		
+		await animplay.animation_finished
+		print(\"done\")
 
 func play_set_piece() -> void:
 	ready_now = true
 "
+
+[sub_resource type="Animation" id="Animation_3mppr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../QodotMap/entity_1_func_group:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(14.1875, -3.625, -9.75)]
+}
+
+[sub_resource type="Animation" id="Animation_v8yj3"]
+resource_name = "move"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../QodotMap/entity_1_func_group:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(14.1875, -3.625, -9.75), Vector3(14.1875, 1.85919, -9.75)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bjmtc"]
+_data = {
+"RESET": SubResource("Animation_3mppr"),
+"move": SubResource("Animation_v8yj3")
+}
 
 [sub_resource type="Animation" id="Animation_4gvcp"]
 length = 0.001
@@ -1832,6 +1875,7 @@ shape = SubResource("ConvexPolygonShape3D_oo2t4")
 
 [node name="entity_1_func_group" type="StaticBody3D" parent="QodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1875, -3.625, -9.75)
+collision_layer = 2
 
 [node name="entity_1_mesh_instance" type="MeshInstance3D" parent="QodotMap/entity_1_func_group"]
 mesh = SubResource("ArrayMesh_uita2")
@@ -1867,6 +1911,11 @@ libraries = {
 [node name="FakeLiftMovement" type="Node" parent="SetPieces" node_paths=PackedStringArray("fake_wall")]
 script = SubResource("GDScript_4xx8e")
 fake_wall = NodePath("../../QodotMap/entity_1_func_group")
+
+[node name="MovementAnimationPlayer" type="AnimationPlayer" parent="SetPieces/FakeLiftMovement"]
+libraries = {
+"": SubResource("AnimationLibrary_bjmtc")
+}
 
 [node name="InitialCutscene" type="Node3D" parent="."]
 
@@ -2025,8 +2074,10 @@ pitch_scale = 0.8
 panning_strength = 0.0
 bus = &"Roar"
 
-[node name="Lift" parent="Objects/BigCorridor" instance=ExtResource("16_auiut")]
+[node name="Lift" parent="Objects/BigCorridor" node_paths=PackedStringArray("setpiece_script") instance=ExtResource("16_auiut")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.497, 1, -11.682)
+monologue_first_line_time = 2.6
+setpiece_script = NodePath("../../../SetPieces/FakeLiftMovement")
 
 [node name="fakedoor" parent="Objects/BigCorridor" instance=ExtResource("15_lkacj")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.35, 0.760695, 5.88665)
@@ -2286,6 +2337,27 @@ visible = false
 [node name="Fridge" parent="Objects/Kitchen" instance=ExtResource("15_ktfy2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.71789, 1, 7.1)
 
+[node name="Skeleton3D" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature" index="0"]
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(9.9748e-08, -9.9748e-08, 0.707107, 0.707107)
+bones/4/rotation = Quaternion(-9.9748e-08, 9.9748e-08, -0.707107, 0.707107)
+
+[node name="Door_fridge" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="0"]
+transform = Transform3D(1, 2.84217e-14, 1.42157e-15, -2.84217e-14, 1, 1.42109e-14, -1.42157e-15, -1.42109e-14, 1, 0.45144, 0.669023, 0.454514)
+
+[node name="Door_freezer" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.451531, 1.63774, 0.446294)
+
+[node name="Controller" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.364519, 1.20031, 0.139305)
+
+[node name="Shelf_bottom" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.579313, -0.0510678)
+
+[node name="Shelf_top" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.995155, -0.0510678)
+
 [node name="CollisionShape3D" parent="Objects/Kitchen/Fridge/Interactable_fridge/InteractableRange" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85199, 1.25519, 1.07709)
 shape = SubResource("BoxShape3D_t0dxu")
@@ -2297,8 +2369,9 @@ shape = SubResource("BoxShape3D_t0dxu")
 [node name="CheapTable" parent="Objects/Kitchen" instance=ExtResource("16_l7y1m")]
 transform = Transform3D(0.104337, 0, 0.994542, 0, 1, 0, -0.994542, 0, 0.104337, 6.65309, 1, 10.8179)
 
-[node name="Stool" parent="Objects/Kitchen" instance=ExtResource("21_oxs2i")]
+[node name="Stool" parent="Objects/Kitchen" node_paths=PackedStringArray("focused_meshes") instance=ExtResource("21_oxs2i")]
 transform = Transform3D(0.990955, 0, -0.134194, 0, 1, 0, 0.134194, 0, 0.990955, 5.69571, 1, 10.3361)
+focused_meshes = [null]
 
 [node name="Stove" parent="Objects/Kitchen" instance=ExtResource("25_nnnhv")]
 transform = Transform3D(-0.232003, 0, -0.972715, 0, 1, 0, 0.972715, 0, -0.232003, 6.7927, 1.71416, 10.298)
@@ -2683,29 +2756,9 @@ switch_object = NodePath("../CheapLight")
 
 [node name="Player" parent="." instance=ExtResource("5_tmuyv")]
 transform = Transform3D(-0.839041, 0, -0.544068, 0, 1, 0, 0.544068, 0, -0.839041, 4.85919, 1.02585, 2.68128)
-accept_input = false
-mouse_scroll_value = 0
-MOUSE_SENSITIVITY_SCROLL_WHEEL = 0.12
-camera_FOV = 90
-first_person = true
 speed = 4.0
-air_control = 0.3
-step_lengthen = 0.7
-default_height = 1.6
 crouch_height = 0.8
-default_width = 0.15
-default_head_height = 1.4
-crouch_head_height = 0.7
-default_feet_height = 0.2
-crouch_feet_height = 0.6
-default_FloorCast_height = 0.0
-crouch_FloorCast_height = 0.4
-crouch_speed = 12
 jump_height = 6.0
-stomp_strength = 50.0
-fly_mode_speed_modifier = 2
-MAX_HEALTH = 150
-health = 100
 
 [node name="HeadBob" parent="Player/Scripts" index="3"]
 rotation_speed = 1.0

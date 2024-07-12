@@ -172,7 +172,6 @@ layout_mode = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Page1_VBoxContainer" type="VBoxContainer" parent="Main_MarginContainer"]
-visible = false
 layout_mode = 2
 theme_override_constants/separation = 120
 
@@ -444,6 +443,7 @@ text = "[center]Outline Shader - [url=https://www.youtube.com/watch?v=9JuZV6Xeo-
 autowrap_mode = 3
 
 [node name="Page4_VBoxContainer" type="VBoxContainer" parent="Main_MarginContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 5
 
