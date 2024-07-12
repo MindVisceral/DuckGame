@@ -34,6 +34,9 @@ var is_focused: bool = false
 
 var can_be_int: bool = false
 
+var radio: bool = true
+
+
 
 ## Toggle the radio off and on
 func toggle_radio() -> void:

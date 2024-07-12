@@ -1,6 +1,6 @@
-[gd_scene load_steps=244 format=3 uid="uid://bc1l8essgx3qb"]
+[gd_scene load_steps=248 format=3 uid="uid://bc1l8essgx3qb"]
 
-[ext_resource type="Environment" uid="uid://blfgbejiclohv" path="res://Scenes_Scripts/Levels/environment_inside.tres" id="1_82ihm"]
+[ext_resource type="Texture2D" uid="uid://2bjvipf27f6y" path="res://HDR_sky.hdr" id="1_o43kj"]
 [ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1_skewd"]
 [ext_resource type="Resource" uid="uid://c36hv0o6g0udo" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="2_n1ec3"]
 [ext_resource type="Texture2D" uid="uid://cejk8u4rtckq4" path="res://Scenes_Scripts/Textures/Classic_64_Asset_Pack/Concrete/Materials/concrete_15.jpg" id="4_g4arq"]
@@ -24,6 +24,7 @@
 [ext_resource type="AudioStream" uid="uid://7q6fujskcqts" path="res://Scenes_Scripts/Sounds/ffission9_hiking-boot-footsteps-on-stone.wav" id="16_82fng"]
 [ext_resource type="PackedScene" uid="uid://dsdtgd7pxkygr" path="res://Scenes_Scripts/Levels/Objects/Lift.tscn" id="16_auiut"]
 [ext_resource type="PackedScene" uid="uid://tlr6sujh62a1" path="res://Scenes_Scripts/Levels/Objects/Cheap_table.tscn" id="16_l7y1m"]
+[ext_resource type="AudioStream" uid="uid://dms0yimbb70qo" path="res://Scenes_Scripts/Sounds/jgxxx_fan_looping-small.wav" id="17_8y35b"]
 [ext_resource type="PackedScene" uid="uid://b7kfdbpdqk3o6" path="res://Scenes_Scripts/Levels/Objects/Door.tscn" id="17_oa5uw"]
 [ext_resource type="AudioStream" uid="uid://tyvvo3g05m3b" path="res://Scenes_Scripts/Sounds/unfa_jnr-hacksaw_boom.wav" id="17_ow35o"]
 [ext_resource type="PackedScene" uid="uid://3bibeogihx0k" path="res://Scenes_Scripts/Levels/Objects/HangingLamp.tscn" id="18_nbo0e"]
@@ -45,6 +46,51 @@
 [ext_resource type="PackedScene" uid="uid://hwftdxvnadge" path="res://Scenes_Scripts/Levels/Objects/WideRack.tscn" id="35_j2pbv"]
 [ext_resource type="PackedScene" uid="uid://8egt1w6pi4se" path="res://Scenes_Scripts/Levels/Objects/ThinRack.tscn" id="36_5xfj4"]
 [ext_resource type="PackedScene" uid="uid://dmjyqi6lctioe" path="res://Blender/eye_test.gltf" id="41_u84jh"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_wm8p7"]
+panorama = ExtResource("1_o43kj")
+
+[sub_resource type="Sky" id="Sky_6f67x"]
+sky_material = SubResource("PanoramaSkyMaterial_wm8p7")
+
+[sub_resource type="Environment" id="Environment_vodpg"]
+background_mode = 2
+sky = SubResource("Sky_6f67x")
+sky_rotation = Vector3(0, -0.244346, 0)
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.1
+ambient_light_energy = 0.0
+reflected_light_source = 2
+tonemap_mode = 3
+tonemap_exposure = 0.47
+tonemap_white = 4.0
+ssr_enabled = true
+ssr_max_steps = 16
+ssr_fade_in = 0.252269
+ssr_fade_out = 2.21914
+ssao_enabled = true
+ssao_radius = 2.5
+ssao_intensity = 2.8
+sdfgi_use_occlusion = true
+sdfgi_read_sky_light = false
+sdfgi_bounce_feedback = 0.7
+glow_enabled = true
+glow_normalized = true
+glow_bloom = 0.08
+glow_blend_mode = 0
+glow_hdr_luminance_cap = 61.15
+fog_light_color = Color(0.647059, 0.654902, 0.670588, 1)
+fog_light_energy = 1.6
+fog_density = 0.0022
+fog_height = -1024.0
+fog_height_density = 0.0022
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.006
+volumetric_fog_albedo = Color(0.647059, 0.654902, 0.670588, 1)
+volumetric_fog_emission = Color(0.647059, 0.654902, 0.670588, 1)
+adjustment_enabled = true
+adjustment_saturation = 0.8
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3w8cn"]
 texture_filter = 0
@@ -1044,7 +1090,7 @@ size = Vector3(2.94128, 2.47546, 3.15417)
 [node name="Environment" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
-environment = ExtResource("1_82ihm")
+environment = SubResource("Environment_vodpg")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
 transform = Transform3D(0.520091, 0.657218, -0.5455, -0.171328, 0.705971, 0.687206, 0.836751, -0.26395, 0.479769, -12.6224, 17.716, 19.0767)
@@ -1625,6 +1671,15 @@ pitch_scale = 0.78
 
 [node name="Objects" type="Node3D" parent="."]
 
+[node name="AmbienceAudioPlayer" type="AudioStreamPlayer3D" parent="Objects"]
+stream = ExtResource("17_8y35b")
+attenuation_model = 3
+volume_db = -7.0
+max_db = 1.0
+pitch_scale = 0.03
+autoplay = true
+panning_strength = 0.0
+
 [node name="Danger" type="Node3D" parent="Objects"]
 visible = false
 
@@ -1968,19 +2023,28 @@ monologue_data = Array[String](["[center]This construction's previous residents 
 monologue_first_line_time = 0.2
 focused_meshes = [NodePath("../Plank1/Cube"), NodePath("../Plank2/Cube"), NodePath("../Plank3/Cube"), NodePath("../Plank4/Cube"), NodePath("../Plank5/Cube"), NodePath("../Plank6/Cube"), NodePath("../Plank7/Cube"), NodePath("../Plank8/Cube"), NodePath("../Plank9/Cube")]
 
+[node name="Collider" parent="Objects/InsideCorridor/DoorwayPlanks/BathroomBlocker" index="0"]
+visible = false
+
 [node name="Kitchen" type="Node3D" parent="Objects"]
 
 [node name="Fridge" parent="Objects/Kitchen" instance=ExtResource("15_ktfy2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.71789, 1, 7.1)
 
-[node name="Skeleton3D" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature" index="0"]
-bones/1/scale = Vector3(1, 1, 1)
-bones/2/scale = Vector3(1, 1, 1)
-bones/3/rotation = Quaternion(9.9748e-08, -9.9748e-08, 0.707107, 0.707107)
-bones/4/rotation = Quaternion(-9.9748e-08, 9.9748e-08, -0.707107, 0.707107)
-
 [node name="Door_fridge" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="0"]
 transform = Transform3D(1, 2.84217e-14, 1.42157e-15, -2.84217e-14, 1, 1.42109e-14, -1.42157e-15, -1.42109e-14, 1, 0.45144, 0.669023, 0.454514)
+
+[node name="Door_freezer" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.451531, 1.63774, 0.446294)
+
+[node name="Controller" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.364519, 1.20031, 0.139305)
+
+[node name="Shelf_bottom" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.579313, -0.0510678)
+
+[node name="Shelf_top" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.995155, -0.0510678)
 
 [node name="CollisionShape3D" parent="Objects/Kitchen/Fridge/Interactable_fridge/InteractableRange" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85199, 1.25519, 1.07709)

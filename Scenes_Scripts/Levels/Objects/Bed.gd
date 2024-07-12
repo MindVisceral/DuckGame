@@ -18,8 +18,6 @@ func _on_interactable_unfocused() -> void:
 	is_focused = false
 	switch_shader()
 
-var can_be_int: bool = false
-
 func switch_shader() -> void:
 	for mesh in focused_meshes:
 		mesh.material_overlay.set_shader_parameter("enabled", is_focused)

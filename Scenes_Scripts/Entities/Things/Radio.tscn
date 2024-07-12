@@ -118,7 +118,6 @@ focused_meshes = [NodePath("radio2/radio")]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)
 
 [node name="radio" parent="radio2" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 material_overlay = SubResource("ShaderMaterial_svwn0")
 
 [node name="Collider" type="CollisionShape3D" parent="."]

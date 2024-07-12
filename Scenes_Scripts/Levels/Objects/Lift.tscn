@@ -13,7 +13,7 @@
 size = Vector3(0.109863, 0.970718, 0.395782)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i0e8u"]
-size = Vector3(3, 3, 3)
+size = Vector3(2.82415, 3.24072, 2.10648)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j0tvc"]
 size = Vector3(2.25269, 2.41603, 0.244858)
@@ -443,7 +443,7 @@ _data = {
 collision_layer = 64
 collision_mask = 133
 script = ExtResource("1_f71ji")
-monologue_data = Array[String](["dayum"])
+monologue_data = Array[String](["[center]I am safe here. These walls should limit [b]its[/b] influence.[/center]", "[center]If I measured everything correctly, this ride to the bottom will take appoximately 352 hours.[/center]"])
 monologue_first_line_time = 3.0
 
 [node name="Lift" parent="." instance=ExtResource("1_mdu1c")]
@@ -471,7 +471,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.840088, 1.22782, 0.393997)
 shape = SubResource("BoxShape3D_w5px6")
 
 [node name="CollisionShape3D" parent="Interactable/InteractableRange" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10734, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10309, 0.986979, -0.446762)
 shape = SubResource("BoxShape3D_i0e8u")
 
 [node name="ExitBlocker" type="CollisionShape3D" parent="."]

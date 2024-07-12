@@ -61,8 +61,9 @@ func _physics_process(delta: float) -> void:
 			
 			
 			if "monologue_data" in interactables[0].owner:
-				if not interactables[0].owner.monologue_data.is_empty():
-					think_HUD.visible = true
+				if not ("radio" in interactables[0].owner):
+					if not interactables[0].owner.monologue_data.is_empty():
+						think_HUD.visible = true
 			if "can_be_int" in interactables[0].owner:
 				interact_HUD.visible = true
 				if "is_locked" in interactables[0].owner:
@@ -75,11 +76,14 @@ func _physics_process(delta: float) -> void:
 			
 			## If the Player wants to, they may interact with this Interactable
 			if Input.is_action_just_pressed("input_interact"):
+				if "radio" in interactables[0].owner:
+					get_interactable_monologue_info(interactables[0])
 				#player.InteractableCast.get_collider(0).interact.emit()
 				interactables[0].interact.emit()
 			if Input.is_action_just_pressed("input_thoughts"):
-				#get_interactable_monologue_info(player.InteractableCast.get_collider(0))
-				get_interactable_monologue_info(interactables[0])
+				if not ("radio" in interactables[0].owner):
+					#get_interactable_monologue_info(player.InteractableCast.get_collider(0))
+					get_interactable_monologue_info(interactables[0])
 			
 		
 		## Since it doesn't, we tell this Interactable to emit the "unfocused" signal
@@ -116,8 +120,9 @@ func _physics_process(delta: float) -> void:
 			
 			
 			if "monologue_data" in closest_interactable.owner:
-				if closest_interactable.owner.monologue_data.is_empty() == false:
-					think_HUD.visible = true
+				if not ("radio" in closest_interactable.owner):
+					if closest_interactable.owner.monologue_data.is_empty() == false:
+						think_HUD.visible = true
 			if "can_be_int" in closest_interactable.owner:
 				interact_HUD.visible = true
 				if "is_locked" in closest_interactable.owner:
@@ -129,9 +134,12 @@ func _physics_process(delta: float) -> void:
 			
 			## And if the Player wants to, they may interact with this Interactable
 			if Input.is_action_just_pressed("input_interact"):
+				if "radio" in closest_interactable.owner:
+					get_interactable_monologue_info(closest_interactable)
 				closest_interactable.interact.emit()
 			if Input.is_action_just_pressed("input_thoughts"):
-				get_interactable_monologue_info(closest_interactable)
+				if not ("radio" in closest_interactable.owner):
+					get_interactable_monologue_info(closest_interactable)
 			
 		
 		## If it isn't colliding, we unfocus all the Interactables

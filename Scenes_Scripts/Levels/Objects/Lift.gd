@@ -9,27 +9,34 @@ extends StaticBody3D
 
 
 
-
-
 @export var setpiece_script: Node
 
 @onready var animPlayer: AnimationPlayer = $AnimationPlayer
 @onready var ColliderBlock: CollisionShape3D = $ExitBlocker
 @export var doors_closed: bool = false
 
+var used: bool = false
+
+
+
+var can_be_int: bool = false
+var radio: bool = false
+
 func _ready() -> void:
 	ColliderBlock.disabled = not doors_closed
 
 func ride() -> void:
-	## Close the doors
-	if doors_closed == false:
-		doors_closed = true
-		animPlayer.play("close")
-		ColliderBlock.disabled = false
-	else:
-		doors_closed = false
-		animPlayer.play("open")
-		ColliderBlock.disabled = true
+	if used == false:
+		if doors_closed == false:
+			doors_closed = true
+			animPlayer.play("close")
+			ColliderBlock.disabled = false
+		else:
+			doors_closed = false
+			animPlayer.play("open")
+			ColliderBlock.disabled = true
+	
+	used = true
 
 
 
