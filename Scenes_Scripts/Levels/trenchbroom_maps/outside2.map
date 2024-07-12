@@ -5,7 +5,7 @@
 "mapversion" "220"
 "classname" "worldspawn"
 "_tb_mod" "Scenes_Scripts"
-"_tb_textures" "textures;textures/Classic_64_Asset_Pack/Bricks/Materials;textures/Classic_64_Asset_Pack/Concrete/Materials;textures/Classic_64_Asset_Pack/Doors/Materials;textures/Classic_64_Asset_Pack/Electrical/Materials;textures/Classic_64_Asset_Pack/Floor/Materials;textures/Classic_64_Asset_Pack/Food/Materials;textures/Classic_64_Asset_Pack/Industrial/Materials;textures/Classic_64_Asset_Pack/Metal/Materials;textures/Classic_64_Asset_Pack/Road/Materials;textures/Classic_64_Asset_Pack/Rocks/Materials;textures/Classic_64_Asset_Pack/Roof/Materials;textures/Classic_64_Asset_Pack/Shelves/Materials;textures/Classic_64_Asset_Pack/Tiles;textures/Classic_64_Asset_Pack/Tiles/Materials;textures/Classic_64_Asset_Pack/Wood/Materials"
+"_tb_textures" "textures;textures/Classic_64_Asset_Pack/Bricks/Materials;textures/Classic_64_Asset_Pack/Concrete/Materials;textures/Classic_64_Asset_Pack/Doors/Materials;textures/Classic_64_Asset_Pack/Electrical/Materials;textures/Classic_64_Asset_Pack/Floor/Materials;textures/Classic_64_Asset_Pack/Food/Materials;textures/Classic_64_Asset_Pack/Industrial/Materials;textures/Classic_64_Asset_Pack/Metal/Materials;textures/Classic_64_Asset_Pack/Road/Materials;textures/Classic_64_Asset_Pack/Rocks/Materials;textures/Classic_64_Asset_Pack/Roof/Materials;textures/Classic_64_Asset_Pack/Shelves/Materials;textures/Classic_64_Asset_Pack/Tiles;textures/Classic_64_Asset_Pack/Tiles/Materials;textures/Classic_64_Asset_Pack/Wood/Materials;textures/base;textures/layers;textures/materials;textures/orrery;textures/pbr;textures/pbr/military-panel;textures/shaders;textures/special"
 // brush 0
 {
 ( 436 -80 -16 ) ( 436 -79 -16 ) ( 436 -80 -15 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
@@ -4685,5 +4685,83 @@
 ( 288 -2640 -8 ) ( 288 -2639 -8 ) ( 289 -2640 -8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_13 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
 ( 288 -2640 -64 ) ( 289 -2640 -64 ) ( 288 -2640 -63 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_13 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
 ( 288 -2640 -64 ) ( 288 -2640 -63 ) ( 288 -2639 -64 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_13 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+}
+// entity 3
+{
+"classname" "func_group"
+"_tb_type" "_tb_layer"
+"_tb_name" "barrier"
+"_tb_id" "4"
+"_tb_layer_sort_index" "2"
+// brush 0
+{
+( 72 -2640 24 ) ( 64 -2576 -8 ) ( 64 -2576 24 ) special/clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 72 -2640 -8 ) ( 96 -2640 24 ) ( 96 -2640 -8 ) special/clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 72 -2640 -8 ) ( 96 -2640 -8 ) ( 64 -2576 -8 ) special/clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 96 -2640 24 ) ( 72 -2640 24 ) ( 64 -2576 24 ) special/clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 64 -2576 -8 ) ( 96 -2640 24 ) ( 64 -2576 24 ) special/clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+// brush 1
+{
+( 352 -2640 -8 ) ( 352 -2640 24 ) ( 288 -3664 24 ) special/clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 320 -3664 -8 ) ( 288 -3664 -8 ) ( 288 -3664 24 ) special/clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 320 -3664 -8 ) ( 384 -2640 -8 ) ( 352 -2640 -8 ) special/clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 352 -2640 24 ) ( 384 -2640 24 ) ( 320 -3664 24 ) special/clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 384 -2640 -8 ) ( 384 -2640 24 ) ( 352 -2640 24 ) special/clip [ -1 0 0 40 ] [ 0 0 -1 0 ] 0 1 1
+( 320 -3664 24 ) ( 384 -2640 24 ) ( 384 -2640 -8 ) special/clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+// brush 2
+{
+( 384 -2576 -8 ) ( 384 -2576 24 ) ( 352 -2640 24 ) special/clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 376 -2640 -8 ) ( 352 -2640 -8 ) ( 352 -2640 24 ) special/clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 376 -2640 -8 ) ( 384 -2576 -8 ) ( 352 -2640 -8 ) special/clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 352 -2640 24 ) ( 384 -2576 24 ) ( 376 -2640 24 ) special/clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 376 -2640 24 ) ( 384 -2576 24 ) ( 384 -2576 -8 ) special/clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+// brush 3
+{
+( 128 -3664 24 ) ( 64 -2640 -8 ) ( 64 -2640 24 ) special/clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 128 -3664 -8 ) ( 160 -3664 24 ) ( 160 -3664 -8 ) special/clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 128 -3664 -8 ) ( 96 -2640 -8 ) ( 64 -2640 -8 ) special/clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 96 -2640 24 ) ( 128 -3664 24 ) ( 64 -2640 24 ) special/clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 64 -2640 -8 ) ( 96 -2640 24 ) ( 64 -2640 24 ) special/clip [ -1 0 0 40 ] [ 0 0 -1 0 ] 0 1 1
+( 96 -2640 -8 ) ( 160 -3664 24 ) ( 96 -2640 24 ) special/clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+// brush 4
+{
+( 40 -2640 24 ) ( -88 -1552 -8 ) ( -88 -1552 24 ) special/clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 40 -2640 -8 ) ( 72 -2640 24 ) ( 72 -2640 -8 ) special/clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 40 -2640 -8 ) ( -56 -1552 -8 ) ( -88 -1552 -8 ) special/clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -56 -1552 24 ) ( 40 -2640 24 ) ( -88 -1552 24 ) special/clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -88 -1552 -8 ) ( -56 -1552 24 ) ( -88 -1552 24 ) special/clip [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -56 -1552 -8 ) ( 72 -2640 24 ) ( -56 -1552 24 ) special/clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+// brush 5
+{
+( 504 -1552 -8 ) ( 504 -1552 24 ) ( 376 -2640 24 ) special/clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 408 -2640 -8 ) ( 376 -2640 -8 ) ( 376 -2640 24 ) special/clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 408 -2640 -8 ) ( 536 -1552 -8 ) ( 504 -1552 -8 ) special/clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 504 -1552 24 ) ( 536 -1552 24 ) ( 408 -2640 24 ) special/clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 536 -1552 -8 ) ( 536 -1552 24 ) ( 504 -1552 24 ) special/clip [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 408 -2640 24 ) ( 536 -1552 24 ) ( 536 -1552 -8 ) special/clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+// brush 6
+{
+( 288 -3696 -8 ) ( 288 -3695 -8 ) ( 288 -3696 -7 ) special/clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 288 -32426 -8 ) ( 288 -32426 -7 ) ( 289 -32426 -8 ) special/clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 288 -3696 -8 ) ( 289 -3696 -8 ) ( 288 -3695 -8 ) special/clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 304 -3664 24 ) ( 304 -3663 24 ) ( 305 -3664 24 ) special/clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 304 -3664 8 ) ( 305 -3664 8 ) ( 304 -3664 9 ) special/clip [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 320 -3664 8 ) ( 320 -3664 9 ) ( 320 -3663 8 ) special/clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+// brush 7
+{
+( 128 -3664 8 ) ( 128 -3663 8 ) ( 128 -3664 9 ) special/clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 160 -32426 -8 ) ( 159 -32426 -8 ) ( 160 -32426 -7 ) special/clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 160 -3696 -8 ) ( 160 -3695 -8 ) ( 159 -3696 -8 ) special/clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 144 -3664 24 ) ( 143 -3664 24 ) ( 144 -3663 24 ) special/clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 144 -3664 8 ) ( 144 -3664 9 ) ( 143 -3664 8 ) special/clip [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 160 -3696 -8 ) ( 160 -3696 -7 ) ( 160 -3695 -8 ) special/clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
