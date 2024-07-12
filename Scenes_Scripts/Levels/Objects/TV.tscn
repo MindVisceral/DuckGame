@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://dxjgsggwy0tir"]
+
+[ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/TV.gd" id="1_85e2u"]
+[ext_resource type="PackedScene" uid="uid://cn0moilkovbc3" path="res://Blender/TV.gltf" id="1_ibuwa"]
+[ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="2_6gnio"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fifbk"]
+size = Vector3(1.08362, 1.08362, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o050e"]
+size = Vector3(3, 3, 3)
+
+[node name="TV" type="RigidBody3D"]
+collision_layer = 128
+collision_mask = 71
+script = ExtResource("1_85e2u")
+
+[node name="TV" parent="." instance=ExtResource("1_ibuwa")]
+transform = Transform3D(0.25, 0, 0, 0, 0.249964, 0.00421477, 0, -0.00421477, 0.249964, 0, 0.491567, 0)
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.544729, -0.200195)
+shape = SubResource("BoxShape3D_fifbk")
+
+[node name="Interactable" parent="." instance=ExtResource("2_6gnio")]
+
+[node name="CollisionShape3D" parent="Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.544729, -0.200195)
+shape = SubResource("BoxShape3D_fifbk")
+
+[node name="CollisionShape3D" parent="Interactable/InteractableRange" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.544729, -0.200195)
+shape = SubResource("BoxShape3D_o050e")
+
+[connection signal="interact" from="Interactable" to="." method="_on_interactable_interact"]
+
+[editable path="Interactable"]

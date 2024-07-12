@@ -8,7 +8,8 @@ extends StaticBody3D
 @onready var fridge_light: SpotLight3D = $FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_fridge/SpotLight3D
 @onready var freezer_light: OmniLight3D = $FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_freezer/OmniLight3D
 ##
-@onready var animPlay: AnimationPlayer = $AnimationPlayer
+@onready var FridgeanimPlay: AnimationPlayer = $FridgeAnimationPlayer
+@onready var FreezeranimPlay: AnimationPlayer =$FreezerAnimationPlayer
 
 ##
 func _ready() -> void:
@@ -19,20 +20,20 @@ func _ready() -> void:
 func toggle_fridge() -> void:
 	if fridge_open == true:
 		fridge_open = false
-		animPlay.play("close_fridge")
+		FridgeanimPlay.play("close_fridge")
 	else:
 		fridge_light.visible = true
 		fridge_open = true
-		animPlay.play("open_fridge")
+		FridgeanimPlay.play("open_fridge")
 
 func toggle_freezer() -> void:
 	if freezer_open == true:
 		freezer_open = false
-		animPlay.play("close_freezer")
+		FreezeranimPlay.play("close_freezer")
 	else:
 		freezer_light.visible = true
 		freezer_open = true
-		animPlay.play("open_freezer")
+		FreezeranimPlay.play("open_freezer")
 
 
 
@@ -48,6 +49,8 @@ func _on_interactable_freezer_interact() -> void:
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "close_fridge":
 		fridge_light.visible = false
-	#
+
+
+func _on_freezer_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "close_freezer":
 		freezer_light.visible = false

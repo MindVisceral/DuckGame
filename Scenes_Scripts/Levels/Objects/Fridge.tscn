@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ilsitja3vrbt"]
+[gd_scene load_steps=20 format=3 uid="uid://ilsitja3vrbt"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/Fridge.gd" id="1_caj86"]
 [ext_resource type="PackedScene" uid="uid://ddeaevqw0fb4h" path="res://Blender/FINAL_fridge_tall.glb" id="1_g8kjj"]
@@ -31,42 +31,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("FINAL_fridge_tall/Armature/Skeleton3D/Door_freezer:rotation")
+tracks/0/path = NodePath("FINAL_fridge_tall/Armature/Skeleton3D/Door_fridge:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(1.13951e-34, -2.84217e-14, -4.00931e-21)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("FINAL_fridge_tall/Armature/Skeleton3D/Door_fridge:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(-1.42109e-14, 1.42157e-15, -2.84217e-14)]
-}
-
-[sub_resource type="Animation" id="Animation_b6pna"]
-resource_name = "close_freezer"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("FINAL_fridge_tall/Armature/Skeleton3D/Door_freezer:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1.8, 1),
-"update": 0,
-"values": [Vector3(0, 2.35619, 0), Vector3(0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_x8udb"]
@@ -83,22 +55,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1.8, 1),
 "update": 0,
 "values": [Vector3(0, 2.35619, 0), Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_q3tvq"]
-resource_name = "open_freezer"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("FINAL_fridge_tall/Armature/Skeleton3D/Door_freezer:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(0.3, 1),
-"update": 0,
-"values": [Vector3(1.13951e-34, -2.84217e-14, -4.00931e-21), Vector3(0, 2.35619, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_jnj3o"]
@@ -120,21 +76,72 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ocwox"]
 _data = {
 "RESET": SubResource("Animation_2vg4i"),
-"close_freezer": SubResource("Animation_b6pna"),
 "close_fridge": SubResource("Animation_x8udb"),
-"open_freezer": SubResource("Animation_q3tvq"),
 "open_fridge": SubResource("Animation_jnj3o")
+}
+
+[sub_resource type="Animation" id="Animation_4nwby"]
+resource_name = "close_freezer"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FINAL_fridge_tall/Armature/Skeleton3D/Door_freezer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1.8, 1),
+"update": 0,
+"values": [Vector3(0, 2.35619, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5hdy0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FINAL_fridge_tall/Armature/Skeleton3D/Door_freezer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.35619, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_norpa"]
+resource_name = "open_freezer"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FINAL_fridge_tall/Armature/Skeleton3D/Door_freezer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.3, 1),
+"update": 0,
+"values": [Vector3(1.13951e-34, -2.84217e-14, -4.00931e-21), Vector3(0, 2.35619, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vh2ai"]
+_data = {
+"RESET": SubResource("Animation_5hdy0"),
+"close_freezer": SubResource("Animation_4nwby"),
+"open_freezer": SubResource("Animation_norpa")
 }
 
 [node name="Fridge" type="StaticBody3D"]
 collision_layer = 64
-collision_mask = 5
+collision_mask = 133
 script = ExtResource("1_caj86")
 
 [node name="FINAL_fridge_tall" parent="." instance=ExtResource("1_g8kjj")]
 
 [node name="Skeleton3D" parent="FINAL_fridge_tall/Armature" index="0"]
-bones/1/scale = Vector3(1, 1, 1)
 bones/2/scale = Vector3(1, 1, 1)
 bones/3/rotation = Quaternion(9.9748e-08, -9.9748e-08, 0.707107, 0.707107)
 bones/4/rotation = Quaternion(-9.9748e-08, 9.9748e-08, -0.707107, 0.707107)
@@ -143,7 +150,7 @@ bones/4/rotation = Quaternion(-9.9748e-08, 9.9748e-08, -0.707107, 0.707107)
 transform = Transform3D(1, 2.84217e-14, 1.42157e-15, -2.84217e-14, 1, 1.42109e-14, -1.42157e-15, -1.42109e-14, 1, 0.45144, 0.669023, 0.454514)
 
 [node name="Door_freezer" parent="FINAL_fridge_tall/Armature/Skeleton3D" index="1"]
-transform = Transform3D(1, 4.00931e-21, -2.84217e-14, -4.00931e-21, 1, -1.13951e-34, 2.84217e-14, 2.27902e-34, 1, 0.451531, 1.63774, 0.446294)
+transform = Transform3D(-0.707104, 0, 0.70711, 0, 1, 0, -0.70711, 0, -0.707104, 0.451531, 1.63774, 0.446294)
 
 [node name="small_light_freezer" parent="FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body" index="1" instance=ExtResource("3_owcwg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85446, 0)
@@ -153,7 +160,7 @@ transform = Transform3D(0.179399, 0, 0.0884072, 0, 0.2, 0, -0.0884072, 0, 0.1793
 cast_shadow = 0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_freezer"]
-light_energy = 0.7
+light_energy = 2.0
 light_indirect_energy = 0.5
 light_volumetric_fog_energy = 0.0
 light_specular = 0.1
@@ -170,11 +177,12 @@ transform = Transform3D(0.179399, 0, 0.0884072, 0, 0.2, 0, -0.0884072, 0, 0.1793
 cast_shadow = 0
 
 [node name="SpotLight3D" type="SpotLight3D" parent="FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_fridge"]
-light_energy = 0.7
+light_energy = 3.0
 light_indirect_energy = 7.0
 light_volumetric_fog_energy = 1.25
 light_specular = 0.2
 shadow_enabled = true
+shadow_bias = 0.0
 spot_range = 1.65
 spot_attenuation = 0.258816
 spot_angle = 60.0
@@ -222,14 +230,20 @@ shape = SubResource("BoxShape3D_eera2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6789, 0.405151)
 shape = SubResource("BoxShape3D_exvrw")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="FridgeAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_ocwox")
 }
 
+[node name="FreezerAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vh2ai")
+}
+
 [connection signal="interact" from="Interactable_fridge" to="." method="_on_interactable_fridge_interact"]
 [connection signal="interact" from="Interactable_freezer" to="." method="_on_interactable_freezer_interact"]
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="FridgeAnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="FreezerAnimationPlayer" to="." method="_on_freezer_animation_player_animation_finished"]
 
 [editable path="FINAL_fridge_tall"]
 [editable path="FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_freezer"]

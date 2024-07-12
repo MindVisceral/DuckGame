@@ -10,7 +10,7 @@ size = Vector3(1.70888, 0.455383, 0.083252)
 
 [node name="Bed" type="StaticBody3D"]
 collision_layer = 64
-collision_mask = 5
+collision_mask = 133
 
 [node name="bed" parent="." instance=ExtResource("1_bvjag")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.176185, 0)

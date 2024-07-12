@@ -11,6 +11,8 @@ size = Vector3(0.35, 0.485352, 0.35)
 size = Vector3(4, 2, 4)
 
 [node name="Stool" type="StaticBody3D"]
+collision_layer = 64
+collision_mask = 133
 script = ExtResource("1_fh8vx")
 
 [node name="stool2" parent="." instance=ExtResource("1_msy4q")]

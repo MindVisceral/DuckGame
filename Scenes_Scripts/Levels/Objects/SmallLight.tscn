@@ -4,7 +4,7 @@
 
 [node name="SmallLight" type="StaticBody3D"]
 collision_layer = 64
-collision_mask = 5
+collision_mask = 133
 
 [node name="small_light" parent="." instance=ExtResource("1_qqvm5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0462391, 0)

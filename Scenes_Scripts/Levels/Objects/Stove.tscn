@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://0gxx8qg8ui1l"]
+
+[ext_resource type="PackedScene" uid="uid://dtpahgxff8fyt" path="res://Blender/fire_thing.gltf" id="1_nxfup"]
+[ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/Stove.gd" id="1_twam7"]
+[ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="2_fvso7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vrqg2"]
+size = Vector3(0.408325, 0.168579, 0.460205)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2h204"]
+size = Vector3(2, 2, 2)
+
+[node name="Stove" type="StaticBody3D"]
+script = ExtResource("1_twam7")
+
+[node name="fire_thing" parent="." instance=ExtResource("1_nxfup")]
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000549316, 0.0870972, 0.00109863)
+shape = SubResource("BoxShape3D_vrqg2")
+
+[node name="Interactable" parent="." instance=ExtResource("2_fvso7")]
+
+[node name="CollisionShape3D" parent="Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000549316, 0.0870972, 0.00109863)
+shape = SubResource("BoxShape3D_vrqg2")
+
+[node name="CollisionShape3D" parent="Interactable/InteractableRange" index="0"]
+shape = SubResource("BoxShape3D_2h204")
+
+[connection signal="interact" from="Interactable" to="." method="_on_interactable_interact"]
+
+[editable path="Interactable"]

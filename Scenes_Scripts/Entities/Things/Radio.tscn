@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://uotr70iswuus"]
+
+[ext_resource type="Script" path="res://Scenes_Scripts/Entities/Things/Radio.gd" id="1_5spta"]
+[ext_resource type="PackedScene" uid="uid://dfd0xsds1rgtm" path="res://Blender/radio.gltf" id="1_7pfbb"]
+[ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="3_x2wao"]
+[ext_resource type="AudioStream" uid="uid://b1j6etmxgg384" path="res://Scenes_Scripts/Music/Portal_radio_decompressed.wav" id="4_scmgq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tnbst"]
+size = Vector3(0.348328, 0.19915, 0.119568)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_geyp3"]
+size = Vector3(3, 3, 3)
+
+[node name="Radio" type="RigidBody3D"]
+collision_layer = 128
+collision_mask = 71
+script = ExtResource("1_5spta")
+
+[node name="radio2" parent="." instance=ExtResource("1_7pfbb")]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+shape = SubResource("BoxShape3D_tnbst")
+
+[node name="Interactable" parent="." instance=ExtResource("3_x2wao")]
+
+[node name="CollisionShape3D" parent="Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+shape = SubResource("BoxShape3D_tnbst")
+
+[node name="CollisionShape3D" parent="Interactable/InteractableRange" index="0"]
+shape = SubResource("BoxShape3D_geyp3")
+
+[node name="AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_scmgq")
+max_polyphony = 6
+attenuation_filter_cutoff_hz = 20500.0
+
+[connection signal="interact" from="Interactable" to="." method="_on_interactable_interact"]
+[connection signal="finished" from="AudioPlayer" to="." method="_on_audio_player_finished"]
+
+[editable path="Interactable"]

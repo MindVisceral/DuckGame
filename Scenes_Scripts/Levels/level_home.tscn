@@ -1,7 +1,7 @@
-[gd_scene load_steps=143 format=3 uid="uid://bc1l8essgx3qb"]
+[gd_scene load_steps=147 format=3 uid="uid://bc1l8essgx3qb"]
 
+[ext_resource type="Environment" uid="uid://c45ge3tprgx5o" path="res://Scenes_Scripts/Levels/environment_default.tres" id="1_1jw4r"]
 [ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1_skewd"]
-[ext_resource type="Texture2D" uid="uid://2bjvipf27f6y" path="res://HDR_sky.hdr" id="1_ujors"]
 [ext_resource type="Resource" uid="uid://c36hv0o6g0udo" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="2_n1ec3"]
 [ext_resource type="Texture2D" uid="uid://dw6w8trhm6ugb" path="res://Scenes_Scripts/Textures/Classic_64_Asset_Pack/Floor/Materials/carpet_black_01.jpg" id="4_skbua"]
 [ext_resource type="Texture2D" uid="uid://wafs3nx184dp" path="res://Scenes_Scripts/Textures/Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty.png" id="5_0l2f4"]
@@ -15,56 +15,20 @@
 [ext_resource type="Texture2D" uid="uid://dgldncf7ajcvu" path="res://Scenes_Scripts/Textures/Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01.png" id="7_ynnql"]
 [ext_resource type="Texture2D" uid="uid://cfys8fan72rcu" path="res://Scenes_Scripts/Textures/Classic_64_Asset_Pack/Wood/Materials/wood_plank_07.jpg" id="8_t7s31"]
 [ext_resource type="Texture2D" uid="uid://lh43du2quvrx" path="res://Scenes_Scripts/Textures/Classic_64_Asset_Pack/Concrete/Materials/concrete_tile_01.jpg" id="11_b0ybp"]
+[ext_resource type="PackedScene" uid="uid://uotr70iswuus" path="res://Scenes_Scripts/Entities/Things/Radio.tscn" id="15_2pxgy"]
 [ext_resource type="PackedScene" uid="uid://ilsitja3vrbt" path="res://Scenes_Scripts/Levels/Objects/Fridge.tscn" id="15_ktfy2"]
 [ext_resource type="PackedScene" uid="uid://ccsu3qdjk12ns" path="res://Scenes_Scripts/Levels/Objects/Bed.tscn" id="15_nrla8"]
 [ext_resource type="PackedScene" uid="uid://tlr6sujh62a1" path="res://Scenes_Scripts/Levels/Objects/Cheap_table.tscn" id="16_l7y1m"]
 [ext_resource type="PackedScene" uid="uid://dm5d2ll615kdq" path="res://Scenes_Scripts/Levels/Objects/Microwave.tscn" id="17_bbmj8"]
 [ext_resource type="PackedScene" uid="uid://3bibeogihx0k" path="res://Scenes_Scripts/Levels/Objects/HangingLamp.tscn" id="18_nbo0e"]
 [ext_resource type="PackedScene" uid="uid://db7w5ip2jk0td" path="res://Scenes_Scripts/Levels/Objects/SmallLight.tscn" id="19_dmpj4"]
+[ext_resource type="PackedScene" uid="uid://bmhltsh5yk6ib" path="res://Scenes_Scripts/Levels/Objects/KitchenSink.tscn" id="21_auyeb"]
 [ext_resource type="PackedScene" uid="uid://cqgv3mifwf8bv" path="res://Scenes_Scripts/Levels/Objects/Stool.tscn" id="21_oxs2i"]
-
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_wkllc"]
-panorama = ExtResource("1_ujors")
-
-[sub_resource type="Sky" id="Sky_6f67x"]
-sky_material = SubResource("PanoramaSkyMaterial_wkllc")
-
-[sub_resource type="Environment" id="Environment_47wo3"]
-background_mode = 2
-sky = SubResource("Sky_6f67x")
-sky_rotation = Vector3(0, -0.244346, 0)
-ambient_light_source = 3
-ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_sky_contribution = 0.3
-tonemap_mode = 3
-tonemap_exposure = 0.47
-tonemap_white = 5.0
-ssr_enabled = true
-ssr_max_steps = 16
-ssr_fade_in = 0.252269
-ssr_fade_out = 2.21914
-ssao_enabled = true
-ssao_radius = 7.14
-ssao_intensity = 2.51
-ssao_power = 0.989631
-ssil_enabled = true
-ssil_radius = 0.2
-ssil_intensity = 0.8
-sdfgi_enabled = true
-sdfgi_read_sky_light = false
-glow_enabled = true
-glow_normalized = true
-glow_bloom = 0.08
-glow_blend_mode = 0
-glow_hdr_luminance_cap = 61.15
-fog_light_color = Color(0.517647, 0.552941, 0.607843, 1)
-fog_light_energy = 0.2
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.03
-volumetric_fog_sky_affect = 0.03
-adjustment_enabled = true
-adjustment_brightness = 0.8
-adjustment_saturation = 0.9
+[ext_resource type="PackedScene" uid="uid://cutufj1luxfqd" path="res://Scenes_Scripts/Levels/Objects/TVShelf.tscn" id="21_q5swt"]
+[ext_resource type="PackedScene" uid="uid://dxjgsggwy0tir" path="res://Scenes_Scripts/Levels/Objects/TV.tscn" id="22_n1yhl"]
+[ext_resource type="PackedScene" uid="uid://dikpxxwdpl37n" path="res://Scenes_Scripts/Levels/Objects/SmallTable.tscn" id="23_hj68o"]
+[ext_resource type="PackedScene" uid="uid://x3e511wh70uk" path="res://Scenes_Scripts/Levels/Objects/BigChair.tscn" id="24_62o4k"]
+[ext_resource type="PackedScene" uid="uid://0gxx8qg8ui1l" path="res://Scenes_Scripts/Levels/Objects/Stove.tscn" id="25_nnnhv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3w8cn"]
 texture_filter = 0
@@ -563,11 +527,13 @@ size = Vector3(3.26733, 2.45862, 2.4812)
 
 [node name="level_home" type="Node3D"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_47wo3")
+[node name="Environment" type="Node3D" parent="."]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(0.520091, 0.657218, -0.5455, -0.171328, 0.705971, 0.687206, 0.836751, -0.26395, 0.479769, -11.5343, 14.9543, 16.6149)
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+environment = ExtResource("1_1jw4r")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(0.520091, 0.657218, -0.5455, -0.171328, 0.705971, 0.687206, 0.836751, -0.26395, 0.479769, -12.6224, 17.716, 19.0767)
 light_energy = 2.0
 light_indirect_energy = 6.0
 light_angular_distance = 0.5
@@ -583,6 +549,7 @@ entity_fgd = ExtResource("2_n1ec3")
 base_texture_dir = "res://Scenes_Scripts/Textures"
 texture_file_extensions = PackedStringArray("png", "jpg", "jpeg", "bmp")
 default_material = SubResource("StandardMaterial3D_3w8cn")
+metadata/_edit_group_ = true
 
 [node name="entity_0_worldspawn" type="StaticBody3D" parent="QodotMap"]
 collision_layer = 2
@@ -900,38 +867,74 @@ shape = SubResource("ConvexPolygonShape3D_do0o5")
 
 [node name="Objects" type="Node3D" parent="."]
 
-[node name="Fridge" parent="Objects" instance=ExtResource("15_ktfy2")]
+[node name="Kitchen" type="Node3D" parent="Objects"]
+
+[node name="Fridge" parent="Objects/Kitchen" instance=ExtResource("15_ktfy2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.71789, 1, 7.1)
 
-[node name="CollisionShape3D" parent="Objects/Fridge/Interactable_fridge/InteractableRange" index="0"]
+[node name="Skeleton3D" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature" index="0"]
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(9.9748e-08, -9.9748e-08, 0.707107, 0.707107)
+bones/4/rotation = Quaternion(-9.9748e-08, 9.9748e-08, -0.707107, 0.707107)
+
+[node name="Door_fridge" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="0"]
+transform = Transform3D(1, 2.84217e-14, 1.42157e-15, -2.84217e-14, 1, 1.42109e-14, -1.42157e-15, -1.42109e-14, 1, 0.45144, 0.669023, 0.454514)
+
+[node name="CollisionShape3D" parent="Objects/Kitchen/Fridge/Interactable_fridge/InteractableRange" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85199, 1.25519, 1.07709)
 shape = SubResource("BoxShape3D_t0dxu")
 
-[node name="CollisionShape3D" parent="Objects/Fridge/Interactable_freezer/InteractableRange" index="0"]
+[node name="CollisionShape3D" parent="Objects/Kitchen/Fridge/Interactable_freezer/InteractableRange" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_t0dxu")
 
-[node name="Bed" parent="Objects" instance=ExtResource("15_nrla8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.439, 1, 1.105)
-
-[node name="Microwave" parent="Objects" instance=ExtResource("17_bbmj8")]
+[node name="Microwave" parent="Objects/Kitchen" instance=ExtResource("17_bbmj8")]
 transform = Transform3D(0.707896, 0, 0.706316, 0, 1, 0, -0.706316, 0, 0.707896, 6.74243, 1.71416, 11.2282)
 
-[node name="CollisionShape3D" parent="Objects/Microwave/Interactable/InteractableRange" index="0"]
+[node name="CollisionShape3D" parent="Objects/Kitchen/Microwave/Interactable/InteractableRange" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00134134, 0.522243, -0.892105)
 shape = SubResource("BoxShape3D_2k2ay")
 
-[node name="HandgingLamp" parent="Objects" instance=ExtResource("18_nbo0e")]
+[node name="CheapTable" parent="Objects/Kitchen" instance=ExtResource("16_l7y1m")]
+transform = Transform3D(0.104337, 0, 0.994542, 0, 1, 0, -0.994542, 0, 0.104337, 6.65309, 1, 10.8179)
+
+[node name="Stool" parent="Objects/Kitchen" instance=ExtResource("21_oxs2i")]
+transform = Transform3D(0.990955, 0, -0.134194, 0, 1, 0, 0.134194, 0, 0.990955, 5.69571, 1, 10.3361)
+
+[node name="Stove" parent="Objects/Kitchen" instance=ExtResource("25_nnnhv")]
+transform = Transform3D(-0.232003, 0, -0.972715, 0, 1, 0, 0.972715, 0, -0.232003, 6.7927, 1.71416, 10.298)
+
+[node name="KitchenSink" parent="Objects/Kitchen" instance=ExtResource("21_auyeb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.0884, 1, 8.59519)
+
+[node name="HandgingLamp" parent="Objects/Kitchen" instance=ExtResource("18_nbo0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47141, 3.9688, 9.09929)
+
+[node name="Main Room" type="Node3D" parent="Objects"]
+
+[node name="TVShelf" parent="Objects/Main Room" instance=ExtResource("21_q5swt")]
+transform = Transform3D(0.993343, 0, -0.115197, 0, 1, 0, 0.115197, 0, 0.993343, 1.99418, 1, 10.9409)
+
+[node name="TV" parent="Objects/Main Room" instance=ExtResource("22_n1yhl")]
+transform = Transform3D(-0.929776, 0, 0.368125, 0, 1, 0, -0.368125, 0, -0.929777, 1.26788, 1.68115, 10.6023)
+
+[node name="SmallTable" parent="Objects/Main Room" instance=ExtResource("23_hj68o")]
+transform = Transform3D(0.390313, 0, -0.920682, 0, 1, 0, 0.920682, 0, 0.390313, 1.25075, 1, 8.7875)
+
+[node name="BigChair" parent="Objects/Main Room" instance=ExtResource("24_62o4k")]
+transform = Transform3D(0.9412, 0, -0.337851, 0, 1, 0, 0.337851, 0, 0.9412, 2.55342, 1, 8.07132)
+
+[node name="Radio" parent="Objects/Main Room" instance=ExtResource("15_2pxgy")]
+transform = Transform3D(0.1519, 0, 0.988396, 0, 1, 0, -0.988396, 0, 0.1519, 1.32116, 1.46746, 8.57723)
+
+[node name="Bedroom" type="Node3D" parent="Objects"]
+
+[node name="Bed" parent="Objects/Bedroom" instance=ExtResource("15_nrla8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.439, 1, 1.105)
 
 [node name="SmallLight" parent="Objects" instance=ExtResource("19_dmpj4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91217, 3.50629, 5.3353)
-
-[node name="CheapTable" parent="Objects" instance=ExtResource("16_l7y1m")]
-transform = Transform3D(0.104337, 0, 0.994542, 0, 1, 0, -0.994542, 0, 0.104337, 6.65309, 1, 10.8179)
-
-[node name="Stool" parent="Objects" instance=ExtResource("21_oxs2i")]
-transform = Transform3D(0.990955, 0, -0.134194, 0, 1, 0, 0.134194, 0, 0.990955, 5.69571, 1, 10.3361)
 
 [node name="Player" parent="." instance=ExtResource("5_tmuyv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2.51392, 5)
@@ -943,13 +946,13 @@ jump_height = 6.0
 rotation_speed = 1.0
 angle_limit_for_tilt = 0.01
 
-[editable path="Objects/Fridge"]
-[editable path="Objects/Fridge/FINAL_fridge_tall"]
-[editable path="Objects/Fridge/FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_freezer"]
-[editable path="Objects/Fridge/FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_fridge"]
-[editable path="Objects/Fridge/Interactable_fridge"]
-[editable path="Objects/Fridge/Interactable_freezer"]
-[editable path="Objects/Microwave"]
-[editable path="Objects/Microwave/microwave"]
-[editable path="Objects/Microwave/Interactable"]
+[editable path="Objects/Kitchen/Fridge"]
+[editable path="Objects/Kitchen/Fridge/FINAL_fridge_tall"]
+[editable path="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_freezer"]
+[editable path="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_fridge"]
+[editable path="Objects/Kitchen/Fridge/Interactable_fridge"]
+[editable path="Objects/Kitchen/Fridge/Interactable_freezer"]
+[editable path="Objects/Kitchen/Microwave"]
+[editable path="Objects/Kitchen/Microwave/microwave"]
+[editable path="Objects/Kitchen/Microwave/Interactable"]
 [editable path="Player"]

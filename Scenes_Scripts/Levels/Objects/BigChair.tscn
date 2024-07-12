@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://x3e511wh70uk"]
+
+[ext_resource type="PackedScene" uid="uid://cupf6fg6l4uk1" path="res://Blender/big_chair.gltf" id="1_nbus0"]
+[ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="2_vt5f7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1eeu3"]
+size = Vector3(1.39124, 0.661865, 0.934082)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aasq4"]
+size = Vector3(2, 2, 2)
+
+[node name="BigChair" type="StaticBody3D"]
+collision_layer = 64
+collision_mask = 133
+
+[node name="big_chair" parent="." instance=ExtResource("1_nbus0")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00457764, 0.340454, 0.032959)
+shape = SubResource("BoxShape3D_1eeu3")
+
+[node name="Interactable" parent="." instance=ExtResource("2_vt5f7")]
+
+[node name="CollisionShape3D" parent="Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00457764, 0.340454, 0.032959)
+shape = SubResource("BoxShape3D_1eeu3")
+
+[node name="CollisionShape3D" parent="Interactable/InteractableRange" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00457764, 0.340454, 0.032959)
+shape = SubResource("BoxShape3D_aasq4")
+
+[editable path="Interactable"]
