@@ -10,9 +10,8 @@ size = Vector3(0.122131, 0.120361, 0.0395508)
 [sub_resource type="BoxShape3D" id="BoxShape3D_i7tvm"]
 size = Vector3(3, 3, 3)
 
-[sub_resource type="Animation" id="Animation_ygfar"]
-resource_name = "on"
-length = 0.1
+[sub_resource type="Animation" id="Animation_axar7"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -20,10 +19,10 @@ tracks/0/path = NodePath("SingleLightSwitch/switch:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-0.0698132, 0, 0), Vector3(0.0698132, 0, 0)]
+"values": [Vector3(-0.0698132, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_pkoro"]
@@ -42,8 +41,9 @@ tracks/0/keys = {
 "values": [Vector3(0.0698132, 0, 0), Vector3(-0.0698132, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_axar7"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_ygfar"]
+resource_name = "on"
+length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -51,10 +51,10 @@ tracks/0/path = NodePath("SingleLightSwitch/switch:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(-0.0698132, 0, 0)]
+"values": [Vector3(-0.0698132, 0, 0), Vector3(0.0698132, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l3rj7"]

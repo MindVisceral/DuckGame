@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn57kbp451520"
-path.s3tc="res://.godot/imported/concrete_04.png-ea2c3be9f03e82af142f424078ed7175.s3tc.ctex"
+uid="uid://cdomoftv8hoh7"
+path.s3tc="res://.godot/imported/Door.jpg-1ffde806661cdead265cf5617d86adf2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Scenes_Scripts/Textures/Classic_64_Asset_Pack/Concrete/Materials/concrete_04.png"
-dest_files=["res://.godot/imported/concrete_04.png-ea2c3be9f03e82af142f424078ed7175.s3tc.ctex"]
+source_file="res://Blender/Door.jpg"
+dest_files=["res://.godot/imported/Door.jpg-1ffde806661cdead265cf5617d86adf2.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,98 @@
+[gd_scene load_steps=10 format=3 uid="uid://b7kfdbpdqk3o6"]
+
+[ext_resource type="PackedScene" uid="uid://dnpca2xy4g5u4" path="res://Blender/door.gltf" id="1_ju2bi"]
+[ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/Door.gd" id="1_oolfw"]
+[ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="2_avstk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h5g04"]
+size = Vector3(1.00317, 2.24445, 0.0975952)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m2ieq"]
+size = Vector3(3, 3, 3)
+
+[sub_resource type="Animation" id="Animation_doc04"]
+resource_name = "close"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("door:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.6057, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_po5mm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("door:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6vqgn"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("door:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.6057, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_755vy"]
+_data = {
+"RESET": SubResource("Animation_po5mm"),
+"close": SubResource("Animation_doc04"),
+"open": SubResource("Animation_6vqgn")
+}
+
+[node name="Door" type="StaticBody3D"]
+collision_layer = 64
+collision_mask = 133
+script = ExtResource("1_oolfw")
+
+[node name="door" parent="." instance=ExtResource("1_ju2bi")]
+
+[node name="Interactable" parent="door" instance=ExtResource("2_avstk")]
+
+[node name="CollisionShape3D" parent="door/Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.505981, 1.12448, 0.00576782)
+shape = SubResource("BoxShape3D_h5g04")
+
+[node name="CollisionShape3D" parent="door/Interactable/InteractableRange" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.505981, 1.12448, 0)
+shape = SubResource("BoxShape3D_m2ieq")
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.496499, 1.12394, 0)
+remote_path = NodePath("../../Collider")
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.0348995, 0, 0.999391, 0, 1, 0, -0.999391, 0, -0.0348995, -0.0173275, 1.12394, -0.496196)
+shape = SubResource("BoxShape3D_h5g04")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_755vy")
+}
+
+[connection signal="interact" from="door/Interactable" to="." method="_on_interactable_interact"]
+
+[editable path="door/Interactable"]

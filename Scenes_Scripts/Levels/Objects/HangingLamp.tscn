@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://3bibeogihx0k"]
+[gd_scene load_steps=4 format=3 uid="uid://3bibeogihx0k"]
 
+[ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/HangingLamp.gd" id="1_ajpn4"]
 [ext_resource type="PackedScene" uid="uid://cwyklong8q5j4" path="res://Blender/top_lamp.gltf" id="1_j8vmv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aabq8"]
@@ -9,6 +10,7 @@ height = 1.20251
 [node name="HandgingLamp" type="StaticBody3D"]
 collision_layer = 64
 collision_mask = 133
+script = ExtResource("1_ajpn4")
 
 [node name="top_lamp" parent="." instance=ExtResource("1_j8vmv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.837, 0)

@@ -10,7 +10,7 @@ extends Node3D
 func _ready() -> void:
 	if switch_on == true:
 		switch_object_interact()
-		anim.play("")
+		anim.play("on")
 
 
 ##

@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn57kbp451520"
-path.s3tc="res://.godot/imported/concrete_04.png-ea2c3be9f03e82af142f424078ed7175.s3tc.ctex"
+uid="uid://df4g8i1baak33"
+path="res://.godot/imported/psxdither.png-a9cf0c854ae3b3f5886a95b4f37cc930.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes_Scripts/Textures/Classic_64_Asset_Pack/Concrete/Materials/concrete_04.png"
-dest_files=["res://.godot/imported/concrete_04.png-ea2c3be9f03e82af142f424078ed7175.s3tc.ctex"]
+source_file="res://Scenes_Scripts/Shaders/GodotRetro/Other/Images/psxdither.png"
+dest_files=["res://.godot/imported/psxdither.png-a9cf0c854ae3b3f5886a95b4f37cc930.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -32,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
