@@ -2683,9 +2683,29 @@ switch_object = NodePath("../CheapLight")
 
 [node name="Player" parent="." instance=ExtResource("5_tmuyv")]
 transform = Transform3D(-0.839041, 0, -0.544068, 0, 1, 0, 0.544068, 0, -0.839041, 4.85919, 1.02585, 2.68128)
+accept_input = false
+mouse_scroll_value = 0
+MOUSE_SENSITIVITY_SCROLL_WHEEL = 0.12
+camera_FOV = 90
+first_person = true
 speed = 4.0
+air_control = 0.3
+step_lengthen = 0.7
+default_height = 1.6
 crouch_height = 0.8
+default_width = 0.15
+default_head_height = 1.4
+crouch_head_height = 0.7
+default_feet_height = 0.2
+crouch_feet_height = 0.6
+default_FloorCast_height = 0.0
+crouch_FloorCast_height = 0.4
+crouch_speed = 12
 jump_height = 6.0
+stomp_strength = 50.0
+fly_mode_speed_modifier = 2
+MAX_HEALTH = 150
+health = 100
 
 [node name="HeadBob" parent="Player/Scripts" index="3"]
 rotation_speed = 1.0
