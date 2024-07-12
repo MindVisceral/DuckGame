@@ -811,6 +811,25 @@ points = PackedVector3Array(-2.4375, 3.375, -0.25, -2.4375, -3.375, -0.25, 2.437
 resource_name = "InitialCutscene"
 script/source = "extends Node
 
+@export var cutscenecam: Camera3D
+@export var cutsceneanim: AnimationPlayer
+
+@export var player: Player
+@export var playercam: Camera3D
+
+func _ready() -> void:
+	player.accept_input = false
+	player.MOUSE_SENSITIVITY = 0.0
+	
+	cutscenecam.current = true
+	cutsceneanim.play(\"get_up\")
+	await cutsceneanim.animation_finished
+	
+	playercam.current = true
+	player.accept_input = true
+	
+	var tween = get_tree().create_tween()
+	tween.tween_property(player, \"MOUSE_SENSITIVITY\", 0.4, 1)
 "
 
 [sub_resource type="GDScript" id="GDScript_qi0ud"]
@@ -1031,10 +1050,22 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(1.5708, 2.59356, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CutsceneCamera:current")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_gv7as"]
 resource_name = "get_up"
-length = 9.5
+length = 12.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1042,7 +1073,7 @@ tracks/0/path = NodePath("CutsceneCamera:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.8, 3.7, 5.4, 6.2, 7.4, 8, 8.5),
+"times": PackedFloat32Array(3.1, 5.9, 6.8, 8.5, 9.3, 10.5, 11.1, 11.6),
 "transitions": PackedFloat32Array(1.27456, 1.27456, 0.615572, 0.450625, 1.31951, 0.68302, 1.1487, 0.659754),
 "update": 0,
 "values": [Vector3(4.56222, 1.692, 1.33173), Vector3(4.56222, 1.692, 1.33173), Vector3(4.117, 2.047, 1.977), Vector3(4.117, 2.047, 1.977), Vector3(4.372, 2.332, 2.247), Vector3(4.372, 2.332, 2.247), Vector3(4.682, 2.332, 2.517), Vector3(4.923, 2.4, 2.718)]
@@ -1054,10 +1085,22 @@ tracks/1/path = NodePath("CutsceneCamera:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 2.5, 3.7, 4.1, 5.2, 6.6, 7.2, 7.5, 8.3, 8.7),
+"times": PackedFloat32Array(3.1, 4.1, 5.6, 6.8, 7.2, 8.3, 9.7, 10.3, 10.6, 11.4, 11.8),
 "transitions": PackedFloat32Array(1.68179, 1, 0.535887, 1, 0.63728, 0.615572, 0.594604, 1, 0.63728, 1.31951, 0.965936),
 "update": 0,
 "values": [Vector3(1.5708, 2.59356, 0), Vector3(0.445059, 3.43481, 0.0139626), Vector3(0.445059, 3.43481, 0.0139626), Vector3(0.0890118, 2.76181, 0.00279252), Vector3(0.0890118, 2.76181, 0.00279252), Vector3(0, 4.18181, 0.0139626), Vector3(0, 4.18181, 0.0139626), Vector3(-0.610865, 4.18181, 0.0139626), Vector3(-0.610865, 4.18181, 0.0139626), Vector3(-0.0872665, 4.18181, 0.0139626), Vector3(0, 3.67217, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CutsceneCamera:current")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.1, 11.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x5677"]
@@ -1625,8 +1668,12 @@ shape = SubResource("ConvexPolygonShape3D_co1nm")
 
 [node name="SetPieces" type="Node" parent="."]
 
-[node name="InitialCutscene" type="Node" parent="SetPieces"]
+[node name="InitialCutscene" type="Node" parent="SetPieces" node_paths=PackedStringArray("cutscenecam", "cutsceneanim", "player", "playercam")]
 script = SubResource("GDScript_4aprg")
+cutscenecam = NodePath("../../InitialCutscene/CutsceneCamera")
+cutsceneanim = NodePath("../../InitialCutscene/CutsceneAnimationPlayer")
+player = NodePath("../../Player")
+playercam = NodePath("../../Player/Head/BobbingNode/PlayerCamera")
 
 [node name="DoorLocked" type="Node" parent="SetPieces" node_paths=PackedStringArray("door")]
 script = SubResource("GDScript_qi0ud")
@@ -1652,6 +1699,7 @@ fake_wall = NodePath("../../QodotMap/entity_1_func_group")
 
 [node name="CutsceneCamera" type="Camera3D" parent="InitialCutscene"]
 transform = Transform3D(-0.853551, 0.521009, -1.88605e-06, 0, -3.61999e-06, -1, -0.521009, -0.853551, 3.08985e-06, 4.733, 1.911, 1.049)
+current = true
 fov = 90.0
 
 [node name="CutsceneAnimationPlayer" type="AnimationPlayer" parent="InitialCutscene"]
@@ -2470,6 +2518,9 @@ angle_limit_for_tilt = 0.01
 [editable path="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_fridge"]
 [editable path="Objects/Kitchen/Fridge/Interactable_fridge"]
 [editable path="Objects/Kitchen/Fridge/Interactable_freezer"]
+[editable path="Objects/Kitchen/Radio"]
+[editable path="Objects/Kitchen/Radio/radio2"]
+[editable path="Objects/Kitchen/Radio/Interactable"]
 [editable path="Objects/Main Room/TV"]
 [editable path="Objects/Main Room/TV/TV"]
 [editable path="Objects/Main Room/TV/Interactable"]

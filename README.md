@@ -9,7 +9,7 @@ TrenchBroom v2023.1
 Blender 4.0.2
 Krita 5.0.2
 Aseprite 1.2.31-dev
-Audacity 2.4.2
+Audacity 3.4.2
 Reaper v7.09
 
 
@@ -59,6 +59,7 @@ Ceiling fan (sound 2), laser sound (heavily pitch-shifted) - [Ezcah](https://fre
 Door opening - [pagancow](https://freesound.org/people/pagancow/sounds/15419/) + [JapanYoshiTheGamer](https://freesound.org/people/JapanYoshiTheGamer/sounds/648820/)
 Elevator opening, closing, and button click - [Sheyvan; Joshua Rasch, Dominik Reinicke, Philipp Grzemba](https://freesound.org/people/Sheyvan/sounds/475234/)
 Elevator opening/closing background noise - [Yoyodaman234](https://freesound.org/people/Yoyodaman234/sounds/341187/)
+Elevator ride - [ceejay](https://freesound.org/people/ceejay/sounds/61078/) + [Sheyvan; Joshua Rasch, Dominik Reinicke, Philipp Grzemba](https://freesound.org/people/Sheyvan/sounds/475231/)
 Footsteps - [Fission9](https://freesound.org/people/Fission9/sounds/521590/)
 Fridge opening/closing - [kyles](https://freesound.org/people/kyles/sounds/452232/)
 Light bulb humming - [kyles](https://freesound.org/people/kyles/sounds/637660/)

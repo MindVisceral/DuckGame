@@ -5,6 +5,11 @@ extends CharacterBody3D
 ##### Variables of Movement and Input
 ###-------------------------------------------------------------------------###
 
+### Input
+@export_group("Player Input")
+@export var accept_input: bool = false
+
+
 ### Mouse and gamepad variables
 @export_group("Mouse and Gamepad")
 
@@ -131,7 +136,7 @@ extends CharacterBody3D
 @onready var FadeToWhite: ColorRect = $Head/BobbingNode/PlayerCamera/CutsceneEffects/SubViewportContainer/SubViewport/CanvasLayer/FadeToWhite
 @onready var Monologue: Control = $Head/BobbingNode/PlayerCamera/HUD/Monologue
 #
-@onready var BLINDNESS: MeshInstance3D = $Head/BobbingNode/PlayerCamera/BLINDNESS
+#@onready var BLINDNESS: MeshInstance3D = $Head/BobbingNode/PlayerCamera/BLINDNESS
 
 @onready var Firearms: Marker3D = $Head/BobbingNode/Firearms
 #@onready var Firearms: Marker3D = $Head/Firearms
@@ -212,8 +217,15 @@ func _ready():
 
 
 func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("die"):
+		get_tree().quit()
+	
 	if is_dead:
 		return
+	
+	if accept_input == false:
+		return
+	
 	
 	## Move the Head up/down and the whole Player right/left with mouse movement
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -222,18 +234,18 @@ func _input(event: InputEvent) -> void:
 		
 		## Clamp Head's rotation. Otherwise we could turn up/down in a circle - that causes bugs
 		Head.rotation_degrees.x = clamp(Head.rotation_degrees.x, -89, 89)
-	
-	
-	if Input.is_action_just_pressed("die"):
-		get_tree().quit()
-	
 
 func _unhandled_input(event: InputEvent) -> void:
+	if accept_input == false:
+		return
+	
 	States.input(event)
 	Weapons.input(event)
 
 ###
 func _physics_process(delta) -> void:
+	if accept_input == false:
+		return
 	
 	if !is_dead:
 #		process_input(delta)

@@ -445,7 +445,7 @@ autowrap_mode = 3
 [node name="Page4_VBoxContainer" type="VBoxContainer" parent="Main_MarginContainer"]
 visible = false
 layout_mode = 2
-theme_override_constants/separation = 60
+theme_override_constants/separation = 45
 
 [node name="Top_VBoxContainer" type="VBoxContainer" parent="Main_MarginContainer/Page4_VBoxContainer"]
 layout_mode = 2
@@ -591,6 +591,17 @@ size_flags_vertical = 4
 alignment = 1
 
 [node name="link_RichTextLabel" parent="Main_MarginContainer/Page4_VBoxContainer/Columns_VBoxContainer/Row8_HBoxContainer" instance=ExtResource("6_fm1yf")]
+layout_mode = 2
+text = "[center]Elevator ride - [url=https://freesound.org/people/ceejay/sounds/61078/]ceejay[/url] + [url=https://freesound.org/people/Sheyvan/sounds/475231/]Sheyvan; Joshua Rasch, Dominik Reinicke, Philipp Grzemba[/url]"
+autowrap_mode = 3
+
+[node name="Row9_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Page4_VBoxContainer/Columns_VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="link_RichTextLabel" parent="Main_MarginContainer/Page4_VBoxContainer/Columns_VBoxContainer/Row9_HBoxContainer" instance=ExtResource("6_fm1yf")]
 layout_mode = 2
 text = "
 [center]^all under Creative Commons CC0 1.0 Universal License^"
@@ -883,7 +894,7 @@ alignment = 1
 
 [node name="link_RichTextLabel" parent="Main_MarginContainer/Page6_VBoxContainer/Columns_VBoxContainer/Row7_HBoxContainer" instance=ExtResource("6_fm1yf")]
 layout_mode = 2
-text = "[center][url=https://www.audacityteam.org/]Audacity[/url] 2.4.2"
+text = "[center][url=https://www.audacityteam.org/]Audacity[/url] 3.4.2"
 autowrap_mode = 3
 
 [node name="Row8_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Page6_VBoxContainer/Columns_VBoxContainer"]

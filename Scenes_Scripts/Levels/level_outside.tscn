@@ -1,4 +1,4 @@
-[gd_scene load_steps=589 format=3 uid="uid://bg11nannq3v0v"]
+[gd_scene load_steps=590 format=3 uid="uid://bg11nannq3v0v"]
 
 [ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="2_j6oke"]
 [ext_resource type="Resource" uid="uid://c36hv0o6g0udo" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="3_aa3n1"]
@@ -1746,6 +1746,17 @@ _surfaces = [{
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rcvf8"]
 points = PackedVector3Array(-929.5, 1.75, -4, -929.5, -1.75, -4, 929.5, -1.75, -4, 929.5, 1.75, -4, -929.5, 1.75, 4, -929.5, -1.75, 4, 929.5, -1.75, 4, 929.5, 1.75, 4)
+
+[sub_resource type="GDScript" id="GDScript_l8kqd"]
+resource_name = "LevelEnter"
+script/source = "extends Node
+
+@export var player: Player
+
+func _ready() -> void:
+	await player.ready
+	#player.CutsceneEffectManager.blackanim.play(\"fade_out\")
+"
 
 [sub_resource type="GDScript" id="GDScript_ywr11"]
 resource_name = "NoiseFollowPlayer"
@@ -4120,6 +4131,10 @@ shape = SubResource("ConvexPolygonShape3D_rcvf8")
 
 [node name="SetPieces" type="Node" parent="."]
 
+[node name="LevelEnter" type="Node" parent="SetPieces" node_paths=PackedStringArray("player")]
+script = SubResource("GDScript_l8kqd")
+player = NodePath("../../Player")
+
 [node name="NoiseFollowPlayer" type="Node" parent="SetPieces" node_paths=PackedStringArray("player")]
 script = SubResource("GDScript_ywr11")
 player = NodePath("../../Player")
@@ -4408,6 +4423,7 @@ libraries = {
 
 [node name="Player" parent="." instance=ExtResource("7_r6keh")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.534, 0.1, 2.865)
+accept_input = true
 speed = 4.0
 crouch_height = 0.8
 jump_height = 6.0

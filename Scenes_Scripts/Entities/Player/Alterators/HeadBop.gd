@@ -117,6 +117,9 @@ func _ready():
 
 ## Applies step and jump headbob, and movement tilt
 func _process(delta: float) -> void:
+	if player.accept_input == false:
+		return
+	
 	
 	## If bobbing is enabled...
 	if step_bob_enabled == true:
