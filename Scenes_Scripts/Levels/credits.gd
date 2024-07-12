@@ -1,10 +1,10 @@
 extends Control
 
 
-@onready var menu_margin: MarginContainer = $MarginContainer
-@onready var background: ColorRect = $MarginContainer/Background
+@onready var menu_margin: MarginContainer = $Main_MarginContainer
+@onready var background: ColorRect = $Main_MarginContainer/Background
 
-@onready var returnSound: AudioStreamPlayer = $MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer/ReturnAudioPlayer
+@onready var returnSound: AudioStreamPlayer = $Return_MarginContainer/ReturnAudioPlayer
 
 @onready var animPlayer: AnimationPlayer = $AnimationPlayer
 

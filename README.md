@@ -36,7 +36,7 @@ Outline shader - [redvillusion](https://www.youtube.com/watch?v=9JuZV6Xeo-w)(htt
 
 
 ## Models
-Bed, Sink, Black kitchen lamp, Table, Shower head, Toilet, Hallway lights - [Elbolilloduro](https://elbolilloduro.itch.io/paquete-de-modelos-psx-3)
+Bed, Sink, Black kitchen lamp, Table, Shower head, Toilet, Hallway lights - [Elbolilloduro][url](https://elbolilloduro.itch.io/paquete-de-modelos-psx-3)[/url]
 Ceiling fan, Coiled lightbulb, Small fan, Door - [Elbolilloduro](https://elbolilloduro.itch.io/objects-interiorvillage-alpha)
 Radio - [Luka Aleksic](https://aleksicluka.itch.io/low-poly-retro-radio)
 Stool - [Luka Aleksic](https://aleksicluka.itch.io/low-poly-old-wooden-stool)

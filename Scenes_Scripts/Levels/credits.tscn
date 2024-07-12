@@ -82,18 +82,18 @@ localize_numeral_system = false
 layout_mode = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Main_VBoxContainer" type="VBoxContainer" parent="Main_MarginContainer"]
+[node name="Page1_VBoxContainer" type="VBoxContainer" parent="Main_MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 250
 
-[node name="Top_VBoxContainer" type="VBoxContainer" parent="Main_MarginContainer/Main_VBoxContainer"]
+[node name="Top_VBoxContainer" type="VBoxContainer" parent="Main_MarginContainer/Page1_VBoxContainer"]
 layout_mode = 2
 size_flags_stretch_ratio = 4.26
 auto_translate = false
 localize_numeral_system = false
 theme_override_constants/separation = 5
 
-[node name="Credits_RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Main_VBoxContainer/Top_VBoxContainer"]
+[node name="Credits_RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Page1_VBoxContainer/Top_VBoxContainer"]
 layout_mode = 2
 auto_translate = false
 localize_numeral_system = false
@@ -109,7 +109,7 @@ fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="Models_RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Main_VBoxContainer/Top_VBoxContainer"]
+[node name="Models_RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Page1_VBoxContainer/Top_VBoxContainer"]
 layout_mode = 2
 auto_translate = false
 localize_numeral_system = false
@@ -125,31 +125,32 @@ fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="Columns_VBoxContainer" type="VBoxContainer" parent="Main_MarginContainer/Main_VBoxContainer"]
+[node name="Columns_VBoxContainer" type="VBoxContainer" parent="Main_MarginContainer/Page1_VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 0
 alignment = 1
 
-[node name="Row1_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer"]
+[node name="Row1_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Page1_VBoxContainer/Columns_VBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 4
 alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer/Row1_HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Page1_VBoxContainer/Columns_VBoxContainer/Row1_HBoxContainer"]
 layout_mode = 2
-text = "credits 1"
+bbcode_enabled = true
+text = "Bed, Sink, Black kitchen lamp, Table, Shower head, Toilet, Hallway lights - [Elbolilloduro](https://elbolilloduro.itch.io/paquete-de-modelos-psx-3)"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
 shortcut_keys_enabled = false
 
-[node name="Row2_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer"]
+[node name="Row2_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Page1_VBoxContainer/Columns_VBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer/Row2_HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Page1_VBoxContainer/Columns_VBoxContainer/Row2_HBoxContainer"]
 layout_mode = 2
 text = "credits 1"
 fit_content = true
@@ -157,12 +158,12 @@ scroll_active = false
 autowrap_mode = 0
 shortcut_keys_enabled = false
 
-[node name="Row3_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer"]
+[node name="Row3_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Page1_VBoxContainer/Columns_VBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer/Row3_HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Page1_VBoxContainer/Columns_VBoxContainer/Row3_HBoxContainer"]
 layout_mode = 2
 text = "credits 1"
 fit_content = true
@@ -170,13 +171,27 @@ scroll_active = false
 autowrap_mode = 0
 shortcut_keys_enabled = false
 
-[node name="Row4_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer"]
+[node name="Row4_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Page1_VBoxContainer/Columns_VBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 4
 alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Main_VBoxContainer/Columns_VBoxContainer/Row4_HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Page1_VBoxContainer/Columns_VBoxContainer/Row4_HBoxContainer"]
+layout_mode = 2
+text = "credits 1"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="Row5_HBoxContainer" type="HBoxContainer" parent="Main_MarginContainer/Page1_VBoxContainer/Columns_VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main_MarginContainer/Page1_VBoxContainer/Columns_VBoxContainer/Row5_HBoxContainer"]
 layout_mode = 2
 text = "credits 1"
 fit_content = true
