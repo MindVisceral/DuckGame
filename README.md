@@ -53,6 +53,7 @@ concrete_15, concrete_04, wood_fancy_04, metal_painted_blue_01, carpet_darkgray_
 
 
 ## Audio & Sounds
+Bed sounds - [BrendanSound12](https://freesound.org/people/BrendanSound12/sounds/445158/)
 'Boom' sound - [jnr hacksaw](https://freesound.org/people/jnr%20hacksaw/sounds/11220/) + [unfa](https://freesound.org/people/unfa/sounds/156498/)
 Ceiling fan (sound 1), giant fan - [fedsmoker](https://freesound.org/people/fedsmoker/sounds/208525/)
 Ceiling fan (sound 2), laser sound (heavily pitch-shifted) - [Ezcah](https://freesound.org/people/Ezcah/sounds/242042/)

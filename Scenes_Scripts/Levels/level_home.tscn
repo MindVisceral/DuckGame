@@ -1,4 +1,4 @@
-[gd_scene load_steps=248 format=3 uid="uid://bc1l8essgx3qb"]
+[gd_scene load_steps=253 format=3 uid="uid://bc1l8essgx3qb"]
 
 [ext_resource type="Texture2D" uid="uid://2bjvipf27f6y" path="res://HDR_sky.hdr" id="1_o43kj"]
 [ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1_skewd"]
@@ -25,9 +25,14 @@
 [ext_resource type="PackedScene" uid="uid://dsdtgd7pxkygr" path="res://Scenes_Scripts/Levels/Objects/Lift.tscn" id="16_auiut"]
 [ext_resource type="PackedScene" uid="uid://tlr6sujh62a1" path="res://Scenes_Scripts/Levels/Objects/Cheap_table.tscn" id="16_l7y1m"]
 [ext_resource type="AudioStream" uid="uid://dms0yimbb70qo" path="res://Scenes_Scripts/Sounds/jgxxx_fan_looping-small.wav" id="17_8y35b"]
+[ext_resource type="AudioStream" uid="uid://cyjw3m53b2p6j" path="res://Scenes_Scripts/Sounds/brendansound12_moving-in-bed-S1.wav" id="17_ebabi"]
 [ext_resource type="PackedScene" uid="uid://b7kfdbpdqk3o6" path="res://Scenes_Scripts/Levels/Objects/Door.tscn" id="17_oa5uw"]
 [ext_resource type="AudioStream" uid="uid://tyvvo3g05m3b" path="res://Scenes_Scripts/Sounds/unfa_jnr-hacksaw_boom.wav" id="17_ow35o"]
+[ext_resource type="AudioStream" uid="uid://ccha8o3qt43kd" path="res://Scenes_Scripts/Sounds/brendansound12_moving-in-bed-S2.wav" id="18_e6hh0"]
 [ext_resource type="PackedScene" uid="uid://3bibeogihx0k" path="res://Scenes_Scripts/Levels/Objects/HangingLamp.tscn" id="18_nbo0e"]
+[ext_resource type="AudioStream" uid="uid://f068nljeoote" path="res://Scenes_Scripts/Sounds/brendansound12_moving-in-bed-S3.wav" id="19_cm241"]
+[ext_resource type="AudioStream" uid="uid://xaasyv6usu6p" path="res://Scenes_Scripts/Sounds/brendansound12_moving-in-bed-S4.wav" id="20_0e4ux"]
+[ext_resource type="AudioStream" uid="uid://do3j6o1jastim" path="res://Scenes_Scripts/Sounds/brendansound12_moving-in-bed-S5.wav" id="21_3xqni"]
 [ext_resource type="PackedScene" uid="uid://bmhltsh5yk6ib" path="res://Scenes_Scripts/Levels/Objects/KitchenSink.tscn" id="21_auyeb"]
 [ext_resource type="PackedScene" uid="uid://cqgv3mifwf8bv" path="res://Scenes_Scripts/Levels/Objects/Stool.tscn" id="21_oxs2i"]
 [ext_resource type="PackedScene" uid="uid://dxjgsggwy0tir" path="res://Scenes_Scripts/Levels/Objects/TV.tscn" id="22_n1yhl"]
@@ -1062,6 +1067,90 @@ tracks/2/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("footstep1_AudioPlayer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("footstep2_AudioPlayer:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("S1-bed_AudioPlayer:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("S2-bed_AudioPlayer:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("S3-bed_AudioPlayer:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("S4-bed_AudioPlayer:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("S5-bed_AudioPlayer:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_gv7as"]
 resource_name = "get_up"
@@ -1098,6 +1187,90 @@ tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(3.1, 11.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("footstep1_AudioPlayer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(11, 11.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("footstep2_AudioPlayer:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(11.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("S1-bed_AudioPlayer:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3.4, 4.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("S2-bed_AudioPlayer:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(5.3, 6.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("S3-bed_AudioPlayer:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(6.9, 8.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("S4-bed_AudioPlayer:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(8.4, 9.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("S5-bed_AudioPlayer:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(9.5, 10.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -1715,6 +1888,41 @@ stream = ExtResource("16_82fng")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07677, 1.14306, 2.59475)
 stream = ExtResource("16_82fng")
 pitch_scale = 0.78
+
+[node name="S1-bed_AudioPlayer" type="AudioStreamPlayer3D" parent="InitialCutscene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07677, 1.14306, 2.59475)
+stream = ExtResource("17_ebabi")
+max_db = 2.0
+panning_strength = 0.3
+bus = &"Sounds"
+
+[node name="S2-bed_AudioPlayer" type="AudioStreamPlayer3D" parent="InitialCutscene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07677, 1.14306, 2.59475)
+stream = ExtResource("18_e6hh0")
+max_db = 2.0
+panning_strength = 0.3
+bus = &"Sounds"
+
+[node name="S3-bed_AudioPlayer" type="AudioStreamPlayer3D" parent="InitialCutscene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07677, 1.14306, 2.59475)
+stream = ExtResource("19_cm241")
+max_db = 2.0
+panning_strength = 0.3
+bus = &"Sounds"
+
+[node name="S4-bed_AudioPlayer" type="AudioStreamPlayer3D" parent="InitialCutscene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07677, 1.14306, 2.59475)
+stream = ExtResource("20_0e4ux")
+max_db = 2.0
+panning_strength = 0.3
+bus = &"Sounds"
+
+[node name="S5-bed_AudioPlayer" type="AudioStreamPlayer3D" parent="InitialCutscene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07677, 1.14306, 2.59475)
+stream = ExtResource("21_3xqni")
+max_db = 2.0
+panning_strength = 0.3
+bus = &"Sounds"
 
 [node name="Objects" type="Node3D" parent="."]
 
