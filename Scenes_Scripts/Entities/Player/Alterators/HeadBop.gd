@@ -38,6 +38,7 @@ var original_rotation: Vector3
 
 ## How fast the bob lerps between positions;
 ## how fast it returns to original_position from new_pos
+## The bigger the number, the smaller the bob (somehow?)
 @export var bob_multiplier: float = 12.0
 
 
@@ -123,6 +124,51 @@ func _process(delta: float) -> void:
 		tween.tween_property(bobbing_node, "rotation", movement_tilt(delta), rotation_speed * delta)
 
 
+## Move bobbing_node on the X, Y and Z axes depending on Player Input or velocity
+func do_head_bob(delta: float) -> Vector3:
+	
+	## NOTE: This is made the same as original_position at first, because if bobbing on an axis
+	## NOTE: was disabled or broken, the Head would go to 0 on that axis!
+	## The position towards which the bobbing_node's position will be lerped
+	var new_pos: Vector3 = original_position
+	
+	## Get IF the Player is moving based on Input.
+	## Could be done with many Input.is_button_pressed()-s, but this is cleaner.
+	var input_dir: Vector2 = Input.get_vector("input_left", "input_right", \
+	 "input_forwards", "input_backwards")
+	
+	## HeadBob on the X axis only works when the Player is pressing horizontal Input buttons...
+	if input_dir != Vector2.ZERO:
+		## NOTE: !player.in_air ensures that this only happens when the Player is NOT in the air
+		
+		## If bobbing on X axis is enabled...
+		if X_axis_bob_enabled == true:
+			## Make the bobbing_node move left and right
+			new_pos.x = original_position.x + (sin(Time.get_ticks_msec() \
+						* x_bob_frequency) * x_bob_amplitude * int(!player.in_air) \
+						## Bobbing stops when colliding with a wall
+						* player.velocity.length())
+		
+		## If bobbing on Y axis is enabled...
+		if Y_axis_bob_enabled == true:
+			## Make the bobbing_node move up and down
+			new_pos.y = original_position.y + (sin(Time.get_ticks_msec() \
+						* y_bob_frequency) * y_bob_amplitude * int(!player.in_air) \
+						## Bobbing stops when colliding with a wall
+						* player.velocity.length())
+	
+	
+	### NOTE: This happens no matter if the Player is on the ground or in the air
+	### If bobbing on Z axis is enabled...
+	#if Z_axis_bob_enabled == true:
+		### NOTE: player.velocity.z could be input_dir.y, but there seems to be not much difference
+		### Make the bobbing_node move fowards or backwards
+		#new_pos.z = original_position.z + (player.velocity.z * Z_bob_length)
+	
+	
+	return new_pos
+
+
 ## Takes X and Z of input_dir (the horizontal direction the Player is moving in),
 ## and returns on which axis the bobbing_node should be tilted
 func movement_tilt(delta: float) -> Vector3:
@@ -147,45 +193,3 @@ func movement_tilt(delta: float) -> Vector3:
 	
 	
 	return new_rot
-
-
-## Move bobbing_node on the X, Y and Z axes depending on Player Input or velocity
-func do_head_bob(delta: float) -> Vector3:
-	
-	## NOTE: This is made the same as original_position at first, because if bobbing on an axis
-	## NOTE: was disabled or broken, the Head would go to 0 on that axis!
-	## The position towards which the bobbing_node's position will be lerped
-	var new_pos: Vector3 = original_position
-	
-	## Get IF the Player is moving based on Input.
-	## Could be done with many Input.is_button_pressed()-s, but this is cleaner.
-	var input_dir: Vector2 = Input.get_vector("input_left", "input_right", \
-	 "input_forwards", "input_backwards")
-	
-	## HeadBob on the X axis only works when the Player is pressing horizontal Input buttons...
-	if input_dir != Vector2.ZERO:
-		## NOTE: !player.in_air ensures that this only happens when the Player is NOT in the air
-		
-		## If bobbing on X axis is enabled...
-		if X_axis_bob_enabled == true:
-			## Make the bobbing_node move left and right
-			new_pos.x = original_position.x + (sin(Time.get_ticks_msec() \
-								* x_bob_frequency) * x_bob_amplitude * int(!player.in_air))
-		
-		## If bobbing on Y axis is enabled...
-		if Y_axis_bob_enabled == true:
-			## Make the bobbing_node move up and down
-			new_pos.y = original_position.y + (sin(Time.get_ticks_msec() \
-						* y_bob_frequency) * y_bob_amplitude * int(!player.in_air))
-	
-	
-	### NOTE: This happens no matter if the Player is on the ground or in the air
-	### If bobbing on Z axis is enabled...
-	#if Z_axis_bob_enabled == true:
-		### NOTE: player.velocity.z could be input_dir.y, but there seems to be not much difference
-		### Make the bobbing_node move fowards or backwards
-		#new_pos.z = original_position.z + (player.velocity.z * Z_bob_length)
-	
-	
-	return new_pos
-

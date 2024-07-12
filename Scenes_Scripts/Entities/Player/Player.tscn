@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://lhlklylca50m"]
+[gd_scene load_steps=17 format=3 uid="uid://lhlklylca50m"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player.gd" id="1_kmike"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player_States/State_Manager.gd" id="2_c5aqi"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/WeaponManager.gd" id="9_alxax"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/HeadBop.gd" id="10_6kxr3"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/WeaponBob.gd" id="12_4bkuj"]
+[ext_resource type="Texture2D" uid="uid://ds6uye256hjrj" path="res://Scenes_Scripts/crosshair.png" id="13_20fa4"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/InteractionManager.gd" id="13_qk48y"]
 
 [sub_resource type="CapsuleShape3D" id="15"]
@@ -111,6 +112,7 @@ editor_description = "Makes the chosen bopped_node - the Head or the Camera:
 Done for better immersion and responsivity"
 script = ExtResource("10_6kxr3")
 bobbing_node = NodePath("../../Head/BobbingNode")
+bob_multiplier = 48.0
 
 [node name="WeaponBob" type="Node" parent="Scripts" node_paths=PackedStringArray("bobbing_node")]
 script = ExtResource("12_4bkuj")
@@ -172,6 +174,23 @@ editor_description = "Main Player camera, typically placed at Head's (0, 0, 0) c
 Its FOV can be changed through an exported variable in the Player node"
 current = true
 fov = 90.0
+
+[node name="Crosshair" type="CenterContainer" parent="Head/BobbingNode/PlayerCamera"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+auto_translate = false
+localize_numeral_system = false
+mouse_filter = 2
+
+[node name="CrosshairSprite" type="Sprite2D" parent="Head/BobbingNode/PlayerCamera/Crosshair"]
+texture = ExtResource("13_20fa4")
 
 [node name="InteractableCast" type="ShapeCast3D" parent="Head/BobbingNode"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
