@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://bc22rykkm5ipg"]
+
+[ext_resource type="PackedScene" uid="uid://d3yh27n7ciaf1" path="res://Blender/ceiling_fan.gltf" id="1_3u0dt"]
+[ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/CeilingFan.gd" id="1_r4ij7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xh0d0"]
+size = Vector3(1.16064, 0.466064, 1.30737)
+
+[sub_resource type="Animation" id="Animation_krnq5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ceiling_fan/Ceiling_Fan_Blades_01:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1eavr"]
+resource_name = "speen_warm"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ceiling_fan/Ceiling_Fan_Blades_01:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bne20"]
+_data = {
+"RESET": SubResource("Animation_krnq5"),
+"speen_warm": SubResource("Animation_1eavr")
+}
+
+[node name="CeilingFan" type="StaticBody3D"]
+collision_layer = 64
+collision_mask = 133
+script = ExtResource("1_r4ij7")
+
+[node name="ceiling_fan" parent="." instance=ExtResource("1_3u0dt")]
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0227051, -0.246704, 0.0318604)
+shape = SubResource("BoxShape3D_xh0d0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bne20")
+}
+
+[editable path="ceiling_fan"]
