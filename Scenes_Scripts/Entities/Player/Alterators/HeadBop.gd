@@ -2,6 +2,16 @@ class_name PlayerHeadbobHandler
 extends Node
 
 
+
+
+
+@onready var footstep_left: AudioStreamPlayer3D = $"../../leftfootstep_AudioPlayer"
+@onready var footstep_right: AudioStreamPlayer3D =$"../../rightfootstep_AudioPlayer"
+
+
+
+
+
 ###-------------------------------------------------------------------------###
 ##### Variables and references
 ###-------------------------------------------------------------------------###
@@ -166,6 +176,14 @@ func do_head_bob(delta: float) -> Vector3:
 		#new_pos.z = original_position.z + (player.velocity.z * Z_bob_length)
 	
 	
+	
+	
+	play_footsteps(new_pos.x)
+	
+	
+	
+	
+	
 	return new_pos
 
 
@@ -193,3 +211,17 @@ func movement_tilt(delta: float) -> Vector3:
 	
 	
 	return new_rot
+
+
+
+
+func play_footsteps(value) -> void:
+	footstep_left.pitch_scale = randf_range(0.65, 1.35)
+	footstep_right.pitch_scale = randf_range(0.65, 1.35)
+	
+	if value >= 0.352:
+		if !footstep_right.playing:
+			footstep_right.play()
+	elif value <= -0.352:
+		if !footstep_left.playing:
+			footstep_left.play()

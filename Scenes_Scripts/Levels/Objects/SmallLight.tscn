@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://db7w5ip2jk0td"]
+[gd_scene load_steps=4 format=3 uid="uid://db7w5ip2jk0td"]
 
 [ext_resource type="PackedScene" uid="uid://cepx8cc4craan" path="res://Blender/small_light.gltf" id="1_qqvm5"]
+[ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/SmallLight.gd" id="1_xkjfj"]
+[ext_resource type="AudioStream" uid="uid://bma82rcwygrwv" path="res://Scenes_Scripts/Sounds/kyles_light-bulb-hum-buzz-thin1.wav" id="3_dirup"]
 
 [node name="SmallLight" type="StaticBody3D"]
 collision_layer = 64
 collision_mask = 133
+script = ExtResource("1_xkjfj")
 
 [node name="small_light" parent="." instance=ExtResource("1_qqvm5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0462391, 0)
@@ -19,5 +22,13 @@ light_volumetric_fog_energy = 0.5
 light_specular = 0.0
 light_cull_mask = 4294443007
 shadow_enabled = true
+
+[node name="hummingAudioPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_dirup")
+unit_size = 2.0
+autoplay = true
+max_distance = 10.0
+
+[connection signal="finished" from="hummingAudioPlayer" to="." method="_on_humming_audio_player_finished"]
 
 [editable path="small_light"]

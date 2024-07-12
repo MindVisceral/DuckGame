@@ -219,6 +219,11 @@ func _input(event: InputEvent) -> void:
 		
 		## Clamp Head's rotation. Otherwise we could turn up/down in a circle - that causes bugs
 		Head.rotation_degrees.x = clamp(Head.rotation_degrees.x, -89, 89)
+	
+	
+	if Input.is_action_just_pressed("die"):
+		get_tree().quit()
+	
 
 func _unhandled_input(event: InputEvent) -> void:
 	States.input(event)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://lhlklylca50m"]
+[gd_scene load_steps=27 format=3 uid="uid://lhlklylca50m"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player.gd" id="1_kmike"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player_States/State_Manager.gd" id="2_c5aqi"]
@@ -19,6 +19,7 @@
 [ext_resource type="Shader" path="res://Scenes_Scripts/Shaders/Grain.gdshader" id="15_pu8nk"]
 [ext_resource type="PackedScene" uid="uid://dv5syngbq0ouk" path="res://Scenes_Scripts/Entities/Player/MonologueUI.tscn" id="16_468sw"]
 [ext_resource type="AudioStream" uid="uid://ngitqq7446yu" path="res://Scenes_Scripts/Music/cacophony.wav" id="19_0jqkr"]
+[ext_resource type="AudioStream" uid="uid://7q6fujskcqts" path="res://Scenes_Scripts/Sounds/ffission9_hiking-boot-footsteps-on-stone.wav" id="19_w70gb"]
 
 [sub_resource type="CapsuleShape3D" id="15"]
 radius = 0.15
@@ -314,6 +315,14 @@ visible = false
 
 [node name="Firearms" type="Marker3D" parent="Head/BobbingNode"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.315, -0.264, -0.106)
+
+[node name="leftfootstep_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.155, 0, 0)
+stream = ExtResource("19_w70gb")
+
+[node name="rightfootstep_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.155, 0, 0)
+stream = ExtResource("19_w70gb")
 
 [node name="cacophony_AudioPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_0jqkr")

@@ -17,7 +17,7 @@ collision_layer = 128
 collision_mask = 71
 script = ExtResource("1_5spta")
 monologue_data = Array[String](["[center]I waited for too long.[/center][center][b]It[/b] is here.[/center]", "[center]I should leave this place while I still can.[/center]"])
-monologue_first_line_time = 4.5
+monologue_first_line_time = 3.8
 
 [node name="radio2" parent="." instance=ExtResource("1_7pfbb")]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)
