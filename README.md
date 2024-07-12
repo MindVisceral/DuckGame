@@ -32,11 +32,11 @@ Arkii - For example code and handy documentation of the Valve 220 format
 ## Shaders
 Film Grain Shader - [martinsh, spl!te, kondelik, ahopness](https://github.com/kondelik/Godot_Film_Grain_Shader) - under Creative Commons Attribution 3.0 Unported License; by Martins Upitis (martinsh)
 Dithering Shader - [abelcamarena, ahopness](https://github.com/Ahopness/GodotRetro/tree/4.x) - under Creative Commons CC0 1.0 Universal License
-Outline shader - [redvillusion](https://www.youtube.com/watch?v=9JuZV6Xeo-w)(https://pastebin.com/716RmTtj) - {edited for ease of use by MindVisceral} - I'm not going to bring up that whole long-ass copyright notice lol, just use a CC license, people; Copyright 2021 redvillusion
+Outline Shader - [redvillusion](https://www.youtube.com/watch?v=9JuZV6Xeo-w)(https://pastebin.com/716RmTtj) - {edited for ease of use by MindVisceral} - I'm not going to bring up that whole long-ass copyright notice lol, just use a CC license, people; Copyright 2021 redvillusion
 
 
 ## Models
-Bed, Sink, Black kitchen lamp, Table, Shower head, Toilet, Hallway lights - [Elbolilloduro][url](https://elbolilloduro.itch.io/paquete-de-modelos-psx-3)[/url]
+Bed, Sink, Black kitchen lamp, Table, Shower head, Toilet, Hallway lights - [Elbolilloduro](https://elbolilloduro.itch.io/paquete-de-modelos-psx-3)
 Ceiling fan, Coiled lightbulb, Small fan, Door - [Elbolilloduro](https://elbolilloduro.itch.io/objects-interiorvillage-alpha)
 Radio - [Luka Aleksic](https://aleksicluka.itch.io/low-poly-retro-radio)
 Stool - [Luka Aleksic](https://aleksicluka.itch.io/low-poly-old-wooden-stool)
@@ -52,20 +52,20 @@ concrete_15, concrete_04, wood_fancy_04, metal_painted_blue_01, carpet_darkgray_
 ^both under Creative Commons CC0 1.0 Universal License^
 
 
-## Audio & sounds
-Sink faucet squeak - [D0tDashDialUp](https://freesound.org/people/D0tDashDialUp/sounds/652454/) + [joedeshon](https://freesound.org/people/joedeshon/sounds/339184/)
-Ceiling fan (sound 1), giant fan,  - [fedsmoker](https://freesound.org/people/fedsmoker/sounds/208525/)
+## Audio & Sounds
+'Boom' sound - [jnr hacksaw](https://freesound.org/people/jnr%20hacksaw/sounds/11220/) + [unfa](https://freesound.org/people/unfa/sounds/156498/)
+Ceiling fan (sound 1), giant fan - [fedsmoker](https://freesound.org/people/fedsmoker/sounds/208525/)
 Ceiling fan (sound 2), laser sound (heavily pitch-shifted) - [Ezcah](https://freesound.org/people/Ezcah/sounds/242042/)
-Small fan, background ambience - [jgxxx](https://freesound.org/people/jgxxx/sounds/704393/)
-Footsteps - [Fission9](https://freesound.org/people/Fission9/sounds/521590/)
-Screech - [thegoose09](https://freesound.org/people/thegoose09/sounds/125388/) + [Khrinx](https://freesound.org/people/Khrinx/sounds/565024/) + [Hard3eat](https://freesound.org/people/Hard3eat/sounds/187137/)
-Switch click - [kwahmah_02](https://freesound.org/people/kwahmah_02/sounds/256116/)
-Fridge opening/closing - [kyles](https://freesound.org/people/kyles/sounds/452232/)
-Light bulb humming - [kyles](https://freesound.org/people/kyles/sounds/637660/)
 Door opening - [pagancow](https://freesound.org/people/pagancow/sounds/15419/) + [JapanYoshiTheGamer](https://freesound.org/people/JapanYoshiTheGamer/sounds/648820/)
 Elevator opening, closing, and button click - [Sheyvan; Joshua Rasch, Dominik Reinicke, Philipp Grzemba](https://freesound.org/people/Sheyvan/sounds/475234/)
 Elevator opening/closing background noise - [Yoyodaman234](https://freesound.org/people/Yoyodaman234/sounds/341187/)
-'Boom' sound - [jnr hacksaw](https://freesound.org/people/jnr%20hacksaw/sounds/11220/) + [unfa](https://freesound.org/people/unfa/sounds/156498/)
+Footsteps - [Fission9](https://freesound.org/people/Fission9/sounds/521590/)
+Fridge opening/closing - [kyles](https://freesound.org/people/kyles/sounds/452232/)
+Light bulb humming - [kyles](https://freesound.org/people/kyles/sounds/637660/)
+Sink faucet squeak - [D0tDashDialUp](https://freesound.org/people/D0tDashDialUp/sounds/652454/) + [joedeshon](https://freesound.org/people/joedeshon/sounds/339184/)
+Small fan, background ambience - [jgxxx](https://freesound.org/people/jgxxx/sounds/704393/)
+Screech - [thegoose09](https://freesound.org/people/thegoose09/sounds/125388/) + [Khrinx](https://freesound.org/people/Khrinx/sounds/565024/) + [Hard3eat](https://freesound.org/people/Hard3eat/sounds/187137/)
+Switch click - [kwahmah_02](https://freesound.org/people/kwahmah_02/sounds/256116/)
 TV Static - [Jace](https://freesound.org/people/Jace/sounds/35291/)
 
 Cacophonic "music" - [Jace](https://freesound.org/people/Jace/sounds/35291/) + [pbimal](https://freesound.org/people/pbimal/sounds/647305/) + [Zabuhailo](https://freesound.org/people/Zabuhailo/sounds/145512/) + [VideoJa.mes](https://freesound.org/people/VideoJa.mes/sounds/677087/) + [hollandm](https://freesound.org/people/hollandm/sounds/573804/) + [_bil_](https://freesound.org/people/_bil_/sounds/402868/)

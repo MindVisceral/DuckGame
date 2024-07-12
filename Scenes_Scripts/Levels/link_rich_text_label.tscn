@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://0xhxhn7aeipa"]
+
+[ext_resource type="Script" path="res://Scenes_Scripts/Levels/link_rich_text_label.gd" id="1_hohhi"]
+[ext_resource type="FontFile" uid="uid://c41k7wxmhkwfs" path="res://Scenes_Scripts/Fonts/VCR_OSD_MONO_1.001.ttf" id="1_rjia4"]
+[ext_resource type="FontVariation" uid="uid://bn6h2tjp2tnml" path="res://Scenes_Scripts/Fonts/BoldVCR.tres" id="2_odrs7"]
+[ext_resource type="FontVariation" uid="uid://ckkunrng0eu5" path="res://Scenes_Scripts/Fonts/ItalicsVCR.tres" id="3_peiwl"]
+[ext_resource type="FontVariation" uid="uid://bpanvlayr3ks1" path="res://Scenes_Scripts/Fonts/BoldItalicsVCR.tres" id="4_dtqis"]
+
+[node name="link_RichTextLabel" type="RichTextLabel"]
+clip_contents = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+auto_translate = false
+localize_numeral_system = false
+theme_override_fonts/normal_font = ExtResource("1_rjia4")
+theme_override_fonts/bold_font = ExtResource("2_odrs7")
+theme_override_fonts/italics_font = ExtResource("3_peiwl")
+theme_override_fonts/bold_italics_font = ExtResource("4_dtqis")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center] - [url=][/url]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+shortcut_keys_enabled = false
+script = ExtResource("1_hohhi")
+
+[connection signal="meta_clicked" from="." to="." method="_on_meta_clicked"]

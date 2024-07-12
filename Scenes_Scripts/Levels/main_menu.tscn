@@ -351,7 +351,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_dw06b")
 theme_override_font_sizes/font_size = 30
 action_mode = 0
-text = "RETURN"
+text = "QUIT"
 
 [node name="ReturnAudioPlayer" type="AudioStreamPlayer" parent="MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer"]
 stream = ExtResource("6_vb8tc")
