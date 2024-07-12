@@ -127,8 +127,8 @@ extends CharacterBody3D
 @onready var Camera: Camera3D = $Head/BobbingNode/PlayerCamera
 @onready var DEATHCAST: RayCast3D = $Head/BobbingNode/PlayerCamera/DEATHCast
 ## UI, HUD, Posprocessing, Custscene effects
-@onready var FadeToBlack: ColorRect = $Head/BobbingNode/PlayerCamera/CutsceneEffects/CanvasLayer/FadeToBlack
-@onready var FadeToWhite: ColorRect = $Head/BobbingNode/PlayerCamera/CutsceneEffects/CanvasLayer/FadeToWhite
+@onready var FadeToBlack: ColorRect = $Head/BobbingNode/PlayerCamera/CutsceneEffects/SubViewportContainer/SubViewport/CanvasLayer/FadeToBlack
+@onready var FadeToWhite: ColorRect = $Head/BobbingNode/PlayerCamera/CutsceneEffects/SubViewportContainer/SubViewport/CanvasLayer/FadeToWhite
 @onready var Monologue: Control = $Head/BobbingNode/PlayerCamera/HUD/Monologue
 #
 @onready var BLINDNESS: MeshInstance3D = $Head/BobbingNode/PlayerCamera/BLINDNESS

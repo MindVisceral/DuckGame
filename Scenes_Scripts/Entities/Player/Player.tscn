@@ -382,24 +382,26 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="DitheringBuffer" type="BackBufferCopy" parent="Head/BobbingNode/PlayerCamera/Postprocessing"]
+[node name="CanvasLayer" type="CanvasLayer" parent="Head/BobbingNode/PlayerCamera/Postprocessing"]
+
+[node name="DitheringBuffer" type="BackBufferCopy" parent="Head/BobbingNode/PlayerCamera/Postprocessing/CanvasLayer"]
+y_sort_enabled = true
 copy_mode = 2
 
-[node name="DitheringShader" type="ColorRect" parent="Head/BobbingNode/PlayerCamera/Postprocessing"]
+[node name="DitheringShader" type="ColorRect" parent="Head/BobbingNode/PlayerCamera/Postprocessing/CanvasLayer"]
 material = SubResource("ShaderMaterial_1e1y2")
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GrainBuffer" type="BackBufferCopy" parent="Head/BobbingNode/PlayerCamera/Postprocessing"]
+[node name="GrainBuffer" type="BackBufferCopy" parent="Head/BobbingNode/PlayerCamera/Postprocessing/CanvasLayer"]
+y_sort_enabled = true
 copy_mode = 2
 
-[node name="GrainShader" type="ColorRect" parent="Head/BobbingNode/PlayerCamera/Postprocessing"]
+[node name="GrainShader" type="ColorRect" parent="Head/BobbingNode/PlayerCamera/Postprocessing/CanvasLayer"]
 material = SubResource("ShaderMaterial_dcbvy")
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -414,10 +416,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Head/BobbingNode/PlayerCamera/CutsceneEffects"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Head/BobbingNode/PlayerCamera/CutsceneEffects"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="Head/BobbingNode/PlayerCamera/CutsceneEffects/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1440, 810)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Head/BobbingNode/PlayerCamera/CutsceneEffects/SubViewportContainer/SubViewport"]
 layer = 100
 
-[node name="FadeToBlack" type="ColorRect" parent="Head/BobbingNode/PlayerCamera/CutsceneEffects/CanvasLayer"]
+[node name="FadeToBlack" type="ColorRect" parent="Head/BobbingNode/PlayerCamera/CutsceneEffects/SubViewportContainer/SubViewport/CanvasLayer"]
+top_level = true
+z_index = 100
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -425,8 +442,9 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
-[node name="FadeToWhite" type="ColorRect" parent="Head/BobbingNode/PlayerCamera/CutsceneEffects/CanvasLayer"]
-visible = false
+[node name="FadeToWhite" type="ColorRect" parent="Head/BobbingNode/PlayerCamera/CutsceneEffects/SubViewportContainer/SubViewport/CanvasLayer"]
+top_level = true
+z_index = 100
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

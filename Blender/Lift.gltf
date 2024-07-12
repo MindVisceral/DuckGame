@@ -3,6 +3,10 @@
 		"generator":"Khronos glTF Blender I/O v4.0.44",
 		"version":"2.0"
 	},
+	"extensionsUsed":[
+		"KHR_materials_specular",
+		"KHR_materials_ior"
+	],
 	"scene":0,
 	"scenes":[
 		{
@@ -126,13 +130,20 @@
 	"materials":[
 		{
 			"doubleSided":true,
+			"extensions":{
+				"KHR_materials_specular":{
+					"specularFactor":0
+				},
+				"KHR_materials_ior":{
+					"ior":1.4500000476837158
+				}
+			},
 			"name":"texture_metal_lift",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"index":0
 				},
-				"metallicFactor":0,
-				"roughnessFactor":0.5
+				"metallicFactor":0
 			}
 		}
 	],

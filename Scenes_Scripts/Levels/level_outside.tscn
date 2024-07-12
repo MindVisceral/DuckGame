@@ -1819,6 +1819,8 @@ var laser_active: bool = false
 
 
 func _ready() -> void:
+	Globals.menu_color_black = false
+	
 	DEATHLaserMesh.mesh.top_radius = 0.01
 	DEATHLaserMesh.mesh.bottom_radius = 0.01
 	DEATHLaserMesh.mesh.height = 0.01
@@ -1887,13 +1889,10 @@ func _on_timer_timeout() -> void:
 
 
 
+@onready var menu: String = \"res://Scenes_Scripts/Levels/main_menu.tscn\"
 
-
-
-
-
-
-
+func return_to_menu() -> void:
+	get_tree().change_scene_to_file(menu)
 
 
 "
@@ -2498,6 +2497,20 @@ tracks/17/keys = {
 "transitions": PackedFloat32Array(0.176777, 1, 1, 1, 1),
 "update": 0,
 "values": [0.01, 119.968, 1.0, 0.4, 0.01]
+}
+tracks/18/type = "method"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../../../../SetPieces/DEATH")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"return_to_menu"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s5pdp"]

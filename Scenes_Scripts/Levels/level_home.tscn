@@ -998,9 +998,8 @@ var ready_now: bool = false
 
 func _physics_process(delta: float) -> void:
 	if ready_now:
-		if fake_wall.position.y < 1.14:
-			var tween = get_tree().create_tween()
-			tween.tween_property(fake_wall, \"position\", Vector3(fake_wall.position.x, 1.14, fake_wall.position.z), delta)
+		var tween = get_tree().create_tween()
+		tween.tween_property(fake_wall, \"position\", Vector3(fake_wall.position.x, 1.4, fake_wall.position.z), 0.5)
 
 func play_set_piece() -> void:
 	ready_now = true
@@ -2030,6 +2029,12 @@ visible = false
 
 [node name="Fridge" parent="Objects/Kitchen" instance=ExtResource("15_ktfy2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.71789, 1, 7.1)
+
+[node name="Skeleton3D" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature" index="0"]
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(9.9748e-08, -9.9748e-08, 0.707107, 0.707107)
+bones/4/rotation = Quaternion(-9.9748e-08, 9.9748e-08, -0.707107, 0.707107)
 
 [node name="Door_fridge" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="0"]
 transform = Transform3D(1, 2.84217e-14, 1.42157e-15, -2.84217e-14, 1, 1.42109e-14, -1.42157e-15, -1.42109e-14, 1, 0.45144, 0.669023, 0.454514)

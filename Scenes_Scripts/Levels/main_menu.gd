@@ -2,6 +2,7 @@ extends Control
 
 
 @onready var menu_margin: MarginContainer = $MarginContainer
+@onready var background: ColorRect = $MarginContainer/Background
 
 @onready var awakenSound: AudioStreamPlayer = $MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer/AwakenAudioPlayer
 @onready var returnSound: AudioStreamPlayer = $MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer/ReturnAudioPlayer
@@ -13,6 +14,11 @@ extends Control
 
 @onready var level: String = "res://Scenes_Scripts/Levels/level_home.tscn"
 
+func _ready() -> void:
+	if Globals.menu_color_black == true:
+		background.color = Color.BLACK
+	else:
+		background.color = Color.WHITE
 
 func _on_awaken_pressed() -> void:
 	animPlayer.play("default")

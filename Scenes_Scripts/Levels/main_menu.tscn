@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cluw03kxhvknr"]
+[gd_scene load_steps=13 format=3 uid="uid://cluw03kxhvknr"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Levels/main_menu.gd" id="1_as0fm"]
 [ext_resource type="FontFile" uid="uid://c41k7wxmhkwfs" path="res://Scenes_Scripts/Fonts/VCR_OSD_MONO_1.001.ttf" id="1_dw06b"]
 [ext_resource type="FontVariation" uid="uid://bn6h2tjp2tnml" path="res://Scenes_Scripts/Fonts/BoldVCR.tres" id="2_5i3kh"]
 [ext_resource type="FontVariation" uid="uid://ckkunrng0eu5" path="res://Scenes_Scripts/Fonts/ItalicsVCR.tres" id="3_368u5"]
 [ext_resource type="FontVariation" uid="uid://bpanvlayr3ks1" path="res://Scenes_Scripts/Fonts/BoldItalicsVCR.tres" id="4_ua02a"]
+[ext_resource type="AudioStream" uid="uid://de1h0n0aopjua" path="res://Scenes_Scripts/Sounds/new_line_beep.wav" id="6_vb8tc"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_caju0"]
 device = -1
@@ -13,9 +14,71 @@ keycode = 4194309
 [sub_resource type="Shortcut" id="Shortcut_jyx2g"]
 events = [SubResource("InputEventKey_caju0")]
 
+[sub_resource type="Animation" id="Animation_4yosr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fade:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer/AwakenAudioPlayer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer/ReturnAudioPlayer:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_77k0v"]
 resource_name = "default"
-step = 0.05
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -69,41 +132,14 @@ tracks/3/keys = {
 "update": 1,
 "values": [true, false]
 }
-
-[sub_resource type="Animation" id="Animation_4yosr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Fade:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Fade:color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("MarginContainer:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer/AwakenAudioPlayer:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(-0.1),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -164,6 +200,18 @@ tracks/3/keys = {
 "args": [],
 "method": &"quit"
 }]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer/ReturnAudioPlayer:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uh7dj"]
@@ -236,6 +284,9 @@ shortcut_in_tooltip = false
 text = "AWAKEN"
 
 [node name="AwakenAudioPlayer" type="AudioStreamPlayer" parent="MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer"]
+stream = ExtResource("6_vb8tc")
+pitch_scale = 1.2
+bus = &"Sounds"
 
 [node name="Return" type="Button" parent="MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer"]
 layout_mode = 2
@@ -245,6 +296,9 @@ action_mode = 0
 text = "RETURN"
 
 [node name="ReturnAudioPlayer" type="AudioStreamPlayer" parent="MarginContainer/Main_VBoxContainer/SizeLimiter_HBoxContainer/Buttons_VBoxContainer"]
+stream = ExtResource("6_vb8tc")
+pitch_scale = 0.4
+bus = &"Sounds"
 
 [node name="Fade" type="ColorRect" parent="."]
 visible = false
