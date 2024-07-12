@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://ckkunrng0eu5"]
+
+[ext_resource type="FontFile" uid="uid://c41k7wxmhkwfs" path="res://Scenes_Scripts/Fonts/VCR_OSD_MONO_1.001.ttf" id="1_jgdwn"]
+
+[resource]
+base_font = ExtResource("1_jgdwn")
+variation_embolden = -0.3
+variation_transform = Transform2D(1, 0.275, 0, 1, 0, 0)

@@ -1,0 +1,8 @@
+// ## Door text
+[center]This place is safe enough, I should not wander.[/center][center]At least until [i]it[/i] gets here.[/center]
+
+
+// ## TV text
+[center]No one is broadcasting anything [i]this[/i] far out from the center.[/center]
+[center]...but all the infrastructure should still be [b]intact[/b].[/center]
+[center]Maybe there [i]is[/i] [b]no[/b] one left to broadcast anything in this layer anymore.[/center]

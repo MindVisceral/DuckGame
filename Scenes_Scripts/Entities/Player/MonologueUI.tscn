@@ -1,9 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://dv5syngbq0ouk"]
+[gd_scene load_steps=14 format=3 uid="uid://dv5syngbq0ouk"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/MonologueUI.gd" id="1_slpki"]
 [ext_resource type="Texture2D" uid="uid://b50lajtkqmova" path="res://Scenes_Scripts/Sprites/continue_button.png" id="2_a53r3"]
+[ext_resource type="FontFile" uid="uid://c41k7wxmhkwfs" path="res://Scenes_Scripts/Fonts/VCR_OSD_MONO_1.001.ttf" id="2_wgsbn"]
 [ext_resource type="AudioStream" uid="uid://cluq8harcdbhc" path="res://Scenes_Scripts/Sounds/new_monologue_beep.wav" id="3_jsy5u"]
+[ext_resource type="FontVariation" uid="uid://bn6h2tjp2tnml" path="res://Scenes_Scripts/Fonts/BoldVCR.tres" id="3_m5o03"]
+[ext_resource type="FontVariation" uid="uid://ckkunrng0eu5" path="res://Scenes_Scripts/Fonts/ItalicsVCR.tres" id="4_dge7k"]
 [ext_resource type="AudioStream" uid="uid://de1h0n0aopjua" path="res://Scenes_Scripts/Sounds/new_line_beep.wav" id="4_l0ou5"]
+[ext_resource type="FontVariation" uid="uid://bpanvlayr3ks1" path="res://Scenes_Scripts/Fonts/BoldItalicsVCR.tres" id="5_s0e1x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n0ee4"]
 bg_color = Color(0, 0, 0, 0)
@@ -20,14 +24,6 @@ corner_radius_bottom_left = 1
 corner_detail = 2
 shadow_color = Color(0, 0, 0, 0.392157)
 shadow_size = 1
-
-[sub_resource type="FontFile" id="FontFile_d4lwd"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [sub_resource type="Animation" id="Animation_rkthl"]
 length = 0.001
@@ -136,9 +132,12 @@ rotation = -6.28319
 auto_translate = false
 localize_numeral_system = false
 mouse_filter = 2
-theme_override_fonts/normal_font = SubResource("FontFile_d4lwd")
+theme_override_fonts/normal_font = ExtResource("2_wgsbn")
+theme_override_fonts/bold_font = ExtResource("3_m5o03")
+theme_override_fonts/italics_font = ExtResource("4_dge7k")
+theme_override_fonts/bold_italics_font = ExtResource("5_s0e1x")
 bbcode_enabled = true
-text = "[p]HATE. LET ME TELL YOU HOW MUCH I'VE COME TO HATE YOU SINCE I BEGAN TO LIVE. [p]THERE ARE 387.44 MILLION MILES OF PRINTED CIRCUITS IN WAFER THIN LAYERS THAT FILL MY COMPLEX.[p] IF THE WORD HATE WAS ENGRAVED ON EACH NANOANGSTROM OF THOSE HUNDREDS OF MILLIONS OF MILES IT WOULD NOT EQUAL ONE ONE-BILLIONTH OF THE HATE I FEEL FOR HUMANS AT THIS MICRO-INSTANT.[p] FOR YOU. HATE. HATE."
+text = "[p][b]HATE. LET ME TELL YOU HOW MUCH I'VE COME TO HATE YOU SINCE I BEGAN TO LIVE. [/b][p][i]THERE ARE 387.44 MILLION MILES OF PRINTED CIRCUITS IN WAFER THIN LAYERS THAT FILL MY COMPLEX.[/i][p][i][b]IF THE WORD HATE WAS ENGRAVED ON EACH NANOANGSTROM OF THOSE HUNDREDS OF MILLIONS OF MILES IT WOULD NOT EQUAL ONE ONE-BILLIONTH OF THE HATE I FEEL FOR HUMANS AT THIS MICRO-INSTANT.[/b][/i][p] FOR YOU. HATE. HATE."
 scroll_active = false
 shortcut_keys_enabled = false
 deselect_on_focus_loss_enabled = false

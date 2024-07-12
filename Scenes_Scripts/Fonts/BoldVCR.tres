@@ -1,0 +1,7 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://bn6h2tjp2tnml"]
+
+[ext_resource type="FontFile" uid="uid://c41k7wxmhkwfs" path="res://Scenes_Scripts/Fonts/VCR_OSD_MONO_1.001.ttf" id="1_83c4g"]
+
+[resource]
+base_font = ExtResource("1_83c4g")
+variation_embolden = 1.0

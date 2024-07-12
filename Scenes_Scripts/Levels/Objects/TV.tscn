@@ -15,7 +15,7 @@ size = Vector3(3, 3, 3)
 collision_layer = 128
 collision_mask = 71
 script = ExtResource("1_85e2u")
-monologue_data = Array[String](["[center]No one is broadcasting anything [i]this[/i] far out from the center.[/center]", "[center]But all the infrastructure should still be intact.[/center]", "[center]Maybe there [i]is[/i] [b]no[/b] one to broadcast anything in this layer anymore.[/center]"])
+monologue_data = Array[String](["[center]No one is broadcasting anything [i]this[/i] far out from the center.[/center]", "[center]...but all the infrastructure should still be [b]intact[/b].[/center]", "[center]Maybe there [i]is[/i] [b]no[/b] one left to broadcast anything in this layer anymore.[/center]"])
 monologue_first_line_time = 1.0
 monologue_line_time = Array[float]([2.0, 0.8, 2.0])
 

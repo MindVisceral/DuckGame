@@ -50,7 +50,7 @@ _data = {
 collision_layer = 64
 collision_mask = 133
 script = ExtResource("1_oolfw")
-monologue_data = Array[String](["[p]This place is safe enough.[/p][p]I would rather stay here until [i]it[/i] arrives.[/p]"])
+monologue_data = Array[String](["[center]This place is safe enough, I should not wander.[/center][center]At least until [i]it[/i] gets here.[/center]"])
 monologue_first_line_time = 0.4
 monologue_line_time = Array[float]([0.5])
 
