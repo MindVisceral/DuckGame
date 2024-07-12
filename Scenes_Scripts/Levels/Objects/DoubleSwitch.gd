@@ -10,6 +10,14 @@ extends Node3D
 @export var left_switch_on: bool = false
 @export var right_switch_on: bool = false
 
+
+
+var is_focused: bool = false
+@export var focused_meshes: Array[MeshInstance3D]
+
+
+var can_be_int: bool = false
+
 func _ready() -> void:
 	if left_switch_on == true:
 		#left_switch_object_interact()
@@ -18,6 +26,10 @@ func _ready() -> void:
 	if right_switch_on == true:
 		#right_switch_object_interact()
 		rightAnim.play("right_on")
+
+
+func interact() -> void:
+	pass
 
 
 ##
@@ -62,3 +74,30 @@ func _on_switch_left_interact() -> void:
 #
 func _on_switch_right_interact() -> void:
 	toggle_right_switch()
+
+
+
+func _on_interactable_left_focused() -> void:
+	is_focused = true
+	switch_shader()
+
+func _on_interactable_left_unfocused() -> void:
+	is_focused = false
+	switch_shader()
+
+
+
+func _on_interactable_right_focused() -> void:
+	is_focused = true
+	switch_shader()
+
+func _on_interactable_right_unfocused() -> void:
+	is_focused = false
+	switch_shader()
+
+func switch_shader() -> void:
+	for mesh in focused_meshes:
+		mesh.material_overlay.set_shader_parameter("enabled", is_focused)
+		
+		if is_focused == false:
+			mesh.material_overlay.set_shader_parameter("enabled", false)

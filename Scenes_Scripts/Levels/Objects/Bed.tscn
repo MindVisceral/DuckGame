@@ -1,8 +1,102 @@
-[gd_scene load_steps=8 format=3 uid="uid://ccsu3qdjk12ns"]
+[gd_scene load_steps=10 format=3 uid="uid://ccsu3qdjk12ns"]
 
 [ext_resource type="PackedScene" uid="uid://bk82hqwy0uldi" path="res://Blender/bed.gltf" id="1_bvjag"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/Bed.gd" id="1_ctwb7"]
 [ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="2_ndu7t"]
+
+[sub_resource type="Shader" id="Shader_60nw4"]
+code = "//Copyright 2021 redvillusion
+//
+//Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files 
+//(the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, 
+//merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished
+//to do so, subject to the following conditions:
+//
+//The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+//
+//THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+//OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE 
+//LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
+//IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ 
+shader_type spatial;
+ 
+render_mode unshaded, cull_front;
+ 
+uniform bool enabled = false;
+const float transparency = 0.0;
+ 
+uniform float border_width : hint_range(0,1,0.001) = 0.02;
+uniform vec4 color : source_color = vec4(0.718, 0.271, 0.518, 1);
+ 
+uniform bool pattern = true;
+uniform float line_number : hint_range(0,100,1) = 2;
+uniform float line_sharpness : hint_range(0,10,0.001) = 1;
+ 
+uniform bool pulse;
+uniform float pulse_speed : hint_range(0,100,1);
+ 
+uniform bool line_movement = true;
+uniform float line_movement_speed : hint_range(-100,100,1) = 1;
+ 
+uniform bool wave;
+ 
+void vertex() {
+	
+	VERTEX += VERTEX * border_width * float(enabled);
+}
+ 
+void fragment() {
+	
+	ALPHA = transparency;
+	if (enabled) {
+		ALBEDO = color.xyz;
+		ALPHA = color.a;
+		if (pattern)
+			{
+				vec2 uv = VERTEX.xy * line_number;
+				ALBEDO = sin(uv.xxx + uv.yyy) * line_sharpness * color.xyz;
+		 
+				if (pulse)
+				{
+					ALBEDO = sin(uv.xxx + uv.yyy) * line_sharpness * color.xyz * sin(TIME * pulse_speed);
+				}
+		 
+				if (line_movement)
+				{
+					ALBEDO = sin(uv.xxx + uv.yyy + TIME * line_movement_speed) * line_sharpness * color.xyz;
+				}
+		 
+				if (pulse && line_movement)
+				{
+					ALBEDO = sin(uv.xxx + uv.yyy + TIME * line_movement_speed) * line_sharpness * color.xyz * sin(TIME * pulse_speed);
+				}
+			}
+	}
+	
+ 
+	if (wave)
+	{
+		vec2 uv = VERTEX.xy * line_number;
+		ALBEDO = sin(uv.xxx + TIME * line_movement_speed) * line_sharpness * color.xyz;
+	}
+ 
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kdqcj"]
+render_priority = 0
+shader = SubResource("Shader_60nw4")
+shader_parameter/enabled = false
+shader_parameter/border_width = 0.02
+shader_parameter/color = Color(0.25098, 0.529412, 0.341176, 1)
+shader_parameter/pattern = true
+shader_parameter/line_number = 2.0
+shader_parameter/line_sharpness = 1.0
+shader_parameter/pulse = null
+shader_parameter/pulse_speed = null
+shader_parameter/line_movement = true
+shader_parameter/line_movement_speed = 1.0
+shader_parameter/wave = null
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r3u8x"]
 size = Vector3(1.71149, 0.444275, 2.92569)
@@ -16,15 +110,19 @@ size = Vector3(1.7113, 0.911682, 2.92688)
 [sub_resource type="BoxShape3D" id="BoxShape3D_jjtoy"]
 size = Vector3(5.56726, 3, 5.81433)
 
-[node name="Bed" type="StaticBody3D"]
+[node name="Bed" type="StaticBody3D" node_paths=PackedStringArray("focused_meshes")]
 collision_layer = 64
 collision_mask = 133
 script = ExtResource("1_ctwb7")
 monologue_data = Array[String](["[center]I should take a look around before I rest again.[/center]"])
 monologue_first_line_time = 0.5
+focused_meshes = [NodePath("bed/Bed")]
 
 [node name="bed" parent="." instance=ExtResource("1_bvjag")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.176185, 0)
+
+[node name="Bed" parent="bed" index="0"]
+material_overlay = SubResource("ShaderMaterial_kdqcj")
 
 [node name="BodyCollider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000213623, 0.23719, -0.486313)
@@ -48,4 +146,8 @@ shape = SubResource("BoxShape3D_m5nw5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.297302, 1.19586, -0.399238)
 shape = SubResource("BoxShape3D_jjtoy")
 
+[connection signal="focused" from="Interactable" to="." method="_on_interactable_focused"]
+[connection signal="unfocused" from="Interactable" to="." method="_on_interactable_unfocused"]
+
+[editable path="bed"]
 [editable path="Interactable"]

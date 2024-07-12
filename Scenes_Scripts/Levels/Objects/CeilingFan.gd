@@ -20,6 +20,11 @@ extends StaticBody3D
 var turned_on: bool = false
 @export var spinning_clockwise: bool = true
 
+
+var is_focused: bool = false
+@export var focused_meshes: Array[MeshInstance3D]
+
+
 func toggle_fan() -> void:
 	if turned_on == true:
 		turned_on = false
@@ -51,3 +56,22 @@ func _on_1fan_audio_player_finished() -> void:
 func _on_2fan_audio_player_finished() -> void:
 	if turned_on:
 		fan_audio2.play()
+
+
+
+
+func _on_interactable_focused() -> void:
+	is_focused = true
+	switch_shader()
+
+func _on_interactable_unfocused() -> void:
+	is_focused = false
+	switch_shader()
+
+
+func switch_shader() -> void:
+	for mesh in focused_meshes:
+		mesh.material_overlay.set_shader_parameter("enabled", is_focused)
+		
+		if is_focused == false:
+			mesh.material_overlay.set_shader_parameter("enabled", false)

@@ -26,6 +26,15 @@ var pause_position = 0
 ## Is the radio turned on right now?
 @export var turned_on: bool = false
 
+
+var is_focused: bool = false
+@export var focused_meshes: Array[MeshInstance3D]
+
+
+
+var can_be_int: bool = false
+
+
 ## Toggle the radio off and on
 func toggle_radio() -> void:
 	if turned_on == true:
@@ -65,3 +74,21 @@ func _on_audio_player_finished() -> void:
 
 func _on_setpiece_timer_timeout() -> void:
 	do_the_setpiece()
+
+
+
+
+func _on_interactable_focused() -> void:
+	is_focused = true
+	switch_shader()
+
+func _on_interactable_unfocused() -> void:
+	is_focused = false
+	switch_shader()
+
+func switch_shader() -> void:
+	for mesh in focused_meshes:
+		mesh.material_overlay.set_shader_parameter("enabled", is_focused)
+		
+		if is_focused == false:
+			mesh.material_overlay.set_shader_parameter("enabled", false)

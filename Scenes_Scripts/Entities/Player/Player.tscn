@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://lhlklylca50m"]
+[gd_scene load_steps=32 format=3 uid="uid://lhlklylca50m"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player.gd" id="1_kmike"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player_States/State_Manager.gd" id="2_c5aqi"]
@@ -17,8 +17,12 @@
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/CutsceneEffectManager.gd" id="13_trho6"]
 [ext_resource type="Shader" path="res://Scenes_Scripts/Shaders/GodotRetro/Screen Shaders/Aditional Shaders/Dithering.gdshader" id="14_ekeqm"]
 [ext_resource type="Shader" path="res://Scenes_Scripts/Shaders/Grain.gdshader" id="15_pu8nk"]
+[ext_resource type="FontFile" uid="uid://c41k7wxmhkwfs" path="res://Scenes_Scripts/Fonts/VCR_OSD_MONO_1.001.ttf" id="16_3svpw"]
 [ext_resource type="PackedScene" uid="uid://dv5syngbq0ouk" path="res://Scenes_Scripts/Entities/Player/MonologueUI.tscn" id="16_468sw"]
+[ext_resource type="FontVariation" uid="uid://bn6h2tjp2tnml" path="res://Scenes_Scripts/Fonts/BoldVCR.tres" id="17_lhxi1"]
+[ext_resource type="FontVariation" uid="uid://ckkunrng0eu5" path="res://Scenes_Scripts/Fonts/ItalicsVCR.tres" id="18_3h82g"]
 [ext_resource type="AudioStream" uid="uid://ngitqq7446yu" path="res://Scenes_Scripts/Music/cacophony.wav" id="19_0jqkr"]
+[ext_resource type="FontVariation" uid="uid://bpanvlayr3ks1" path="res://Scenes_Scripts/Fonts/BoldItalicsVCR.tres" id="19_a8hm7"]
 [ext_resource type="AudioStream" uid="uid://7q6fujskcqts" path="res://Scenes_Scripts/Sounds/ffission9_hiking-boot-footsteps-on-stone.wav" id="19_w70gb"]
 
 [sub_resource type="CapsuleShape3D" id="15"]
@@ -28,6 +32,22 @@ height = 1.6
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_hata5"]
 height = 0.01
 radius = 0.18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pnq18"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 0.529412)
+border_blend = true
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+corner_detail = 2
+shadow_color = Color(0, 0, 0, 0.392157)
+shadow_size = 1
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1e1y2"]
 shader = ExtResource("14_ekeqm")
@@ -156,10 +176,8 @@ bob_multiplier = 48.0
 script = ExtResource("12_4bkuj")
 bobbing_node = NodePath("../../Head/BobbingNode/Firearms")
 
-[node name="InteractionManager" type="Node" parent="Scripts" node_paths=PackedStringArray("ray_start_pos_node")]
+[node name="InteractionManager" type="Node" parent="Scripts"]
 script = ExtResource("13_qk48y")
-InteractableCast_range = 10.0
-ray_start_pos_node = NodePath("../../Head/BobbingNode/PlayerCamera")
 
 [node name="UIController" type="Node" parent="Scripts"]
 
@@ -252,6 +270,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -0.5
+offset_right = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -262,6 +282,93 @@ mouse_filter = 2
 
 [node name="CrosshairSprite" type="Sprite2D" parent="Head/BobbingNode/PlayerCamera/HUD/Crosshair"]
 texture = ExtResource("13_20fa4")
+
+[node name="EMarginContainer" type="MarginContainer" parent="Head/BobbingNode/PlayerCamera/HUD"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51
+anchor_top = 0.478
+anchor_right = 0.638
+anchor_bottom = 0.523
+offset_left = 0.600037
+offset_top = -0.180023
+offset_bottom = 0.369995
+grow_vertical = 2
+auto_translate = false
+localize_numeral_system = false
+
+[node name="TextBackground_Panel" type="Panel" parent="Head/BobbingNode/PlayerCamera/HUD/EMarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+theme_override_styles/panel = SubResource("StyleBoxFlat_pnq18")
+
+[node name="Interact_RichTextLabel" type="RichTextLabel" parent="Head/BobbingNode/PlayerCamera/HUD/EMarginContainer/TextBackground_Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+auto_translate = false
+localize_numeral_system = false
+mouse_filter = 2
+mouse_force_pass_scroll_events = false
+theme_override_fonts/normal_font = ExtResource("16_3svpw")
+theme_override_fonts/bold_font = ExtResource("17_lhxi1")
+theme_override_fonts/italics_font = ExtResource("18_3h82g")
+theme_override_fonts/bold_italics_font = ExtResource("19_a8hm7")
+bbcode_enabled = true
+text = "[center]Interact [E]: [img=30]res://Scenes_Scripts/Sprites/E_button.png[/img]"
+scroll_active = false
+shortcut_keys_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="FMarginContainer2" type="MarginContainer" parent="Head/BobbingNode/PlayerCamera/HUD"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.357
+anchor_top = 0.478
+anchor_right = 0.485
+anchor_bottom = 0.523
+offset_left = -0.0800171
+offset_top = -0.180023
+offset_right = -0.679993
+offset_bottom = 0.369995
+grow_vertical = 2
+auto_translate = false
+localize_numeral_system = false
+
+[node name="TextBackground_Panel" type="Panel" parent="Head/BobbingNode/PlayerCamera/HUD/FMarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+theme_override_styles/panel = SubResource("StyleBoxFlat_pnq18")
+
+[node name="Interact_RichTextLabel" type="RichTextLabel" parent="Head/BobbingNode/PlayerCamera/HUD/FMarginContainer2/TextBackground_Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+auto_translate = false
+localize_numeral_system = false
+mouse_filter = 2
+mouse_force_pass_scroll_events = false
+theme_override_fonts/normal_font = ExtResource("16_3svpw")
+theme_override_fonts/bold_font = ExtResource("17_lhxi1")
+theme_override_fonts/italics_font = ExtResource("18_3h82g")
+theme_override_fonts/bold_italics_font = ExtResource("19_a8hm7")
+bbcode_enabled = true
+text = "[center]Think [F]: [img=30]res://Scenes_Scripts/Sprites/F_button.png[/img]"
+scroll_active = false
+shortcut_keys_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
 
 [node name="Monologue" parent="Head/BobbingNode/PlayerCamera/HUD" instance=ExtResource("16_468sw")]
 layout_mode = 1

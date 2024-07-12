@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://uotr70iswuus"]
+[gd_scene load_steps=10 format=3 uid="uid://uotr70iswuus"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Things/Radio.gd" id="1_5spta"]
 [ext_resource type="PackedScene" uid="uid://dfd0xsds1rgtm" path="res://Blender/radio.gltf" id="1_7pfbb"]
@@ -6,21 +6,120 @@
 [ext_resource type="AudioStream" uid="uid://ngitqq7446yu" path="res://Scenes_Scripts/Music/cacophony.wav" id="4_y0a5a"]
 [ext_resource type="AudioStream" uid="uid://bohu1lq4vlv1" path="res://Scenes_Scripts/Sounds/kwahmah_click-switch.wav" id="5_rvl2i"]
 
+[sub_resource type="Shader" id="Shader_6a1ju"]
+code = "//Copyright 2021 redvillusion
+//
+//Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files 
+//(the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, 
+//merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished
+//to do so, subject to the following conditions:
+//
+//The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+//
+//THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+//OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE 
+//LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
+//IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ 
+shader_type spatial;
+ 
+render_mode unshaded, cull_front;
+ 
+uniform bool enabled = false;
+const float transparency = 0.0;
+ 
+uniform float border_width : hint_range(0,1,0.001) = 0.02;
+uniform vec4 color : source_color = vec4(0.71, 0.267, 0.51, 1);
+ 
+uniform bool pattern = true;
+uniform float line_number : hint_range(0,100,1) = 2;
+uniform float line_sharpness : hint_range(0,10,0.001) = 1;
+ 
+uniform bool pulse;
+uniform float pulse_speed : hint_range(0,100,1);
+ 
+uniform bool line_movement = true;
+uniform float line_movement_speed : hint_range(-100,100,1) = 1;
+ 
+uniform bool wave;
+ 
+void vertex() {
+	
+	VERTEX += VERTEX * border_width * float(enabled);
+}
+ 
+void fragment() {
+	
+	ALPHA = transparency;
+	if (enabled) {
+		ALBEDO = color.xyz;
+		ALPHA = color.a;
+		if (pattern)
+			{
+				vec2 uv = VERTEX.xy * line_number;
+				ALBEDO = sin(uv.xxx + uv.yyy) * line_sharpness * color.xyz;
+		 
+				if (pulse)
+				{
+					ALBEDO = sin(uv.xxx + uv.yyy) * line_sharpness * color.xyz * sin(TIME * pulse_speed);
+				}
+		 
+				if (line_movement)
+				{
+					ALBEDO = sin(uv.xxx + uv.yyy + TIME * line_movement_speed) * line_sharpness * color.xyz;
+				}
+		 
+				if (pulse && line_movement)
+				{
+					ALBEDO = sin(uv.xxx + uv.yyy + TIME * line_movement_speed) * line_sharpness * color.xyz * sin(TIME * pulse_speed);
+				}
+			}
+	}
+	
+ 
+	if (wave)
+	{
+		vec2 uv = VERTEX.xy * line_number;
+		ALBEDO = sin(uv.xxx + TIME * line_movement_speed) * line_sharpness * color.xyz;
+	}
+ 
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_svwn0"]
+render_priority = 0
+shader = SubResource("Shader_6a1ju")
+shader_parameter/enabled = false
+shader_parameter/border_width = 0.02
+shader_parameter/color = Color(0.71, 0.267, 0.51, 1)
+shader_parameter/pattern = true
+shader_parameter/line_number = 2.0
+shader_parameter/line_sharpness = 1.0
+shader_parameter/pulse = null
+shader_parameter/pulse_speed = null
+shader_parameter/line_movement = true
+shader_parameter/line_movement_speed = 1.0
+shader_parameter/wave = null
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_tnbst"]
 size = Vector3(0.348328, 0.19915, 0.119568)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_geyp3"]
 size = Vector3(3, 3, 3)
 
-[node name="Radio" type="RigidBody3D"]
+[node name="Radio" type="RigidBody3D" node_paths=PackedStringArray("focused_meshes")]
 collision_layer = 128
 collision_mask = 71
 script = ExtResource("1_5spta")
 monologue_data = Array[String](["[center]I waited for too long.[/center][center][b]It[/b] is here.[/center]", "[center]I should leave this place while I still can.[/center]"])
 monologue_first_line_time = 3.8
+focused_meshes = [NodePath("radio2/radio")]
 
 [node name="radio2" parent="." instance=ExtResource("1_7pfbb")]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)
+
+[node name="radio" parent="radio2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+material_overlay = SubResource("ShaderMaterial_svwn0")
 
 [node name="Collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
@@ -56,8 +155,11 @@ bus = &"Sounds"
 [node name="SetpieceTimer" type="Timer" parent="."]
 wait_time = 1.5
 
+[connection signal="focused" from="Interactable" to="." method="_on_interactable_focused"]
 [connection signal="interact" from="Interactable" to="." method="_on_interactable_interact"]
+[connection signal="unfocused" from="Interactable" to="." method="_on_interactable_unfocused"]
 [connection signal="finished" from="cacophony_AudioPlayer" to="." method="_on_audio_player_finished"]
 [connection signal="timeout" from="SetpieceTimer" to="." method="_on_setpiece_timer_timeout"]
 
+[editable path="radio2"]
 [editable path="Interactable"]

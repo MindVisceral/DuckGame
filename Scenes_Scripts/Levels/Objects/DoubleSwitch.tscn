@@ -1,9 +1,103 @@
-[gd_scene load_steps=16 format=3 uid="uid://ir1i011ri52f"]
+[gd_scene load_steps=18 format=3 uid="uid://ir1i011ri52f"]
 
 [ext_resource type="PackedScene" uid="uid://oeh8mfia8pi1" path="res://Blender/LightSwitch.gltf" id="1_2dw8e"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/DoubleSwitch.gd" id="1_mhabs"]
 [ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="2_eml1d"]
 [ext_resource type="AudioStream" uid="uid://bohu1lq4vlv1" path="res://Scenes_Scripts/Sounds/kwahmah_click-switch.wav" id="4_yuo1s"]
+
+[sub_resource type="Shader" id="Shader_e072n"]
+code = "//Copyright 2021 redvillusion
+//
+//Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files 
+//(the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, 
+//merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished
+//to do so, subject to the following conditions:
+//
+//The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+//
+//THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+//OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE 
+//LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
+//IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ 
+shader_type spatial;
+ 
+render_mode unshaded, cull_front;
+ 
+uniform bool enabled = false;
+const float transparency = 0.0;
+ 
+uniform float border_width : hint_range(0,1,0.001) = 0.02;
+uniform vec4 color : source_color = vec4(0.251, 0.529, 0.341, 1);
+ 
+uniform bool pattern = true;
+uniform float line_number : hint_range(0,100,1) = 2;
+uniform float line_sharpness : hint_range(0,10,0.001) = 1;
+ 
+uniform bool pulse;
+uniform float pulse_speed : hint_range(0,100,1);
+ 
+uniform bool line_movement = true;
+uniform float line_movement_speed : hint_range(-100,100,1) = 1;
+ 
+uniform bool wave;
+ 
+void vertex() {
+	
+	VERTEX += VERTEX * border_width * float(enabled);
+}
+ 
+void fragment() {
+	
+	ALPHA = transparency;
+	if (enabled) {
+		ALBEDO = color.xyz;
+		ALPHA = color.a;
+		if (pattern)
+			{
+				vec2 uv = VERTEX.xy * line_number;
+				ALBEDO = sin(uv.xxx + uv.yyy) * line_sharpness * color.xyz;
+		 
+				if (pulse)
+				{
+					ALBEDO = sin(uv.xxx + uv.yyy) * line_sharpness * color.xyz * sin(TIME * pulse_speed);
+				}
+		 
+				if (line_movement)
+				{
+					ALBEDO = sin(uv.xxx + uv.yyy + TIME * line_movement_speed) * line_sharpness * color.xyz;
+				}
+		 
+				if (pulse && line_movement)
+				{
+					ALBEDO = sin(uv.xxx + uv.yyy + TIME * line_movement_speed) * line_sharpness * color.xyz * sin(TIME * pulse_speed);
+				}
+			}
+	}
+	
+ 
+	if (wave)
+	{
+		vec2 uv = VERTEX.xy * line_number;
+		ALBEDO = sin(uv.xxx + TIME * line_movement_speed) * line_sharpness * color.xyz;
+	}
+ 
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_romk8"]
+render_priority = 0
+shader = SubResource("Shader_e072n")
+shader_parameter/enabled = false
+shader_parameter/border_width = 0.2
+shader_parameter/color = Color(0.717647, 0.270588, 0.517647, 1)
+shader_parameter/pattern = true
+shader_parameter/line_number = 2.0
+shader_parameter/line_sharpness = 1.0
+shader_parameter/pulse = null
+shader_parameter/pulse_speed = null
+shader_parameter/line_movement = true
+shader_parameter/line_movement_speed = 1.0
+shader_parameter/wave = null
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hwbpu"]
 size = Vector3(0.05896, 0.120361, 0.0395508)
@@ -122,10 +216,14 @@ _data = {
 "right_on": SubResource("Animation_kjmyo")
 }
 
-[node name="DoubleSwitch" type="Node3D"]
+[node name="DoubleSwitch" type="Node3D" node_paths=PackedStringArray("focused_meshes")]
 script = ExtResource("1_mhabs")
+focused_meshes = [NodePath("LightSwitch/switch_body")]
 
 [node name="LightSwitch" parent="." instance=ExtResource("1_2dw8e")]
+
+[node name="switch_body" parent="LightSwitch" index="0"]
+material_overlay = SubResource("ShaderMaterial_romk8")
 
 [node name="switch_right" parent="LightSwitch" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.997564, 0.0697565, 0, -0.0697565, 0.997564, 0.024417, 0, 0.026861)
@@ -167,8 +265,12 @@ volume_db = 80.0
 max_polyphony = 8
 bus = &"Sounds"
 
+[connection signal="focused" from="InteractableLeft" to="." method="_on_interactable_left_focused"]
 [connection signal="interact" from="InteractableLeft" to="." method="_on_switch_left_interact"]
+[connection signal="unfocused" from="InteractableLeft" to="." method="_on_interactable_left_unfocused"]
+[connection signal="focused" from="InteractableRight" to="." method="_on_interactable_right_focused"]
 [connection signal="interact" from="InteractableRight" to="." method="_on_switch_right_interact"]
+[connection signal="unfocused" from="InteractableRight" to="." method="_on_interactable_right_unfocused"]
 
 [editable path="LightSwitch"]
 [editable path="InteractableLeft"]

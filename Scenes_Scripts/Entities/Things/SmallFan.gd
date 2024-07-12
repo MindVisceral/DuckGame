@@ -19,10 +19,18 @@ extends RigidBody3D
 
 @export var turned_on: bool = false
 
-func _ready() -> void:
-	speen()
 
-func speen() -> void:
+
+var is_focused: bool = false
+@export var focused_meshes: Array[MeshInstance3D]
+
+var can_be_int: bool = false
+
+
+func _ready() -> void:
+	interact()
+
+func interact() -> void:
 	if turned_on == true:
 		turned_on = false
 		animPlayer.play("speen")
@@ -36,4 +44,23 @@ func speen() -> void:
 
 
 func _on_interactable_interact() -> void:
-	speen()
+	interact()
+
+
+
+
+func _on_interactable_focused() -> void:
+	is_focused = true
+	switch_shader()
+
+func _on_interactable_unfocused() -> void:
+	is_focused = false
+	switch_shader()
+
+
+func switch_shader() -> void:
+	for mesh in focused_meshes:
+		mesh.material_overlay.set_shader_parameter("enabled", is_focused)
+		
+		if is_focused == false:
+			mesh.material_overlay.set_shader_parameter("enabled", false)

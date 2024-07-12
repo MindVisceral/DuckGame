@@ -24,6 +24,11 @@ var pause_position = 0
 var rng = RandomNumberGenerator.new()
 
 
+var is_focused: bool = false
+@export var focused_meshes: Array[MeshInstance3D]
+
+var can_be_int: bool = false
+
 func _ready() -> void:
 	noise_texture.visible = false
 	TV_light.visible = false
@@ -35,7 +40,7 @@ func _process(delta: float) -> void:
 		noise_texture.texture.noise.offset.y = delta * rng.randf_range(-9999, 9999)
 
 
-func toggle_TV() -> void:
+func interact() -> void:
 	if turned_on == true:
 		turned_on = false
 		
@@ -55,9 +60,26 @@ func toggle_TV() -> void:
 
 
 func _on_interactable_interact() -> void:
-	toggle_TV()
+	interact()
 
 
 func _on_static_audio_player_finished() -> void:
 	if turned_on:
 		staticaudio.play()
+
+
+func _on_interactable_focused() -> void:
+	is_focused = true
+	switch_shader()
+
+func _on_interactable_unfocused() -> void:
+	is_focused = false
+	switch_shader()
+
+
+func switch_shader() -> void:
+	for mesh in focused_meshes:
+		mesh.material_overlay.set_shader_parameter("enabled", is_focused)
+		
+		if is_focused == false:
+			mesh.material_overlay.set_shader_parameter("enabled", false)

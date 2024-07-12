@@ -1,10 +1,105 @@
-[gd_scene load_steps=11 format=3 uid="uid://bc22rykkm5ipg"]
+[gd_scene load_steps=14 format=3 uid="uid://bc22rykkm5ipg"]
 
 [ext_resource type="PackedScene" uid="uid://d3yh27n7ciaf1" path="res://Blender/ceiling_fan.gltf" id="1_3u0dt"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/CeilingFan.gd" id="1_r4ij7"]
 [ext_resource type="AudioStream" uid="uid://byvgo1fl7e68s" path="res://Scenes_Scripts/Sounds/ffedsmoker_fan_loop-wind-final.wav" id="3_5g3b7"]
 [ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="3_6jajp"]
+[ext_resource type="Material" uid="uid://bg4rnpepnabf7" path="res://Scenes_Scripts/Resources/ThoughtOutline.tres" id="3_ybgfp"]
 [ext_resource type="AudioStream" uid="uid://geawk1ahxaw7" path="res://Scenes_Scripts/Sounds/ezcah_computer-fan_loop-motor-final.wav" id="4_uahxi"]
+
+[sub_resource type="Shader" id="Shader_4b0hj"]
+code = "//Copyright 2021 redvillusion
+//
+//Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files 
+//(the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, 
+//merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished
+//to do so, subject to the following conditions:
+//
+//The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+//
+//THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+//OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE 
+//LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
+//IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ 
+shader_type spatial;
+ 
+render_mode unshaded, cull_front;
+ 
+uniform bool enabled = false;
+const float transparency = 0.0;
+ 
+uniform float border_width : hint_range(0,1,0.001) = 0.02;
+uniform vec4 color : source_color = vec4(0.718, 0.271, 0.518, 1);
+ 
+uniform bool pattern = true;
+uniform float line_number : hint_range(0,100,1) = 2;
+uniform float line_sharpness : hint_range(0,10,0.001) = 1;
+ 
+uniform bool pulse;
+uniform float pulse_speed : hint_range(0,100,1);
+ 
+uniform bool line_movement = true;
+uniform float line_movement_speed : hint_range(-100,100,1) = 1;
+ 
+uniform bool wave;
+ 
+void vertex() {
+	
+	VERTEX += VERTEX * border_width * float(enabled);
+}
+ 
+void fragment() {
+	
+	ALPHA = transparency;
+	if (enabled) {
+		ALBEDO = color.xyz;
+		ALPHA = color.a;
+		if (pattern)
+			{
+				vec2 uv = VERTEX.xy * line_number;
+				ALBEDO = sin(uv.xxx + uv.yyy) * line_sharpness * color.xyz;
+		 
+				if (pulse)
+				{
+					ALBEDO = sin(uv.xxx + uv.yyy) * line_sharpness * color.xyz * sin(TIME * pulse_speed);
+				}
+		 
+				if (line_movement)
+				{
+					ALBEDO = sin(uv.xxx + uv.yyy + TIME * line_movement_speed) * line_sharpness * color.xyz;
+				}
+		 
+				if (pulse && line_movement)
+				{
+					ALBEDO = sin(uv.xxx + uv.yyy + TIME * line_movement_speed) * line_sharpness * color.xyz * sin(TIME * pulse_speed);
+				}
+			}
+	}
+	
+ 
+	if (wave)
+	{
+		vec2 uv = VERTEX.xy * line_number;
+		ALBEDO = sin(uv.xxx + TIME * line_movement_speed) * line_sharpness * color.xyz;
+	}
+ 
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1y5al"]
+render_priority = 0
+shader = SubResource("Shader_4b0hj")
+shader_parameter/enabled = false
+shader_parameter/border_width = 0.02
+shader_parameter/color = Color(0.25098, 0.529412, 0.341176, 1)
+shader_parameter/pattern = true
+shader_parameter/line_number = 2.0
+shader_parameter/line_sharpness = 1.0
+shader_parameter/pulse = null
+shader_parameter/pulse_speed = null
+shader_parameter/line_movement = true
+shader_parameter/line_movement_speed = 1.0
+shader_parameter/wave = null
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xh0d0"]
 size = Vector3(1.16064, 0.466064, 1.30737)
@@ -50,14 +145,21 @@ _data = {
 "speen_warm": SubResource("Animation_1eavr")
 }
 
-[node name="CeilingFan" type="StaticBody3D"]
+[node name="CeilingFan" type="StaticBody3D" node_paths=PackedStringArray("focused_meshes")]
 collision_layer = 64
 collision_mask = 133
 script = ExtResource("1_r4ij7")
 monologue_data = Array[String](["[center]I do not understand this object's purpose.[/center][center]Its movement does not accomplish any task which I am aware of.[/center]"])
 monologue_first_line_time = 0.5
+focused_meshes = [NodePath("ceiling_fan/Ceiling_Fan_Blades_01"), NodePath("ceiling_fan/Ceiling_Fan_01")]
 
 [node name="ceiling_fan" parent="." instance=ExtResource("1_3u0dt")]
+
+[node name="Ceiling_Fan_Blades_01" parent="ceiling_fan" index="0"]
+material_overlay = SubResource("ShaderMaterial_1y5al")
+
+[node name="Ceiling_Fan_01" parent="ceiling_fan" index="1"]
+material_overlay = ExtResource("3_ybgfp")
 
 [node name="Interactable" parent="." instance=ExtResource("3_6jajp")]
 
@@ -90,6 +192,8 @@ max_distance = 6.0
 max_polyphony = 4
 bus = &"Sounds"
 
+[connection signal="focused" from="Interactable" to="." method="_on_interactable_focused"]
+[connection signal="unfocused" from="Interactable" to="." method="_on_interactable_unfocused"]
 [connection signal="finished" from="1fan_AudioPlayer" to="." method="_on_1fan_audio_player_finished"]
 [connection signal="finished" from="2fan_AudioPlayer" to="." method="_on_2fan_audio_player_finished"]
 

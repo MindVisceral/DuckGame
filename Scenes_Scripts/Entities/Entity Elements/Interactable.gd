@@ -12,11 +12,13 @@ signal interact()
 ## When an Entity enters/exits the Range Area3D, we add/remove this Interactable node to/from
 ## that Entity's "interactables" Array
 func _on_body_range_entered(body: Node3D) -> void:
+	unfocused.emit()
 	if body is Player:
 		body.InteractionManager.interactables.append(self)
 		#print(body, " has entered ", self.owner, "'s Range!")
 #
 func _on_body_range_exited(body: Node3D) -> void:
+	unfocused.emit()
 	if body is Player:
 		body.InteractionManager.interactables.erase(self)
 		## We also emit the "unfocused" signal to avoid bugs

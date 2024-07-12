@@ -1,6 +1,6 @@
-[gd_scene load_steps=243 format=3 uid="uid://bc1l8essgx3qb"]
+[gd_scene load_steps=244 format=3 uid="uid://bc1l8essgx3qb"]
 
-[ext_resource type="Environment" uid="uid://c45ge3tprgx5o" path="res://Scenes_Scripts/Levels/environment_default.tres" id="1_1jw4r"]
+[ext_resource type="Environment" uid="uid://blfgbejiclohv" path="res://Scenes_Scripts/Levels/environment_inside.tres" id="1_82ihm"]
 [ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1_skewd"]
 [ext_resource type="Resource" uid="uid://c36hv0o6g0udo" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="2_n1ec3"]
 [ext_resource type="Texture2D" uid="uid://cejk8u4rtckq4" path="res://Scenes_Scripts/Textures/Classic_64_Asset_Pack/Concrete/Materials/concrete_15.jpg" id="4_g4arq"]
@@ -33,6 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://dikpxxwdpl37n" path="res://Scenes_Scripts/Levels/Objects/SmallTable.tscn" id="23_hj68o"]
 [ext_resource type="PackedScene" uid="uid://0gxx8qg8ui1l" path="res://Scenes_Scripts/Levels/Objects/Stove.tscn" id="25_nnnhv"]
 [ext_resource type="PackedScene" uid="uid://du6v4lkt3a81t" path="res://Scenes_Scripts/Levels/Objects/BathroomBlocker.tscn" id="26_g1g4j"]
+[ext_resource type="Material" uid="uid://bg4rnpepnabf7" path="res://Scenes_Scripts/Resources/ThoughtOutline.tres" id="27_mw02y"]
 [ext_resource type="PackedScene" uid="uid://7p8wceukapmt" path="res://Scenes_Scripts/Entities/Things/SmallFan.tscn" id="27_w2tk1"]
 [ext_resource type="PackedScene" uid="uid://bc22rykkm5ipg" path="res://Scenes_Scripts/Levels/Objects/CeilingFan.tscn" id="28_yh6ym"]
 [ext_resource type="PackedScene" uid="uid://1ucvqg5p5g1x" path="res://Blender/Plank.gltf" id="29_jyjop"]
@@ -781,7 +782,7 @@ func _process(delta: float) -> void:
 	if ready_now:
 		door.is_locked = false
 		door.monologue_data.clear()
-		door.monologue_data = new_monologue_data.duplicate()
+		#door.monologue_data = new_monologue_data.duplicate()
 
 func play_set_piece() -> void:
 	ready_now = true
@@ -1043,7 +1044,7 @@ size = Vector3(2.94128, 2.47546, 3.15417)
 [node name="Environment" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
-environment = ExtResource("1_1jw4r")
+environment = ExtResource("1_82ihm")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
 transform = Transform3D(0.520091, 0.657218, -0.5455, -0.171328, 0.705971, 0.687206, 0.836751, -0.26395, 0.479769, -12.6224, 17.716, 19.0767)
@@ -1911,38 +1912,75 @@ switch_on = true
 [node name="Plank1" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
 transform = Transform3D(3.99299, 1.03451e-08, 0.236668, 0.236668, -1.74539e-07, -3.99299, 0, 4, -1.74845e-07, 9.06035, 2.03277, 4.61859)
 
+[node name="Cube" parent="Objects/InsideCorridor/DoorwayPlanks/Plank1" index="0"]
+material_overlay = ExtResource("27_mw02y")
+
 [node name="Plank2" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
 transform = Transform3D(3.99999, 0, 0, 0, -1.74846e-07, -3.99999, 0, 4, -1.74845e-07, 9.41687, 2.01454, 4.61859)
+
+[node name="Cube" parent="Objects/InsideCorridor/DoorwayPlanks/Plank2" index="0"]
+material_overlay = ExtResource("27_mw02y")
 
 [node name="Plank3" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
 transform = Transform3D(3.99943, 2.92943e-09, 0.0670174, 0.0670174, -1.74821e-07, -3.99943, 0, 4, -1.74845e-07, 9.73223, 2.0599, 4.61859)
 
+[node name="Cube" parent="Objects/InsideCorridor/DoorwayPlanks/Plank3" index="0"]
+material_overlay = ExtResource("27_mw02y")
+
 [node name="Plank4" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
 transform = Transform3D(3.99804, 5.46153e-09, 0.124945, 0.124945, -1.7476e-07, -3.99804, 0, 4, -1.74845e-07, 10.038, 1.99158, 4.61859)
+
+[node name="Cube" parent="Objects/InsideCorridor/DoorwayPlanks/Plank4" index="0"]
+material_overlay = ExtResource("27_mw02y")
 
 [node name="Plank5" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
 transform = Transform3D(0.169595, 1.74688e-07, 3.9964, 3.9964, -7.41323e-09, -0.169595, 0, 4, -1.74845e-07, 9.52377, 2.07803, 4.52888)
 
+[node name="Cube" parent="Objects/InsideCorridor/DoorwayPlanks/Plank5" index="0"]
+material_overlay = ExtResource("27_mw02y")
+
 [node name="Plank6" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
 transform = Transform3D(-0.476735, 1.73599e-07, 3.97148, 3.97148, 2.08388e-08, 0.476735, 6.22097e-16, 4, -1.74845e-07, 9.52377, 2.49671, 4.52888)
+
+[node name="Cube" parent="Objects/InsideCorridor/DoorwayPlanks/Plank6" index="0"]
+material_overlay = ExtResource("27_mw02y")
 
 [node name="Plank7" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
 transform = Transform3D(-0.220777, 1.74579e-07, 3.9939, 3.9939, 9.65046e-09, 0.220777, -1.1416e-15, 4, -1.74845e-07, 9.52377, 2.82783, 4.52888)
 
+[node name="Cube" parent="Objects/InsideCorridor/DoorwayPlanks/Plank7" index="0"]
+material_overlay = ExtResource("27_mw02y")
+
 [node name="Plank8" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
 transform = Transform3D(0.281254, 1.74413e-07, 3.99009, 3.99009, -1.2294e-08, -0.281254, -1.1416e-15, 4, -1.74845e-07, 9.52377, 1.75681, 4.52888)
+
+[node name="Cube" parent="Objects/InsideCorridor/DoorwayPlanks/Plank8" index="0"]
+material_overlay = ExtResource("27_mw02y")
 
 [node name="Plank9" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
 transform = Transform3D(0.0743463, 1.74815e-07, 3.9993, 3.9993, -3.24979e-09, -0.0743463, -2.55616e-16, 4, -1.74845e-07, 9.52377, 1.42782, 4.52888)
 
-[node name="BathroomBlocker" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("26_g1g4j")]
+[node name="Cube" parent="Objects/InsideCorridor/DoorwayPlanks/Plank9" index="0"]
+material_overlay = ExtResource("27_mw02y")
+
+[node name="BathroomBlocker" parent="Objects/InsideCorridor/DoorwayPlanks" node_paths=PackedStringArray("focused_meshes") instance=ExtResource("26_g1g4j")]
 monologue_data = Array[String](["[center]This construction's previous residents barricaded most of the doors and windows, except for the lift in the corridor.[/center][center]We may only theorize on an explanation for this behaviour.[/center]"])
 monologue_first_line_time = 0.2
+focused_meshes = [NodePath("../Plank1/Cube"), NodePath("../Plank2/Cube"), NodePath("../Plank3/Cube"), NodePath("../Plank4/Cube"), NodePath("../Plank5/Cube"), NodePath("../Plank6/Cube"), NodePath("../Plank7/Cube"), NodePath("../Plank8/Cube"), NodePath("../Plank9/Cube")]
 
 [node name="Kitchen" type="Node3D" parent="Objects"]
 
 [node name="Fridge" parent="Objects/Kitchen" instance=ExtResource("15_ktfy2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.71789, 1, 7.1)
+
+[node name="Skeleton3D" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature" index="0"]
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(9.9748e-08, -9.9748e-08, 0.707107, 0.707107)
+bones/4/rotation = Quaternion(-9.9748e-08, 9.9748e-08, -0.707107, 0.707107)
+
+[node name="Door_fridge" parent="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D" index="0"]
+transform = Transform3D(1, 2.84217e-14, 1.42157e-15, -2.84217e-14, 1, 1.42109e-14, -1.42157e-15, -1.42109e-14, 1, 0.45144, 0.669023, 0.454514)
 
 [node name="CollisionShape3D" parent="Objects/Kitchen/Fridge/Interactable_fridge/InteractableRange" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85199, 1.25519, 1.07709)
@@ -2352,6 +2390,15 @@ angle_limit_for_tilt = 0.01
 [connection signal="body_entered" from="Objects/BigCorridor/HallwaySetpiece/WindowArea3D" to="SetPieces/HallwayLights" method="_on_window_area_3d_body_entered"]
 [connection signal="body_entered" from="Objects/BigCorridor/HallwaySetpiece/LiftArea3D" to="SetPieces/HallwayLights" method="_on_lift_area_3d_body_entered"]
 
+[editable path="Objects/InsideCorridor/DoorwayPlanks/Plank1"]
+[editable path="Objects/InsideCorridor/DoorwayPlanks/Plank2"]
+[editable path="Objects/InsideCorridor/DoorwayPlanks/Plank3"]
+[editable path="Objects/InsideCorridor/DoorwayPlanks/Plank4"]
+[editable path="Objects/InsideCorridor/DoorwayPlanks/Plank5"]
+[editable path="Objects/InsideCorridor/DoorwayPlanks/Plank6"]
+[editable path="Objects/InsideCorridor/DoorwayPlanks/Plank7"]
+[editable path="Objects/InsideCorridor/DoorwayPlanks/Plank8"]
+[editable path="Objects/InsideCorridor/DoorwayPlanks/Plank9"]
 [editable path="Objects/InsideCorridor/DoorwayPlanks/BathroomBlocker"]
 [editable path="Objects/InsideCorridor/DoorwayPlanks/BathroomBlocker/Interactable"]
 [editable path="Objects/Kitchen/Fridge"]
@@ -2361,5 +2408,6 @@ angle_limit_for_tilt = 0.01
 [editable path="Objects/Kitchen/Fridge/Interactable_fridge"]
 [editable path="Objects/Kitchen/Fridge/Interactable_freezer"]
 [editable path="Objects/Main Room/TV"]
+[editable path="Objects/Main Room/TV/TV"]
 [editable path="Objects/Main Room/TV/Interactable"]
 [editable path="Player"]

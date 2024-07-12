@@ -485,16 +485,20 @@ libraries = {
 }
 
 [node name="closing_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18025, 1.07285)
 stream = ExtResource("5_o03sn")
 
 [node name="opening_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18025, 1.07285)
 stream = ExtResource("6_7y1i0")
 
 [node name="backing_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18025, 1.07285)
 stream = ExtResource("5_tofot")
 volume_db = -6.0
 
 [node name="buttonclicked_AudioPlayer" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.770644, 1.23415, 0.403302)
 stream = ExtResource("6_bif47")
 
 [connection signal="interact" from="Interactable" to="." method="_on_interactable_interact"]

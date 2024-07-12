@@ -19,6 +19,15 @@ var open: bool = false
 ## The time before you can move on to the next line after a line shows up on the screen 
 @export var monologue_line_time: Array[float]
 
+
+
+var is_focused: bool = false
+@export var focused_meshes: Array[MeshInstance3D]
+
+
+var can_be_int: bool = false
+
+
 func toggle_door() -> void:
 	if open == false:
 		if !is_locked:
@@ -29,3 +38,20 @@ func toggle_door() -> void:
 
 func _on_interactable_interact() -> void:
 	toggle_door()
+
+
+
+func _on_interactable_focused() -> void:
+	is_focused = true
+	switch_shader()
+
+func _on_interactable_unfocused() -> void:
+	is_focused = false
+	switch_shader()
+
+func switch_shader() -> void:
+	for mesh in focused_meshes:
+		mesh.material_overlay.set_shader_parameter("enabled", is_focused)
+		
+		if is_focused == false:
+			mesh.material_overlay.set_shader_parameter("enabled", false)

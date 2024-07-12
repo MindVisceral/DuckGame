@@ -12,23 +12,8 @@ var player: Player
 ## All the Interactable nodes within Player's reach (reach is set in each Interactable separately)
 var interactables: Array[Interactable] = []
 
-
-###-------------------------------------------------------------------------###
-##### Exported variables
-###-------------------------------------------------------------------------###
-
-@export_group("Variables")
-
-## Range of the InteractableCast in meters
-@export var InteractableCast_range: float = 1
-
-## The Node from which the ray originates
-## Should be the Camera
-@export var ray_start_pos_node: Node3D
-
-## Layers which the interaction ray can see, so pretty much just the Interactable layer
-## Only made an exported variable to avoid headaches with hard-coded layers
-@export_flags_3d_physics var ray_collision_mask = 32
+@onready var interact_HUD: MarginContainer = $"../../Head/BobbingNode/PlayerCamera/HUD/EMarginContainer"
+@onready var think_HUD: MarginContainer = $"../../Head/BobbingNode/PlayerCamera/HUD/FMarginContainer2"
 
 ###-------------------------------------------------------------------------###
 ##### Setup functions
@@ -37,6 +22,9 @@ var interactables: Array[Interactable] = []
 ## This Node needs a reference to the Player to access its functions and variables
 func init(player: Player) -> void:
 	self.player = player
+	
+	interact_HUD.visible = false
+	think_HUD.visible = false
 
 ###-------------------------------------------------------------------------###
 ##### Executing functions
@@ -47,12 +35,21 @@ func _physics_process(delta: float) -> void:
 #region No Interactables in range
 	## If there are no Interactables within range, we turn off the InteractableCast for efficiency
 	if interactables.size() == 0:
+		interact_HUD.visible = false
+		think_HUD.visible = false
 		player.InteractableCast.enabled = false
 #endregion
 	
 #region One Interactable within range
 	## Otherwise, we turn it on and...
 	elif interactables.size() == 1:
+		interact_HUD.visible = false
+		think_HUD.visible = false
+		
+		for interactable in interactables:
+			interactable.unfocused.emit()
+		
+		
 		player.InteractableCast.enabled = true
 		
 		## ...check if the InteractableCast intersects with that one Interactable
@@ -62,17 +59,33 @@ func _physics_process(delta: float) -> void:
 			## Since it does, we tell this Interactable to emit the "focused" signal
 			interactables[0].focused.emit()
 			
+			
+			if "monologue_data" in interactables[0].owner:
+				if not interactables[0].owner.monologue_data.is_empty():
+					think_HUD.visible = true
+			if "can_be_int" in interactables[0].owner:
+				interact_HUD.visible = true
+				if "is_locked" in interactables[0].owner:
+					if interactables[0].owner.is_locked == true:
+						interact_HUD.visible = false 
+					else:
+						interact_HUD.visible = true
+			
+			
+			
 			## If the Player wants to, they may interact with this Interactable
 			if Input.is_action_just_pressed("input_interact"):
 				#player.InteractableCast.get_collider(0).interact.emit()
 				interactables[0].interact.emit()
+			if Input.is_action_just_pressed("input_thoughts"):
 				#get_interactable_monologue_info(player.InteractableCast.get_collider(0))
 				get_interactable_monologue_info(interactables[0])
 			
 		
 		## Since it doesn't, we tell this Interactable to emit the "unfocused" signal
 		else:
-			interactables[0].unfocused.emit()
+			for interactable in interactables:
+				interactable.unfocused.emit()
 			## The Interactable becomes "unfocused" if the Player exits its range too
 			## (that is written into the Interactable code itself)
 #endregion
@@ -80,6 +93,13 @@ func _physics_process(delta: float) -> void:
 #region Two or more Interactables are within range
 	## Here, we also turn on the InteractableCast and...
 	elif interactables.size() >= 2:
+		interact_HUD.visible = false
+		think_HUD.visible = false
+		
+		for interactable in interactables:
+			interactable.unfocused.emit()
+		
+		
 		player.InteractableCast.enabled = true
 		## ...check if the InteractableCast intersects with at least one of those Interactables
 		player.InteractableCast.force_shapecast_update()
@@ -94,9 +114,23 @@ func _physics_process(delta: float) -> void:
 			## ...and finally, focus only on the closest Interactable
 			closest_interactable.focused.emit()
 			
+			
+			if "monologue_data" in closest_interactable.owner:
+				if closest_interactable.owner.monologue_data.is_empty() == false:
+					think_HUD.visible = true
+			if "can_be_int" in closest_interactable.owner:
+				interact_HUD.visible = true
+				if "is_locked" in closest_interactable.owner:
+					if closest_interactable.owner.is_locked == true:
+						interact_HUD.visible = false
+					else:
+						interact_HUD.visible = true
+			
+			
 			## And if the Player wants to, they may interact with this Interactable
 			if Input.is_action_just_pressed("input_interact"):
 				closest_interactable.interact.emit()
+			if Input.is_action_just_pressed("input_thoughts"):
 				get_interactable_monologue_info(closest_interactable)
 			
 		

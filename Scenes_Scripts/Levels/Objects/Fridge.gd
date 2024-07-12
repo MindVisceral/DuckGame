@@ -23,10 +23,23 @@ extends StaticBody3D
 @onready var FridgeanimPlay: AnimationPlayer = $FridgeAnimationPlayer
 @onready var FreezeranimPlay: AnimationPlayer =$FreezerAnimationPlayer
 
+
+
+
+var is_focused: bool = false
+@export var focused_meshes: Array[MeshInstance3D]
+
+
+var can_be_int: bool = false
+
+
 ##
 func _ready() -> void:
 	fridge_light.visible = fridge_open
 	freezer_light.visible = freezer_open
+
+
+
 
 ##
 func toggle_fridge() -> void:
