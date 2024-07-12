@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://3bibeogihx0k"]
+
+[ext_resource type="PackedScene" uid="uid://cwyklong8q5j4" path="res://Blender/top_lamp.gltf" id="1_j8vmv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aabq8"]
+radius = 0.190865
+height = 1.20251
+
+[node name="HandgingLamp" type="StaticBody3D"]
+collision_layer = 64
+collision_mask = 5
+
+[node name="top_lamp" parent="." instance=ExtResource("1_j8vmv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.837, 0)
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.415379, 0)
+shape = SubResource("CapsuleShape3D_aabq8")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.866991, 0)
+light_energy = 7.0
+light_indirect_energy = 9.0
+light_volumetric_fog_energy = 3.0
+shadow_enabled = true
+spot_angle = 60.0

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://db7w5ip2jk0td"]
+
+[ext_resource type="PackedScene" uid="uid://cepx8cc4craan" path="res://Blender/small_light.gltf" id="1_qqvm5"]
+
+[node name="SmallLight" type="StaticBody3D"]
+collision_layer = 64
+collision_mask = 5
+
+[node name="small_light" parent="." instance=ExtResource("1_qqvm5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0462391, 0)
+
+[node name="Lamps_02" parent="small_light" index="0"]
+cast_shadow = 0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0790753, 0)
+light_indirect_energy = 1.25
+light_volumetric_fog_energy = 0.5
+light_specular = 0.0
+light_cull_mask = 4294443007
+shadow_enabled = true
+
+[editable path="small_light"]

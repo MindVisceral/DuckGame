@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://tlr6sujh62a1"]
+
+[ext_resource type="PackedScene" uid="uid://dvyree74hn4m2" path="res://Blender/cheap_table.gltf" id="1_v3gi8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nfgtu"]
+size = Vector3(1.72378, 0.0310059, 1.02245)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mg2b3"]
+size = Vector3(0.05, 0.687149, 0.05)
+
+[node name="CheapTable" type="StaticBody3D"]
+collision_layer = 64
+collision_mask = 5
+
+[node name="cheap_table" parent="." instance=ExtResource("1_v3gi8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0308561, 0)
+
+[node name="SurfaceCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00594521, 0.699648, -7.24792e-05)
+shape = SubResource("BoxShape3D_nfgtu")
+
+[node name="Leg1Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.998342, 0.057564, 0, -0.0574686, 0.996686, 0.057564, 0.00331362, -0.0574686, 0.998342, -0.821566, 0.342961, 0.466722)
+shape = SubResource("BoxShape3D_mg2b3")
+
+[node name="Leg2Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.998342, -0.057564, 0, 0.0574686, 0.996686, 0.057564, -0.00331362, -0.0574686, 0.998342, 0.822025, 0.342961, 0.466722)
+shape = SubResource("BoxShape3D_mg2b3")
+
+[node name="Leg3Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.998342, -0.057564, 0, 0.0574686, 0.996686, -0.057564, 0.00331362, 0.0574686, 0.998342, 0.822025, 0.342961, -0.467976)
+shape = SubResource("BoxShape3D_mg2b3")
+
+[node name="Leg4Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.998342, 0.057564, 0, -0.0574686, 0.996686, -0.057564, -0.00331362, 0.0574686, 0.998342, -0.822551, 0.342961, -0.467976)
+shape = SubResource("BoxShape3D_mg2b3")

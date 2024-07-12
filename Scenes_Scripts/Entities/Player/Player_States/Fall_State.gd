@@ -15,7 +15,6 @@ extends BasePlayerState
 @export var idle_state: BasePlayerState
 @export var walk_state: BasePlayerState
 @export var crouch_state: BasePlayerState
-@export var stomp_state: BasePlayerState
 
 
 func enter() -> void:
@@ -30,8 +29,6 @@ func exit() -> void:
 
 ## When a movement button is pressed, change to a corresponding State node
 func input(event: InputEvent) -> BasePlayerState:
-	if Input.is_action_just_pressed("input_crouch"):
-		return stomp_state
 	
 	return null
 

@@ -1,0 +1,919 @@
+// Game: DuckGame
+// Format: Valve
+// entity 0
+{
+"mapversion" "220"
+"classname" "worldspawn"
+"_tb_mod" "Scenes_Scripts"
+"_tb_textures" "textures;textures/Classic_64_Asset_Pack;textures/Classic_64_Asset_Pack/Bricks/Materials;textures/Classic_64_Asset_Pack/Concrete/Materials;textures/Classic_64_Asset_Pack/Doors/Materials;textures/Classic_64_Asset_Pack/Electrical/Materials;textures/Classic_64_Asset_Pack/Floor/Materials;textures/Classic_64_Asset_Pack/Food/Materials;textures/Classic_64_Asset_Pack/Industrial/Materials;textures/Classic_64_Asset_Pack/Metal/Materials;textures/Classic_64_Asset_Pack/Road/Materials;textures/Classic_64_Asset_Pack/Rocks/Materials;textures/Classic_64_Asset_Pack/Roof/Materials;textures/Classic_64_Asset_Pack/Shelves/Materials;textures/Classic_64_Asset_Pack/Tiles;textures/Classic_64_Asset_Pack/Wood/Materials"
+"_tb_def" "builtin:QodotQuakeCompat.fgd"
+// brush 0
+{
+( 0 4 32 ) ( 0 5 32 ) ( 0 4 33 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 12 0 32 ) ( 12 0 33 ) ( 13 0 32 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 12 4 56 ) ( 13 4 56 ) ( 12 5 56 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 140 132 72 ) ( 140 133 72 ) ( 141 132 72 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 140 220 64 ) ( 141 220 64 ) ( 140 220 65 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 192 132 64 ) ( 192 132 65 ) ( 192 133 64 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+// brush 1
+{
+( 68 4 -24 ) ( 68 5 -24 ) ( 68 4 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 104 20 ) ( 72 104 24 ) ( 200 104 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 100 48 ) ( 72 96 48 ) ( 200 96 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 196 132 56 ) ( 196 133 56 ) ( 197 132 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 196 120 8 ) ( 197 120 8 ) ( 196 120 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 132 8 ) ( 72 132 9 ) ( 72 133 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 2
+{
+( 68 4 -24 ) ( 68 5 -24 ) ( 68 4 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 88 32 ) ( 200 88 28 ) ( 72 88 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 100 48 ) ( 72 96 48 ) ( 200 96 48 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 196 132 56 ) ( 196 133 56 ) ( 197 132 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 104 20 ) ( 200 104 24 ) ( 72 104 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 132 8 ) ( 72 132 9 ) ( 72 133 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 3
+{
+( 68 4 -24 ) ( 68 5 -24 ) ( 68 4 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 0 52 ) ( 200 0 48 ) ( 72 0 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 100 48 ) ( 72 96 48 ) ( 200 96 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 196 132 56 ) ( 196 133 56 ) ( 197 132 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 88 32 ) ( 72 88 28 ) ( 200 88 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 132 8 ) ( 72 132 9 ) ( 72 133 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 4
+{
+( 68 120 44 ) ( 68 121 44 ) ( 68 120 45 ) Classic_64_Asset_Pack/Metal/Materials/metal_painted_blue_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 120 44 ) ( 68 120 45 ) ( 69 120 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 120 48 ) ( 69 120 48 ) ( 68 121 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 136 56 ) ( 72 137 56 ) ( 73 136 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 144 48 ) ( 73 144 48 ) ( 72 144 49 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 136 48 ) ( 72 136 49 ) ( 72 137 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 5
+{
+( 68 144 52 ) ( 68 145 52 ) ( 68 144 53 ) Classic_64_Asset_Pack/Metal/Materials/metal_painted_blue_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 64 144 52 ) ( 64 144 53 ) ( 65 144 52 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 64 144 48 ) ( 65 144 48 ) ( 64 145 48 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 148 56 ) ( 72 149 56 ) ( 73 148 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 160 56 ) ( 73 160 56 ) ( 72 160 57 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 148 56 ) ( 72 148 57 ) ( 72 149 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 6
+{
+( 68 152 52 ) ( 68 153 52 ) ( 68 152 53 ) Classic_64_Asset_Pack/Metal/Materials/metal_painted_blue_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 64 160 52 ) ( 64 160 53 ) ( 65 160 52 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 64 152 48 ) ( 65 152 48 ) ( 64 153 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 156 56 ) ( 72 157 56 ) ( 73 156 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 168 56 ) ( 73 168 56 ) ( 72 168 57 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 156 56 ) ( 72 156 57 ) ( 72 157 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 7
+{
+( 100 120 44 ) ( 100 121 44 ) ( 100 120 45 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 120 44 ) ( 100 120 45 ) ( 101 120 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 120 48 ) ( 101 120 48 ) ( 100 121 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 136 56 ) ( 104 137 56 ) ( 105 136 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 136 48 ) ( 105 136 48 ) ( 104 136 49 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 136 48 ) ( 104 136 49 ) ( 104 137 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 8
+{
+( 100 136 52 ) ( 100 137 52 ) ( 100 136 53 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 96 136 52 ) ( 96 136 53 ) ( 97 136 52 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 96 136 48 ) ( 97 136 48 ) ( 96 137 48 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 140 56 ) ( 104 141 56 ) ( 105 140 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 152 56 ) ( 105 152 56 ) ( 104 152 57 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 140 56 ) ( 104 140 57 ) ( 104 141 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 9
+{
+( 100 152 52 ) ( 100 153 52 ) ( 100 152 53 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 96 152 52 ) ( 96 152 53 ) ( 97 152 52 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 96 152 48 ) ( 97 152 48 ) ( 96 153 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 156 56 ) ( 104 157 56 ) ( 105 156 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 168 56 ) ( 105 168 56 ) ( 104 168 57 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 156 56 ) ( 104 156 57 ) ( 104 157 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 10
+{
+( 188 4 -24 ) ( 188 5 -24 ) ( 188 4 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 120 44 ) ( 320 120 40 ) ( 192 120 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 176 4 16 ) ( 177 4 16 ) ( 176 5 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 304 132 56 ) ( 304 133 56 ) ( 305 132 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 304 168 8 ) ( 305 168 8 ) ( 304 168 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 132 8 ) ( 192 132 9 ) ( 192 133 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 11
+{
+( 72 0 16 ) ( 72 1 16 ) ( 72 0 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 0 16 ) ( 72 0 17 ) ( 73 0 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 0 48 ) ( 92 0 48 ) ( 92 128 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 4 56 ) ( 100 5 56 ) ( 101 4 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 4 20 ) ( 101 4 20 ) ( 100 4 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 0 36 ) ( 80 0 44 ) ( 80 128 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 12
+{
+( 72 0 16 ) ( 72 1 16 ) ( 72 0 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 0 16 ) ( 72 0 17 ) ( 73 0 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 0 28 ) ( 92 0 28 ) ( 92 128 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 0 48 ) ( 92 128 48 ) ( 92 0 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 4 20 ) ( 101 4 20 ) ( 100 4 21 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 0 36 ) ( 80 0 44 ) ( 80 128 44 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 13
+{
+( 72 0 16 ) ( 72 1 16 ) ( 72 0 17 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 0 16 ) ( 72 0 17 ) ( 73 0 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 0 16 ) ( 73 0 16 ) ( 72 1 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 0 28 ) ( 92 128 28 ) ( 92 0 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 4 20 ) ( 101 4 20 ) ( 100 4 21 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 0 36 ) ( 80 0 44 ) ( 80 128 44 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 14
+{
+( 80 0 36 ) ( 80 128 44 ) ( 80 0 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 0 16 ) ( 72 0 17 ) ( 73 0 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 0 48 ) ( 92 0 48 ) ( 92 128 48 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 4 56 ) ( 100 5 56 ) ( 101 4 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 4 20 ) ( 101 4 20 ) ( 100 4 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 92 0 36 ) ( 92 0 44 ) ( 92 128 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 15
+{
+( 80 0 36 ) ( 80 128 44 ) ( 80 0 44 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 0 16 ) ( 72 0 17 ) ( 73 0 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 0 16 ) ( 73 0 16 ) ( 72 1 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 0 28 ) ( 92 128 28 ) ( 92 0 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 4 20 ) ( 101 4 20 ) ( 100 4 21 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 92 0 36 ) ( 92 0 44 ) ( 92 128 44 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 16
+{
+( 92 0 36 ) ( 92 128 44 ) ( 92 0 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 0 16 ) ( 72 0 17 ) ( 73 0 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 0 48 ) ( 92 0 48 ) ( 92 128 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 4 56 ) ( 100 5 56 ) ( 101 4 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 4 20 ) ( 101 4 20 ) ( 100 4 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 4 20 ) ( 100 4 21 ) ( 100 5 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 17
+{
+( 92 0 36 ) ( 92 128 44 ) ( 92 0 44 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 0 16 ) ( 72 0 17 ) ( 73 0 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 80 0 28 ) ( 92 0 28 ) ( 92 128 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 0 48 ) ( 92 128 48 ) ( 92 0 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 4 20 ) ( 101 4 20 ) ( 100 4 21 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 4 20 ) ( 100 4 21 ) ( 100 5 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 18
+{
+( 92 0 36 ) ( 92 128 44 ) ( 92 0 44 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 0 16 ) ( 72 0 17 ) ( 73 0 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 0 16 ) ( 73 0 16 ) ( 72 1 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 80 0 28 ) ( 92 128 28 ) ( 92 0 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 4 20 ) ( 101 4 20 ) ( 100 4 21 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 4 20 ) ( 100 4 21 ) ( 100 5 20 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 19
+{
+( 96 204 40 ) ( 96 204 24 ) ( 96 332 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 200 16 ) ( 68 200 17 ) ( 69 200 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 96 204 48 ) ( 88 332 48 ) ( 88 204 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 204 56 ) ( 104 205 56 ) ( 105 204 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 204 20 ) ( 105 204 20 ) ( 104 204 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 204 20 ) ( 104 204 21 ) ( 104 205 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 20
+{
+( 76 204 44 ) ( 76 204 32 ) ( 76 332 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 200 16 ) ( 68 200 17 ) ( 69 200 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 96 204 48 ) ( 88 332 48 ) ( 88 204 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 204 56 ) ( 104 205 56 ) ( 105 204 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 204 20 ) ( 105 204 20 ) ( 104 204 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 96 204 40 ) ( 96 332 24 ) ( 96 204 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 21
+{
+( 68 200 16 ) ( 68 201 16 ) ( 68 200 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 200 16 ) ( 68 200 17 ) ( 69 200 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 96 204 48 ) ( 88 332 48 ) ( 88 204 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 204 56 ) ( 104 205 56 ) ( 105 204 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 204 20 ) ( 105 204 20 ) ( 104 204 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 76 204 44 ) ( 76 332 32 ) ( 76 204 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 22
+{
+( 124 0 40 ) ( 124 0 36 ) ( 124 128 36 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 128 0 -24 ) ( 128 0 -23 ) ( 129 0 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 144 0 48 ) ( 148 0 48 ) ( 148 128 48 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 256 4 56 ) ( 256 5 56 ) ( 257 4 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 256 4 8 ) ( 257 4 8 ) ( 256 4 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 168 0 36 ) ( 168 0 40 ) ( 168 128 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 23
+{
+( 124 0 40 ) ( 124 0 36 ) ( 124 128 36 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 128 0 -24 ) ( 128 0 -23 ) ( 129 0 -24 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 128 -124 16 ) ( 129 -124 16 ) ( 128 -123 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 148 0 28 ) ( 160 128 28 ) ( 160 0 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 256 4 8 ) ( 257 4 8 ) ( 256 4 9 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 168 0 36 ) ( 168 0 40 ) ( 168 128 40 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 24
+{
+( 104 -124 -24 ) ( 104 -123 -24 ) ( 104 -124 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 108 0 -24 ) ( 108 0 -23 ) ( 109 0 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 128 0 28 ) ( 140 0 28 ) ( 140 128 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 124 0 48 ) ( 128 128 48 ) ( 128 0 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 236 4 8 ) ( 237 4 8 ) ( 236 4 9 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 124 0 44 ) ( 124 128 40 ) ( 124 0 40 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 25
+{
+( 104 -124 -24 ) ( 104 -123 -24 ) ( 104 -124 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 108 0 -24 ) ( 108 0 -23 ) ( 109 0 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 124 0 48 ) ( 128 0 48 ) ( 128 128 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 236 4 56 ) ( 236 5 56 ) ( 237 4 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 236 4 8 ) ( 237 4 8 ) ( 236 4 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 124 0 24 ) ( 124 0 28 ) ( 124 128 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 26
+{
+( 104 -124 -24 ) ( 104 -123 -24 ) ( 104 -124 -23 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 108 0 -24 ) ( 108 0 -23 ) ( 109 0 -24 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 108 -124 16 ) ( 109 -124 16 ) ( 108 -123 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 128 0 28 ) ( 140 128 28 ) ( 140 0 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 236 4 8 ) ( 237 4 8 ) ( 236 4 9 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 124 0 24 ) ( 124 0 28 ) ( 124 128 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 27
+{
+( 168 0 36 ) ( 168 128 40 ) ( 168 0 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 108 0 -24 ) ( 108 0 -23 ) ( 109 0 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 124 0 48 ) ( 128 0 48 ) ( 128 128 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 236 4 56 ) ( 236 5 56 ) ( 237 4 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 236 4 8 ) ( 237 4 8 ) ( 236 4 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 188 4 8 ) ( 188 4 9 ) ( 188 5 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 28
+{
+( 168 0 36 ) ( 168 128 40 ) ( 168 0 40 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 108 0 -24 ) ( 108 0 -23 ) ( 109 0 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 128 0 28 ) ( 140 0 28 ) ( 140 128 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 124 0 48 ) ( 128 128 48 ) ( 128 0 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 236 4 8 ) ( 237 4 8 ) ( 236 4 9 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 188 4 8 ) ( 188 4 9 ) ( 188 5 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 29
+{
+( 168 0 36 ) ( 168 128 40 ) ( 168 0 40 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 108 0 -24 ) ( 108 0 -23 ) ( 109 0 -24 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 108 -124 16 ) ( 109 -124 16 ) ( 108 -123 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 128 0 28 ) ( 140 128 28 ) ( 140 0 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 236 4 8 ) ( 237 4 8 ) ( 236 4 9 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 188 4 8 ) ( 188 4 9 ) ( 188 5 8 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 30
+{
+( 188 -52 -24 ) ( 188 -51 -24 ) ( 188 -52 -23 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 76 44 ) ( 320 76 36 ) ( 192 76 36 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 176 -52 16 ) ( 177 -52 16 ) ( 176 -51 16 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 88 28 ) ( 192 92 28 ) ( 320 92 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 96 44 ) ( 192 96 36 ) ( 320 96 36 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 76 8 ) ( 192 76 9 ) ( 192 77 8 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 31
+{
+( 188 -52 -24 ) ( 188 -51 -24 ) ( 188 -52 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_tile_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 76 44 ) ( 320 76 36 ) ( 192 76 36 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 84 48 ) ( 320 88 48 ) ( 192 88 48 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 304 76 56 ) ( 304 77 56 ) ( 305 76 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 96 44 ) ( 192 96 36 ) ( 320 96 36 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 76 8 ) ( 192 76 9 ) ( 192 77 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 32
+{
+( 188 -40 -24 ) ( 188 -39 -24 ) ( 188 -40 -23 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 96 44 ) ( 320 96 36 ) ( 192 96 36 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 176 -40 16 ) ( 177 -40 16 ) ( 176 -39 16 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 100 28 ) ( 192 104 28 ) ( 320 104 28 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 116 44 ) ( 192 116 36 ) ( 320 116 36 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 88 8 ) ( 192 88 9 ) ( 192 89 8 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 33
+{
+( 188 -40 -24 ) ( 188 -39 -24 ) ( 188 -40 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_tile_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 96 44 ) ( 320 96 36 ) ( 192 96 36 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 96 48 ) ( 320 100 48 ) ( 192 100 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 304 88 56 ) ( 304 89 56 ) ( 305 88 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 116 44 ) ( 192 116 36 ) ( 320 116 36 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 88 8 ) ( 192 88 9 ) ( 192 89 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 34
+{
+( 188 -40 -12 ) ( 188 -39 -12 ) ( 188 -40 -11 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_tile_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 96 56 ) ( 320 96 48 ) ( 192 96 48 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 176 -40 28 ) ( 177 -40 28 ) ( 176 -39 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 100 48 ) ( 192 104 48 ) ( 320 104 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 116 56 ) ( 192 116 48 ) ( 320 116 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 88 20 ) ( 192 88 21 ) ( 192 89 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 35
+{
+( 52 4 48 ) ( 52 4 40 ) ( 52 132 40 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 0 -24 ) ( 4 0 -23 ) ( 5 0 -24 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 -124 16 ) ( 5 -124 16 ) ( 4 -123 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 60 4 28 ) ( 52 4 28 ) ( 52 132 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 4 8 ) ( 133 4 8 ) ( 132 4 9 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 4 8 ) ( 68 4 9 ) ( 68 5 8 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 36
+{
+( 52 4 48 ) ( 52 4 40 ) ( 52 132 40 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 0 -24 ) ( 4 0 -23 ) ( 5 0 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 60 4 28 ) ( 52 132 28 ) ( 52 4 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 64 4 48 ) ( 52 4 48 ) ( 52 132 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 4 8 ) ( 133 4 8 ) ( 132 4 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 4 8 ) ( 68 4 9 ) ( 68 5 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 37
+{
+( 52 4 48 ) ( 52 4 40 ) ( 52 132 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 0 -24 ) ( 4 0 -23 ) ( 5 0 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 64 4 48 ) ( 52 132 48 ) ( 52 4 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 4 56 ) ( 132 5 56 ) ( 133 4 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 4 8 ) ( 133 4 8 ) ( 132 4 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 4 8 ) ( 68 4 9 ) ( 68 5 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 38
+{
+( 20 4 44 ) ( 20 4 40 ) ( 20 132 40 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 0 -24 ) ( 4 0 -23 ) ( 5 0 -24 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 -124 16 ) ( 5 -124 16 ) ( 4 -123 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 60 4 28 ) ( 52 4 28 ) ( 52 132 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 4 8 ) ( 133 4 8 ) ( 132 4 9 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 52 4 48 ) ( 52 132 40 ) ( 52 4 40 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 39
+{
+( 20 4 44 ) ( 20 4 40 ) ( 20 132 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 0 -24 ) ( 4 0 -23 ) ( 5 0 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 64 4 48 ) ( 52 132 48 ) ( 52 4 48 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 4 56 ) ( 132 5 56 ) ( 133 4 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 4 8 ) ( 133 4 8 ) ( 132 4 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 52 4 48 ) ( 52 132 40 ) ( 52 4 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 40
+{
+( 4 -124 -24 ) ( 4 -123 -24 ) ( 4 -124 -23 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 0 -24 ) ( 4 0 -23 ) ( 5 0 -24 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 -124 16 ) ( 5 -124 16 ) ( 4 -123 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 60 4 28 ) ( 52 4 28 ) ( 52 132 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 4 8 ) ( 133 4 8 ) ( 132 4 9 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 20 4 44 ) ( 20 132 40 ) ( 20 4 40 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 41
+{
+( 4 -124 -24 ) ( 4 -123 -24 ) ( 4 -124 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 0 -24 ) ( 4 0 -23 ) ( 5 0 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 60 4 28 ) ( 52 132 28 ) ( 52 4 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 64 4 48 ) ( 52 4 48 ) ( 52 132 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 4 8 ) ( 133 4 8 ) ( 132 4 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 20 4 44 ) ( 20 132 40 ) ( 20 4 40 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 42
+{
+( 4 -124 -24 ) ( 4 -123 -24 ) ( 4 -124 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 0 -24 ) ( 4 0 -23 ) ( 5 0 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 64 4 48 ) ( 52 132 48 ) ( 52 4 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 4 56 ) ( 132 5 56 ) ( 133 4 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 4 8 ) ( 133 4 8 ) ( 132 4 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 20 4 44 ) ( 20 132 40 ) ( 20 4 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 43
+{
+( 0 4 -24 ) ( 0 5 -24 ) ( 0 4 -23 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 12 0 -24 ) ( 12 0 -23 ) ( 13 0 -24 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 12 4 0 ) ( 13 4 0 ) ( 12 5 0 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 140 132 16 ) ( 140 133 16 ) ( 141 132 16 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0.9999999999999992 -5.551115123125783e-17 0 0 ] [ -5.551115123125783e-17 -0.9999999999999992 0 0 ] 1.7763568e-15 0.4 0.4
+( 44 116 16 ) ( 36 116 144 ) ( 36 116 16 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 108 16 ) ( 68 96 16 ) ( 68 96 144 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 44
+{
+( 104 68 16 ) ( 104 56 144 ) ( 104 56 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 44 116 16 ) ( 36 116 16 ) ( 36 116 144 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 12 4 0 ) ( 13 4 0 ) ( 12 5 0 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 140 132 16 ) ( 140 133 16 ) ( 141 132 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 140 172 16 ) ( 148 172 16 ) ( 148 172 144 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 132 8 ) ( 192 132 9 ) ( 192 133 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 45
+{
+( 0 4 -24 ) ( 0 5 -24 ) ( 0 4 -23 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 44 116 16 ) ( 36 116 16 ) ( 36 116 144 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 12 4 0 ) ( 13 4 0 ) ( 12 5 0 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 140 132 16 ) ( 140 133 16 ) ( 141 132 16 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 40 172 16 ) ( 32 172 144 ) ( 32 172 16 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 108 16 ) ( 68 96 16 ) ( 68 96 144 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 46
+{
+( 104 84 16 ) ( 104 116 0 ) ( 104 116 16 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 124 72 16 ) ( 104 84 0 ) ( 104 84 16 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 0.7352941176470578 -0.44117647058823706 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 72 16 ) ( 124 72 0 ) ( 124 72 16 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 116 0 ) ( 124 72 0 ) ( 192 72 0 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 116 16 ) ( 104 84 16 ) ( 104 116 16 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 116 16 ) ( 104 116 0 ) ( 192 116 0 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 116 16 ) ( 192 72 0 ) ( 192 72 16 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 47
+{
+( 124 72 16 ) ( 124 0 16 ) ( 124 0 0 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -0.9961946976636419 -0.08715574764090414 0 ] [ 0 0.08715574764090414 -0.9961946976636419 0 ] 5 0.4 0.4
+( 124 0 16 ) ( 192 0 16 ) ( 192 0 0 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0.9961946976636419 0 -0.08715574764090414 0 ] [ -0.08715574764090414 0 -0.9961946976636419 0 ] 5 0.4 0.4
+( 192 0 0 ) ( 192 72 0 ) ( 124 72 0 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -0.9961946976636419 -0.08715574764090414 0 0 ] [ 0.08715574764090414 -0.9961946976636419 0 0 ] 5 0.4 0.4
+( 124 72 16 ) ( 192 72 16 ) ( 192 0 16 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0.9961946976636419 -0.08715574764090414 0 0 ] [ -0.08715574764090414 -0.9961946976636419 0 0 ] 5 0.4 0.4
+( 192 72 0 ) ( 192 72 16 ) ( 124 72 16 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -0.9961946976636419 0 -0.08715574764090414 0 ] [ 0.08715574764090414 0 -0.9961946976636419 0 ] 5 0.4 0.4
+( 192 0 16 ) ( 192 72 16 ) ( 192 72 0 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 0.9961946976636419 -0.08715574764090414 0 ] [ 0 -0.08715574764090414 -0.9961946976636419 0 ] 5 0.4 0.4
+}
+// brush 48
+{
+( 68 108 16 ) ( 68 96 144 ) ( 68 96 16 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 76 168 16 ) ( 84 168 144 ) ( 84 168 16 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 12 4 0 ) ( 13 4 0 ) ( 12 5 0 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 140 132 16 ) ( 140 133 16 ) ( 141 132 16 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 140 212 8 ) ( 141 212 8 ) ( 140 212 9 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 68 16 ) ( 104 56 16 ) ( 104 56 144 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 49
+{
+( 68 0 16 ) ( 68 168 0 ) ( 68 168 16 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 0 16 ) ( 68 0 0 ) ( 68 0 16 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 168 0 ) ( 68 0 0 ) ( 104 0 0 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 168 16 ) ( 68 0 16 ) ( 68 168 16 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 168 16 ) ( 68 168 0 ) ( 104 168 0 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 168 16 ) ( 104 0 0 ) ( 104 0 16 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 50
+{
+( 104 -8 -24 ) ( 104 -7 -24 ) ( 104 -8 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 128 116 -24 ) ( 128 116 -23 ) ( 129 116 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_tile_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 160 116 28 ) ( 168 116 28 ) ( 168 244 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 168 116 48 ) ( 160 116 48 ) ( 160 244 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 256 120 8 ) ( 257 120 8 ) ( 256 120 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 120 8 ) ( 192 120 9 ) ( 192 121 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 51
+{
+( 104 -8 -24 ) ( 104 -7 -24 ) ( 104 -8 -23 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 128 116 -24 ) ( 128 116 -23 ) ( 129 116 -24 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 128 -8 16 ) ( 129 -8 16 ) ( 128 -7 16 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 160 116 28 ) ( 168 244 28 ) ( 168 116 28 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 256 120 8 ) ( 257 120 8 ) ( 256 120 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 120 8 ) ( 192 120 9 ) ( 192 121 8 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 52
+{
+( 104 -8 -24 ) ( 104 -7 -24 ) ( 104 -8 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 128 116 -24 ) ( 128 116 -23 ) ( 129 116 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_tile_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 168 116 48 ) ( 160 244 48 ) ( 160 116 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 256 120 56 ) ( 256 121 56 ) ( 257 120 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 256 120 8 ) ( 257 120 8 ) ( 256 120 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 120 8 ) ( 192 120 9 ) ( 192 121 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 53
+{
+( 100 4 -24 ) ( 100 5 -24 ) ( 100 4 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 84 20 ) ( 104 84 24 ) ( 232 84 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 104 48 ) ( 104 96 48 ) ( 232 96 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 100 56 ) ( 232 96 56 ) ( 104 96 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 228 120 8 ) ( 229 120 8 ) ( 228 120 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 132 8 ) ( 104 132 9 ) ( 104 133 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_tile_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 54
+{
+( 100 4 -24 ) ( 100 5 -24 ) ( 100 4 -23 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 84 20 ) ( 104 84 24 ) ( 232 84 24 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 100 28 ) ( 104 96 28 ) ( 232 96 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 104 48 ) ( 232 96 48 ) ( 104 96 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 228 120 8 ) ( 229 120 8 ) ( 228 120 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 132 8 ) ( 104 132 9 ) ( 104 133 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_tile_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 55
+{
+( 100 4 -24 ) ( 100 5 -24 ) ( 100 4 -23 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 84 20 ) ( 104 84 24 ) ( 232 84 24 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 4 16 ) ( 101 4 16 ) ( 100 5 16 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 100 28 ) ( 232 96 28 ) ( 104 96 28 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 228 120 8 ) ( 229 120 8 ) ( 228 120 9 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 132 8 ) ( 104 132 9 ) ( 104 133 8 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 56
+{
+( 100 -76 -24 ) ( 100 -75 -24 ) ( 100 -76 -23 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 0 20 ) ( 104 0 24 ) ( 232 0 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 16 28 ) ( 104 12 28 ) ( 232 12 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 12 48 ) ( 104 16 48 ) ( 232 16 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 228 20 8 ) ( 229 20 8 ) ( 228 20 9 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 52 8 ) ( 104 52 9 ) ( 104 53 8 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 57
+{
+( 100 -76 -24 ) ( 100 -75 -24 ) ( 100 -76 -23 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 0 20 ) ( 104 0 24 ) ( 232 0 24 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 -76 16 ) ( 101 -76 16 ) ( 100 -75 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 16 28 ) ( 232 12 28 ) ( 104 12 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 228 20 8 ) ( 229 20 8 ) ( 228 20 9 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 52 8 ) ( 104 52 9 ) ( 104 53 8 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 58
+{
+( 100 -76 -24 ) ( 100 -75 -24 ) ( 100 -76 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 0 20 ) ( 104 0 24 ) ( 232 0 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 12 48 ) ( 232 16 48 ) ( 104 16 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 20 56 ) ( 232 16 56 ) ( 104 16 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 228 20 8 ) ( 229 20 8 ) ( 228 20 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 52 8 ) ( 104 52 9 ) ( 104 53 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 59
+{
+( 188 -64 -24 ) ( 188 -63 -24 ) ( 188 -64 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 0 44 ) ( 320 0 36 ) ( 192 0 36 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 72 48 ) ( 320 76 48 ) ( 192 76 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 304 64 56 ) ( 304 65 56 ) ( 305 64 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 188 72 52 ) ( 188 72 44 ) ( 316 72 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 64 8 ) ( 192 64 9 ) ( 192 65 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 60
+{
+( 188 -64 -12 ) ( 188 -63 -12 ) ( 188 -64 -11 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 0 56 ) ( 320 0 48 ) ( 192 0 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 176 -64 28 ) ( 177 -64 28 ) ( 176 -63 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 76 48 ) ( 192 80 48 ) ( 320 80 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 188 72 52 ) ( 188 72 44 ) ( 316 72 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 64 20 ) ( 192 64 21 ) ( 192 65 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 61
+{
+( 188 -64 -24 ) ( 188 -63 -24 ) ( 188 -64 -23 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 0 44 ) ( 320 0 36 ) ( 192 0 36 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 176 -64 16 ) ( 177 -64 16 ) ( 176 -63 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 76 28 ) ( 192 80 28 ) ( 320 80 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 188 72 52 ) ( 188 72 44 ) ( 316 72 44 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 64 8 ) ( 192 64 9 ) ( 192 65 8 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 62
+{
+( 188 -64 -24 ) ( 188 -63 -24 ) ( 188 -64 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_tile_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 188 72 52 ) ( 316 72 44 ) ( 188 72 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 72 48 ) ( 320 76 48 ) ( 192 76 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 304 64 56 ) ( 304 65 56 ) ( 305 64 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 76 44 ) ( 192 76 36 ) ( 320 76 36 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 64 8 ) ( 192 64 9 ) ( 192 65 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 63
+{
+( 188 -64 -12 ) ( 188 -63 -12 ) ( 188 -64 -11 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_tile_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 188 72 52 ) ( 316 72 44 ) ( 188 72 44 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 176 -64 28 ) ( 177 -64 28 ) ( 176 -63 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 76 48 ) ( 192 80 48 ) ( 320 80 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 76 56 ) ( 192 76 48 ) ( 320 76 48 ) Classic_64_Asset_Pack/Wood/Materials/wood_plank_07 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 64 20 ) ( 192 64 21 ) ( 192 65 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 64
+{
+( 188 -64 -24 ) ( 188 -63 -24 ) ( 188 -64 -23 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 188 72 52 ) ( 316 72 44 ) ( 188 72 44 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 176 -64 16 ) ( 177 -64 16 ) ( 176 -63 16 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 76 28 ) ( 192 80 28 ) ( 320 80 28 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 192 76 44 ) ( 192 76 36 ) ( 320 76 36 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 64 8 ) ( 192 64 9 ) ( 192 65 8 ) Classic_64_Asset_Pack/Bricks/Materials/brick_medium_brown [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 65
+{
+( 68 4 -24 ) ( 68 5 -24 ) ( 68 4 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 0 32 ) ( 72 0 36 ) ( 200 0 36 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 72 28 ) ( 68 56 28 ) ( 196 56 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 100 48 ) ( 200 96 48 ) ( 72 96 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 88 32 ) ( 72 88 28 ) ( 200 88 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 132 8 ) ( 72 132 9 ) ( 72 133 8 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 66
+{
+( 68 4 -24 ) ( 68 5 -24 ) ( 68 4 -23 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 0 32 ) ( 72 0 36 ) ( 200 0 36 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 4 16 ) ( 69 4 16 ) ( 68 5 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 68 72 28 ) ( 196 56 28 ) ( 68 56 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 88 32 ) ( 72 88 28 ) ( 200 88 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 132 8 ) ( 72 132 9 ) ( 72 133 8 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 67
+{
+( 0 4 -24 ) ( 0 5 -24 ) ( 0 4 -23 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -12 0 -24 ) ( -12 0 -23 ) ( -11 0 -24 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -12 4 16 ) ( -11 4 16 ) ( -12 5 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 4 12 28 ) ( 4 24 28 ) ( 132 24 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 4 116 32 ) ( 132 116 48 ) ( 4 116 48 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 132 8 ) ( 4 132 9 ) ( 4 133 8 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 68
+{
+( 0 4 -24 ) ( 0 5 -24 ) ( 0 4 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -12 0 -24 ) ( -12 0 -23 ) ( -11 0 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 12 28 ) ( 132 24 28 ) ( 4 24 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 116 132 56 ) ( 116 133 56 ) ( 117 132 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 4 116 32 ) ( 132 116 48 ) ( 4 116 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 132 8 ) ( 4 132 9 ) ( 4 133 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 69
+{
+( 0 -8 -24 ) ( 0 -7 -24 ) ( 0 -8 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 116 -24 ) ( 4 116 -23 ) ( 5 116 -24 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 -8 16 ) ( 5 -8 16 ) ( 4 -7 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 24 116 28 ) ( 12 116 28 ) ( 12 244 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 120 8 ) ( 133 120 8 ) ( 132 120 9 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 120 8 ) ( 68 120 9 ) ( 68 121 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 70
+{
+( 68 4 -24 ) ( 68 5 -24 ) ( 68 4 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 104 20 ) ( 72 104 24 ) ( 200 104 24 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 112 28 ) ( 68 108 28 ) ( 196 108 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 100 48 ) ( 200 96 48 ) ( 72 96 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 196 120 8 ) ( 197 120 8 ) ( 196 120 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 132 8 ) ( 72 132 9 ) ( 72 133 8 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 71
+{
+( 104 84 16 ) ( 104 0 16 ) ( 104 0 0 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ 0 -0.8571428571428571 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 124 0 0 ) ( 124 72 0 ) ( 104 84 0 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 84 16 ) ( 124 72 16 ) ( 124 0 16 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 124 72 16 ) ( 104 60 16 ) ( 104 60 144 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ 0.8574929257125442 0.5144957554275266 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 124 72 0 ) ( 124 72 16 ) ( 104 84 16 ) Classic_64_Asset_Pack/Roof/Materials/shingles_wood_01 [ -0.7352941176470577 0.44117647058823706 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 72
+{
+( 104 84 16 ) ( 104 0 16 ) ( 104 0 0 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 -0.8538811694259789 -0.0747049265493465 0 ] [ 0 0.08715574764090414 -0.9961946976636419 0 ] 5 0.4 0.4
+( 124 72 16 ) ( 104 60 144 ) ( 104 60 16 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -0.8542299058789199 -0.5125379435273522 -0.08715574764090418 0 ] [ 0.07473543703726314 0.044841262222357854 -0.9961946976636419 0 ] 5 0.4 0.4
+( 104 0 16 ) ( 124 0 16 ) ( 124 0 0 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0.9961946976636419 0 -0.08715574764090414 0 ] [ -0.08715574764090414 0 -0.9961946976636419 0 ] 5 0.4 0.4
+( 124 0 0 ) ( 124 72 0 ) ( 104 84 0 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ -0.9961946976636419 -0.08715574764090414 0 0 ] [ 0.08715574764090414 -0.9961946976636419 0 0 ] 5 0.4 0.4
+( 104 84 16 ) ( 124 72 16 ) ( 124 0 16 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0.9961946976636419 -0.08715574764090414 0 0 ] [ -0.08715574764090414 -0.9961946976636419 0 0 ] 5 0.4 0.4
+( 124 0 16 ) ( 124 72 16 ) ( 124 72 0 ) Classic_64_Asset_Pack/Floor/Materials/carpet_black_01 [ 0 0.9961946976636419 -0.08715574764090414 0 ] [ 0 -0.08715574764090414 -0.9961946976636419 0 ] 5 0.4 0.4
+}
+// brush 73
+{
+( 100 120 16 ) ( 100 121 16 ) ( 100 120 17 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 120 16 ) ( 100 120 17 ) ( 101 120 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 128 28 ) ( 100 124 28 ) ( 228 124 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 136 48 ) ( 104 137 48 ) ( 105 136 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 136 20 ) ( 105 136 20 ) ( 104 136 21 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 136 20 ) ( 104 136 21 ) ( 104 137 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 74
+{
+( 100 120 16 ) ( 100 121 16 ) ( 100 120 17 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 120 16 ) ( 100 120 17 ) ( 101 120 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 120 16 ) ( 101 120 16 ) ( 100 121 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 128 28 ) ( 228 124 28 ) ( 100 124 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 136 20 ) ( 105 136 20 ) ( 104 136 21 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 136 20 ) ( 104 136 21 ) ( 104 137 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 75
+{
+( 100 172 16 ) ( 100 173 16 ) ( 100 172 17 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 168 16 ) ( 100 168 17 ) ( 101 168 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 172 16 ) ( 101 172 16 ) ( 100 173 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 160 28 ) ( 100 172 28 ) ( 228 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 200 20 ) ( 105 200 20 ) ( 104 200 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 200 20 ) ( 104 200 21 ) ( 104 201 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 76
+{
+( 104 168 16 ) ( 104 169 16 ) ( 104 168 17 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 124 168 16 ) ( 124 168 17 ) ( 125 168 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 124 168 16 ) ( 125 168 16 ) ( 124 169 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 160 28 ) ( 100 172 28 ) ( 228 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 168 172 20 ) ( 169 172 20 ) ( 168 172 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 172 20 ) ( 192 172 21 ) ( 192 173 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 77
+{
+( 96 204 40 ) ( 96 204 24 ) ( 96 332 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 200 16 ) ( 68 200 17 ) ( 69 200 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 200 16 ) ( 69 200 16 ) ( 68 201 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 160 28 ) ( 100 172 28 ) ( 228 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 204 20 ) ( 105 204 20 ) ( 104 204 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 204 20 ) ( 104 204 21 ) ( 104 205 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 78
+{
+( 100 152 16 ) ( 100 153 16 ) ( 100 152 17 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 152 16 ) ( 100 152 17 ) ( 101 152 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 152 16 ) ( 101 152 16 ) ( 100 153 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 160 28 ) ( 100 172 28 ) ( 228 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 168 20 ) ( 105 168 20 ) ( 104 168 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 168 20 ) ( 104 168 21 ) ( 104 169 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 79
+{
+( 104 168 16 ) ( 104 169 16 ) ( 104 168 17 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 124 168 16 ) ( 124 168 17 ) ( 125 168 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 160 28 ) ( 228 172 28 ) ( 100 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 168 172 56 ) ( 168 173 56 ) ( 169 172 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 168 172 20 ) ( 169 172 20 ) ( 168 172 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 192 172 20 ) ( 192 172 21 ) ( 192 173 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 80
+{
+( 96 204 40 ) ( 96 204 24 ) ( 96 332 24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 200 16 ) ( 68 200 17 ) ( 69 200 16 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 160 28 ) ( 228 172 28 ) ( 100 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 96 204 48 ) ( 88 204 48 ) ( 88 332 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 204 20 ) ( 105 204 20 ) ( 104 204 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 204 20 ) ( 104 204 21 ) ( 104 205 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 81
+{
+( 100 152 16 ) ( 100 153 16 ) ( 100 152 17 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 152 16 ) ( 100 152 17 ) ( 101 152 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 160 28 ) ( 228 172 28 ) ( 100 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 168 48 ) ( 104 169 48 ) ( 105 168 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 168 20 ) ( 105 168 20 ) ( 104 168 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 168 20 ) ( 104 168 21 ) ( 104 169 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 82
+{
+( 68 152 16 ) ( 68 153 16 ) ( 68 152 17 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 160 16 ) ( 68 160 17 ) ( 69 160 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 152 16 ) ( 69 152 16 ) ( 68 153 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 164 28 ) ( 72 172 28 ) ( 200 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 168 20 ) ( 73 168 20 ) ( 72 168 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 168 20 ) ( 72 168 21 ) ( 72 169 20 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 83
+{
+( 0 168 16 ) ( 0 169 16 ) ( 0 168 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 28 168 16 ) ( 28 168 17 ) ( 29 168 16 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 28 168 16 ) ( 29 168 16 ) ( 28 169 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 164 28 ) ( 72 172 28 ) ( 200 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 172 20 ) ( 73 172 20 ) ( 72 172 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 172 20 ) ( 72 172 21 ) ( 72 173 20 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 84
+{
+( 68 172 16 ) ( 68 173 16 ) ( 68 172 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 172 16 ) ( 68 172 17 ) ( 69 172 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 172 16 ) ( 69 172 16 ) ( 68 173 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 164 28 ) ( 72 172 28 ) ( 200 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 200 20 ) ( 73 200 20 ) ( 72 200 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 200 20 ) ( 72 200 21 ) ( 72 201 20 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 85
+{
+( 68 200 16 ) ( 68 201 16 ) ( 68 200 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 200 16 ) ( 68 200 17 ) ( 69 200 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 200 16 ) ( 69 200 16 ) ( 68 201 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 164 28 ) ( 72 172 28 ) ( 200 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 204 20 ) ( 105 204 20 ) ( 104 204 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 76 204 44 ) ( 76 332 32 ) ( 76 204 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 86
+{
+( 68 152 16 ) ( 68 153 16 ) ( 68 152 17 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 160 16 ) ( 68 160 17 ) ( 69 160 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 164 28 ) ( 200 172 28 ) ( 72 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 168 48 ) ( 72 169 48 ) ( 73 168 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 168 20 ) ( 73 168 20 ) ( 72 168 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 168 20 ) ( 72 168 21 ) ( 72 169 20 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 87
+{
+( 68 200 16 ) ( 68 201 16 ) ( 68 200 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 200 16 ) ( 68 200 17 ) ( 69 200 16 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 164 28 ) ( 200 172 28 ) ( 72 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 96 204 48 ) ( 88 204 48 ) ( 88 332 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 204 20 ) ( 105 204 20 ) ( 104 204 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 76 204 44 ) ( 76 332 32 ) ( 76 204 32 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 88
+{
+( 68 120 16 ) ( 68 121 16 ) ( 68 120 17 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 120 16 ) ( 68 120 17 ) ( 69 120 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 120 16 ) ( 69 120 16 ) ( 68 121 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 124 28 ) ( 72 132 28 ) ( 200 132 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 144 20 ) ( 73 144 20 ) ( 72 144 21 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 136 20 ) ( 72 136 21 ) ( 72 137 20 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 89
+{
+( 68 4 -24 ) ( 68 5 -24 ) ( 68 4 -23 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 104 20 ) ( 72 104 24 ) ( 200 104 24 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 4 16 ) ( 69 4 16 ) ( 68 5 16 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 68 112 28 ) ( 196 108 28 ) ( 68 108 28 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 196 120 8 ) ( 197 120 8 ) ( 196 120 9 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 132 8 ) ( 72 132 9 ) ( 72 133 8 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_plank_02 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 90
+{
+( 68 120 16 ) ( 68 121 16 ) ( 68 120 17 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 120 16 ) ( 68 120 17 ) ( 69 120 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 124 28 ) ( 200 132 28 ) ( 72 132 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 136 48 ) ( 72 137 48 ) ( 73 136 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 144 20 ) ( 73 144 20 ) ( 72 144 21 ) Classic_64_Asset_Pack/Wood/Materials/wood_fancy_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 136 20 ) ( 72 136 21 ) ( 72 137 20 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 91
+{
+( 0 -8 -24 ) ( 0 -7 -24 ) ( 0 -8 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 116 -24 ) ( 4 116 -23 ) ( 5 116 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 24 116 28 ) ( 12 244 28 ) ( 12 116 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 64 120 48 ) ( 56 120 48 ) ( 56 248 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 120 8 ) ( 133 120 8 ) ( 132 120 9 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 120 8 ) ( 68 120 9 ) ( 68 121 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 92
+{
+( 0 -8 -24 ) ( 0 -7 -24 ) ( 0 -8 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 116 -24 ) ( 4 116 -23 ) ( 5 116 -24 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 64 120 48 ) ( 56 248 48 ) ( 56 120 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 120 56 ) ( 132 121 56 ) ( 133 120 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 132 120 8 ) ( 133 120 8 ) ( 132 120 9 ) Classic_64_Asset_Pack/Metal/Materials/metal_painted_blue_01 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 120 8 ) ( 68 120 9 ) ( 68 121 8 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 93
+{
+( 0 4 -24 ) ( 0 5 -24 ) ( 0 4 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 120 44 ) ( 132 120 40 ) ( 4 120 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( -12 4 16 ) ( -11 4 16 ) ( -12 5 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 4 128 48 ) ( 4 136 48 ) ( 132 136 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 116 168 8 ) ( 117 168 8 ) ( 116 168 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 132 8 ) ( 4 132 9 ) ( 4 133 8 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 94
+{
+( 0 4 -24 ) ( 0 5 -24 ) ( 0 4 -23 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 120 44 ) ( 132 120 40 ) ( 4 120 40 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 128 48 ) ( 132 136 48 ) ( 4 136 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 116 132 56 ) ( 116 133 56 ) ( 117 132 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 116 168 8 ) ( 117 168 8 ) ( 116 168 9 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 4 132 8 ) ( 4 132 9 ) ( 4 133 8 ) Classic_64_Asset_Pack/Metal/Materials/metal_painted_blue_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 95
+{
+( 0 168 16 ) ( 0 169 16 ) ( 0 168 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 28 168 16 ) ( 28 168 17 ) ( 29 168 16 ) Classic_64_Asset_Pack/Metal/Materials/metal_painted_blue_01 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 28 168 48 ) ( 36 168 48 ) ( 36 296 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 172 56 ) ( 72 173 56 ) ( 73 172 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 172 20 ) ( 73 172 20 ) ( 72 172 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 172 20 ) ( 72 172 21 ) ( 72 173 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 96
+{
+( 0 168 16 ) ( 0 169 16 ) ( 0 168 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 28 168 16 ) ( 28 168 17 ) ( 29 168 16 ) Classic_64_Asset_Pack/Bricks/Materials/brick_small_white_dirty [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 164 28 ) ( 200 172 28 ) ( 72 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 28 168 48 ) ( 36 296 48 ) ( 36 168 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 172 20 ) ( 73 172 20 ) ( 72 172 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 172 20 ) ( 72 172 21 ) ( 72 173 20 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 97
+{
+( 100 172 16 ) ( 100 173 16 ) ( 100 172 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 168 16 ) ( 100 168 17 ) ( 101 168 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 196 48 ) ( 100 188 48 ) ( 228 188 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 200 56 ) ( 104 201 56 ) ( 105 200 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 200 20 ) ( 105 200 20 ) ( 104 200 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 200 20 ) ( 104 200 21 ) ( 104 201 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 98
+{
+( 100 172 16 ) ( 100 173 16 ) ( 100 172 17 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 168 16 ) ( 100 168 17 ) ( 101 168 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 100 160 28 ) ( 228 172 28 ) ( 100 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 100 196 48 ) ( 228 188 48 ) ( 100 188 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 104 200 20 ) ( 105 200 20 ) ( 104 200 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 104 200 20 ) ( 104 200 21 ) ( 104 201 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 99
+{
+( 68 172 16 ) ( 68 173 16 ) ( 68 172 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 172 16 ) ( 68 172 17 ) ( 69 172 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 164 28 ) ( 200 172 28 ) ( 72 172 28 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 180 48 ) ( 72 188 48 ) ( 200 188 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 200 20 ) ( 73 200 20 ) ( 72 200 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 200 20 ) ( 72 200 21 ) ( 72 201 20 ) Classic_64_Asset_Pack/Floor/Materials/carpet_darkgray_01 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+// brush 100
+{
+( 68 172 16 ) ( 68 173 16 ) ( 68 172 17 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 68 172 16 ) ( 68 172 17 ) ( 69 172 16 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 180 48 ) ( 200 188 48 ) ( 72 188 48 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 200 56 ) ( 72 201 56 ) ( 73 200 56 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.4 0.4
+( 72 200 20 ) ( 73 200 20 ) ( 72 200 21 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+( 72 200 20 ) ( 72 200 21 ) ( 72 201 20 ) Classic_64_Asset_Pack/Concrete/Materials/concrete_15 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.4 0.4
+}
+}

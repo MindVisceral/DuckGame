@@ -22,7 +22,6 @@ var speed_multiplier: float ## Not needed, no other state has a higher multipier
 @export var walk_state: BasePlayerState
 @export var crouch_state: BasePlayerState
 @export var jump_state: BasePlayerState
-@export var stomp_state: BasePlayerState
 
 ## Timer, so that the ground isn't detected immediately after a jump
 ## Check Editor description for an explanation
@@ -52,8 +51,6 @@ func exit() -> void:
 
 ## When a movement button is pressed, change to a corresponding State node
 func input(event: InputEvent) -> BasePlayerState:
-	if Input.is_action_just_pressed("input_crouch"):
-		return stomp_state
 	
 	return null
 

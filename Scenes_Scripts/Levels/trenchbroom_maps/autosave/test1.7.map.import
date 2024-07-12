@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://cupinji4aagqb"
+path="res://.godot/imported/test1.7.map-b36398506ec014c0ca69a52e6d62c4d9.tres"
+
+[deps]
+
+source_file="res://Scenes_Scripts/Levels/trenchbroom_maps/autosave/test1.7.map"
+dest_files=["res://.godot/imported/test1.7.map-b36398506ec014c0ca69a52e6d62c4d9.tres"]
+
+[params]
+

@@ -1,0 +1,99 @@
+[gd_scene load_steps=10 format=3 uid="uid://dm5d2ll615kdq"]
+
+[ext_resource type="PackedScene" uid="uid://bsmqr1hkriyn6" path="res://Blender/microwave.gltf" id="1_evyjy"]
+[ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/Microwave.gd" id="1_kfyfh"]
+[ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="2_4vhcf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bdhhb"]
+size = Vector3(0.695557, 0.368286, 0.448303)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7rj2x"]
+size = Vector3(0.569458, 0.368286, 0.108429)
+
+[sub_resource type="Animation" id="Animation_3oqdw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("microwave/Microwave_01/Microwave_door_01:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.43051e-14, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ymd55"]
+resource_name = "close_door"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("microwave/Microwave_01/Microwave_door_01:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1.8, 1),
+"update": 0,
+"values": [Vector3(0, 2.35619, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0psy6"]
+resource_name = "open_door"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("microwave/Microwave_01/Microwave_door_01:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.3, 1),
+"update": 0,
+"values": [Vector3(-1.43051e-14, 0, 0), Vector3(0, 2.35619, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0j14f"]
+_data = {
+"RESET": SubResource("Animation_3oqdw"),
+"close_door": SubResource("Animation_ymd55"),
+"open_door": SubResource("Animation_0psy6")
+}
+
+[node name="Microwave" type="StaticBody3D"]
+collision_layer = 64
+collision_mask = 5
+script = ExtResource("1_kfyfh")
+
+[node name="microwave" parent="." instance=ExtResource("1_evyjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.140475, 0.185116, -0.0816057)
+
+[node name="Microwave_door_01" parent="microwave/Microwave_01" index="0"]
+transform = Transform3D(1.03931, 0, 0, 0, 0.993409, 1.42108e-14, 0, -1.42108e-14, 0.993409, -1.50712, 0, -0.776613)
+
+[node name="MicrowaveCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0320101, 0.183108, 0.0162048)
+shape = SubResource("BoxShape3D_bdhhb")
+
+[node name="Interactable" parent="." instance=ExtResource("2_4vhcf")]
+
+[node name="CollisionShape3D" parent="Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0285752, 0.18733, -0.149869)
+shape = SubResource("BoxShape3D_7rj2x")
+
+[node name="CollisionShape3D" parent="Interactable/InteractableRange" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.184536, -0.151508)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0j14f")
+}
+
+[connection signal="interact" from="Interactable" to="." method="_on_interactable_interact"]
+
+[editable path="microwave"]
+[editable path="Interactable"]

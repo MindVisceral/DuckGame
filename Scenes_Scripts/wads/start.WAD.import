@@ -1,0 +1,16 @@
+[remap]
+
+importer="qodot.wad"
+type="Resource"
+uid="uid://bty8bxj6mp0bg"
+path="res://.godot/imported/start.WAD-6917bedb0c5ca38eaa0b99b417740298.res"
+
+[deps]
+
+source_file="res://Scenes_Scripts/wads/start.WAD"
+dest_files=["res://.godot/imported/start.WAD-6917bedb0c5ca38eaa0b99b417740298.res"]
+
+[params]
+
+palette_file="res://addons/qodot/palette.lmp"
+generate_mipmaps=true

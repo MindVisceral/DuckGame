@@ -56,7 +56,7 @@ extends CharacterBody3D
 
 
 ## Default Collider width in units
-@export_range(0.1, 1, 0.05) var default_width: float = 0.45
+@export_range(0.1, 1, 0.05) var default_width: float = 0.15
 
 
 ## Head's default height (Y coordinate) in units

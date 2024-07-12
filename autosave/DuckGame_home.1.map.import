@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://22v7yaw1x61v"
+path="res://.godot/imported/DuckGame_home.1.map-5d3e5a569f512e8e30b437c657f06b64.tres"
+
+[deps]
+
+source_file="res://autosave/DuckGame_home.1.map"
+dest_files=["res://.godot/imported/DuckGame_home.1.map-5d3e5a569f512e8e30b437c657f06b64.tres"]
+
+[params]
+

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cshuyxat1wpeh"
-path.s3tc="res://.godot/imported/military-panel_ao.png-0ec093cd2673630910f442f8288e9bdf.s3tc.ctex"
+path.s3tc="res://.godot/imported/military-panel_ao.png-2b335b2c8a46497397fb731dd0e39412.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Scenes & Scripts/Textures/pbr/military-panel/military-panel_ao.png"
-dest_files=["res://.godot/imported/military-panel_ao.png-0ec093cd2673630910f442f8288e9bdf.s3tc.ctex"]
+source_file="res://Scenes_Scripts/Textures/pbr/military-panel/military-panel_ao.png"
+dest_files=["res://.godot/imported/military-panel_ao.png-2b335b2c8a46497397fb731dd0e39412.s3tc.ctex"]
 
 [params]
 

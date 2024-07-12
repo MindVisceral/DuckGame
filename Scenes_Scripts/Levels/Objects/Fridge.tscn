@@ -1,0 +1,238 @@
+[gd_scene load_steps=18 format=3 uid="uid://ilsitja3vrbt"]
+
+[ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/Fridge.gd" id="1_caj86"]
+[ext_resource type="PackedScene" uid="uid://ddeaevqw0fb4h" path="res://Blender/FINAL_fridge_tall.glb" id="1_g8kjj"]
+[ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="2_ed88q"]
+[ext_resource type="PackedScene" uid="uid://cepx8cc4craan" path="res://Blender/small_light.gltf" id="3_owcwg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rlw1q"]
+size = Vector3(1, 0.639221, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6hd6s"]
+size = Vector3(1, 0.121048, 0.904785)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_woqvi"]
+size = Vector3(1.00122, 1.35464, 0.0807648)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7nthp"]
+size = Vector3(0.0883179, 1.22223, 0.806763)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_07o0c"]
+size = Vector3(0.0883179, 1.22223, 0.806763)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eera2"]
+size = Vector3(1, 1.27, 0.19)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_exvrw"]
+size = Vector3(1, 0.637451, 0.189697)
+
+[sub_resource type="Animation" id="Animation_2vg4i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FINAL_fridge_tall/Armature/Skeleton3D/Door_freezer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.13951e-34, -2.84217e-14, -4.00931e-21)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FINAL_fridge_tall/Armature/Skeleton3D/Door_fridge:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.42109e-14, 1.42157e-15, -2.84217e-14)]
+}
+
+[sub_resource type="Animation" id="Animation_b6pna"]
+resource_name = "close_freezer"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FINAL_fridge_tall/Armature/Skeleton3D/Door_freezer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1.8, 1),
+"update": 0,
+"values": [Vector3(0, 2.35619, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x8udb"]
+resource_name = "close_fridge"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FINAL_fridge_tall/Armature/Skeleton3D/Door_fridge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1.8, 1),
+"update": 0,
+"values": [Vector3(0, 2.35619, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_q3tvq"]
+resource_name = "open_freezer"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FINAL_fridge_tall/Armature/Skeleton3D/Door_freezer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.3, 1),
+"update": 0,
+"values": [Vector3(1.13951e-34, -2.84217e-14, -4.00931e-21), Vector3(0, 2.35619, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jnj3o"]
+resource_name = "open_fridge"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FINAL_fridge_tall/Armature/Skeleton3D/Door_fridge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.3, 1),
+"update": 0,
+"values": [Vector3(-1.42109e-14, 1.42157e-15, -2.84217e-14), Vector3(0, 2.35619, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ocwox"]
+_data = {
+"RESET": SubResource("Animation_2vg4i"),
+"close_freezer": SubResource("Animation_b6pna"),
+"close_fridge": SubResource("Animation_x8udb"),
+"open_freezer": SubResource("Animation_q3tvq"),
+"open_fridge": SubResource("Animation_jnj3o")
+}
+
+[node name="Fridge" type="StaticBody3D"]
+collision_layer = 64
+collision_mask = 5
+script = ExtResource("1_caj86")
+
+[node name="FINAL_fridge_tall" parent="." instance=ExtResource("1_g8kjj")]
+
+[node name="Skeleton3D" parent="FINAL_fridge_tall/Armature" index="0"]
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(9.9748e-08, -9.9748e-08, 0.707107, 0.707107)
+bones/4/rotation = Quaternion(-9.9748e-08, 9.9748e-08, -0.707107, 0.707107)
+
+[node name="Door_fridge" parent="FINAL_fridge_tall/Armature/Skeleton3D" index="0"]
+transform = Transform3D(1, 2.84217e-14, 1.42157e-15, -2.84217e-14, 1, 1.42109e-14, -1.42157e-15, -1.42109e-14, 1, 0.45144, 0.669023, 0.454514)
+
+[node name="Door_freezer" parent="FINAL_fridge_tall/Armature/Skeleton3D" index="1"]
+transform = Transform3D(1, 4.00931e-21, -2.84217e-14, -4.00931e-21, 1, -1.13951e-34, 2.84217e-14, 2.27902e-34, 1, 0.451531, 1.63774, 0.446294)
+
+[node name="small_light_freezer" parent="FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body" index="1" instance=ExtResource("3_owcwg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85446, 0)
+
+[node name="Lamps_02" parent="FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_freezer" index="0"]
+transform = Transform3D(0.179399, 0, 0.0884072, 0, 0.2, 0, -0.0884072, 0, 0.179399, 0, 0, 0)
+cast_shadow = 0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_freezer"]
+light_energy = 0.7
+light_indirect_energy = 0.5
+light_volumetric_fog_energy = 0.0
+light_specular = 0.1
+shadow_enabled = true
+omni_range = 0.6
+omni_attenuation = 0.840898
+omni_shadow_mode = 0
+
+[node name="small_light_fridge" parent="FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body" index="2" instance=ExtResource("3_owcwg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25514, 0)
+
+[node name="Lamps_02" parent="FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_fridge" index="0"]
+transform = Transform3D(0.179399, 0, 0.0884072, 0, 0.2, 0, -0.0884072, 0, 0.179399, 0, 0, 0)
+cast_shadow = 0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_fridge"]
+light_energy = 0.7
+light_indirect_energy = 7.0
+light_volumetric_fog_energy = 1.25
+light_specular = 0.2
+shadow_enabled = true
+spot_range = 1.65
+spot_attenuation = 0.258816
+spot_angle = 60.0
+spot_angle_attenuation = 1.03526
+
+[node name="Controller" parent="FINAL_fridge_tall/Armature/Skeleton3D" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.364519, 1.20031, 0.139305)
+
+[node name="Shelf_bottom" parent="FINAL_fridge_tall/Armature/Skeleton3D" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.579313, -0.0510678)
+
+[node name="Shelf_top" parent="FINAL_fridge_tall/Armature/Skeleton3D" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.995155, -0.0510678)
+
+[node name="FreezerCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68039, 0)
+shape = SubResource("BoxShape3D_rlw1q")
+
+[node name="BottomCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0786057, -0.0476074)
+shape = SubResource("BoxShape3D_6hd6s")
+disabled = true
+
+[node name="BackCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000610352, 0.682327, -0.453401)
+shape = SubResource("BoxShape3D_woqvi")
+
+[node name="RightWallCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.461448, 0.749664, -0.0966187)
+shape = SubResource("BoxShape3D_7nthp")
+
+[node name="LeftWallCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.465506, 0.749664, -0.0966187)
+shape = SubResource("BoxShape3D_07o0c")
+
+[node name="Interactable_fridge" parent="." instance=ExtResource("2_ed88q")]
+
+[node name="CollisionShape3D" parent="Interactable_fridge" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64, 0.405731)
+shape = SubResource("BoxShape3D_eera2")
+
+[node name="Interactable_freezer" parent="." instance=ExtResource("2_ed88q")]
+
+[node name="CollisionShape3D" parent="Interactable_freezer" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6789, 0.405151)
+shape = SubResource("BoxShape3D_exvrw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ocwox")
+}
+
+[connection signal="interact" from="Interactable_fridge" to="." method="_on_interactable_fridge_interact"]
+[connection signal="interact" from="Interactable_freezer" to="." method="_on_interactable_freezer_interact"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+
+[editable path="FINAL_fridge_tall"]
+[editable path="FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_freezer"]
+[editable path="FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_fridge"]
+[editable path="Interactable_fridge"]
+[editable path="Interactable_freezer"]

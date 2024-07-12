@@ -63,7 +63,7 @@ func _physics_process(delta: float) -> void:
 			interactables[0].focused.emit()
 			
 			## If the Player wants to, they may interact with this Interactable
-			if Input.is_action_just_pressed("interact"):
+			if Input.is_action_just_pressed("input_interact"):
 				player.InteractableCast.get_collider(0).interact.emit()
 			
 		
@@ -92,7 +92,7 @@ func _physics_process(delta: float) -> void:
 			closest_interactable.focused.emit()
 			
 			## And if the Player wants to, they may interact with this Interactable
-			if Input.is_action_just_pressed("interact"):
+			if Input.is_action_just_pressed("input_interact"):
 				closest_interactable.interact.emit()
 			
 		

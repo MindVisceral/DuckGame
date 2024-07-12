@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dj46i4tdud6ji"
-path.s3tc="res://.godot/imported/sun.png-38138e2fc1b770e4667e6da09b049b58.s3tc.ctex"
+path.s3tc="res://.godot/imported/sun.png-e461b35777b2d0b7c6da5890587371e4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Scenes & Scripts/Textures/orrery/sun.png"
-dest_files=["res://.godot/imported/sun.png-38138e2fc1b770e4667e6da09b049b58.s3tc.ctex"]
+source_file="res://Scenes_Scripts/Textures/orrery/sun.png"
+dest_files=["res://.godot/imported/sun.png-e461b35777b2d0b7c6da5890587371e4.s3tc.ctex"]
 
 [params]
 

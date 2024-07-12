@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi62fnfvufj8i"
-path.s3tc="res://.godot/imported/skip.png-694d3b930fec179ec1504e3115cf7428.s3tc.ctex"
+path.s3tc="res://.godot/imported/skip.png-d9a68bd2923fd23ca4cf1c9f3f3b6626.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Scenes & Scripts/Textures/special/skip.png"
-dest_files=["res://.godot/imported/skip.png-694d3b930fec179ec1504e3115cf7428.s3tc.ctex"]
+source_file="res://Scenes_Scripts/Textures/special/skip.png"
+dest_files=["res://.godot/imported/skip.png-d9a68bd2923fd23ca4cf1c9f3f3b6626.s3tc.ctex"]
 
 [params]
 
