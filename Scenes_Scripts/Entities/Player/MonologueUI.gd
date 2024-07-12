@@ -20,6 +20,8 @@ var monologue_time: Array = []
 ## We only make new monologue show up when the current monologue is over
 var accept_new_data: bool = true
 
+## If false, the line sounds may no longer play
+var lines_can_play: bool = false
 
 func _ready() -> void:
 	reset_monologue()
@@ -46,6 +48,7 @@ func start_monologue():
 			timer.wait_time = 0.001
 		timer.start()
 		
+		lines_can_play = true
 		background.visible = true
 		beep_audioplayer.play()
 		textbox.text = monologue[current_monologue_line]
@@ -63,16 +66,20 @@ func nextPhrase() -> void:
 	
 	sprite_anim.play("invisible")
 	
+	
 	## When we reach the end of the monologue, we reset the whole thing
 	if current_monologue_line >= monologue.size():
 		reset_monologue()
 	## Othwerwise, we set the next monologue line in the Array
 	else:
 		textbox.text = monologue[current_monologue_line]
-		newlinebeep_audioplayer.play()
+		if lines_can_play == true:
+			newlinebeep_audioplayer.play()
 	
 	if current_monologue_line == monologue.size():
-		lastlinebeep_audioplayer.play()
+		if lines_can_play == true:
+			lastlinebeep_audioplayer.play()
+			lines_can_play = false
 	
 	current_monologue_line += 1
 

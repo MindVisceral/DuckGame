@@ -77,6 +77,8 @@ func _on_audio_player_finished() -> void:
 
 func _on_setpiece_timer_timeout() -> void:
 	do_the_setpiece()
+	
+	monologue_data.clear()
 
 
 

@@ -36,6 +36,7 @@ func ride() -> void:
 			animPlayer.play("open")
 			ColliderBlock.disabled = true
 	
+	monologue_data.clear()
 	used = true
 
 
