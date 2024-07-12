@@ -11,5 +11,6 @@ var menu_color_black: bool = true
 var camare_shake_enabled: bool = false
 var fade_to_black: bool = false
 var fade_to_white: bool = false
+var fade_to_normal: bool = false
 
 var cacophony_active: bool = false

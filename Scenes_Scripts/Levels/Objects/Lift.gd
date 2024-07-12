@@ -24,17 +24,29 @@ var radio: bool = false
 
 func _ready() -> void:
 	ColliderBlock.disabled = not doors_closed
+	
+	if doors_closed == false:
+		animPlayer.play("RESET_OPEN")
+	elif doors_closed == true:
+		monologue_data.clear()
+		
+		animPlayer.play("RESET_CLOSED")
+		await animPlayer.animation_finished
+		
+		animPlayer.play("ride_finished")
+		await animPlayer.animation_finished
+		
+		animPlayer.play("open")
+
 
 func ride() -> void:
 	if used == false:
 		if doors_closed == false:
 			doors_closed = true
 			animPlayer.play("close")
-			ColliderBlock.disabled = false
 		else:
 			doors_closed = false
 			animPlayer.play("open")
-			ColliderBlock.disabled = true
 	
 	monologue_data.clear()
 	used = true
@@ -60,3 +72,17 @@ func do_screen_shake() -> void:
 
 func fade_to_black() -> void:
 	Globals.fade_to_black = true
+
+func fade_to_normal() -> void:
+	Globals.fade_to_normal = true
+
+
+@onready var level2: String = "res://Scenes_Scripts/Levels/level_outside.tscn"
+
+func next_level() -> void:
+	get_tree().change_scene_to_file(level2)
+	
+	Globals.camare_shake_enabled = false
+	Globals.fade_to_black = false
+	Globals.fade_to_white = false
+	Globals.cacophony_active = false

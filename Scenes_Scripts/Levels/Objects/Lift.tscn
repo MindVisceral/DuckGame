@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dsdtgd7pxkygr"]
+[gd_scene load_steps=19 format=3 uid="uid://dsdtgd7pxkygr"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/Lift.gd" id="1_f71ji"]
 [ext_resource type="PackedScene" uid="uid://c1xj4q1r54i1r" path="res://Blender/Lift.gltf" id="1_mdu1c"]
@@ -17,129 +17,6 @@ size = Vector3(2.82415, 3.24072, 2.10648)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j0tvc"]
 size = Vector3(2.25269, 2.41603, 0.244858)
-
-[sub_resource type="Animation" id="Animation_jk1xr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Lift/Lift_body/Lift_door_outer_L:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.877011, 1.02957, 0.987187)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Lift/Lift_body/Lift_door_outer_R:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.88087, 1.02957, 0.987187)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Lift/Lift_body/Lift_door_outer_R/Lift_door_inner_R:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.0501674, 0, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Lift/Lift_body/Lift_door_outer_L/Lift_door_inner_L:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.0501675, 0, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Lift:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Interactable:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("ExitBlocker:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.000610352, 1.10142, 1.0099)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Lift/Lift_body/SmallLight/OmniLight3D:light_energy")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Lift/Lift_body/SmallLight/OmniLight3D:light_indirect_energy")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.25]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Lift/Lift_body/SmallLight/OmniLight3D:light_volumetric_fog_energy")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
 
 [sub_resource type="Animation" id="Animation_tu6ci"]
 resource_name = "close"
@@ -219,6 +96,18 @@ tracks/5/keys = {
 "args": [0.0],
 "method": &"play"
 }]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ExitBlocker:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_jewxc"]
@@ -301,10 +190,22 @@ tracks/5/keys = {
 "method": &"play"
 }]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ExitBlocker:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_kgc3x"]
 resource_name = "ride_down"
-length = 8.0
+length = 14.0
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -312,11 +213,185 @@ tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8, 6.9, 7, 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8, 8.1, 8.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8, 6.9, 7, 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 8.7, 8.8, 8.9, 9, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6, 9.7, 9.8, 9.9, 10, 10.1, 10.2, 10.3, 10.4, 10.5, 10.6, 10.7, 10.8, 10.9, 11, 11.1, 11.2, 11.3, 11.4, 11.5, 11.6, 11.7, 11.8, 11.9, 12, 12.1, 12.2, 12.3, 12.4, 12.5, 12.6, 12.7, 12.8, 12.9, 13, 13.1, 13.2, 13.3, 13.4, 13.5, 13.6, 13.7, 13.8, 13.9, 14),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
 "args": [],
 "method": &"fade_to_black"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
 }, {
 "args": [],
 "method": &"do_screen_shake"
@@ -476,11 +551,14 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(5),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(5, 14),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
 "method": &"fade_to_black"
+}, {
+"args": [],
+"method": &"next_level"
 }]
 }
 tracks/2/type = "value"
@@ -520,12 +598,498 @@ tracks/4/keys = {
 "values": [0.5, 0.5, 0.0]
 }
 
+[sub_resource type="Animation" id="Animation_5yy0c"]
+resource_name = "RESET_OPEN"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lift/Lift_body/Lift_door_outer_L:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.877011, 1.02957, 0.987187)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lift/Lift_body/Lift_door_outer_R:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.88087, 1.02957, 0.987187)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Lift/Lift_body/Lift_door_outer_R/Lift_door_inner_R:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0501674, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Lift/Lift_body/Lift_door_outer_L/Lift_door_inner_L:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0501675, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Lift:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Interactable:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ExitBlocker:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.000610352, 1.10142, 1.0099)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Lift/Lift_body/SmallLight/OmniLight3D:light_energy")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Lift/Lift_body/SmallLight/OmniLight3D:light_indirect_energy")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.25]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Lift/Lift_body/SmallLight/OmniLight3D:light_volumetric_fog_energy")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ExitBlocker:disabled")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_jk1xr"]
+resource_name = "RESET_CLOSED"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lift/Lift_body/Lift_door_outer_L:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.61, 1.03, 0.987)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lift/Lift_body/Lift_door_outer_R:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.61, 1.03, 0.987)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Lift/Lift_body/Lift_door_outer_R/Lift_door_inner_R:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.382, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Lift/Lift_body/Lift_door_outer_L/Lift_door_inner_L:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.382, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Lift:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Interactable:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ExitBlocker:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.000610352, 1.10142, 1.0099)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Lift/Lift_body/SmallLight/OmniLight3D:light_energy")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Lift/Lift_body/SmallLight/OmniLight3D:light_indirect_energy")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.25]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Lift/Lift_body/SmallLight/OmniLight3D:light_volumetric_fog_energy")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ExitBlocker:disabled")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_neoix"]
+resource_name = "ride_finished"
+length = 8.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"fade_to_normal"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Lift/Lift_body/SmallLight/OmniLight3D:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.8, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Lift/Lift_body/SmallLight/OmniLight3D:light_indirect_energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.8, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.25, 1.25]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Lift/Lift_body/SmallLight/OmniLight3D:light_volumetric_fog_energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.8, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.5, 0.5]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ciqi5"]
 _data = {
-"RESET": SubResource("Animation_jk1xr"),
+"RESET_CLOSED": SubResource("Animation_jk1xr"),
+"RESET_OPEN": SubResource("Animation_5yy0c"),
 "close": SubResource("Animation_tu6ci"),
 "open": SubResource("Animation_jewxc"),
-"ride_down": SubResource("Animation_kgc3x")
+"ride_down": SubResource("Animation_kgc3x"),
+"ride_finished": SubResource("Animation_neoix")
 }
 
 [node name="Lift" type="StaticBody3D"]
@@ -554,6 +1118,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0501674, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.06083, 0)
 
 [node name="OmniLight3D" parent="Lift/Lift_body/SmallLight" index="1"]
+light_energy = 0.0
+light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
 
 [node name="Interactable" parent="." instance=ExtResource("3_gf1b1")]

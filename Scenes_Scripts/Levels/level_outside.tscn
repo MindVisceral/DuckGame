@@ -4407,7 +4407,7 @@ libraries = {
 }
 
 [node name="Player" parent="." instance=ExtResource("7_r6keh")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -323.717, 0.296296, 15.7569)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.534, 0.1, 2.865)
 speed = 4.0
 crouch_height = 0.8
 jump_height = 6.0

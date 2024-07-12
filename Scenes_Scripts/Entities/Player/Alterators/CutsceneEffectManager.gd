@@ -16,7 +16,17 @@ func _process(delta: float) -> void:
 		
 		player.FadeToBlack.color.a = lerpf(player.FadeToBlack.color.a, 255, 0.001 * delta)
 	
-	
 	if Globals.fade_to_white == true:
 		player.FadeToWhite.color.a = lerpf(player.FadeToBlack.color.a, 255, 1 * delta)
 		player.BLINDNESS.visible = true
+	
+	if Globals.fade_to_normal == true:
+		player.FadeToBlack.color.a = lerpf(player.FadeToBlack.color.a, 0, 0.001 * delta)
+		
+		player.FadeToWhite.color.a = lerpf(player.FadeToBlack.color.a, 0, 1 * delta)
+		player.BLINDNESS.visible = false
+	
+	if player.FadeToBlack.color.a == 0 or player.FadeToWhite.color.a == 0:
+		Globals.fade_to_black = false
+		Globals.fade_to_normal = false
+		Globals.fade_to_white = false
