@@ -1,16 +1,347 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsdtgd7pxkygr"]
+[gd_scene load_steps=13 format=3 uid="uid://dsdtgd7pxkygr"]
 
+[ext_resource type="Script" path="res://Scenes_Scripts/Levels/Objects/Lift.gd" id="1_f71ji"]
 [ext_resource type="PackedScene" uid="uid://c1xj4q1r54i1r" path="res://Blender/Lift.gltf" id="1_mdu1c"]
+[ext_resource type="PackedScene" uid="uid://db7w5ip2jk0td" path="res://Scenes_Scripts/Levels/Objects/SmallLight.tscn" id="2_4ajtd"]
+[ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="3_gf1b1"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_q1bx1"]
-size = Vector3(3.28787, 0.533081, 3.7114)
+[sub_resource type="BoxShape3D" id="BoxShape3D_w5px6"]
+size = Vector3(0.109863, 0.970718, 0.395782)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i0e8u"]
+size = Vector3(3, 3, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j0tvc"]
+size = Vector3(2.25269, 2.41603, 0.244858)
+
+[sub_resource type="Animation" id="Animation_tu6ci"]
+resource_name = "close"
+length = 2.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lift/Lift_body/Lift_door_outer_L:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.3),
+"transitions": PackedFloat32Array(0.392292, 1.23114, 1.23114),
+"update": 0,
+"values": [Vector3(-0.877011, 1.02957, 0.987187), Vector3(-0.61, 1.03, 0.987), Vector3(-0.61, 1.03, 0.987)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lift/Lift_body/Lift_door_outer_R:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2.3),
+"transitions": PackedFloat32Array(0.392292, 1.23114, 1.23114),
+"update": 0,
+"values": [Vector3(0.88087, 1.02957, 0.987187), Vector3(0.61, 1.03, 0.987), Vector3(0.61, 1.03, 0.987)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Lift/Lift_body/Lift_door_outer_R/Lift_door_inner_R:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.3),
+"transitions": PackedFloat32Array(0.757858, 1.41421, 0.68302),
+"update": 0,
+"values": [Vector3(-0.0501674, 0, 0), Vector3(-0.0501674, 0, 0), Vector3(-0.382, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Lift/Lift_body/Lift_door_outer_L/Lift_door_inner_L:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.3),
+"transitions": PackedFloat32Array(0.757858, 1.41421, 0.68302),
+"update": 0,
+"values": [Vector3(0.0501675, 0, 0), Vector3(0.0501675, 0, 0), Vector3(0.382, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jk1xr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lift/Lift_body/Lift_door_outer_L:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.877011, 1.02957, 0.987187)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lift/Lift_body/Lift_door_outer_R:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.88087, 1.02957, 0.987187)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Lift/Lift_body/Lift_door_outer_R/Lift_door_inner_R:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0501674, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Lift/Lift_body/Lift_door_outer_L/Lift_door_inner_L:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0501675, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Lift:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Interactable:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ExitBlocker:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.000610352, 1.10142, 1.0099)]
+}
+
+[sub_resource type="Animation" id="Animation_jewxc"]
+resource_name = "open"
+length = 2.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lift/Lift_body/Lift_door_outer_L:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9, 2.1, 2.2, 2.4),
+"transitions": PackedFloat32Array(0.517632, 1.62451, 0.482968, 0.189465, 0.258816),
+"update": 0,
+"values": [Vector3(-0.61, 1.03, 0.987), Vector3(-0.61, 1.03, 0.987), Vector3(-0.877011, 1.02957, 0.987187), Vector3(-0.89, 1.03, 0.987), Vector3(-0.877011, 1.02957, 0.987187)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lift/Lift_body/Lift_door_outer_R:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9, 2.1, 2.2, 2.4),
+"transitions": PackedFloat32Array(0.517632, 1.62451, 0.482968, 0.189465, 0.258816),
+"update": 0,
+"values": [Vector3(0.61, 1.03, 0.987), Vector3(0.61, 1.03, 0.987), Vector3(0.88087, 1.02957, 0.987187), Vector3(0.89, 1.03, 0.987), Vector3(0.88087, 1.02957, 0.987187)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Lift/Lift_body/Lift_door_outer_R/Lift_door_inner_R:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2.1),
+"transitions": PackedFloat32Array(0.933033, 1.27456, 0.757858),
+"update": 0,
+"values": [Vector3(-0.382, 0, 0), Vector3(-0.0501674, 0, 0), Vector3(-0.0501674, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Lift/Lift_body/Lift_door_outer_L/Lift_door_inner_L:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2.1),
+"transitions": PackedFloat32Array(0.933033, 1.27456, 0.757858),
+"update": 0,
+"values": [Vector3(0.382, 0, 0), Vector3(0.0501675, 0, 0), Vector3(0.0501675, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kgc3x"]
+resource_name = "ride_down"
+length = 8.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 3.4, 3.6, 3.8, 4, 4.2, 4.4, 4.6, 4.8, 5, 5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6, 6.7, 6.9, 7.1, 7.3, 7.5, 7.7, 7.9, 8.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"fade_to_black"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}, {
+"args": [],
+"method": &"do_screen_shake"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ciqi5"]
+_data = {
+"RESET": SubResource("Animation_jk1xr"),
+"close": SubResource("Animation_tu6ci"),
+"open": SubResource("Animation_jewxc"),
+"ride_down": SubResource("Animation_kgc3x")
+}
 
 [node name="Lift" type="StaticBody3D"]
 collision_layer = 64
 collision_mask = 133
+script = ExtResource("1_f71ji")
 
 [node name="Lift" parent="." instance=ExtResource("1_mdu1c")]
 
-[node name="Colider" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.142532, -0.233459, 0.111496)
-shape = SubResource("BoxShape3D_q1bx1")
+[node name="ColliderBody" parent="Lift/Lift_body" index="0"]
+collision_layer = 64
+collision_mask = 133
+
+[node name="SmallLight" parent="Lift/Lift_body" index="4" instance=ExtResource("2_4ajtd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0618, 0)
+
+[node name="Interactable" parent="." instance=ExtResource("3_gf1b1")]
+
+[node name="CollisionShape3D" parent="Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.840088, 1.22782, 0.393997)
+shape = SubResource("BoxShape3D_w5px6")
+
+[node name="CollisionShape3D" parent="Interactable/InteractableRange" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10734, 0)
+shape = SubResource("BoxShape3D_i0e8u")
+
+[node name="ExitBlocker" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000610352, 1.10142, 1.0099)
+shape = SubResource("BoxShape3D_j0tvc")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ciqi5")
+}
+
+[connection signal="interact" from="Interactable" to="." method="_on_interactable_interact"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+
+[editable path="Lift"]
+[editable path="Interactable"]

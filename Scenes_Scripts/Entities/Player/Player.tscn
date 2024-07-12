@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://lhlklylca50m"]
+[gd_scene load_steps=23 format=3 uid="uid://lhlklylca50m"]
 
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player.gd" id="1_kmike"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Player_States/State_Manager.gd" id="2_c5aqi"]
@@ -12,7 +12,9 @@
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/HeadBop.gd" id="10_6kxr3"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/WeaponBob.gd" id="12_4bkuj"]
 [ext_resource type="Texture2D" uid="uid://ds6uye256hjrj" path="res://Scenes_Scripts/crosshair.png" id="13_20fa4"]
+[ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/CameraShake.gd" id="13_gi0ur"]
 [ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/InteractionManager.gd" id="13_qk48y"]
+[ext_resource type="Script" path="res://Scenes_Scripts/Entities/Player/Alterators/CutsceneEffectManager.gd" id="13_trho6"]
 [ext_resource type="Shader" path="res://Scenes_Scripts/Shaders/GodotRetro/Screen Shaders/Aditional Shaders/Dithering.gdshader" id="14_ekeqm"]
 [ext_resource type="Shader" path="res://Scenes_Scripts/Shaders/Grain.gdshader" id="15_pu8nk"]
 
@@ -141,6 +143,13 @@ ray_start_pos_node = NodePath("../../Head/BobbingNode/PlayerCamera")
 
 [node name="UIController" type="Node" parent="Scripts"]
 
+[node name="CutsceneEffectManager" type="Node" parent="Scripts"]
+script = ExtResource("13_trho6")
+
+[node name="CameraShake" type="Node" parent="Scripts"]
+script = ExtResource("13_gi0ur")
+randomStrength = 0.01
+
 [node name="Timers" type="Node" parent="."]
 
 [node name="JumpBufferTimer" type="Timer" parent="Timers"]
@@ -190,6 +199,23 @@ editor_description = "Main Player camera, typically placed at Head's (0, 0, 0) c
 Its FOV can be changed through an exported variable in the Player node"
 current = true
 fov = 90.0
+
+[node name="CutsceneEffects" type="Control" parent="Head/BobbingNode/PlayerCamera"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FadeToBlack" type="ColorRect" parent="Head/BobbingNode/PlayerCamera/CutsceneEffects"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
 
 [node name="HUD" type="Control" parent="Head/BobbingNode/PlayerCamera"]
 layout_mode = 3

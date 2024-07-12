@@ -116,16 +116,21 @@ extends CharacterBody3D
 @onready var HeadBob: PlayerHeadbobHandler = $Scripts/HeadBob
 @onready var WeaponBob: PlayerWeaponbobHandler = $Scripts/WeaponBob
 @onready var InteractionManager: PlayerInteractionManager = $Scripts/InteractionManager
-@onready var UIcontroller: Node = $Scripts/UIController
+#@onready var UIcontroller: Node = $Scripts/UIController
+@onready var CutsceneEffectManager: Node = $Scripts/CutsceneEffectManager
+@onready var CameraShake: Node = $Scripts/CameraShake
 @onready var JumpBufferT: Timer = $Timers/JumpBufferTimer
 @onready var Collider: CollisionShape3D = $Collider
 @onready var FeetCollider: CollisionShape3D = $FeetCollider
 @onready var FloorCast: RayCast3D = $FloorCast
 @onready var Head: Marker3D = $Head
+@onready var Camera: Camera3D = $Head/BobbingNode/PlayerCamera
+## UI, HUD, Posprocessing, Custscene effects
+@onready var FadeToBlack: ColorRect = $Head/BobbingNode/PlayerCamera/CutsceneEffects/FadeToBlack
+#
 @onready var Firearms: Marker3D = $Head/BobbingNode/Firearms
 #@onready var Firearms: Marker3D = $Head/Firearms
 #@onready var Firearms: Marker3D = $Firearms
-@onready var Camera: Camera3D = $Head/BobbingNode/PlayerCamera
 @onready var InteractableCast: ShapeCast3D = $Head/BobbingNode/InteractableCast
 @onready var TPMarker: Marker3D = $Head/BobbingNode/TPMarker
 
@@ -192,6 +197,8 @@ func _ready():
 	WeaponBob.init(self)
 	InteractionManager.init(self)
 	#UIcontroller.init(self)
+	CutsceneEffectManager.init(self)
+	CameraShake.init(self)
 	
 	
 	## Apply exported variables to the Player
