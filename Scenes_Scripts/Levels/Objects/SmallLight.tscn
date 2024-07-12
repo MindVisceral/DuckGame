@@ -28,6 +28,7 @@ stream = ExtResource("3_dirup")
 unit_size = 2.0
 autoplay = true
 max_distance = 10.0
+bus = &"Sounds"
 
 [connection signal="finished" from="hummingAudioPlayer" to="." method="_on_humming_audio_player_finished"]
 
