@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://du6v4lkt3a81t"]
+
+[ext_resource type="PackedScene" uid="uid://nf1bgcn3f8w0" path="res://Scenes_Scripts/Entities/Entity Elements/Interactable.tscn" id="1_f186q"]
+
+[sub_resource type="GDScript" id="GDScript_2y5iq"]
+resource_name = "BathroomBlocadeScript"
+script/source = "extends StaticBody3D
+
+## Contains Strings, which are taken by the MonologueUI Node, which displays them in the
+## Player's monologue box
+@export var monologue_data: Array[String]
+## How long before the first line gets shown on screen
+@export var monologue_first_line_time: float = 0.0
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xwlom"]
+size = Vector3(1.97946, 1.99302, 0.462528)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5iayx"]
+size = Vector3(1.92676, 1.98853, 0.487)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ltjyt"]
+size = Vector3(2.75134, 2.31946, 2.20496)
+
+[node name="BathroomBlocker" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.524, 2, 4.529)
+collision_layer = 2
+collision_mask = 197
+script = SubResource("GDScript_2y5iq")
+monologue_data = Array[String](["[center]This construction's previous residents barricaded most doors and windows, except for the lift in the corridor.[/center][center]We may only theorize on the explanation for this behaviour.[/center]"])
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0112572, 0.0120883, -0.084116)
+shape = SubResource("BoxShape3D_xwlom")
+
+[node name="Interactable" parent="." instance=ExtResource("1_f186q")]
+
+[node name="CollisionShape3D" parent="Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0209961, 0.00939941, -0.0437927)
+shape = SubResource("BoxShape3D_5iayx")
+
+[node name="CollisionShape3D" parent="Interactable/InteractableRange" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0310669, 0.18512, 0.602478)
+shape = SubResource("BoxShape3D_ltjyt")
+
+[editable path="Interactable"]

@@ -16,7 +16,7 @@ size = Vector3(3, 3, 3)
 collision_layer = 128
 collision_mask = 71
 script = ExtResource("1_5spta")
-monologue_data = Array[String](["[center]I waited for too long.[/center]", "[center][b]It[/b] is here.[/center]", "[center]I should get out of here while I still can.[/center]"])
+monologue_data = Array[String](["[center]I waited for too long.[/center][center][b]It[/b] is here.[/center]", "[center]I should leave this place while I still can.[/center]"])
 monologue_first_line_time = 4.5
 
 [node name="radio2" parent="." instance=ExtResource("1_7pfbb")]

@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://dxjgsggwy0tir" path="res://Scenes_Scripts/Levels/Objects/TV.tscn" id="22_n1yhl"]
 [ext_resource type="PackedScene" uid="uid://dikpxxwdpl37n" path="res://Scenes_Scripts/Levels/Objects/SmallTable.tscn" id="23_hj68o"]
 [ext_resource type="PackedScene" uid="uid://0gxx8qg8ui1l" path="res://Scenes_Scripts/Levels/Objects/Stove.tscn" id="25_nnnhv"]
+[ext_resource type="PackedScene" uid="uid://du6v4lkt3a81t" path="res://Scenes_Scripts/Levels/Objects/BathroomBlocker.tscn" id="26_g1g4j"]
 [ext_resource type="PackedScene" uid="uid://7p8wceukapmt" path="res://Scenes_Scripts/Entities/Things/SmallFan.tscn" id="27_w2tk1"]
 [ext_resource type="PackedScene" uid="uid://bc22rykkm5ipg" path="res://Scenes_Scripts/Levels/Objects/CeilingFan.tscn" id="28_yh6ym"]
 [ext_resource type="PackedScene" uid="uid://1ucvqg5p5g1x" path="res://Blender/Plank.gltf" id="29_jyjop"]
@@ -956,9 +957,6 @@ size = Vector3(0.333107, 0.161207, 2.03492)
 [sub_resource type="BoxShape3D" id="BoxShape3D_2o8vr"]
 size = Vector3(0.351119, 2.09169, 1.11583)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_xwlom"]
-size = Vector3(1.32555, 1.95049, 0.462528)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_t0dxu"]
 size = Vector3(2.94128, 2.47546, 3.15417)
 
@@ -1828,14 +1826,9 @@ transform = Transform3D(0.281254, 1.74413e-07, 3.99009, 3.99009, -1.2294e-08, -0
 [node name="Plank9" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("29_jyjop")]
 transform = Transform3D(0.0743463, 1.74815e-07, 3.9993, 3.9993, -3.24979e-09, -0.0743463, -2.55616e-16, 4, -1.74845e-07, 9.52377, 1.42782, 4.52888)
 
-[node name="BathroomBlocker" type="StaticBody3D" parent="Objects/InsideCorridor/DoorwayPlanks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.524, 2, 4.529)
-collision_layer = 2
-collision_mask = 197
-
-[node name="Collider" type="CollisionShape3D" parent="Objects/InsideCorridor/DoorwayPlanks/BathroomBlocker"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0268993, 0.0336456, -0.084116)
-shape = SubResource("BoxShape3D_xwlom")
+[node name="BathroomBlocker" parent="Objects/InsideCorridor/DoorwayPlanks" instance=ExtResource("26_g1g4j")]
+monologue_data = Array[String](["[center]This construction's previous residents barricaded most of the doors and windows, except for the lift in the corridor.[/center][center]We may only theorize on an explanation for this behaviour.[/center]"])
+monologue_first_line_time = 0.2
 
 [node name="Kitchen" type="Node3D" parent="Objects"]
 
@@ -1901,7 +1894,7 @@ shadow_bias = 0.02
 transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 4.76837e-07, 0.659703, 0.326403)
 
 [node name="SmallTable" parent="Objects/Main Room" instance=ExtResource("23_hj68o")]
-transform = Transform3D(-0.518475, 0, -0.855093, 0, 1, 0, 0.855093, 0, -0.518475, 1.15254, 1, 10.7042)
+transform = Transform3D(0.440973, 0, 0.89752, 0, 1, 0, -0.89752, 0, 0.440973, 1.23353, 1, 10.7702)
 
 [node name="Bedroom" type="Node3D" parent="Objects"]
 
@@ -2262,6 +2255,8 @@ angle_limit_for_tilt = 0.01
 [connection signal="body_entered" from="Objects/BigCorridor/HallwaySetpiece/WindowArea3D" to="SetPieces/HallwayLights" method="_on_window_area_3d_body_entered"]
 [connection signal="body_entered" from="Objects/BigCorridor/HallwaySetpiece/LiftArea3D" to="SetPieces/HallwayLights" method="_on_lift_area_3d_body_entered"]
 
+[editable path="Objects/InsideCorridor/DoorwayPlanks/BathroomBlocker"]
+[editable path="Objects/InsideCorridor/DoorwayPlanks/BathroomBlocker/Interactable"]
 [editable path="Objects/Kitchen/Fridge"]
 [editable path="Objects/Kitchen/Fridge/FINAL_fridge_tall"]
 [editable path="Objects/Kitchen/Fridge/FINAL_fridge_tall/Armature/Skeleton3D/Fridge_body/small_light_freezer"]

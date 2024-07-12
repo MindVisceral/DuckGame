@@ -3,10 +3,6 @@
 		"generator":"Khronos glTF Blender I/O v4.0.44",
 		"version":"2.0"
 	},
-	"extensionsUsed":[
-		"KHR_materials_specular",
-		"KHR_materials_ior"
-	],
 	"scene":0,
 	"scenes":[
 		{
@@ -19,49 +15,19 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"Washbasin_06",
-			"translation":[
-				0,
-				0.10236071795225143,
-				0
-			]
+			"name":"Washbasin_06"
 		}
 	],
 	"materials":[
 		{
 			"doubleSided":true,
-			"extensions":{
-				"KHR_materials_specular":{
-					"specularFactor":0
-				},
-				"KHR_materials_ior":{
-					"ior":1.4500000476837158
-				}
-			},
-			"name":"Plastic_06",
+			"name":"sink_texture",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"index":0
 				},
-				"metallicFactor":0
-			}
-		},
-		{
-			"doubleSided":true,
-			"extensions":{
-				"KHR_materials_specular":{
-					"specularFactor":0
-				},
-				"KHR_materials_ior":{
-					"ior":1.4500000476837158
-				}
-			},
-			"name":"Metal_01",
-			"pbrMetallicRoughness":{
-				"baseColorTexture":{
-					"index":1
-				},
-				"metallicFactor":0
+				"metallicFactor":0,
+				"roughnessFactor":0.5
 			}
 		}
 	],
@@ -77,15 +43,6 @@
 					},
 					"indices":3,
 					"material":0
-				},
-				{
-					"attributes":{
-						"POSITION":4,
-						"NORMAL":5,
-						"TEXCOORD_0":6
-					},
-					"indices":7,
-					"material":1
 				}
 			]
 		}
@@ -94,149 +51,78 @@
 		{
 			"sampler":0,
 			"source":0
-		},
-		{
-			"sampler":1,
-			"source":1
 		}
 	],
 	"images":[
 		{
-			"mimeType":"image/jpeg",
-			"name":"Plastic_06",
-			"uri":"Plastic_06.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"Metal_01",
-			"uri":"Metal_01.jpg"
+			"mimeType":"image/png",
+			"name":"texture_sink",
+			"uri":"texture_sink.png"
 		}
 	],
 	"accessors":[
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":164,
+			"count":317,
 			"max":[
 				0.3012065887451172,
-				0.8420129418373108,
-				0.1570168435573578
+				1.1730214357376099,
+				0.15701685845851898
 			],
 			"min":[
 				-0.3012046813964844,
-				-0.09917615354061127,
-				-0.3183666169643402
+				0.0031845644116401672,
+				-0.3183665871620178
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":164,
+			"count":317,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":164,
+			"count":317,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":414,
-			"type":"SCALAR"
-		},
-		{
-			"bufferView":4,
-			"componentType":5126,
-			"count":151,
-			"max":[
-				0.12850245833396912,
-				1.0706607103347778,
-				0.12811368703842163
-			],
-			"min":[
-				-0.12850479781627655,
-				0.7686095237731934,
-				-0.14533591270446777
-			],
-			"type":"VEC3"
-		},
-		{
-			"bufferView":5,
-			"componentType":5126,
-			"count":151,
-			"type":"VEC3"
-		},
-		{
-			"bufferView":6,
-			"componentType":5126,
-			"count":151,
-			"type":"VEC2"
-		},
-		{
-			"bufferView":7,
-			"componentType":5123,
-			"count":312,
+			"count":726,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":1968,
+			"byteLength":3804,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1968,
-			"byteOffset":1968,
+			"byteLength":3804,
+			"byteOffset":3804,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1312,
-			"byteOffset":3936,
+			"byteLength":2536,
+			"byteOffset":7608,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":828,
-			"byteOffset":5248,
-			"target":34963
-		},
-		{
-			"buffer":0,
-			"byteLength":1812,
-			"byteOffset":6076,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":1812,
-			"byteOffset":7888,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":1208,
-			"byteOffset":9700,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":624,
-			"byteOffset":10908,
+			"byteLength":1452,
+			"byteOffset":10144,
 			"target":34963
 		}
 	],
 	"samplers":[
-		{
-			"magFilter":9729,
-			"minFilter":9987
-		},
 		{
 			"magFilter":9728,
 			"minFilter":9984
@@ -244,7 +130,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":11532,
+			"byteLength":11596,
 			"uri":"kitchen_sink.bin"
 		}
 	]

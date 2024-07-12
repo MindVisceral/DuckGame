@@ -4,13 +4,13 @@
 
 // ## Ceiling Fan
 [center]I do not understand this object's purpose.[/center]
-[center]Its movement does not accomplish any task that I can recognise.[/center]
+[center]Its movement does not accomplish any task which I am aware of.[/center]
 
 
 // ## Small fan
 [center]This object seems to be a smaller version of the object in the bedroom.[/center]
 
-[center]This revelation brings me no closer to figuring out its purpose.[/center]
+[center]This revelation brings me no closer to grasping its purpose.[/center]
 
 
 // ## Stove
@@ -31,7 +31,7 @@
 [center]Nothing happened.[/center]
 
 [center]This object's shape suggests that it is a reservoir,[/center]
-[center]but I have no knowledge of what substance it contains.[/center]
+[center]but I lack knowledge on what substance it may contain.[/center]
 
 
 // ## Fridge
@@ -42,19 +42,23 @@
 
 // ## Door text
 [center]This place is safe enough, I should not wander.[/center]
-[center]At least until [i]it[/i] gets here.[/center]
+[center]At least until [i]it[/i] follows me here.[/center]
+
+
+// ## Bathroom blocade
+[center]This construction's previous residents barricaded most of the doors and windows, except for the lift in the corridor.[/center]
+[center]We may only theorize on an explanation for this behaviour.[/center]
 
 
 // ## TV text
 [center]A primitive broadcast receiver.[/center]
-[center]No one is broadcasting anything [i]this[/i] far out from the center.[/center]
+[center]It seems that no one is broadcasting anything this far out from The Core.[/center]
 
-[center]...but all the infrastructure should still be intact.[/center]
+[center]...but all the infrastructure should still be intact. Perplexing.[/center]
 
 
 // ## Radio text
 [center]I waited for too long.[/center]
-
 [center][b]It[/b] is here.[/center]
 
-[center]I should get out of here while I still can.[/center]
+[center]I should leave this place while I still can.[/center]

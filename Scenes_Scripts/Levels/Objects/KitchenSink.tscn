@@ -21,7 +21,7 @@ size = Vector3(3, 3, 3)
 collision_layer = 64
 collision_mask = 133
 script = ExtResource("1_dd2x4")
-monologue_data = Array[String](["[center]Nothing happened.[/center]", "[center]This object's shape suggests that it is a reservoir,[/center][center]but I have no knowledge of what substance it contains.[/center]"])
+monologue_data = Array[String](["[center]Nothing happened.[/center]", "[center]This object's shape suggests that it is a reservoir,[/center][center]but I lack knowledge on what substance it may contain.[/center]"])
 monologue_first_line_time = 1.4
 
 [node name="kitchen_sink" parent="." instance=ExtResource("1_dl2eh")]
