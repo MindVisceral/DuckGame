@@ -1,4 +1,4 @@
-[gd_scene load_steps=238 format=3 uid="uid://bc1l8essgx3qb"]
+[gd_scene load_steps=243 format=3 uid="uid://bc1l8essgx3qb"]
 
 [ext_resource type="Environment" uid="uid://c45ge3tprgx5o" path="res://Scenes_Scripts/Levels/environment_default.tres" id="1_1jw4r"]
 [ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1_skewd"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://ilsitja3vrbt" path="res://Scenes_Scripts/Levels/Objects/Fridge.tscn" id="15_ktfy2"]
 [ext_resource type="PackedScene" uid="uid://dnpca2xy4g5u4" path="res://Blender/door.gltf" id="15_lkacj"]
 [ext_resource type="PackedScene" uid="uid://ccsu3qdjk12ns" path="res://Scenes_Scripts/Levels/Objects/Bed.tscn" id="15_nrla8"]
+[ext_resource type="AudioStream" uid="uid://7q6fujskcqts" path="res://Scenes_Scripts/Sounds/ffission9_hiking-boot-footsteps-on-stone.wav" id="16_82fng"]
 [ext_resource type="PackedScene" uid="uid://dsdtgd7pxkygr" path="res://Scenes_Scripts/Levels/Objects/Lift.tscn" id="16_auiut"]
 [ext_resource type="PackedScene" uid="uid://tlr6sujh62a1" path="res://Scenes_Scripts/Levels/Objects/Cheap_table.tscn" id="16_l7y1m"]
 [ext_resource type="PackedScene" uid="uid://b7kfdbpdqk3o6" path="res://Scenes_Scripts/Levels/Objects/Door.tscn" id="17_oa5uw"]
@@ -759,6 +760,12 @@ _surfaces = [{
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_co1nm"]
 points = PackedVector3Array(-2.4375, 3.375, -0.25, -2.4375, -3.375, -0.25, 2.4375, -3.375, -0.25, 2.4375, 3.375, -0.25, -2.4375, 3.375, 0.25, -2.4375, -3.375, 0.25, 2.4375, -3.375, 0.25, 2.4375, 3.375, 0.25)
 
+[sub_resource type="GDScript" id="GDScript_4aprg"]
+resource_name = "InitialCutscene"
+script/source = "extends Node
+
+"
+
 [sub_resource type="GDScript" id="GDScript_qi0ud"]
 resource_name = "DoorLockedScript"
 script/source = "extends Node
@@ -951,6 +958,67 @@ func _physics_process(delta: float) -> void:
 func play_set_piece() -> void:
 	ready_now = true
 "
+
+[sub_resource type="Animation" id="Animation_4gvcp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CutsceneCamera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.733, 1.911, 1.049)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CutsceneCamera:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.5708, 2.59356, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gv7as"]
+resource_name = "get_up"
+length = 9.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CutsceneCamera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.8, 3.7, 5.4, 6.2, 7.4, 8, 8.5),
+"transitions": PackedFloat32Array(1.27456, 1.27456, 0.615572, 0.450625, 1.31951, 0.68302, 1.1487, 0.659754),
+"update": 0,
+"values": [Vector3(4.56222, 1.692, 1.33173), Vector3(4.56222, 1.692, 1.33173), Vector3(4.117, 2.047, 1.977), Vector3(4.117, 2.047, 1.977), Vector3(4.372, 2.332, 2.247), Vector3(4.372, 2.332, 2.247), Vector3(4.682, 2.332, 2.517), Vector3(4.923, 2.4, 2.718)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CutsceneCamera:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2.5, 3.7, 4.1, 5.2, 6.6, 7.2, 7.5, 8.3, 8.7),
+"transitions": PackedFloat32Array(1.68179, 1, 0.535887, 1, 0.63728, 0.615572, 0.594604, 1, 0.63728, 1.31951, 0.965936),
+"update": 0,
+"values": [Vector3(1.5708, 2.59356, 0), Vector3(0.445059, 3.43481, 0.0139626), Vector3(0.445059, 3.43481, 0.0139626), Vector3(0.0890118, 2.76181, 0.00279252), Vector3(0.0890118, 2.76181, 0.00279252), Vector3(0, 4.18181, 0.0139626), Vector3(0, 4.18181, 0.0139626), Vector3(-0.610865, 4.18181, 0.0139626), Vector3(-0.610865, 4.18181, 0.0139626), Vector3(-0.0872665, 4.18181, 0.0139626), Vector3(0, 3.67217, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x5677"]
+_data = {
+"RESET": SubResource("Animation_4gvcp"),
+"get_up": SubResource("Animation_gv7as")
+}
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iome6"]
 size = Vector3(3.48389, 2.42859, 4.72012)
@@ -1511,6 +1579,9 @@ shape = SubResource("ConvexPolygonShape3D_co1nm")
 
 [node name="SetPieces" type="Node" parent="."]
 
+[node name="InitialCutscene" type="Node" parent="SetPieces"]
+script = SubResource("GDScript_4aprg")
+
 [node name="DoorLocked" type="Node" parent="SetPieces" node_paths=PackedStringArray("door")]
 script = SubResource("GDScript_qi0ud")
 door = NodePath("../../Objects/InsideCorridor/Door")
@@ -1530,6 +1601,26 @@ libraries = {
 [node name="FakeLiftMovement" type="Node" parent="SetPieces" node_paths=PackedStringArray("fake_wall")]
 script = SubResource("GDScript_4xx8e")
 fake_wall = NodePath("../../QodotMap/entity_1_func_group")
+
+[node name="InitialCutscene" type="Node3D" parent="."]
+
+[node name="CutsceneCamera" type="Camera3D" parent="InitialCutscene"]
+transform = Transform3D(-0.853551, 0.521009, -1.88605e-06, 0, -3.61999e-06, -1, -0.521009, -0.853551, 3.08985e-06, 4.733, 1.911, 1.049)
+fov = 90.0
+
+[node name="CutsceneAnimationPlayer" type="AnimationPlayer" parent="InitialCutscene"]
+libraries = {
+"": SubResource("AnimationLibrary_x5677")
+}
+
+[node name="footstep1_AudioPlayer" type="AudioStreamPlayer3D" parent="InitialCutscene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.86885, 1.14306, 2.95775)
+stream = ExtResource("16_82fng")
+
+[node name="footstep2_AudioPlayer" type="AudioStreamPlayer3D" parent="InitialCutscene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07677, 1.14306, 2.59475)
+stream = ExtResource("16_82fng")
+pitch_scale = 0.78
 
 [node name="Objects" type="Node3D" parent="."]
 
@@ -1920,7 +2011,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71045, 3.49393, 1.90082)
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.137, 2.3, 4.246)
 left_switch_object = NodePath("../CheapLight")
 right_switch_object = NodePath("../CeilingFan")
-right_switch_on = true
 
 [node name="WindowPlanks" type="Node3D" parent="Objects"]
 
@@ -2250,12 +2340,10 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.23, 
 switch_object = NodePath("../CheapLight")
 
 [node name="Player" parent="." instance=ExtResource("5_tmuyv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.67809, 1.47042, 2.82313)
+transform = Transform3D(-0.839041, 0, -0.544068, 0, 1, 0, 0.544068, 0, -0.839041, 4.85919, 1.02585, 2.68128)
 speed = 4.0
 crouch_height = 0.8
 jump_height = 6.0
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
 
 [node name="HeadBob" parent="Player/Scripts" index="3"]
 rotation_speed = 1.0
